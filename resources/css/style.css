@@ -4,8 +4,7 @@
 @import url(setting/common.css); /*common*/
 @import url(setting/board.css); /*게시판*/
 @import url(setting/header_footer.css); /*헤더,푸터*/
-
-
+@import url(./sub.css); /*헤더,푸터*/
 
 
 

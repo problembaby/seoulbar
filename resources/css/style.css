@@ -1,0 +1,91 @@
+/** setting */
+@import url(setting/font.css); /*폰트*/
+@import url(setting/vars.css); /*변수*/
+@import url(setting/common.css); /*common*/
+@import url(setting/board.css); /*게시판*/
+@import url(setting/header_footer.css); /*헤더,푸터*/
+
+
+
+
+
+/**프린트*/
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+  }
+  /* 기본 스타일 초기화 */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: auto !important; /* 배경 스타일을 초기화하여 자동으로 설정 */
+  }
+
+  /* 레이아웃 초기화 */
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  /* 이미지 */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    page-break-inside: avoid;
+  }
+
+  /* 링크 스타일 */
+  a {
+    text-decoration: underline !important;
+    color: #000 !important;
+  }
+
+  /* 페이지 구분 */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* 테이블 */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  th,
+  td {
+    border: 1px solid #000 !important;
+    padding: 8px !important;
+  }
+
+  /* 페이지 안 보이는 요소 숨기기 */
+  .no-print,
+  .hidden,
+  .float-btnWrap,
+  #section2 .main-tab,
+  #header,
+  #footer,
+  .main-tab,
+  .btn-bottom-wrap {
+    display: none !important;
+  }
+  * {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important; /* Chrome, Safari, Edge */
+  }
+}

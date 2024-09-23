@@ -2,6 +2,10 @@
 
 $(document).ready(function () {
 
+  //
+
+
+
 
   //데이터피커  
   $(".datepicker").datepicker({
@@ -66,10 +70,6 @@ $(document).ready(function () {
       chkConf.hide();
     }
   });
-
-
-
-
 
 
 });

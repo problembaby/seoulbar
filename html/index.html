@@ -59,7 +59,6 @@
   <script src="../resources/js/modal.js"></script>
   <script src="../resources/js/check.js"></script>
 
-
 </head>
 
 <body>
@@ -74,27 +73,30 @@
   <!--접근성-->
 
   <header id="header">
-    <!--  
-    <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">모바일 메뉴</button> 
-    -->
+    
+ <!--    <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">모바일 메뉴</button>  -->
+    
   </header>
-  <div class="container-fluid p0" id="dashborad">
+  <div class="container-fluid" id="dashborad">
 
     <!--왼쪽 메뉴 [start] -->
     <div class="gnb" id="gnb">
       <!-- TODO: 모바일에서 메뉴 클릭 시 .offcanvas 추가 예정 -->
 
+     <!--  <div class="offcanvas offcanvas-end gnb-layout" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"> -->
       <div class="offcanvas-end gnb-layout" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header gnb-title">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          <div class="offcanvas-title" id="offcanvasRightLabel">
             <a href="#" class="logo">
-              <img src="../resources/images/logo.svg" alt="서울 지방변호사회 로고">
+              <img src="../resources/images/logo.svg" class="logo-img" alt="서울 지방변호사회 로고">
+              <img src="../resources/images/smal-logo.svg" class="logo-simg" alt="서울 지방변호사회 스몰 로고">
             </a>
-          </h5>
-          <button type="button" class="btn-close only-mob" data-bs-dismiss="offcanvas" aria-label="닫기"></button>
+          </div>
+          <!-- <button type="button" class="btn-close only-mob" data-bs-dismiss="offcanvas" aria-label="닫기"></button> -->
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body leftMenu">
           <div class="user-profile">
+            <!--프로필 [start]-->
             <div class="user-profile__thumbnail">
               <div class="images">
                 <img src="../resources/images/user-img01.svg" alt="회원 이미지">
@@ -114,9 +116,74 @@
               </a>
             </div>
           </div>
+          <!--프로필 [end]-->
+
+          <!--메뉴 [start]-->
+          <div class="menu">
+            <ul class="menu-list">
+              <li>
+                <a href="#" class="menuBtn on" title="선택됨">
+                  <i class="ico ico-chatGpt"></i>
+                  <span>AI통합검색</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="menuBtn">
+                  <i class="ico ico-case"></i>
+                  <span>사건관리</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="menuBtn">
+                  <i class="ico ico-ss"></i>
+                  <span>소송복대리</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="menuBtn" >
+                  <i class="ico ico-library"></i>
+                  <span>자료실</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="menuBtn" >
+                  <i class="ico ico-law"></i>
+                  <span>법조인명부</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="menuBtn" >
+                  <i class="ico ico-notice"></i>
+                  <span>공지사항</span>
+                </a>
+              </li>
+            </ul>
+
+
+          </div>
+          <!--메뉴 [end]-->
+          <button class="btn-menuSizeToggle" aria-label="메뉴사이즈 조절" aria-expanded="true"></button>
         </div>
       </div>
     </div>
+
+      
+  <script>
+    //.btn-menuSizeToggle 클릭시  #gnb에 .smallMenu 추가되고 aria-expanded="false"로 변경 
+    //만약 #gnb에 .smallMenu이 있으면 제거하고 aria-expanded="true"로 변경
+    //
+    $(document).ready(function () {
+      $('.btn-menuSizeToggle').click(function () {
+        if ($('#gnb').hasClass('smallMenu')) {
+          $('#gnb').removeClass('smallMenu');
+          $(this).attr('aria-expanded', 'true').removeClass('on');
+        } else {
+          $('#gnb').addClass('smallMenu');
+          $(this).attr('aria-expanded', 'false').addClass('on');
+        }
+      });
+    });
+  </script>
     <!--왼쪽 메뉴 [end] -->
 
 
@@ -126,5 +193,7 @@
   </div>
 
 </body>
+
+
 
 </html>

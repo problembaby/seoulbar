@@ -31,11 +31,11 @@
   --body-font-family: "Pretendard";
   --sub-font-family: "";
   --point-font-family: "";
-  --body-font-size: 16px;
+  --body-font-size: 14px;
   --body-font-weight: 400;
   --body-line-height: 1.5;
   --body-color: #1F2023;
-  --body-bg: #F8F9FC;
+  --body-bg: #3067a1;
 
   /* 색상 팔레트 */
   --blue: #0670ae;

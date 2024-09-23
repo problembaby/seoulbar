@@ -2,31 +2,73 @@
 @import url(setting/font/pretendard.css); /*폰트*/
 @import url(setting/vars.css); /*변수*/
 @import url(setting/common.css); /*common*/
-@import url(setting/board.css); /*게시판*/
-
 
 /** layout */
 #header{ background-color: var(--main2-color);; width: 100%; display: flex; height: 0;}
 #dashborad{display: flex; width: 100%; height: 100vh; padding: 0;
 }
 #gnb{
-  background-color: var(--main2-color); flex:1 0 290px;  justify-content: center; height: 100%; transition: all 0.2s ease-in-out; padding-top: var(--pc-content-topPadding);
+  background-color:transparent; 
+  width: 290px; 
+  justify-content: center; 
+  height: 100%; 
+  flex-basis: 1;
+  flex-shrink: 0;
+  transition: width 0s; /* width를 대상으로 transition 설정 */
+  padding-top: var(--pc-content-topPadding);
 }
-#contents{background-color: beige; flex:1 1 100%; padding-top: var(--pc-content-topPadding);}
+#contents{background-color: transparent; flex:1 1 100%; padding: 0 30px; padding-top: var(--pc-content-topPadding);}
 
+.whiteList{border-radius: 16px; background-color: #fff; overflow: hidden;}
+.whiteList li{ background-color: #fff; overflow: hidden; display: flex; height: 50px; align-items: center;border-bottom: 1px dotted #002839; justify-content: space-between; padding:0 12px; gap:10px}
+.whiteList li:last-child{border-bottom: 0;}
+
+
+.notice-list .state{width:63px; height: 26px; display: flex; justify-content: center; align-items: center; background-color: gray; color:#fff; border-radius: 5px; font-size: 12px; gap:5px; flex:0 63px}
+
+.notice-list .state.state-notice{background-color: #455785;}
+.notice-list .state.state-notice::before{content:""; display: block; background: url(../images/ico/ico-state-notice.svg); width: 12px; height: 10px;}
+
+.notice-list .state.state-case{background-color: #FF5545;}
+.notice-list .state.state-case::before{content:""; display: block; background: url(../images/ico/ico-state-case.svg);  width: 12px; height: 11px;}
+
+.notice-list .state.state-deputy{background-color: #458FFF;}
+.notice-list .state.state-deputy::before{content:""; display: block; background: url(../images/ico/ico-state-deputy.svg);  width: 11px; height: 12px;}
+
+.whiteList li .subject { flex: 1 1 410px;   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+.whiteList li .subject a {
+  font-size: 12px;
+  display: block; 
+  width: 100%; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  font-weight: 500;
+  box-sizing: border-box;
+}
+.whiteList li .subject a:hover{text-decoration: underline;}
+.whiteList li .writer{font-size: 12px; flex: 0 0 100px; font-weight: 500;}
+.whiteList li .date{font-size: 12px; flex: 0 0 100px; text-align: center; font-weight: 500;}
 
 /*스몰 메뉴 css*/
-#gnb.smallMenu{flex:1 0 70px; background-color: var(--main-color);  }
+#gnb.smallMenu{width:70px; background-color: var(--main-color);   transition: width 0.2s; /* width를 대상으로 transition 설정 */ }
 #gnb.smallMenu .user-profile__name,#gnb.smallMenu .user-profile__stats, #gnb.smallMenu .logo-img,#gnb.smallMenu .menuBtn span  {display: none;}
 
 #gnb.smallMenu .logo-simg{display: block;}
 
-#gnb.smallMenu .menu-list .menuBtn{width: 100%;}
+#gnb.smallMenu .menu-list .menuBtn{width: 100%; transition: all 0s;}
 
 #gnb.smallMenu .user-profile__thumbnail .images {
   width: 48px;
   height: 48px;
 }
+
+#gnb.smallMenu  .menu-list .menuBtn.on, #gnb.smallMenu  .menu-list .menuBtn:hover {
+  background-color: transparent;
+}
+
 
 
 
@@ -51,7 +93,7 @@
   top:5px
 }
 
-.user-profile__name{font-size: 18px; color:#fff; font-weight: 500; letter-spacing: 4px; }
+.user-profile__name{font-size: 18px; color:#fff; font-weight: 500; letter-spacing: 4px;text-align: center; }
 
 .user-profile__stats{ color:#fff; display: flex; gap:16px}
 
@@ -61,7 +103,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 
 .ico-message::before{display: block; content:""; width: 18px; height: 16px; background:url("../images/ico/ico-message.svg") no-repeat; background-size: 100% 100%; margin-right: 5px;}
 
-.menu{width: 100%; height: 100%; overflow: auto;
+.menu{width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden;
 
   padding-top: env(safe-area-inset-top, 0);
   &::-webkit-scrollbar {
@@ -144,6 +186,56 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .btn-menuSizeToggle.on::before{content: ""; background: url(../images/ico/ico-menurlarge.svg); width: 22px; height: 22px; display: block; background-size: 100% 100%;}
 
 .logo-simg{display: none;}
+
+
+.main-container{width: 100%; height: 100%; display: flex;  gap:30px}
+.main-container .left {width: 100%;  flex:1 1 50%; }
+.main-container .right {width: 100%;  flex:1 1 50%;  }
+
+.ai-search{border-radius: 16px; overflow: hidden; background-color: #fff;}
+.ai-search .form-control{  border:0; height: 60px;}
+
+.ai-search__btn{ background-color: #fff; width: 60px; display: flex; align-items: center; justify-content: center;}
+.ai-search__btn::before{
+  content: "";
+  background: url(../images/ico/ico-search.svg);
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: 100% 100%;
+}
+
+
+.sec-box{margin-top:20px; width: 100%;}
+.sec-box__title{font-size: 22px; color:#fff; margin-bottom: 16px;}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: var(--bs-nav-pills-link-active-color);
+  background-color: var(--main-color);
+}
+.nav-link:focus, .nav-link:hover, .nav-link {
+  color:#fff;
+  background-color: var(--main3-color);
+  font-size: 12px;
+}
+
+.mainTab{margin-bottom:10px}
+.mainTab .nav-link{width: 70px; height: 40px; padding:0 0px}
+
+
+.whiteTable{padding:12px; border-radius: 16px; background-color: #fff; overflow: hidden;}
+.thead-bg{background: #fff; position: relative;}
+.thead-bg tr th{background-color: #D3DBF9; text-align: center; }
+.tr-link tr td{cursor: pointer; text-align: center;}
+
+.td-subect{ 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  max-width: 250px;
+}
+
+.sec02 .whiteTable{max-height:330px; overflow: auto;}
 
 
 

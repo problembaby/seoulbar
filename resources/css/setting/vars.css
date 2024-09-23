@@ -10,9 +10,9 @@
   --------------------------------------------*/
 
 
-  --main-color: #1c4eba;           /* Primary Color*/
-  --main2-color: #333C50;           /* main color2*/
-  --main3-color: #B4D200;           /* main color2*/
+  --main-color: #0F3966;           /* Primary Color*/
+  --main2-color: #3067a1;           /* main color2*/
+  --main3-color: #83a4c7;           /* main color2*/
   --main4-color: #1C60A4;           /* main color2*/
 
   --sub-color: #1B4792;            /* Accent Color */
@@ -28,7 +28,7 @@
   --disableBg-color: #e8e8e8;      /* 비활성화 배경 색상 */ 
 
   /* 폰트 속성 */
-  --body-font-family: "NotoSansKR";
+  --body-font-family: "Pretendard";
   --sub-font-family: "";
   --point-font-family: "";
   --body-font-size: 16px;

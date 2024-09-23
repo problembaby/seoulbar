@@ -17,25 +17,6 @@ $(document).ready(function () {
 
 
 
-  // 스크롤바가 있는지 확인하고 패딩을 적용하는 함수
-  function adjustPaddingForScrollbar() {
-    const scrollbarWidth = 7; // body 스크롤바 너비
-    const bodyHasVerticalScroll = $('body')[0].scrollHeight > window.innerHeight;
-
-    if (bodyHasVerticalScroll) {
-      //스크롤 있을때
-      $('body').css('paddingRight', '0px');
-    } else {
-      //스크롤 없을때
-      $('body').css('paddingRight', `${scrollbarWidth}px`);
-    }
-  }
-
-  // 페이지 로드와 리사이즈 이벤트에 대응
-  $(window).on('load resize', adjustPaddingForScrollbar);
-
-
-
   //onlyNumber 클래스 추가시 숫자만 입력 하게 하는 함수
   $('.onlyNumber').on('input', function () {
     if (!$(this).val().match(/^[0-9]*$/)) {
@@ -58,31 +39,6 @@ $(document).ready(function () {
 
   });
 
-
-  // #menuBtn 메뉴 드롭 이벤트
-  $("#menuBtn").click(function (e) {
-    e.stopPropagation(); //버블링방지
-    let expanded = $(this).attr("aria-expanded") === "true" || false;
-    $(this).attr("aria-expanded", !expanded);
-    $("#lnb").fadeToggle('fast').attr("aria-hidden", expanded); // #lnb의 표시 상태를 전환합니다.
-  });
-
-  $(".gnbClose").click(function () {
-    $("#menuBtn").attr("aria-expanded", false);
-    $("#lnb").fadeOut('fast').attr("aria-hidden", true); // #lnb를 숨깁니다.
-  });
-
-  //외부 클릭 시 이벤트
-  $(document).click(function () {
-    $('#menuBtn').attr("aria-expanded", false);
-    $('#lnb').fadeOut('fast').attr("aria-hidden", true);
-
-  });
-
-  // #lnb 내부 클릭 시 이벤트 버블링 막기
-  $("#lnb").click(function (e) {
-    e.stopPropagation();
-  });
 
   // .dropdown 클릭 이벤트
   $("#lnb .dropdown").click(function (e) {
@@ -112,38 +68,12 @@ $(document).ready(function () {
   });
 
 
-  // 북마크 버튼 클릭 이벤트 
-  $('.bookmark, .btn-bookmark').click(function () {
-    $(this).toggleClass('on');
-    if ($(this).hasClass('on')) {
-      alert('관심사업에 등록되었습니다');
-    } else {
-      alert('관심사업에 등록이 취소되었습니다');
-    }
-  });
 
 
-  $('.btn-ww').click(function () {
-    $('.main-card').toggleClass('wideScreen');
-    $(this).toggleClass('on');
-  });
+
 
 });
 
-
-// 챗봇 사이즈 조절
-function adjustChatbotWidth() {
-  if ($(window).width() <= 1024) {
-    $('.main-card').addClass('fullScreen');
-  } else {
-    $('.main-card').removeClass('fullScreen');
-  }
-}
-
-// 페이지 로드 시 함수 실행
-$(document).ready(adjustChatbotWidth);
-// 윈도우 리사이즈 시 함수 실행
-$(window).resize(adjustChatbotWidth);
 
 
 
@@ -216,6 +146,8 @@ function activateTabs() {
 // }
 
 
+
+//파일 업로드시 파일명 표시
 $(function () {
   $('.upload_text').val('미리보여줄 텍스트.');
   $('.input_file').change(function () {
@@ -233,14 +165,5 @@ setupTopDropSelect();
 activateTabs();
 //setupTabDropdown();  // 탭 모바일시 드롭다운  
 
-//#header 가 70px 스크롤되었을떄 sticky 클래스 추가
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 100) {
-    $('#header').addClass('sticky');
-    $("#contents").css('padding-top', '70px'); //헤더 높이만큼 패딩 추가
-  } else {
-    $('#header').removeClass('sticky');
-    $("#contents").css('padding-top', '0');
-  }
-});
+
 

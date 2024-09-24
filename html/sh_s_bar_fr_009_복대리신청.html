@@ -125,7 +125,7 @@
           <div class="menu">
             <ul class="menu-list">
               <li>
-                <a href="#" class="menuBtn on" title="선택됨">
+                <a href="" class="menuBtn">
                   <i class="ico ico-chatGpt"></i>
                   <span>AI통합검색</span>
                 </a>
@@ -137,7 +137,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="menuBtn">
+                <a href="#" class="menuBtn on" title="선택됨">
                   <i class="ico ico-ss"></i>
                   <span>소송복대리</span>
                 </a>
@@ -202,15 +202,81 @@
     <!--컨텐츠 [start] -->
     <div id="contents">
       <div class="sub-container">
-        <h2 class="sr-only">복대리 신청</h2>
-
-        <div>
-
-          컨텐츠
+        <div class="inner">
+          <div class="subBg-line">
+            <div class="sub-title">
+              <i class="ico ico-ss"></i>
+              <h2>소송복대리</h2>
+            </div>
+          </div>
+  
+          <div class="borad-top-search-container">
+            <div class="borad-menuList">
+              <div class="sub-link-list left">
+                <a href="#" title="선택됨" class="subMenuLink on">복대리 신청</a>
+                <a href="#" class="subMenuLink">복대리 지원</a>
+                <a href="#" class="subMenuLink">내 복대리</a>
+              </div>
+              <div class="right">
+                <div class="switch-box">
+                  <input type="checkbox" id="switch1" class="chk-switch">
+                  <label for="switch1">나의 지역만 보기</label>
+                  <p class="chk_y" onclick="document.getElementById('switch1').click();">진행중</p>
+                  <p class="chk_n" onclick="document.getElementById('switch1').click();">종료</p>
+                </div>
+                
+                <button type="button" class="btn-alSet">관심지역 알림설정</button>
+              </div>
+            </div>
+  
+            <div class="search-area">
+              <div class="letf">
+                <div class="search-area__inputList">
+                  <select class="form-select" aria-label="지역선택">
+                    <option selected>지역선택</option>
+                    <option value="전체">전체</option>
+                    <option value="서울">서울</option>
+                    <option value="인천/경기도">인천/경기도</option>
+                    <option value="강원도">강원도</option>
+                    <option value="충청북도">충청북도</option>
+                    <option value="대전/세종/충청남도">대전/세종/충청남도</option>
+                    <option value="대구/경상북도">대구/경상북도</option>
+                    <option value="부산/울산/경상남도">부산/울산/경상남도</option>
+                    <option value="광주/전라남도">광주/전라남도</option>
+                    <option value="전라북도">전라북도</option>
+                    <option value="제주도">제주도</option>
+                  </select>
+      
+                  <select class="form-select" aria-label="각급법원 선택">
+                    <option selected>각급법원 선택</option>
+                    <option value="1">고등법원</option>
+                    <option value="2">지방법원</option>
+                    <option value="3">전문법원</option>
+                  </select>
+  
+                  <div class="date-group">
+                    <label for="search-date" class="sr-only">등록일</label>
+                    <div class="date-input-wrap">
+                      <input type="text" id="search-date-start" class="form-control datepicker date-input" placeholder="시작일">
+                      <span>~</span>
+                      <input type="text" id="search-date-end" class="form-control datepicker date-input" placeholder="종료일">
+                    </div>
+                  </div>
+  
+                  <button type="submit" class="btn-search btn btn-primary">조회</button>
+                </div>
+              </div>
+  
+  
+            </div>
+  
+  
+          </div>
         </div>
 
 
-      
+
+
         <!--footer [start]-->
         <footer id="footer">
           <div class="copiright">

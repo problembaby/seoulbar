@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서울지방변호사회 : 복대리신청</title>
+
+
+  <!-- 기본 파비콘 설정 -->
+  <link rel="icon" href="../resources/images/meta/favicon.ico" type="image/x-icon">
+
+  <!-- PNG 포맷 파비콘 (더 많은 브라우저와 플랫폼에서 지원) -->
+  <link rel="icon" href="../resources/images/meta/favicon-16x16.png" type="image/png">
+
+  <!-- 애플 터치 아이콘 (iOS) -->
+  <link rel="apple-touch-icon" href="../resources/images/meta/apple-icon.png">
+
+  <!-- 다양한 크기의 애플 터치 아이콘 -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../resources/images/meta/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../resources/images/meta/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../resources/images/meta/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../resources/images/meta/apple-icon-144x144.png">
+
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- 다양한 크기의 파비콘 설정 -->
+  <link rel="icon" sizes="16x16" href="../resources/images/meta/favicon-16x16.png">
+  <link rel="icon" sizes="32x32" href="../resources/images/meta/favicon-32x32.png">
+  <link rel="icon" sizes="96x96" href="../resources/images/meta/favicon-96x96.png">
+  <link rel="icon" sizes="192x192" href="../resources/images/meta/android-icon-192x192.png">
+
+  <!-- swiper -->
+  <script src="../resources/plugin/swiper-4.5.3/swiper.min.js"></script>
+  <link rel="stylesheet" href="../resources/plugin/swiper-4.5.3/swiper.css">
+
+  <!--jquery-->
+  <script src="../resources/plugin/jquery/jquery.min.js"></script>
+  <script src="../resources/plugin/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="../resources/plugin/jquery-ui-1.13.2/jquery-ui.min.css">
+  <script src="../resources/plugin/jquery-cookie/jquery.cookie.min.js"></script>
+
+  <!--aos-->
+  <link rel="stylesheet" href="../resources/plugin/aos/aos.css">
+  <script src="../resources/plugin/aos/aos.js"></script>
+
+  <!--fontawesome-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!--bootstrap-->
+  <link rel="stylesheet" href="../resources/plugin/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <script src="../resources/plugin/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../resources/css/style.css">
+
+  <!-- JS -->
+  <script src="../resources/js/style.js"></script>
+  <script src="../resources/js/modal.js"></script>
+  <script src="../resources/js/check.js"></script>
+  <style>
+
+    .form-container {
+        max-width: 1144px;
+        margin: 0 auto;
+        padding: 25px 30px;
+        border-radius: 15px;
+        background-color: #fff;
+    }
+
+    .inline input {
+        width: auto;
+        margin-right: 10px;
+    }
+    .inline label {
+        margin: 0 10px 0 0;
+    }
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+</head>
+
+<body>
+    <!--컨텐츠 [start] -->
+    <div id="contents">
+      <div class="sub-container">
+        <h2 class="sr-only">소송복대리 신청 팝업</h2>
+        <div class="form-sec sec-box">
+          <form class="form-container" action="/submit" method="POST">
+            <h2 class="form__title">복대리 신청</h2>
+            <div class="form-list form-row">
+              <!-- 신청 구분 -->
+              <div class="form-group col">
+                  <label class="label__title">신청구분</label>
+                  <div class="inline">
+                      <input type="radio" id="bokdaeri" name="application_type" value="bokdaeri" checked>
+                      <label for="bokdaeri">복대리</label>
+                      <input type="radio" id="jaesojeon" name="application_type" value="jaesojeon">
+                      <label for="jaesojeon">재소전 화해</label>
+                  </div>
+              </div>
+          
+              <!-- 관할 법원 -->
+              <div class="form-group col">
+                  <label class="label__title" for="region">관할법원</label>
+                  <div class="inline">
+                      <select id="region" class="col" name="region" required>
+                          <option value="">지역 선택</option>
+                          <option value="서울">서울</option>
+                          <option value="부산">부산</option>
+                          <!-- Add more options as needed -->
+                      </select>
+                      <select id="court" class="col" name="court" required>
+                          <option value="">각급법원 선택</option>
+                          <!-- Add options for courts here -->
+                      </select>
+                  </div>
+              </div>
+            </div>
+            
+            <div class="form-list">
+              <!-- 제목 -->
+              <div class="form-group">
+                  <label class="label__title" for="title">제목</label>
+                  <input type="text" id="title" name="title" placeholder="제목에는 연락처 및 메일주소를 입력하지 않습니다." required>
+              </div>
+            </div>
+        
+            <div class="form-list">
+              <!-- 공고 기간 -->
+              <div class="form-group">
+                  <label class="label__title" for="date">공고기간</label>
+                  <div class="inline">
+                      <input type="date" id="date" name="date" required>
+                      <input type="time" id="time" name="time" required>
+                  </div>
+              </div>
+            </div>
+            
+            <div class="form-list form-row">
+              <!-- 사무실명, 담당자명 -->
+              <div class="form-group col">
+                  <label class="label__title" for="office_name">사무실명</label>
+                  <input type="text" id="office_name" name="office_name">
+              </div>
+          
+              <div class="form-group col">
+                  <label class="label__title" for="person_in_charge">담당자명</label>
+                  <input type="text" id="person_in_charge" name="person_in_charge">
+              </div>
+            </div>
+            <div class="form-list form-row">
+              <!-- 연락처 -->
+              <div class="form-group col">
+                  <label class="label__title" for="contact">연락처</label>
+                  <div class="inline">
+                    <input type="tel" id="contact" name="contact" placeholder="010 0000 0000" required>
+                    <input type="tel" id="contact" name="contact" placeholder="기타 입력" required>
+                  </div>
+              </div>
+          
+              <!-- 이메일 -->
+              <div class="form-group col">
+                  <label class="label__title" for="email">이메일</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="form-list form-row">
+              <!-- 사건명, 구분 -->
+              <div class="form-group col">
+                  <label class="label__title" for="case_name">사건명</label>
+                  <input type="text" id="case_name" name="case_name">
+              </div>
+          
+              <div class="form-group col">
+                  <label class="label__title">구분</label>
+                  <div class="inline">
+                      <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                      <label for="plaintiff">원고</label>
+                      <input type="radio" id="defendant" name="case_type" value="defendant">
+                      <label for="defendant">피고</label>
+                  </div>
+              </div>
+            </div>
+            
+            <div class="form-list form-row">
+              <!-- 재판일시, 금액 -->
+              <div class="form-group col">
+                  <label class="label__title" for="trial_date">재판일시</label>
+                  <div class="inline">
+                    <input type="text" id="year" name="year">
+                    <input type="text" id="month" name="month">
+                    <input type="text" id="date" name="date">
+                  </div>
+              </div>
+          
+              <div class="form-group col">
+                  <label class="label__title" for="amount">금액</label>
+                  <input type="text" id="amount" name="amount" required>
+              </div>
+            </div>
+            
+            <div class="form-list form-row">
+              <!-- 세금계산서 발행 여부 -->
+              <div class="form-group col">
+                  <label class="label__title">세금계산서<br> 발행 여부</label>
+                  <div class="inline">
+                      <input type="radio" id="issued" name="tax_invoice" value="issued" checked>
+                      <label for="issued">발행</label>
+                      <input type="radio" id="not_issued" name="tax_invoice" value="not_issued">
+                      <label for="not_issued">미발행</label>
+                  </div>
+              </div>
+          
+              <!-- 부가세 포함 여부 -->
+              <div class="form-group col">
+                  <label class="label__title">부가세 포함 여부</label>
+                  <div class="inline">
+                      <input type="radio" id="included" name="vat" value="included" checked>
+                      <label for="included">포함</label>
+                      <input type="radio" id="not_included" name="vat" value="not_included">
+                      <label for="not_included">별도</label>
+                  </div>
+              </div>
+            </div>
+            
+            <div class="form-list">
+              <!-- 내용 -->
+              <div class="form-group">
+                  <label class="label__title details__title" for="details">내용</label>
+                  <textarea id="details" name="details" placeholder="본문 내용에는 연락처 및 메일주소를 입력하지 않습니다." rows="5"></textarea>
+              </div>
+            </div>
+        
+            <!-- Submit Button -->
+            <div class="form-group form-button">
+                <button type="submit">취소</button>
+                <button type="submit">등록</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--컨텐츠 [end] -->
+
+  </div>
+</body>
+
+
+
+</html>

@@ -259,7 +259,7 @@
                     <div class="date-input-wrap">
                       <input type="text" id="search-date-start" class="form-control datepicker  formStyle01"
                         placeholder="시작일">
-                    
+
                       <input type="text" id="search-date-end" class="form-control datepicker  formStyle01"
                         placeholder="종료일">
                     </div>
@@ -305,26 +305,28 @@
                   </colgroup>
                   <thead class="thead-bg">
                     <tr>
-                      <th scope="col">일자</th>
-                      <th scope="col">시간</th>
-                      <th scope="col">사건번호</th>
+                      <th scope="col">NO</th>
                       <th scope="col">구분</th>
-                      <th scope="col">내용</th>
-                      <th scope="col">의뢰인</th>
-                      <th scope="col">변호사</th>
+                      <th scope="col">법원구분</th>
+                      <th scope="col">제목</th>
+                      <th scope="col">작성자</th>
+                      <th scope="col">금액</th>
+                      <th scope="col">재판일시</th>
+                      <th scope="col">진행상황</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr >
-                      <td>2024.08.16</td>
-                      <td>10:26</td>
-                      <td>2001헌바82645</td>
-                      <td>서면</td>
+                    <tr>
+                      <td>1203</td>
+                      <td>복대리</td>
+                      <td>서울중앙지방법원</td>
+                      <td>서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</td>
                       <td>
-                        <p class="td-subect"><a href="#">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</a></p>
+                        홍길동
                       </td>
-                      <td>주식회사</td>
-                      <td>홍길동</td>
+                      <td>110,000</td>
+                      <td>2024. 9. 4. 11:00</td>
+                      <td><span class="state-ing">진행중</span></td>
                     </tr>
 
 
@@ -332,8 +334,50 @@
 
                   </tbody>
                 </table>
+              </div>
+
+              
+              <!--pc버전 페이징 [ start]-->
+              <div class="page only-pc-flex">
+                <a href="#none" class="a-firstpage"
+                aria-label="다음 페이지 그룹으로">다음 페이지</a>
+              <a href="#none" class="a-prevpage"
+                aria-label="마지막 페이지 그룹으로">첫</a>
+
+                <ul class="ul-page-list" aria-label="페이지 목록">
+
+                  <li class="active">
+                    <a href="#none" class="a-page-el a-current-page" aria-current="page" title="현재 1 페이지">1</a>
+                  </li>
+                  <li><a href="#none" class="a-page-el"
+                      title="페이지 2 이동">2</a></li>
+                  <li><a href="#none" class="a-page-el"
+                      title="페이지 3 이동">3</a></li>
+
+                  <li><a href="#none" class="a-page-el"
+                      title="페이지 4 이동">4</a></li>
+                  <li><a href="#none"  class="a-page-el"
+                      title="페이지 5 이동">5</a></li>
+                  <li><a href="#none"  class="a-page-el"
+                      title="페이지 6 이동">6</a></li>
+                  <li><a href="#none" class="a-page-el"
+                      title="페이지 7 이동">7</a></li>
+                  <li><a href="#none" class="a-page-el"
+                      title="페이지 8 이동">8</a></li>
+                  <li><a href="#none"  class="a-page-el"
+                      title="페이지 9 이동">9</a></li>
+                  <li><a href="#none"  class="a-page-el"
+                      title="페이지 10 이동">10</a></li>
+                </ul>
+
+                <a href="#none" class="a-nextpage"
+                  aria-label="다음 페이지 그룹으로">다음 페이지</a>
+                <a href="#none" class="a-lastpage"
+                  aria-label="마지막 페이지 그룹으로">마지막</a>
 
               </div>
+              <!--pc버전 페이징 [ end]-->
+
             </div>
 
 

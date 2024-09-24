@@ -458,7 +458,104 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .btn-search::before{content: ""; background: url(../images/ico/ico-btnSearch.svg); width: 20px; height: 20px; display: block; background-size: 100% 100%;}
 
 .border-contents .inner{
-  
+
+}
+
+
+
+/* 페이징 넘버링 */
+.page {
+  --page-el-width: 34px;
+  --page-el-height: 34px;
+  --paging-color: #1c4eba;
+  margin-top: 54px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.ul-page-list {
+  display: flex;
+  margin: 0 15px;
+}
+.ul-page-list li ~ li {
+  margin-left: 5px;
+}
+.a-page-el {
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.a-current-page {
+  background:#0F3966;
+  color: #fff;
+  border-radius: 4px;
+}
+.a-firstpage,
+.a-prevpage,
+.a-nextpage,
+.a-lastpage {
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  margin: 0 3px;
+}
+
+.a-firstpage::after {
+  display: inline-block;
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  margin-top: -2px;
+  vertical-align: middle;
+  background: url(../images/common/a-firstpage.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  content: "";
+}
+
+.a-prevpage::after {
+  display: inline-block;
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  margin-top: -2px;
+  vertical-align: middle;
+  background: url(../images/common/a-prevpage.png) no-repeat;
+  content: "";
+  background-size: cover;
+  background-position: center center;
+}
+
+.a-nextpage::after {
+  display: inline-block;
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  margin-top: -2px;
+  vertical-align: middle;
+  background: url(../images/common/a-nextpage.png) no-repeat;
+  content: "";
+  background-size: cover;
+  background-position: center;
+}
+
+.a-lastpage::after {
+  display: inline-block;
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  margin-top: -2px;
+  vertical-align: middle;
+  background: url(../images/common/a-lastpage.png) no-repeat;
+  content: "";
+  background-size: cover;
+  background-position: center;
 }
 
 

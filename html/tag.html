@@ -222,6 +222,36 @@
         </div>
       </form>
 
+
+
+
+       <!--등록일-->
+       <div class="search-group date">
+        <label for="search-date" class="tit">등록일</label>
+        <div class="date-input-wrap">
+          <input type="text" id="search-date-start" class="form-control datepicker date-input" placeholder="시작일">
+          <span>~</span>
+          <input type="text" id="search-date-end" class="form-control datepicker date-input" placeholder="종료일">
+        </div>
+      </div>
+      <script>
+        function initializeDatepicker() {
+          $(".datepicker").datepicker({
+            dateFormat: 'yy-mm-dd',
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'],
+            dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
+            showMonthAfterYear: true,
+          });
+          $(".datepicker").datepicker('setDate', 'today');
+        }
+
+        $(function () {
+          initializeDatepicker();
+        });
+      </script>
+
       <h2 id="tab">#탭</h2>
       
       

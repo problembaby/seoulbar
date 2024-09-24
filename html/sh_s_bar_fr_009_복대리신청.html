@@ -209,7 +209,7 @@
               <h2>소송복대리</h2>
             </div>
           </div>
-  
+
           <div class="borad-top-search-container">
             <div class="borad-menuList">
               <div class="sub-link-list left">
@@ -224,15 +224,15 @@
                   <p class="chk_y" onclick="document.getElementById('switch1').click();">진행중</p>
                   <p class="chk_n" onclick="document.getElementById('switch1').click();">종료</p>
                 </div>
-                
+
                 <button type="button" class="btn-alSet">관심지역 알림설정</button>
               </div>
             </div>
-  
+
             <div class="search-area">
               <div class="letf">
                 <div class="search-area__inputList">
-                  <select class="form-select" aria-label="지역선택">
+                  <select class="form-select formStyle01" aria-label="지역선택">
                     <option selected>지역선택</option>
                     <option value="전체">전체</option>
                     <option value="서울">서울</option>
@@ -246,31 +246,97 @@
                     <option value="전라북도">전라북도</option>
                     <option value="제주도">제주도</option>
                   </select>
-      
-                  <select class="form-select" aria-label="각급법원 선택">
+
+                  <select class="form-select formStyle01" aria-label="각급법원 선택">
                     <option selected>각급법원 선택</option>
                     <option value="1">고등법원</option>
                     <option value="2">지방법원</option>
                     <option value="3">전문법원</option>
                   </select>
-  
+
                   <div class="date-group">
-                    <label for="search-date" class="sr-only">등록일</label>
+                    <label for="search-date" class="sr-only">공고일</label>
                     <div class="date-input-wrap">
-                      <input type="text" id="search-date-start" class="form-control datepicker date-input" placeholder="시작일">
-                      <span>~</span>
-                      <input type="text" id="search-date-end" class="form-control datepicker date-input" placeholder="종료일">
+                      <input type="text" id="search-date-start" class="form-control datepicker  formStyle01"
+                        placeholder="시작일">
+                    
+                      <input type="text" id="search-date-end" class="form-control datepicker  formStyle01"
+                        placeholder="종료일">
                     </div>
                   </div>
-  
-                  <button type="submit" class="btn-search btn btn-primary">조회</button>
+
+                  <button type="submit" class="btn btn-primary btn-search">조회</button>
                 </div>
               </div>
-  
-  
+
+              <div class="right">
+                <div class="search-area__inputList">
+                  <select class="form-select formStyle01" aria-label="정렬순">
+                    <option value="등록일순">등록일순</option>
+                    <option value="기일임박">기일임박</option>
+                  </select>
+                  <select class="form-select formStyle01">
+                    <option value="제목순">제목순</option>
+                    <option value="관할법원순">관할법원순</option>
+                    <option value="작성자순">작성자순</option>
+                  </select>
+                  <input type="text" class="form-control formStyle240" placeholder="검색어를 입력하세요.">
+                  <button type="submit" class="btn-search btn btn-primary">검색</button>
+                </div>
+              </div>
+
+
             </div>
-  
-  
+
+            <div class="border-contents">
+              <div class="whiteTable">
+                <table class="table table-hover tr-link mb0">
+                  <caption>
+                    사건 진행 현황
+                  </caption>
+                  <colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 5%;">
+                    <col style="width: auto;">
+                    <col style="width: 10%;">
+                    <col style="width: 250px;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                  </colgroup>
+                  <thead class="thead-bg">
+                    <tr>
+                      <th scope="col">일자</th>
+                      <th scope="col">시간</th>
+                      <th scope="col">사건번호</th>
+                      <th scope="col">구분</th>
+                      <th scope="col">내용</th>
+                      <th scope="col">의뢰인</th>
+                      <th scope="col">변호사</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr >
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect"><a href="#">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</a></p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+
+
+
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+
+
           </div>
         </div>
 

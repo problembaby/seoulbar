@@ -73,18 +73,19 @@
   </div>
   <!--접근성-->
 
-  <header id="header">
+  <header id="header" class="only-mob">
 
-    <!--    <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">모바일 메뉴</button>  -->
+    <a href="#" class="mobile-logo" title="페이지 이동">
+      <img src="../resources/images/mobile_logo.svg" alt="서울지방변호사회 로고" />
+    </a>
+    <button class="only-mob gnbMenuToggle" id="gnbMenu" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></button>
 
   </header>
   <div class="container-fluid" id="dashborad">
 
     <!--왼쪽 메뉴 [start] -->
     <div class="gnb" id="gnb">
-      <!-- TODO: 모바일에서 메뉴 클릭 시 .offcanvas 추가 예정 -->
-
-      <!--  <div class="offcanvas offcanvas-end gnb-layout" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"> -->
       <div class="offcanvas-end gnb-layout" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header gnb-title">
           <div class="offcanvas-title" id="offcanvasRightLabel">
@@ -93,7 +94,8 @@
               <img src="../resources/images/smal-logo.svg" class="logo-simg" alt="서울 지방변호사회 스몰 로고">
             </a>
           </div>
-          <!-- <button type="button" class="btn-close only-mob" data-bs-dismiss="offcanvas" aria-label="닫기"></button> -->
+          <div class="menuRightClosePosi" data-bs-theme="dark"><button type="button" class="btn-close only-mob "
+              data-bs-dismiss="offcanvas" aria-label="닫기"></button> </div>
         </div>
         <div class="offcanvas-body leftMenu">
           <div class="user-profile">
@@ -135,7 +137,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="menuBtn">
+                <a href="sh_s_bar_fr_009_복대리신청.html" class="menuBtn">
                   <i class="ico ico-ss"></i>
                   <span>소송복대리</span>
                 </a>
@@ -181,6 +183,17 @@
             $(this).attr('aria-expanded', 'false').addClass('on');
           }
         });
+
+        // 너비 1024px 이하일 때 #offcanvasRight에 .offcanvas 추가
+        // #gnb에서 .smallMenu 클래스 삭제도 추가
+        $(window).resize(function () {
+          if ($(window).width() <= 1024) {
+            $('#offcanvasRight').addClass('offcanvas');
+            $('#gnb').removeClass('smallMenu');
+          } else {
+            $('#offcanvasRight').removeClass('offcanvas');
+          }
+        });
       });
     </script>
     <!--왼쪽 메뉴 [end] -->
@@ -192,13 +205,7 @@
         <h2 class="sr-only">메인보드</h2>
         <div class="left">
 
-          <form action="#">
-            <div class="input-group ai-search">
-              <label for="search" class="sr-only">ai통합검색</label>
-              <input type="text" class="form-control" placeholder="AI Integrated Search" id="search" required>
-              <button class="ai-search__btn" type="submit"></button>
-            </div>
-          </form>
+
 
           <section class="sec-box sec01">
             <h3 class="sec-box__title">최근알림</h3>
@@ -267,12 +274,34 @@
                     <div class="writer">홍길동</div>
                     <div class="date">2024.08.16</div>
                   </li>
+                  <li>
+                    <span class="state state-notice">공지</span>
+                    <div class="subject">
+                      <a href="#" title="페이지 이동">
+
+                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                      </a>
+                    </div>
+                    <div class="writer">홍길동</div>
+                    <div class="date">2024.08.16</div>
+                  </li>
                 </ul>
 
               </div>
               <div class="tab-pane fade" id="notice-announcement-cont" role="tabpanel"
                 aria-labelledby="notice-announcement" tabindex="0">
                 <ul class="whiteList notice-list">
+                  <li>
+                    <span class="state state-notice">공지</span>
+                    <div class="subject">
+                      <a href="#" title="페이지 이동">
+
+                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                      </a>
+                    </div>
+                    <div class="writer">홍길동</div>
+                    <div class="date">2024.08.16</div>
+                  </li>
                   <li>
                     <span class="state state-notice">공지</span>
                     <div class="subject">
@@ -352,6 +381,13 @@
                     <div class="writer">2022가합15802</div>
                     <div class="date">2024.08.16</div>
                   </li>
+                  <li>
+                    <span class="state state-case">사건</span>
+                    <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인</a>
+                    </div>
+                    <div class="writer">2022가합15802</div>
+                    <div class="date">2024.08.16</div>
+                  </li>
 
                 </ul>
 
@@ -360,6 +396,16 @@
                 tabindex="0">
 
                 <ul class="whiteList notice-list">
+                  <li>
+                    <span class="state state-deputy">복대리</span>
+                    <div class="subject">
+                      <a href="#" title="페이지 이동">
+                        복대리 신청이 완료되었습니다.
+                      </a>
+                    </div>
+                    <div class="writer">서울중앙지방법원</div>
+                    <div class="date">2024.08.16</div>
+                  </li>
                   <li>
                     <span class="state state-deputy">복대리</span>
                     <div class="subject">
@@ -485,7 +531,9 @@
                         <td>10:26</td>
                         <td>2001헌바82645</td>
                         <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
@@ -495,7 +543,9 @@
                         <td>10:26</td>
                         <td>2001헌바82645</td>
                         <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
@@ -504,7 +554,9 @@
                         <td>10:26</td>
                         <td>2001헌바82645</td>
                         <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
@@ -513,7 +565,9 @@
                         <td>10:26</td>
                         <td>2001헌바82645</td>
                         <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
@@ -522,22 +576,15 @@
                         <td>10:26</td>
                         <td>2001헌바82645</td>
                         <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
-                      <tr onclick="window.location.href='#'" tabindex="0">
-                        <td>2024.08.16</td>
-                        <td>10:26</td>
-                        <td>2001헌바82645</td>
-                        <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
-                        <td>주식회사</td>
-                        <td>홍길동</td>
-                      </tr>
-   
 
-                      
+
+
                     </tbody>
                   </table>
                 </div>
@@ -577,15 +624,17 @@
                         <td>10:26</td>
                         <td>2001헌바82645</td>
                         <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
-                
+
                     </tbody>
                   </table>
 
-              </div>
+                </div>
               </div>
               <div class="tab-pane fade" id="caseUpdate-order-cont" role="tabpanel" aria-labelledby="caseUpdate-order"
                 tabindex="0">
@@ -620,17 +669,19 @@
                         <td>10:26</td>
                         <td>2001헌바82645</td>
                         <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
-                
+
                     </tbody>
                   </table>
 
+                </div>
               </div>
-              </div>
-            
+
               <div class="tab-pane fade" id="caseUpdate-documents-cont" role="tabpanel"
                 aria-labelledby="caseUpdate-documents" tabindex="0">
                 <div class="whiteTable">
@@ -664,15 +715,17 @@
                         <td>10:26</td>
                         <td>2001헌바82645</td>
                         <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
-                
+
                     </tbody>
                   </table>
 
-              </div>
+                </div>
               </div>
               <div class="tab-pane fade" id="caseUpdate-delivery-cont" role="tabpanel"
                 aria-labelledby="caseUpdate-delivery" tabindex="0">
@@ -707,15 +760,16 @@
                         <td>10:26</td>
                         <td>2001헌바82645</td>
                         <td>서면</td>
-                        <td><p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p></td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
-                
+
                     </tbody>
                   </table>
-
-              </div>
+                </div>
               </div>
             </div>
           </section>
@@ -724,12 +778,207 @@
 
         </div>
         <div class="right">
-          오른쪽
+          <section class="sec-box sec03">
+            <ul class="notification-list">
+              <li>
+                <a href="#" title="페이지이동" class="notification-item">
+                  <div class="tit">전체공지</div>
+                  <div class="value">1</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" title="페이지이동" class="notification-item">
+                  <div class="tit">사건업데이트현황</div>
+                  <div class="value">4</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" title="페이지이동" class="notification-item">
+                  <div class="tit">신규 복대리</div>
+                  <div class="value">16</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" title="페이지이동" class="notification-item">
+                  <div class="tit">내가 쓴 글</div>
+                  <div class="value">299</div>
+                </a>
+              </li>
+            </ul>
+
+
+          </section>
+
+
+          <section class="sec-box sec04">
+            <div class="calender-container">
+              <div class="cal-top">
+                <div class="calendar-year">
+                  <span class="year-nav prev"></span>
+                  <div class="year-display">2024.09</div>
+                  <span class="year-nav next"></span>
+                </div>
+
+                <div>
+                  <button>Week</button>
+                  <button>Month</button>
+                </div>
+              </div>
+              <div class="cal-cont">
+
+              </div>
+            </div>
+
+
+
+            <div class="calTable">
+              <ul class="nav nav-pills mainTab" id="calender-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="calender-all" data-bs-toggle="pill"
+                    data-bs-target="#calender-all-cont" type="button" role="tab" aria-controls="calender-all-cont"
+                    aria-selected="true">통합</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="calender-case-management" data-bs-toggle="pill"
+                    data-bs-target="#calender-case-management-cont" type="button" role="tab"
+                    aria-controls="calender-case-management-cont">사건관리</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="calender-deputy" data-bs-toggle="pill"
+                    data-bs-target="#calender-deputy-cont" type="button" role="tab"
+                    aria-controls="calender-deputy-cont">복대리</button>
+                </li>
+              </ul>
+              <div class="whiteTable">
+
+                <div class="tab-content" id="calender-tabContent">
+                  <div class="tab-pane fade show active" id="calender-all-cont" role="tabpanel"
+                    aria-labelledby="calender-all" tabindex="0">
+
+                    <table class="table table-hover tr-link mb0">
+                      <caption>
+                        캘린더 별 사건 진행 현황
+                      </caption>
+                      <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width: 5%;">
+                        <col style="width: auto;">
+                        <col style="width: 10%;">
+                        <col style="width: 250px;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                      </colgroup>
+                      <thead class="thead-bg">
+                        <tr>
+                          <th scope="col">일자</th>
+                          <th scope="col">시간</th>
+                          <th scope="col">사건번호</th>
+                          <th scope="col">구분</th>
+                          <th scope="col">내용</th>
+                          <th scope="col">의뢰인</th>
+                          <th scope="col">변호사</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr onclick="window.location.href='#'" tabindex="0">
+                          <td>2024.08.16</td>
+                          <td>10:26</td>
+                          <td>2001헌바82645</td>
+                          <td>서면</td>
+                          <td>
+                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                          </td>
+                          <td>주식회사</td>
+                          <td>홍길동</td>
+                        </tr>
+                        <tr onclick="window.location.href='#'" tabindex="0">
+                          <td>2024.08.16</td>
+                          <td>10:26</td>
+                          <td>2001헌바82645</td>
+                          <td>서면</td>
+                          <td>
+                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                          </td>
+                          <td>주식회사</td>
+                          <td>홍길동</td>
+                        </tr>
+                        <tr onclick="window.location.href='#'" tabindex="0">
+                          <td>2024.08.16</td>
+                          <td>10:26</td>
+                          <td>2001헌바82645</td>
+                          <td>서면</td>
+                          <td>
+                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                          </td>
+                          <td>주식회사</td>
+                          <td>홍길동</td>
+                        </tr>
+                        <tr onclick="window.location.href='#'" tabindex="0">
+                          <td>2024.08.16</td>
+                          <td>10:26</td>
+                          <td>2001헌바82645</td>
+                          <td>서면</td>
+                          <td>
+                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                          </td>
+                          <td>주식회사</td>
+                          <td>홍길동</td>
+                        </tr>
+                        <tr onclick="window.location.href='#'" tabindex="0">
+                          <td>2024.08.16</td>
+                          <td>10:26</td>
+                          <td>2001헌바82645</td>
+                          <td>서면</td>
+                          <td>
+                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                          </td>
+                          <td>주식회사</td>
+                          <td>홍길동</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                  <div class="tab-pane fade" id="calender-case-management-cont" role="tabpanel"
+                    aria-labelledby="calender-case-management" tabindex="0">
+                    2
+                  </div>
+
+                  <div class="tab-pane fade" id="calender-deputy-cont" role="tabpanel" aria-labelledby="calender-deputy"
+                    tabindex="0">
+                    3
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+
         </div>
+        <!--footer [start]-->
+        <footer id="footer">
+          <div class="copiright">
+            Copyright(c) SEOUL BAR ASSOCIATION. All Rights Reserved.
+          </div>
+        </footer>
+        <!--footer [end]-->
       </div>
+
+
+
     </div>
     <!--컨텐츠 [end] -->
+
+
+
   </div>
+
+
 
 </body>
 

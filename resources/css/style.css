@@ -4,20 +4,30 @@
 @import url(setting/common.css); /*common*/
 
 /** layout */
-#header{ background-color: var(--main2-color);; width: 100%; display: flex; height: 0;}
-#dashborad{display: flex; width: 100%; height: 100vh; padding: 0;
+#header{ background-color: var(--main2-color);; width: 100%; display: flex; height: 0; justify-content: space-between; padding:20px; align-items: center;}
+#dashborad{display: flex; width: 100%; height: auto;  padding: 0; align-items: stretch;
 }
 #gnb{
   background-color:transparent; 
   width: 290px; 
   justify-content: center; 
-  height: 100%; 
   flex-basis: 1;
   flex-shrink: 0;
   transition: width 0s; /* width를 대상으로 transition 설정 */
   padding-top: var(--pc-content-topPadding);
+  background-color: var(--main2-color);
 }
-#contents{background-color: transparent; flex:1 1 100%; padding: 0 30px; padding-top: var(--pc-content-topPadding);}
+#contents{background-color: transparent; width: 100%; padding: 0 30px; padding-top: var(--pc-content-topPadding); }
+#footer{
+  bottom:0px;
+  background-color: var(--main2-color); 
+  width: 100%; 
+  height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+}
 
 .whiteList{border-radius: 16px; background-color: #fff; overflow: hidden;}
 .whiteList li{ background-color: #fff; overflow: hidden; display: flex; height: 50px; align-items: center;border-bottom: 1px dotted #002839; justify-content: space-between; padding:0 12px; gap:10px}
@@ -72,7 +82,7 @@
 
 
 
-.gnb-layout{display: flex; flex-direction: column; align-items: center; height: 100%; }
+.gnb-layout{display: flex; flex-direction: column; align-items: center; /* height: 100%; */ }
 .gnb-title{margin-bottom: 38px;}
 
 
@@ -188,9 +198,11 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .logo-simg{display: none;}
 
 
-.main-container{width: 100%; height: 100%; display: flex;  gap:30px}
-.main-container .left {width: 100%;  flex:1 1 50%; }
-.main-container .right {width: 100%;  flex:1 1 50%;  }
+.main-container{width: 100%;  display: flex;  gap:0 30px; flex-wrap: wrap;}
+.main-container .left {width: 100%;  flex:1 1 45%; }
+.main-container .right {width: 100%;  flex:1 1 45%;  }
+
+.sub-container{width: 100%; height: 100%;  min-height: calc(100vh - 40px);}
 
 .ai-search{border-radius: 16px; overflow: hidden; background-color: #fff;}
 .ai-search .form-control{  border:0; height: 60px;}
@@ -206,7 +218,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 
 
-.sec-box{margin-top:20px; width: 100%;}
+.sec-box{margin-bottom:36px; width: 100%;}
 .sec-box__title{font-size: 22px; color:#fff; margin-bottom: 16px;}
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -223,10 +235,10 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .mainTab .nav-link{width: 70px; height: 40px; padding:0 0px}
 
 
-.whiteTable{padding:12px; border-radius: 16px; background-color: #fff; overflow: hidden;}
+.whiteTable{padding:12px; border-radius: 16px; background-color: #fff;}
 .thead-bg{background: #fff; position: relative;}
 .thead-bg tr th{background-color: #D3DBF9; text-align: center; }
-.tr-link tr td{cursor: pointer; text-align: center;}
+.tr-link tr td{cursor: pointer; text-align: center; height: 50px; font-size: 12px; vertical-align: middle; font-weight: 500;}
 
 .td-subect{ 
   white-space: nowrap; 
@@ -235,12 +247,79 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   max-width: 250px;
 }
 
-.sec02 .whiteTable{max-height:330px; overflow: auto;}
+.sec02 .whiteTable, .calTable .whiteTable{max-height:330px; overflow: auto;
+}
 
 
+.notification-list{display: flex; gap:25px; justify-content: space-between;}
+.notification-list li{display: flex;}
+.notification-list li a{width: 180px; height: 110px; display: flex; flex-direction: column; align-items: center; background-color: #fff; border-radius: 16px; justify-content: space-between; overflow: hidden;
+  box-shadow: 0 10px 0 #184F88;}
 
-@media screen and (max-width: 1366px) {
+.notification-list li a .tit {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  background: linear-gradient(to bottom, #FFFFFF, #DEDEDE);
+  position: relative;
+  color:#000
+}
+.notification-list li a .tit::before {
+ content: "";
+ display: block;
+ background: url(../images/common/notification-deco.svg);
+ width: 18px;
+ height: 10px;
+ position: absolute;
+ top: 100%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+.notification-list li a .value {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color:#0F3966;
+  font-size:26px
+}
+
+.calTable{margin-top: 36px;}
+.gnbMenuToggle{background-color: transparent;}
+.gnbMenuToggle::before{content:""; background: url(../images/meneBtn.svg); width: 50px; height: 38px; display: block; background-size: cover;}
+
+.mobile-logo{max-width: 300px; width: 100%;}
+.menuRightClosePosi{position: absolute; right: 30px; top:30px}
+
+
+@media screen and (max-width: 1800px) {
+  .notification-list li a {
+    width: 160px;
+}
+
+}
+@media screen and (max-width: 1440px) {
   /* 노트북 해상도  */
+  #gnb {
+    width: 220px;
+}
+.notification-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.td-subect {
+  max-width: 120px;
+}
 
 }
 @media screen and (max-width: 1280px) {
@@ -249,6 +328,44 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 
 @media screen and (max-width: 1024px) {
   /* 태블릿 해상도 */
+  #header {
+    height: 100px;
+}
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+#gnb {
+  width: 0;
+}
+.gnb-layout{
+  background-color: var(--main2-color);
+}
+.notification-list li a {
+  width: 100%;
+}
+.notification-list li {
+  display: flex;
+  flex: 1 1 48%;
+}
+.notification-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-menuSizeToggle{display: none;}
+
+.gnb-title {
+  margin-bottom: 0;
+  margin-top:20px
+}
+
+
+
 }
 
 @media screen and (max-width: 882px) {
@@ -256,7 +373,22 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 
 @media screen and (max-width: 768px) {
+  .mobile-logo {
+    max-width: 200px;
+    width: 100%;
+}
 
+.gnbMenuToggle::before {
+  content: "";
+  background: url(../images/meneBtn.svg);
+  width: 24px;
+  height: 20px;
+  display: block;
+  background-size: cover;
+}
+#header {
+  height: 60px;
+}
 }
 
 @media screen and (max-width: 576px) {
@@ -264,6 +396,19 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 
 @media screen and (max-width: 480px) {
+  .mobile-logo {
+    max-width: 160px;
+    width: 100%;
+}
+
+.gnbMenuToggle::before {
+  content: "";
+  background: url(../images/meneBtn.svg);
+  width: 24px;
+  height: 20px;
+  display: block;
+  background-size: cover;
+}
 }
 
 @media screen and (max-width: 320px) {

@@ -54,7 +54,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="../resources/css/style.css">
-  <link rel="stylesheet" href="../resources/css/board.css">
 
   <!-- JS -->
   <script src="../resources/js/style.js"></script>
@@ -235,7 +234,7 @@
               <div class="form-group col">
                 <label class="label__title" for="contact">연락처<span class="required">*</span></label>
                 <div class="form-group__inputWarp">
-                  <input type="tel" id="contact" name="contact" placeholder="010 0000 0000" required>
+                  <input type="tel" id="contact" name="contact" placeholder="010 0000 0000" required oninput="formatPhoneNumber(this)">
                   <input type="text" id="contact" name="contact" placeholder="기타 입력" required>
                 </div>
               </div>
@@ -243,7 +242,11 @@
               <!-- 이메일 -->
               <div class="form-group col">
                 <label class="label__title" for="email">이메일<span class="required">*</span></label>
-                <input type="email" id="email" name="email" required>
+                <div class="position-relative w100">
+                  <input type="email" id="email" name="email" required placeholder="example@example.com" onblur="validateEmail()">
+                  <span id="emailError" class="position-absolute" style="color:red; display:none; font-size: 11px;
+                  bottom: -18px; left: 2px;">이메일 형식이 잘못되었습니다.</span>
+                </div>
               </div>
             </div>
             <div class="form-item form-row">
@@ -281,7 +284,7 @@
 
               <div class="form-group col">
                 <label class="label__title" for="amount">금액<span class="required">*</span></label>
-                <input type="text" id="amount" name="amount" required>
+                <input type="number" id="amount" name="amount" required>
               </div>
             </div>
 
@@ -329,7 +332,7 @@
           <!-- Submit Button -->
           <div class="form-button">
             <button class="cancel" type="submit">취소</button>
-            <button class="submit" type="submit">등록</button>
+            <button class="submit" type="submit" onclick="validateForm(event)">등록</button>
           </div>
         </form>
       </div>
@@ -354,6 +357,56 @@
     $(function () {
       initializeDatepicker();
     });
+    function formatPhoneNumber(input) {
+      // 숫자만 남기기
+      let numbers = input.value.replace(/[^0-9]/g, '');
+      
+      // 첫 3자리와 그다음 4자리, 그다음 4자리를 나눠서 하이픈 추가
+      let formattedNumber = '';
+      if (numbers.length <= 3) {
+          formattedNumber = numbers;
+      } else if (numbers.length <= 7) {
+          formattedNumber = numbers.slice(0, 3) + '-' + numbers.slice(3);
+      } else {
+          formattedNumber = numbers.slice(0, 3) + '-' + numbers.slice(3, 7) + '-' + numbers.slice(7, 11);
+      }
+      
+      // input 필드에 포맷된 전화번호 표시
+      input.value = formattedNumber;
+    }
+    function validateEmail() {
+      const emailInput = document.getElementById('email');
+      const emailError = document.getElementById('emailError');
+      
+      // 정규표현식을 사용한 이메일 형식 검사
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      
+      // 이메일 유효성 체크
+      if (!emailPattern.test(emailInput.value)) {
+          emailError.style.display = 'inline'; // 에러 메시지 표시
+          emailInput.focus(); // 이메일 입력란에 다시 포커스
+      } else {
+          emailError.style.display = 'none'; // 에러 메시지 숨기기
+      }
+    }
+
+    function validateForm(event) {
+        // 폼 필드 가져오기
+        const title = document.getElementById('title').value;
+        const content = document.getElementById('content').value;
+
+        // 연락처 또는 이메일 패턴 (간단한 정규표현식)
+        const phonePattern = /(\d{2,4}-?\d{3,4}-?\d{4})/g; // 전화번호 패턴
+        const emailPattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g; // 이메일 패턴
+
+        // 제목이나 본문에 전화번호나 이메일이 있는지 검사
+        if (phonePattern.test(title) || emailPattern.test(title) || 
+            phonePattern.test(content) || emailPattern.test(content)) {
+            // 경고창 출력
+            alert("제목과 본문 내용에는 연락처 및 메일주소를 입력하지 않습니다.");
+            event.preventDefault(); // 폼 제출 방지
+        }
+    }
   </script>
 </body>
 

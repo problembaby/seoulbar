@@ -54,6 +54,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="../resources/css/style.css">
+  <link rel="stylesheet" href="../resources/css/board.css">
 
   <!-- JS -->
   <script src="../resources/js/style.js"></script>
@@ -69,7 +70,10 @@
       <h2 class="sr-only">소송복대리 신청 팝업</h2>
       <div class="form-sec sec-box">
         <form class="form-container" action="/submit" method="POST">
-          <h2 class="form__title">복대리 신청</h2>
+          <div class="title__area">
+            <h2 class="form__title">복대리 신청</h2>
+            <button type="button" class="btn-close" aria-label="Close" onclick="window.close();"></button>
+          </div>
           <div class="form-area__inputList">
             <div class="form-item form-row">
               <!-- 신청 구분 -->

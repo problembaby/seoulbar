@@ -76,10 +76,14 @@
               <div class="form-group col">
                 <label class="label__title">신청구분</label>
                 <div class="form-group__inputWarp">
-                  <label for="bokdaeri">복대리</label>
-                  <input type="radio" id="bokdaeri" name="application_type" value="bokdaeri" checked>
-                  <label for="jaesojeon">재소전 화해</label>
-                  <input type="radio" id="jaesojeon" name="application_type" value="jaesojeon">
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="bokdaeri" name="application_type" value="bokdaeri" checked>
+                    <label for="bokdaeri">복대리</label>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="jaesojeon" name="application_type" value="jaesojeon">
+                    <label for="jaesojeon">재소전 화해</label>
+                  </div>
                 </div>
               </div>
 
@@ -116,94 +120,95 @@
                 <div class="form-row">
                   <div class="form-date-area">
                     <!-- 시작 날짜 -->
-                    <input type="text" id="form-date-start" class="form-control datepicker date-input"
-                      placeholder="시작일">
-                    <!-- 시작 시간 (24시간 형식) -->
-                    <select id="start_time" class="form-select formStyle02" name="start_time" required>
-                      <option value="00">00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                    </select>
-
-                    <!-- 시작 분 (10분 단위) -->
-                    <select id="start_minute" class="form-select formStyle02" name="start_minute" required>
-                      <option value="00">00</option>
-                      <option value="10">10</option>
-                      <option value="20">20</option>
-                      <option value="30">30</option>
-                      <option value="40">40</option>
-                      <option value="50">50</option>
-                    </select>
+                    <input type="text" id="form-date-start" class="form-control datepicker date-input" placeholder="시작일">
+                    <div class="d-flex gap-2">
+                      <!-- 시작 시간 (24시간 형식) -->
+                      <select id="start_time" class="form-select formStyle02" name="start_time" required>
+                        <option value="00">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                      </select>
+  
+                      <!-- 시작 분 (10분 단위) -->
+                      <select id="start_minute" class="form-select formStyle02" name="start_minute" required>
+                        <option value="00">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                      </select>
+                    </div>
                     <span> ~ </span>
                   </div>
                   <!-- 구분 기호 (~) -->
                   <div class="form-date-area">
                     <!-- 종료 날짜 -->
-                    <input type="text" id="form-date-start" class="form-control datepicker date-input"
-                      placeholder="시작일">
-
-                    <!-- 종료 시간 (24시간 형식) -->
-                    <select id="end_time" class="form-select formStyle02" name="end_time" required>
-                      <option value="00">00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                    </select>
-
-                    <!-- 종료 분 (10분 단위) -->
-                    <select id="end_minute" class="form-select formStyle02" name="end_minute" required>
-                      <option value="00">00</option>
-                      <option value="10">10</option>
-                      <option value="20">20</option>
-                      <option value="30">30</option>
-                      <option value="40">40</option>
-                      <option value="50">50</option>
-                    </select>
+                    <input type="text" id="form-date-start" class="form-control datepicker date-input" placeholder="시작일">
+                    <div class="d-flex gap-2">
+                      <!-- 종료 시간 (24시간 형식) -->
+                      <select id="end_time" class="form-select formStyle02" name="end_time" required>
+                        <option value="00">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                      </select>
+  
+                      <!-- 종료 분 (10분 단위) -->
+                      <select id="end_minute" class="form-select formStyle02" name="end_minute" required>
+                        <option value="00">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                      </select>
+                    </div>
 
                     <!-- 기타 내용 -->
-                    <input type="text" id="contact" name="contact" placeholder="기타 내용 입력" required>
                   </div>
+                  <input type="text" id="contact" name="contact" placeholder="기타 내용 입력" required>
                 </div>
               </div>
 
@@ -247,10 +252,14 @@
               <div class="form-group col">
                 <label class="label__title">구분</label>
                 <div class="form-group__inputWarp">
-                  <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
-                  <label for="plaintiff">원고</label>
-                  <input type="radio" id="defendant" name="case_type" value="defendant">
-                  <label for="defendant">피고</label>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                    <label for="plaintiff">원고</label>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="defendant" name="case_type" value="defendant">
+                    <label for="defendant">피고</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -258,7 +267,7 @@
             <div class="form-item form-row">
               <!-- 재판일시, 금액 -->
               <div class="form-group col">
-                <label class="label__title" for="trial_date">재판일시</label>
+                <label class="label__title trial_date__title" for="trial_date">재판일시</label>
                 <div class="form-group__inputWarp">
                   <input type="text" id="year" name="year">
                   <input type="text" id="month" name="month">
@@ -277,10 +286,14 @@
               <div class="form-group col">
                 <label class="label__title tax_invoice__title">세금계산서<br> 발행 여부<span class="required">*</span></label>
                 <div class="form-group__inputWarp">
-                  <input type="radio" id="issued" name="tax_invoice" value="issued" checked>
-                  <label for="issued">발행</label>
-                  <input type="radio" id="not_issued" name="tax_invoice" value="not_issued">
-                  <label for="not_issued">미발행</label>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="issued" name="tax_invoice" value="issued" checked>
+                    <label for="issued">발행</label>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="not_issued" name="tax_invoice" value="not_issued">
+                    <label for="not_issued">미발행</label>
+                  </div>
                 </div>
               </div>
 
@@ -288,10 +301,14 @@
               <div class="form-group col">
                 <label class="label__title">부가세 포함 여부</label>
                 <div class="form-group__inputWarp">
-                  <input type="radio" id="included" name="vat" value="included" checked>
-                  <label for="included">포함</label>
-                  <input type="radio" id="not_included" name="vat" value="not_included">
-                  <label for="not_included">별도</label>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="included" name="vat" value="included" checked>
+                    <label for="included">포함</label>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="not_included" name="vat" value="not_included">
+                    <label for="not_included">별도</label>
+                  </div>
                 </div>
               </div>
             </div>

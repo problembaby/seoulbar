@@ -270,15 +270,15 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   color:#000
 }
 .notification-list li a .tit::before {
- content: "";
- display: block;
- background: url(../images/common/notification-deco.svg);
- width: 18px;
- height: 10px;
- position: absolute;
- top: 100%;
- left: 50%;
- transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  background: url(../images/common/notification-deco.svg);
+  width: 18px;
+  height: 10px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .notification-list li a .value {
@@ -299,27 +299,65 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 
 .mobile-logo{max-width: 300px; width: 100%;}
 .menuRightClosePosi{position: absolute; right: 30px; top:30px}
-
-.form-container .form-list{
+.form-container {
+  max-width: 1144px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+.form-container .form-area__inputList {
+  border-top: 2px solid #0F3966;
+}
+.form-container .form-item {
   border-bottom: 1px solid #999;
+  padding-right: 20px;
 }
-.form-container .form-row{
-  display: flex;
-  gap: 20px;
-}
-.form-container .form-group{
+.form-container .form-row {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-.form-container .form__title{
+.form-container .form-row .form-date-area {
+  display: flex;
+  gap: 10px;
+}
+.form-container .form-row .form-date-area .form-control {
+  width: 175px;
+  flex-shrink: 0;
+}
+.form-container .form-row .form-date-area select,
+.form-container .form-row .form-date-area input[type="text"] {
+  flex-grow: 1;
+}
+.form-container .form-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+.form-container .form-group .form-group__inputWarp {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+.form-group__inputWarp label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.form-container .form__title {
   font-size: 22px;
   padding-bottom: 8px;
   border-bottom: 0.5px solid #0F3966;
   margin-bottom: 23px;
   font-weight: 700;
 }
-.form-container .form-group .label__title{
+.form-container .form-group .label__title {
   max-width: 140px;
   width: 100%;
   height: 63px;
@@ -335,9 +373,10 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .form-container .form-group .details__title{
   height: 182px;
 }
-.form-container .form-group .inline {
+.form-container .form-group .form-row {
   display: flex;
   flex-grow: 1;
+  gap: 10px;
 }
 .form-container .form-group input[type="text"],
 .form-container .form-group input[type="tel"],
@@ -345,11 +384,11 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   width: 100%;
   height: 36px;
   border-radius: 4px;
-  border: 1px solid #bbb;
+  border: 1px solid var(--gray-2);
 }
 .form-container .form-group textarea{
   width: 100%;
-  border: 1px solid #bbb;
+  border: 1px solid var(--gray-2);
 }
 .form-container .form-group input::placeholder,
 .form-container .form-group textarea::placeholder{
@@ -359,7 +398,33 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .form-container .form-button {
   margin-top: 30px;
 }
-
+.form-button {
+  width: 290px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+}
+.form-button button {
+  width: 50%;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.form-button .cancel {
+  background-color: #A2A2B5;
+}
+.form-button .submit {
+  background-color: #0F3966;
+}
+.form-button button :hover {
+}
 
 
 .chk_list
@@ -463,6 +528,8 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .sub-container .inner{min-height: 830px;}
 
 .formStyle01{max-width:160px; width: 100%; font-size: 14px;}
+.formStyle02{max-width:82px; width: 100%; font-size: 14px; border-color: var(--gray-2);}
+.formStyle03{max-width:175px; width: 100%; font-size: 14px; border-color: var(--gray-2);}
 .formStyle240{max-width: 240px; width: 100%; font-size: 14px;}
 .btn-search{display: flex; gap:10px; max-width:84px ;}
 .btn-search::before{content: ""; background: url(../images/ico/ico-btnSearch.svg); width: 20px; height: 20px; display: block; background-size: 100% 100%;}
@@ -713,6 +780,21 @@ width: 100%;
   border-bottom: 1px solid #999999;
 }
 
+
+.form-container .form-row {
+  flex-direction: column;
+  gap: 0px;
+  align-items: baseline;
+}
+.form-container .form-row .form-group.col:first-child {
+  border-bottom: 1px solid #999;
+}
+.form-container .form-row .form-date-area {
+  align-items: center;
+}
+.form-container .form-group .start-date {
+  height: 130px;
+}
 
 }
 

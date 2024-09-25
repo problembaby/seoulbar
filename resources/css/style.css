@@ -344,17 +344,26 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   cursor: pointer;
 }
 
-.form-container .form__title {
-  font-size: 22px;
+.form-container .title__area {
   padding-bottom: 8px;
   border-bottom: 0.5px solid var(--main-color);
   margin-bottom: 23px;
+  display: flex;
+  justify-content: space-between;
+}
+.form-container .title__area .form__title {
+  font-size: 22px;
   font-weight: 700;
+  color: #1E356D;
+}
+.form-container .title__area .btn-close {
+  width: 16px;
+  height: 16px;
 }
 .form-container .form-group .label__title {
   max-width: 140px;
   width: 100%;
-  height: 63px;
+  height: 75px;
   background-color: #eee;
   font-size: 14px;
   font-weight: 500;
@@ -383,7 +392,8 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 .form-container .form-group input[type="text"],
 .form-container .form-group input[type="tel"],
-.form-container .form-group input[type="email"]{
+.form-container .form-group input[type="email"],
+.form-container .form-group input[type="number"]{
   width: 100%;
   height: 36px;
   border-radius: 4px;
@@ -719,6 +729,9 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   .form-container .form-group .start-date {
     height: 160px;
   }
+  .form-container .form-row .form-group.col:first-child {
+    border-bottom: 1px solid #999;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -818,14 +831,14 @@ width: 100%;
   gap: 0px;
   align-items: baseline;
 }
-.form-container .form-row .form-group.col:first-child {
-  border-bottom: 1px solid #999;
-}
+
 .form-container .form-row .form-date-area {
   align-items: center;
   width: 100%;
 }
-
+.form-container .form-item {
+  padding-right: 0px;
+}
 
 }
 
@@ -872,7 +885,7 @@ width: 100%;
   flex: 0 0 80px;
   height: 100%;
 }
-
+.board-contents + .board-contents {margin-top: 20px;}
 .board-viewPage .whiteTable {
   padding: 30px 10px;
 }

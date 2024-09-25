@@ -2,6 +2,7 @@
 @import url(setting/font/pretendard.css); /*폰트*/
 @import url(setting/vars.css); /*변수*/
 @import url(setting/common.css); /*common*/
+@import url(setting/board.css); /*board*/
 
 /** layout */
 #header{ background-color: var(--main2-color);; width: 100%; display: flex; height: 0; justify-content: space-between; padding:20px; align-items: center;}
@@ -427,7 +428,13 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .chk-switch:checked + label + .chk_y{display: block;}
 .chk-switch:checked + label + .chk_y + .chk_n{display: none;}
 
-.search-area{display: flex; justify-content: space-between; margin-bottom: 30px;}
+.search-area {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 .search-area .left{flex:0 40%}
 .search-area .right{flex:0 40%}
 .search-area__inputList{display: flex; gap:10px}
@@ -440,7 +447,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 /* .subBg-line::before{height: 3px; width:80%; background-color: #83a4c7; content: ""; position: absolute; top: 50%; left: 250px; transform: translateY(-50%); z-index: -1;} */
 
 .borad-top-search-container{margin-top: 26px;}
-.borad-menuList{display: flex; justify-content: space-between; margin-bottom: 20px;}
+.borad-menuList{display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap:12px}
 .borad-menuList .sub-link-list{display: flex;}
 
 .subMenuLink{display: flex; align-items: center; justify-content: center; color:#fff; width: 140px; height: 40px; background-color: var(--main3-color); border-radius: 6px; transition: all 0.2s;}
@@ -559,6 +566,14 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 
 
+/*상태*/
+.ico-state{width:74px; height:30px; display: flex; justify-content: center; align-items: center; border-radius: 15px; font-size: 14px;  font-weight: 500; color:#fff; background-color: #48526E; border:1px solid #fff}
+
+.ico-state.state-ing{ background-color: #48526E; border:1px solid #48526E}
+.ico-state.state-close{ background-color: #999999; border:1px solid #999999}
+.ico-state.state-complete{ background-color: #FF5545; border:1px solid #FF5545}
+
+
 @media screen and (max-width: 1800px) {
   .notification-list li a {
     width: 160px;
@@ -580,6 +595,11 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   max-width: 120px;
 }
 
+
+.search-area .right {
+  flex: 1 100%;
+}
+
 }
 @media screen and (max-width: 1280px) {
   /*갤럭시탭 해상도*/
@@ -588,8 +608,22 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 @media screen and (max-width: 1024px) {
   /* 태블릿 해상도 */
   #header {
-    height: 100px;
+    height: 60px;
 }
+.mobile-logo {
+  max-width: 200px;
+  width: 100%;
+}
+
+.gnbMenuToggle::before {
+content: "";
+background: url(../images/meneBtn.svg);
+width: 24px;
+height: 20px;
+display: block;
+background-size: cover;
+}
+#contents{padding: 0 10px;}
 .main-container {
   width: 100%;
   height: 100%;
@@ -624,6 +658,44 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 
 
+#footer {
+  margin-top: 100px;
+}
+
+.search-area .letf{
+width: 100%;
+}
+.search-area__inputList{flex-direction: column; width: 100%;}
+.search-area__inputList > *{flex:1 100%; max-width: 100%;}
+.date-input-wrap > * {
+ max-width: 100%;
+}
+.btn-search{max-width: 100%; width: 100%;}
+
+.ico-state {
+  width: 55px;
+  height: 30px;
+  font-size: 12px;
+}
+
+.sub-title {
+  border: 3px solid #83a4c7;
+  display: inline-flex;
+  padding: 10px 0;
+  width: 200px;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.sub-container .inner {
+  min-height: auto;
+  margin-top: 20px;
+}
 
 }
 
@@ -632,23 +704,39 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 
 @media screen and (max-width: 768px) {
-  .mobile-logo {
-    max-width: 200px;
+
+    /*페이징 사이즈 조절*/
+    .page {
+      --page-el-width: 30px;
+      --page-el-height: 30px;
+    }
+
+  #header {
+    height: 60px;
+  }
+
+  .borad-menuList .sub-link-list {
+    display: flex;
     width: 100%;
 }
 
-.gnbMenuToggle::before {
-  content: "";
-  background: url(../images/meneBtn.svg);
-  width: 24px;
-  height: 20px;
-  display: block;
-  background-size: cover;
+  .subMenuLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    flex:1 auto;
+    height: 40px;
+    background-color: var(--main3-color);
+    border-radius: 6px;
+    transition: all 0.2s;
 }
-#header {
-  height: 60px;
-}
-}
+
+
+  }    
+
+
 
 @media screen and (max-width: 576px) {
 

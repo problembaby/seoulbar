@@ -1,0 +1,277 @@
+.no-contents, .table-board .no-contents {
+  height: 400px;
+  text-align: center;
+  width: 100%;
+}
+
+.borad-list {
+  margin-top: 0;
+}
+.table-board table thead tr th {
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  padding: 10px 5px;
+  vertical-align: middle;
+  background: #D3DBF9;
+  text-align: center;
+}
+
+/* 테이블 본문 스타일 */
+.table-board table tbody tr td {
+  vertical-align: middle;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  color: #333;
+  padding: 10px 5px;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+  word-break: keep-all !important;
+  font-weight: 400;
+  background: #fff;
+  height: 50px;
+}
+
+/* 제목 셀 스타일 */
+.table-board table tbody tr td.cell-subject {
+  text-align: left;
+  position: relative;
+}
+.table-board table tbody tr td.cell-subject.text-center {
+  text-align: center;
+  position: relative;
+}
+.table-board table tbody tr td.num.text-center {
+  text-align: center;
+  position: relative;
+}
+
+/* 제목 셀 두줄 생략 스타일 */
+.table-board table tbody tr td.cell-subject.line2 a {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+}
+
+.table-board table tbody tr td.cell-subject a:hover,
+.table-board table tbody tr td.cell-subject a:focus {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+/* 행 hover 효과 */
+.table-board table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.table-board table tbody tr:hover td,
+.table-board table tbody tr:hover td a {
+  /*  font-weight: bold; */
+  background: #f6f9ff;
+}
+.cell-subject img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+}
+td.cell-subject > * {
+  display: inline-block !important;
+}
+
+
+.table-board table td.newPost a {
+  position: relative;
+  display: flex !important;
+  flex-flow: wrap;
+}
+.table-board table td.newPost a:after {
+  position: static;
+  content: "";
+  width: 18px;
+  height: 19px;
+  background: url(/resources/images/ico/ic_new.png) center no-repeat;
+  display: block;
+  flex: 0 20px;
+}
+
+/* 중앙 정렬 */
+.ic-center {
+  margin: 0 auto !important;
+}
+
+.borad-btn-area{display: flex; justify-content: flex-end; align-items: center; margin-top: 20px;}
+
+
+@media (max-width: 1024px) {
+
+  .no-contents, .table-board .no-contents {
+    height: 400px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .table-board table tbody tr td.mobNone{display: none;}
+
+  .table-num {
+    width: 5%;
+    display: none;
+  }
+  .table-object {
+    width: auto;
+  }
+  .table-date {
+    width: 150px;
+    display: none;
+  }
+  .table-preview {
+    width: 100px;
+    display: none;
+  }
+  .table-download {
+    width: 100px;
+    display: none;
+  }
+
+
+  .table-board table tbody tr td.cell-subject {
+    display: block;
+    height: auto !important;
+    padding: 0;
+    max-width: 100%;
+    position: relative;
+    text-overflow: clip;
+    overflow: visible;
+    margin-right: 0 !important;
+  }
+  .table-board table tbody tr td.cell-subject a {
+    word-break: break-all;
+    white-space: normal;
+    text-overflow: unset;
+    font-size: 16px;
+    width: 90%;
+    margin-bottom: 0px;
+    margin: 5px 0;
+  }
+  .table-board table tbody tr td.cell-subject.hasnew a {
+    width: 90% !important;
+  }
+  .table-board table tbody tr td.cell-subject img {
+    top: 16px;
+    right: 5%;
+  }
+  .table-board table tbody tr td.cell-subject:after {
+    display: none;
+  }
+  .table-board table tbody tr td.cell-nodata {
+    display: none;
+  }
+  .table-board table thead {
+    display: none;
+  }
+  .table-board table tbody tr {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    background: #fff;
+  }
+  .table-board table colgroup {
+    display: none;
+  }
+  .table-board table tbody tr td {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    height: fit-content;
+    border-bottom: 0;
+    padding: 0;
+    padding-right: 10px;
+  }
+  .table-board table tbody tr td {
+    white-space: inherit;
+  }
+  /* .table-board table tbody tr td.num { display: none; } */
+  .table-board table tbody tr td.num::after {
+    display: none;
+  }
+  .table-board table tbody tr td.num.num_after::after {
+    display: block;
+  }
+  .table-board table tbody tr td.txt-ell::after {
+    display: none;
+  }
+  .table-board table tbody tr td.txt-ell-2::after {
+    display: none;
+  }
+  .table-board table tbody tr td:last-child {
+    padding: 0;
+  }
+  .table-board table tbody tr td:last-child:after {
+    display: none;
+  }
+  .table-board table tbody tr + tr {
+    margin-top: 10px;
+  }
+  .table-board table tbody tr td {
+    padding-right: 10px !important;
+    text-align: left;
+    width: auto;
+  }
+  .table-board table tbody tr td:after {
+    width: 1px;
+    height: 14px;
+    background: #ccc;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+  }
+  .table-board table tbody tr td.cell-file {
+    display: none;
+  }
+  .table-board table tbody tr td.cell-file.hasfile {
+    display: inline-block;
+  }
+  .table-board table tbody tr td.cell-file.hasfile:after {
+    display: block;
+  }
+  .table-board table tbody tr td {
+    vertical-align: middle;
+    font-family: var(--body-font-family), sans-serif;
+    font-size: 16px;
+    color: #333;
+    padding: 0px;
+    height: auto;
+    white-space: inherit;
+  }
+  .table-board table thead tr th {
+    font-size: 13px;
+    color: #333;
+    font-weight: normal;
+    padding: 10px;
+  }
+
+
+  
+}
+
+@media(max-width:768px){
+  
+  .table-board table tbody tr td:last-child:after {
+    display: none;
+  }
+  .table-board table tbody tr + tr {
+    margin-top: 10px;
+  }
+
+}

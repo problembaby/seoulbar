@@ -320,7 +320,15 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 .form-container .form-row .form-date-area {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+}
+.form-container .form-row .form-date-area .form-control {
+  width: 175px;
+  flex-shrink: 0;
+}
+.form-container .form-row .form-date-area select,
+.form-container .form-row .form-date-area input[type="text"] {
+  flex-grow: 1;
 }
 .form-container .form-group {
   display: flex;
@@ -330,12 +338,9 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 .form-container .form-group .form-group__inputWarp {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   width: 100%;
-}
-.form-container .form-group .form-group__inputWarp select option {
-  color: #B3B3B3;
 }
 .form-group__inputWarp label {
   display: flex;
@@ -761,10 +766,14 @@ width: 100%;
 
 .form-container .form-row {
   flex-direction: column;
-  gap: 0;
+  gap: 0px;
+  align-items: baseline;
 }
 .form-container .form-row .form-group.col:first-child {
   border-bottom: 1px solid #999;
+}
+.form-container .form-row .form-date-area {
+  align-items: center;
 }
 .form-container .form-group .start-date {
   height: 130px;

@@ -1198,6 +1198,23 @@ Box Sizing 정의 (Margin & Padding)
   --btn-disabled-border-color: #83a4c7;
 }
 
+.btn-red {
+  --btn-color: #fff;
+  --btn-bg: #FF5545;
+  --btn-border-color: #FF5545;
+  --btn-hover-color: #fff;
+  --btn-hover-bg: #ff0000;
+  --btn-hover-border-color: #ff0000;
+  --btn-focus-shadow-rgb: 49, 132, 253;
+  --btn-active-color: #fff;
+  --btn-active-bg: #ff0000;
+  --btn-active-border-color: #ff0000;
+  --btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --btn-disabled-color: #AAAAAA;
+  --btn-disabled-bg:#E1E1E1;
+  --btn-disabled-border-color: #E1E1E1;
+}
+
 .btn-secondary {
   --btn-color: #fff;
   --btn-bg: #666666;

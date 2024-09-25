@@ -2,10 +2,6 @@
 
 $(document).ready(function () {
 
-  //
-
-
-
 
   //데이터피커  
   $(".datepicker").datepicker({

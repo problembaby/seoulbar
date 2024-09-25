@@ -324,11 +324,6 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 .form-container .form-row .form-date-area .form-control {
   width: 175px;
-  flex-shrink: 0;
-}
-.form-container .form-row .form-date-area select,
-.form-container .form-row .form-date-area input[type="text"] {
-  flex-grow: 1;
 }
 .form-container .form-group {
   display: flex;
@@ -353,7 +348,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .form-container .form__title {
   font-size: 22px;
   padding-bottom: 8px;
-  border-bottom: 0.5px solid #0F3966;
+  border-bottom: 0.5px solid var(--main-color);
   margin-bottom: 23px;
   font-weight: 700;
 }
@@ -370,12 +365,19 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   align-items: center;
   justify-content: center;
 }
+.form-container .form-group .label__title .required {
+  color:#FF5545;
+  margin-left: 3px;
+}
+.form-container .form-group .label__title.tax_invoice__title .required {
+  margin-top: 22px;
+  margin-left: -2px;
+}
 .form-container .form-group .details__title{
   height: 182px;
 }
 .form-container .form-group .form-row {
   display: flex;
-  flex-grow: 1;
   gap: 10px;
 }
 .form-container .form-group input[type="text"],
@@ -415,13 +417,13 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   align-items: center;
   font-size: 16px;
   font-weight: 500;
-  color: #fff;
+  color: var(--white);
 }
 .form-button .cancel {
   background-color: #A2A2B5;
 }
 .form-button .submit {
-  background-color: #0F3966;
+  background-color: var(--main-color);
 }
 .form-button button :hover {
 }
@@ -442,7 +444,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   display: block;
   border-radius: 100px;
   position: relative;
-  border:4px solid #fff
+  border:4px solid var(--main-color);
 }
 .chk-switch + label:after {
   content: "";
@@ -708,6 +710,14 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 @media screen and (max-width: 1280px) {
   /*갤럭시탭 해상도*/
+  .form-container .form-row {
+    flex-direction: column;
+    gap: 0px;
+    align-items: baseline;
+  }
+  .form-container .form-group .start-date {
+    height: 130px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -812,10 +822,9 @@ width: 100%;
 }
 .form-container .form-row .form-date-area {
   align-items: center;
+  width: 100%;
 }
-.form-container .form-group .start-date {
-  height: 130px;
-}
+
 
 }
 
@@ -851,6 +860,10 @@ width: 100%;
     background-color: var(--main3-color);
     border-radius: 6px;
     transition: all 0.2s;
+}
+
+.form-container .form-row .form-date-area .form-control {
+  width: 140px;
 }
 
 

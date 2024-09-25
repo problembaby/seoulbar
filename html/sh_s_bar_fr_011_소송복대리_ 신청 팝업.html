@@ -59,37 +59,6 @@
   <script src="../resources/js/style.js"></script>
   <script src="../resources/js/modal.js"></script>
   <script src="../resources/js/check.js"></script>
-  <style>
-
-    .form-container {
-        max-width: 1144px;
-        margin: 0 auto;
-        padding: 25px 30px;
-        border-radius: 15px;
-        background-color: #fff;
-    }
-
-    .inline input {
-        width: auto;
-        margin-right: 10px;
-    }
-    .inline label {
-        margin: 0 10px 0 0;
-    }
-    button {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    button:hover {
-        background-color: #45a049;
-    }
-</style>
 
 </head>
 
@@ -101,154 +70,243 @@
         <div class="form-sec sec-box">
           <form class="form-container" action="/submit" method="POST">
             <h2 class="form__title">복대리 신청</h2>
-            <div class="form-list form-row">
-              <!-- 신청 구분 -->
-              <div class="form-group col">
-                  <label class="label__title">신청구분</label>
-                  <div class="inline">
-                      <input type="radio" id="bokdaeri" name="application_type" value="bokdaeri" checked>
+            <div class="form-area__inputList">
+              <div class="form-item form-row">
+                <!-- 신청 구분 -->
+                <div class="form-group col">
+                    <label class="label__title">신청구분</label>
+                    <div class="form-group__inputWarp">
                       <label for="bokdaeri">복대리</label>
-                      <input type="radio" id="jaesojeon" name="application_type" value="jaesojeon">
+                      <input type="radio" id="bokdaeri" name="application_type" value="bokdaeri" checked>
                       <label for="jaesojeon">재소전 화해</label>
-                  </div>
-              </div>
-          
-              <!-- 관할 법원 -->
-              <div class="form-group col">
-                  <label class="label__title" for="region">관할법원</label>
-                  <div class="inline">
-                      <select id="region" class="col" name="region" required>
+                      <input type="radio" id="jaesojeon" name="application_type" value="jaesojeon">
+                    </div>
+                </div>
+            
+                <!-- 관할 법원 -->
+                <div class="form-group col">
+                    <label class="label__title" for="region">관할법원</label>
+                    <div class="form-group__inputWarp">
+                        <select id="region" class="form-select formStyle03 col" name="region" required>
                           <option value="">지역 선택</option>
                           <option value="서울">서울</option>
                           <option value="부산">부산</option>
                           <!-- Add more options as needed -->
-                      </select>
-                      <select id="court" class="col" name="court" required>
+                        </select>
+                        <select id="court" class="form-select formStyle03 col" name="court" required>
                           <option value="">각급법원 선택</option>
                           <!-- Add options for courts here -->
+                        </select>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="form-item">
+                <!-- 제목 -->
+                <div class="form-group">
+                    <label class="label__title" for="title">제목</label>
+                    <input type="text" id="title" name="title" placeholder="제목에는 연락처 및 메일주소를 입력하지 않습니다." required>
+                </div>
+              </div>
+          
+              <div class="form-item">
+                <!-- 공고 기간 -->
+                <div class="form-group">
+                  <label class="label__title start-date" for="start_date">공고기간</label>
+                  <div class="form-row">
+                    <div class="form-date-area">
+                      <!-- 시작 날짜 -->
+                      <input type="text" id="form-date-start" class="form-control datepicker date-input" placeholder="시작일">
+                      <!-- 시작 시간 (24시간 형식) -->
+                      <select id="start_time" class="form-select formStyle02" name="start_time" required>
+                          <option value="00">00</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
                       </select>
+                      
+                      <!-- 시작 분 (10분 단위) -->
+                      <select id="start_minute" class="form-select formStyle02" name="start_minute" required>
+                          <option value="00">00</option>
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                          <option value="30">30</option>
+                          <option value="40">40</option>
+                          <option value="50">50</option>
+                      </select>
+                    </div>
+                    <!-- 구분 기호 (~) -->
+                    <span> ~ </span>
+                    <div class="form-date-area">
+                      <!-- 종료 날짜 -->
+                      <input type="text" id="form-date-start" class="form-control datepicker date-input" placeholder="시작일">
+                      
+                      <!-- 종료 시간 (24시간 형식) -->
+                      <select id="end_time" class="form-select formStyle02" name="end_time" required>
+                          <option value="00">00</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                      </select>
+              
+                      <!-- 종료 분 (10분 단위) -->
+                      <select id="end_minute" class="form-select formStyle02" name="end_minute" required>
+                          <option value="00">00</option>
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                          <option value="30">30</option>
+                          <option value="40">40</option>
+                          <option value="50">50</option>
+                      </select>
+                      
+                      <!-- 기타 내용 -->
+                      <input type="tel" id="contact" name="contact" placeholder="기타 내용 입력" required>
+                    </div>  
                   </div>
+                </div>
+              
               </div>
-            </div>
+              
+              <div class="form-item form-row">
+                <!-- 사무실명, 담당자명 -->
+                <div class="form-group col">
+                    <label class="label__title" for="office_name">사무실명</label>
+                    <input type="text" id="office_name" name="office_name">
+                </div>
             
-            <div class="form-list">
-              <!-- 제목 -->
-              <div class="form-group">
-                  <label class="label__title" for="title">제목</label>
-                  <input type="text" id="title" name="title" placeholder="제목에는 연락처 및 메일주소를 입력하지 않습니다." required>
+                <div class="form-group col">
+                    <label class="label__title" for="person_in_charge">담당자명</label>
+                    <input type="text" id="person_in_charge" name="person_in_charge">
+                </div>
               </div>
-            </div>
-        
-            <div class="form-list">
-              <!-- 공고 기간 -->
-              <div class="form-group">
-                  <label class="label__title" for="date">공고기간</label>
-                  <div class="inline">
-                      <input type="date" id="date" name="date" required>
-                      <input type="time" id="time" name="time" required>
-                  </div>
-              </div>
-            </div>
+              <div class="form-item form-row">
+                <!-- 연락처 -->
+                <div class="form-group col">
+                    <label class="label__title" for="contact">연락처</label>
+                    <div  class="form-group__inputWarp">
+                      <input type="tel" id="contact" name="contact" placeholder="010 0000 0000" required>
+                      <input type="text" id="contact" name="contact" placeholder="기타 입력" required>
+                    </div>
+                </div>
             
-            <div class="form-list form-row">
-              <!-- 사무실명, 담당자명 -->
-              <div class="form-group col">
-                  <label class="label__title" for="office_name">사무실명</label>
-                  <input type="text" id="office_name" name="office_name">
+                <!-- 이메일 -->
+                <div class="form-group col">
+                    <label class="label__title" for="email">이메일</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
               </div>
-          
-              <div class="form-group col">
-                  <label class="label__title" for="person_in_charge">담당자명</label>
-                  <input type="text" id="person_in_charge" name="person_in_charge">
-              </div>
-            </div>
-            <div class="form-list form-row">
-              <!-- 연락처 -->
-              <div class="form-group col">
-                  <label class="label__title" for="contact">연락처</label>
-                  <div class="inline">
-                    <input type="tel" id="contact" name="contact" placeholder="010 0000 0000" required>
-                    <input type="tel" id="contact" name="contact" placeholder="기타 입력" required>
-                  </div>
-              </div>
-          
-              <!-- 이메일 -->
-              <div class="form-group col">
-                  <label class="label__title" for="email">이메일</label>
-                  <input type="email" id="email" name="email" required>
-              </div>
-            </div>
-            <div class="form-list form-row">
-              <!-- 사건명, 구분 -->
-              <div class="form-group col">
-                  <label class="label__title" for="case_name">사건명</label>
-                  <input type="text" id="case_name" name="case_name">
-              </div>
-          
-              <div class="form-group col">
-                  <label class="label__title">구분</label>
-                  <div class="inline">
-                      <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
-                      <label for="plaintiff">원고</label>
-                      <input type="radio" id="defendant" name="case_type" value="defendant">
-                      <label for="defendant">피고</label>
-                  </div>
-              </div>
-            </div>
+              <div class="form-item form-row">
+                <!-- 사건명, 구분 -->
+                <div class="form-group col">
+                    <label class="label__title" for="case_name">사건명</label>
+                    <input type="text" id="case_name" name="case_name">
+                </div>
             
-            <div class="form-list form-row">
-              <!-- 재판일시, 금액 -->
-              <div class="form-group col">
-                  <label class="label__title" for="trial_date">재판일시</label>
-                  <div class="inline">
-                    <input type="text" id="year" name="year">
-                    <input type="text" id="month" name="month">
-                    <input type="text" id="date" name="date">
-                  </div>
+                <div class="form-group col">
+                    <label class="label__title">구분</label>
+                    <div class="form-group__inputWarp">
+                        <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                        <label for="plaintiff">원고</label>
+                        <input type="radio" id="defendant" name="case_type" value="defendant">
+                        <label for="defendant">피고</label>
+                    </div>
+                </div>
               </div>
-          
-              <div class="form-group col">
-                  <label class="label__title" for="amount">금액</label>
-                  <input type="text" id="amount" name="amount" required>
-              </div>
-            </div>
+              
+              <div class="form-item form-row">
+                <!-- 재판일시, 금액 -->
+                <div class="form-group col">
+                    <label class="label__title" for="trial_date">재판일시</label>
+                    <div class="form-group__inputWarp">
+                      <input type="text" id="year" name="year">
+                      <input type="text" id="month" name="month">
+                      <input type="text" id="date" name="date">
+                    </div>
+                </div>
             
-            <div class="form-list form-row">
-              <!-- 세금계산서 발행 여부 -->
-              <div class="form-group col">
-                  <label class="label__title">세금계산서<br> 발행 여부</label>
-                  <div class="inline">
-                      <input type="radio" id="issued" name="tax_invoice" value="issued" checked>
-                      <label for="issued">발행</label>
-                      <input type="radio" id="not_issued" name="tax_invoice" value="not_issued">
-                      <label for="not_issued">미발행</label>
-                  </div>
+                <div class="form-group col">
+                    <label class="label__title" for="amount">금액</label>
+                    <input type="text" id="amount" name="amount" required>
+                </div>
               </div>
-          
-              <!-- 부가세 포함 여부 -->
-              <div class="form-group col">
-                  <label class="label__title">부가세 포함 여부</label>
-                  <div class="inline">
-                      <input type="radio" id="included" name="vat" value="included" checked>
-                      <label for="included">포함</label>
-                      <input type="radio" id="not_included" name="vat" value="not_included">
-                      <label for="not_included">별도</label>
-                  </div>
-              </div>
-            </div>
+              
+              <div class="form-item form-row">
+                <!-- 세금계산서 발행 여부 -->
+                <div class="form-group col">
+                    <label class="label__title">세금계산서<br> 발행 여부</label>
+                    <div class="form-group__inputWarp">
+                        <input type="radio" id="issued" name="tax_invoice" value="issued" checked>
+                        <label for="issued">발행</label>
+                        <input type="radio" id="not_issued" name="tax_invoice" value="not_issued">
+                        <label for="not_issued">미발행</label>
+                    </div>
+                </div>
             
-            <div class="form-list">
-              <!-- 내용 -->
-              <div class="form-group">
-                  <label class="label__title details__title" for="details">내용</label>
-                  <textarea id="details" name="details" placeholder="본문 내용에는 연락처 및 메일주소를 입력하지 않습니다." rows="5"></textarea>
+                <!-- 부가세 포함 여부 -->
+                <div class="form-group col">
+                    <label class="label__title">부가세 포함 여부</label>
+                    <div class="form-group__inputWarp">
+                        <input type="radio" id="included" name="vat" value="included" checked>
+                        <label for="included">포함</label>
+                        <input type="radio" id="not_included" name="vat" value="not_included">
+                        <label for="not_included">별도</label>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="form-item">
+                <!-- 내용 -->
+                <div class="form-group">
+                    <label class="label__title details__title" for="details">내용</label>
+                    <textarea id="details" name="details" placeholder="본문 내용에는 연락처 및 메일주소를 입력하지 않습니다." rows="5"></textarea>
+                </div>
               </div>
             </div>
         
             <!-- Submit Button -->
-            <div class="form-group form-button">
-                <button type="submit">취소</button>
-                <button type="submit">등록</button>
+            <div class="form-button">
+                <button class="cancel" type="submit">취소</button>
+                <button class="submit" type="submit">등록</button>
             </div>
           </form>
         </div>
@@ -257,6 +315,23 @@
     <!--컨텐츠 [end] -->
 
   </div>
+  <script>
+    function initializeDatepicker() {
+      $(".datepicker").datepicker({
+        dateFormat: 'yy-mm-dd',
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'],
+        dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
+        showMonthAfterYear: true,
+      });
+      $(".datepicker").datepicker('setDate', 'today');
+    }
+
+    $(function () {
+      initializeDatepicker();
+    });
+  </script>
 </body>
 
 

@@ -105,6 +105,8 @@ td.cell-subject > * {
 
 .board-btn-area{display: flex; justify-content: flex-end; align-items: center; margin-top: 20px;}
 
+.board-btn-area.flex-js-spaced{justify-content: space-between;}
+
 
 @media (max-width: 1024px) {
 

@@ -6,7 +6,7 @@
 
 /** layout */
 #header{ background-color: var(--main2-color);; width: 100%; display: flex; height: 0; justify-content: space-between; padding:20px; align-items: center;}
-#dashborad{display: flex; width: 100%; height: auto;  padding: 0; align-items: stretch;
+#dashboard{display: flex; width: 100%; height: auto;  padding: 0; align-items: stretch;
 }
 #gnb{
   background-color:transparent; 
@@ -446,14 +446,14 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .subBg-line{position: relative;}
 /* .subBg-line::before{height: 3px; width:80%; background-color: #83a4c7; content: ""; position: absolute; top: 50%; left: 250px; transform: translateY(-50%); z-index: -1;} */
 
-.borad-top-search-container{margin-top: 26px;}
-.borad-menuList{display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap:12px}
-.borad-menuList .sub-link-list{display: flex;}
+.board-top-search-container{margin-top: 26px;}
+.board-menuList{display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap:12px}
+.board-menuList .sub-link-list{display: flex;}
 
 .subMenuLink{display: flex; align-items: center; justify-content: center; color:#fff; width: 140px; height: 40px; background-color: var(--main3-color); border-radius: 6px; transition: all 0.2s;}
 .subMenuLink.on, .subMenuLink:hover{ background-color: var(--main-color);}
 
-.borad-menuList .right{display: flex; align-items: center;}
+.board-menuList .right{display: flex; align-items: center;}
 
 .btn-alSet{background-color: #fff; height: 36px; padding: 0 20px; border-radius: 6px; color:#000; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap:10px; cursor: pointer;}
 
@@ -715,7 +715,7 @@ width: 100%;
     height: 60px;
   }
 
-  .borad-menuList .sub-link-list {
+  .board-menuList .sub-link-list {
     display: flex;
     width: 100%;
 }

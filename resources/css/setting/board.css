@@ -4,7 +4,7 @@
   width: 100%;
 }
 
-.borad-list {
+.board-list {
   margin-top: 0;
 }
 .table-board table thead tr th {
@@ -103,7 +103,7 @@ td.cell-subject > * {
   margin: 0 auto !important;
 }
 
-.borad-btn-area{display: flex; justify-content: flex-end; align-items: center; margin-top: 20px;}
+.board-btn-area{display: flex; justify-content: flex-end; align-items: center; margin-top: 20px;}
 
 
 @media (max-width: 1024px) {

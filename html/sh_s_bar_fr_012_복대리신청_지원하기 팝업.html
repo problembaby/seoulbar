@@ -64,7 +64,7 @@
 
 <body>
   <!--컨텐츠 [start] -->
-  <div id="contents">
+  <div id="contents" class="fr_012_popup">
     <div class="sub-container">
       <h2 class="sr-only">복대리신청 지원하기 팝업</h2>
       <div class="form-sec sec-box">
@@ -79,18 +79,7 @@
                 <span class="ico-state state-ing">진행중</span>
                 9/4 11:00 여주지원 복대리 요청드립니다.
               </div>
-
               <div class="view-list">
-                <div class="inline-row">
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">구분</div>
-                    <div class="inline-row-form__conf">홍길동</div>
-                  </div>
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">등록일</div>
-                    <div class="inline-row-form__conf">2024.08.10 15:37:23</div>
-                  </div>
-                </div>
                 <div class="inline-row">
                   <div class="inline-row-form">
                     <div class="inline-row-form__tit">구분</div>
@@ -129,93 +118,72 @@
                   <div class="inline-row-form">
                     <div class="inline-row-form__tit">재판일시</div>
                     <div class="inline-row-form__conf">2024.09.04 11:00</div>
-                  </div>
-                </div>
-                <div class="inline-row">
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">연락처</div>
-                    <div class="inline-row-form__conf">
-                      <p class="text-danger">매칭 시 확인 가능</p>
-                    </div>
-                  </div>
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">이메일</div>
-                    <div class="inline-row-form__conf">
-                      <p class="text-danger">매칭시 확인 가능</p>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="board-contents">
+          <div class="board-contents board-viewPage mt20">
             <div class="board-viewPage__con">
               <div class="title">
                 *복대리 위임장 기재사항
               </div>
-
               <div class="view-list">
                 <div class="inline-row">
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">구분</div>
-                    <div class="inline-row-form__conf">홍길동</div>
-                  </div>
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">등록일</div>
-                    <div class="inline-row-form__conf">2024.08.10 15:37:23</div>
-                  </div>
-                </div>
-                <div class="inline-row">
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">구분</div>
-                    <div class="inline-row-form__conf">복대리</div>
-                  </div>
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">관할 법원</div>
-                    <div class="inline-row-form__conf">서울지방중앙법원</div>
-                  </div>
-                </div>
-                <div class="inline-row">
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">사무실명</div>
-                    <div class="inline-row-form__conf">법률사무소</div>
-                  </div>
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">담당자 명</div>
-                    <div class="inline-row-form__conf">홍길동</div>
-                  </div>
-                </div>
-                <div class="inline-row">
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">공고기간</div>
-                    <div class="inline-row-form__conf">2024.08.04 10:00 ~2024.09.04 11:00</div>
-                  </div>
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">금액</div>
-                    <div class="inline-row-form__conf">100,000원(계산서 발행, vat별도)</div>
-                  </div>
-                </div>
-                <div class="inline-row">
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">사건(구분)</div>
-                    <div class="inline-row-form__conf">대여금사건 피고 소송대리(피고)</div>
-                  </div>
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">재판일시</div>
-                    <div class="inline-row-form__conf">2024.09.04 11:00</div>
-                  </div>
-                </div>
-                <div class="inline-row">
-                  <div class="inline-row-form">
-                    <div class="inline-row-form__tit">연락처</div>
+                  <div class="inline-row-form form-group">
+                    <div class="inline-row-form__tit">사무실 명</div>
                     <div class="inline-row-form__conf">
-                      <p class="text-danger">매칭 시 확인 가능</p>
+                      <input type="text" id="title" name="title" required>
+                    </div>
+                  </div>                </div>
+                <div class="inline-row">
+                  <div class="inline-row-form form-group">
+                    <div class="inline-row-form__tit">성명</div>
+                    <div class="inline-row-form__conf">
+                      <input type="text" id="title" name="title" required>
                     </div>
                   </div>
-                  <div class="inline-row-form">
+                  <div class="inline-row-form form-group">
                     <div class="inline-row-form__tit">이메일</div>
+                    <div class="inline-row-form__conf position-relative">
+                      <input type="email" id="email" name="email" required placeholder="example@example.com" onblur="validateEmail()">
+                      <!-- <span id="emailError" class="position-absolute" style="color:red; display:none; font-size: 11px;
+                  bottom: -18px; left: 2px;">이메일 형식이 잘못되었습니다.</span> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="inline-row">
+                  <div class="inline-row-form form-group">
+                    <div class="inline-row-form__tit">연락처</div>
                     <div class="inline-row-form__conf">
-                      <p class="text-danger">매칭시 확인 가능</p>
+                      <input type="tel" id="contact" name="contact" placeholder="010 0000 0000" required oninput="formatPhoneNumber(this)">
+                    </div>
+                  </div>
+                  <div class="inline-row-form form-group">
+                    <div class="inline-row-form__tit">금액</div>
+                    <div class="inline-row-form__conf">
+                      <input type="number" id="amount" name="amount" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="inline-row ">
+                  <div class="inline-row-form form-group address__input">
+                    <div class="inline-row-form__tit">주소</div>
+                    <div class="inline-row-form__conf">
+                      <div class="d-flex">
+                        <input type="text" id="postal-code" name="postal-code" placeholder="우편번호" style="flex: 1;">
+                        <button type="button" class="btn-set navy-color">주소검색</button>
+                      </div>
+                      <input type="text" id="address" name="address" placeholder="주소">
+                      <input type="text" id="detail-address" name="detail-address" placeholder="상세주소">
+                    </div>
+                  </div>
+                </div>
+                <div class="inline-row">
+                  <div class="inline-row-form form-group">
+                    <div class="inline-row-form__tit details__title">지원내용</div>
+                    <div class="inline-row-form__conf">
+                      <textarea id="details" name="details" placeholder="본문 내용에는 연락처 및 메일주소를 입력하지 않습니다." rows="5"></textarea>
                     </div>
                   </div>
                 </div>
@@ -226,8 +194,8 @@
 
           <!-- Submit Button -->
           <div class="form-button">
-            <button class="cancel" type="submit">취소</button>
-            <button class="submit" type="submit">지원</button>
+            <button class="btn-set gray-color" type="submit">취소</button>
+            <button class="btn-set navy-color" type="submit">지원</button>
           </div>
         </form>
       </div>
@@ -236,7 +204,40 @@
   <!--컨텐츠 [end] -->
 
   </div>
-
+  <script>
+    function formatPhoneNumber(input) {
+      // 숫자만 남기기
+      let numbers = input.value.replace(/[^0-9]/g, '');
+      
+      // 첫 3자리와 그다음 4자리, 그다음 4자리를 나눠서 하이픈 추가
+      let formattedNumber = '';
+      if (numbers.length <= 3) {
+          formattedNumber = numbers;
+      } else if (numbers.length <= 7) {
+          formattedNumber = numbers.slice(0, 3) + '-' + numbers.slice(3);
+      } else {
+          formattedNumber = numbers.slice(0, 3) + '-' + numbers.slice(3, 7) + '-' + numbers.slice(7, 11);
+      }
+      
+      // input 필드에 포맷된 전화번호 표시
+      input.value = formattedNumber;
+    }
+    // function validateEmail() {
+    //   const emailInput = document.getElementById('email');
+    //   const emailError = document.getElementById('emailError');
+      
+    //   // 정규표현식을 사용한 이메일 형식 검사
+    //   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      
+    //   // 이메일 유효성 체크
+    //   if (!emailPattern.test(emailInput.value)) {
+    //       emailError.style.display = 'inline'; // 에러 메시지 표시
+    //       emailInput.focus(); // 이메일 입력란에 다시 포커스
+    //   } else {
+    //       emailError.style.display = 'none'; // 에러 메시지 숨기기
+    //   }
+    // }
+  </script>
 </body>
 
 

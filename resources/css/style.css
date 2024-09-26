@@ -417,7 +417,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   display: flex;
   gap: 10px;
 }
-.form-button button {
+.btn-set {
   width: 50%;
   height: 36px;
   border: none;
@@ -427,16 +427,44 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 4
+  
+  00;
   color: var(--white);
 }
-.form-button .cancel {
+.gray-color {
   background-color: #A2A2B5;
+  color: #fff;
 }
-.form-button .submit {
+.navy-color {
   background-color: var(--main-color);
+  color: #fff;
 }
-.form-button button :hover {
+
+/* fr_012_popup 복대리신청 지원하기 팝업 */
+.fr_012_popup .inline-row-form__conf {
+  width: auto;
+  padding: 10px;
+  flex: 1;
+}
+.fr_012_popup .inline-row-form__tit {
+  height: 60px;
+}
+.fr_012_popup .address__input .inline-row-form__tit {
+  height: 155px;
+}
+.fr_012_popup .address__input .inline-row-form__conf {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+}
+.fr_012_popup .address__input .inline-row-form__conf .d-flex {
+  gap: 10px;
+}
+.fr_012_popup .address__input .inline-row-form__conf button {
+  display: flex;
+  gap: 10px;
 }
 
 
@@ -663,7 +691,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .view-list{border-top: 1px solid #999; border-top: 2px solid #0F3966; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; }
 .view-list .inline-row{display: flex; width: 100%; border-bottom:1px solid #999999 }
 .inline-row-form{display: flex ; align-items: center; flex:1 40%; gap:20px}
-.inline-row-form__tit{flex:0 140px; color:#000; padding:10px; height: 50px; display: flex; align-items: center; background-color: #EEEEEE; font-weight: 700;}
+.inline-row-form__tit{flex:0 140px; color:#000; padding:10px; height: 50px; display: flex; align-items: center; background-color: #EEEEEE; font-weight: 700; justify-content: center;}
 .inline-row-form__conf{flex:1 auto; display: flex; align-items: center; padding:10px; }
 
 .view-contents{padding:20px}
@@ -885,7 +913,6 @@ width: 100%;
   flex: 0 80px;
   height: 100%;
 }
-.board-contents + .board-contents {margin-top: 20px;}
 .board-viewPage .whiteTable {
   padding: 30px 10px;
 }

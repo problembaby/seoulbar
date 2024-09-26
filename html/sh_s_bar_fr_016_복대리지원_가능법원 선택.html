@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서울지방변호사회 : 기능법원 선택</title>
+
+
+  <!-- 기본 파비콘 설정 -->
+  <link rel="icon" href="../resources/images/meta/favicon.ico" type="image/x-icon">
+
+  <!-- PNG 포맷 파비콘 (더 많은 브라우저와 플랫폼에서 지원) -->
+  <link rel="icon" href="../resources/images/meta/favicon-16x16.png" type="image/png">
+
+  <!-- 애플 터치 아이콘 (iOS) -->
+  <link rel="apple-touch-icon" href="../resources/images/meta/apple-icon.png">
+
+  <!-- 다양한 크기의 애플 터치 아이콘 -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../resources/images/meta/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../resources/images/meta/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../resources/images/meta/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../resources/images/meta/apple-icon-144x144.png">
+
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- 다양한 크기의 파비콘 설정 -->
+  <link rel="icon" sizes="16x16" href="../resources/images/meta/favicon-16x16.png">
+  <link rel="icon" sizes="32x32" href="../resources/images/meta/favicon-32x32.png">
+  <link rel="icon" sizes="96x96" href="../resources/images/meta/favicon-96x96.png">
+  <link rel="icon" sizes="192x192" href="../resources/images/meta/android-icon-192x192.png">
+
+  <!-- swiper -->
+  <script src="../resources/plugin/swiper-4.5.3/swiper.min.js"></script>
+  <link rel="stylesheet" href="../resources/plugin/swiper-4.5.3/swiper.css">
+
+  <!--jquery-->
+  <script src="../resources/plugin/jquery/jquery.min.js"></script>
+  <script src="../resources/plugin/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="../resources/plugin/jquery-ui-1.13.2/jquery-ui.min.css">
+  <script src="../resources/plugin/jquery-cookie/jquery.cookie.min.js"></script>
+
+  <!--aos-->
+  <link rel="stylesheet" href="../resources/plugin/aos/aos.css">
+  <script src="../resources/plugin/aos/aos.js"></script>
+
+  <!--fontawesome-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!--bootstrap-->
+  <link rel="stylesheet" href="../resources/plugin/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <script src="../resources/plugin/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../resources/css/style.css">
+
+  <!-- JS -->
+  <script src="../resources/js/style.js"></script>
+
+</head>
+
+<body>
+  <!--컨텐츠 [start] -->
+  <div id="contents">
+    <div class="sub-container">
+      <h2 class="sr-only">가능법원 팝업</h2>
+      <div class="form-sec sec-box">
+        <form class="form-container" action="/submit" method="POST">
+          <div class="title__area">
+            <h2 class="form__title">가능법원 선택</h2>
+            <button type="button" class="btn-close" aria-label="Close" onclick="window.close();"></button>
+          </div>
+          <div class="form-area__searchList">
+
+            <!--지역 탭 start-->
+            <ul class="nav nav-pills nav-fill localTab" id="local-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-seoul" data-bs-toggle="pill" data-bs-target="#tab-seoul-cont"
+                  type="button" role="tab" aria-controls="tab-seoul-cont" aria-selected="true">서울</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-incheon-gyeonggi" data-bs-toggle="pill"
+                  data-bs-target="#tab-incheon-gyeonggi-cont" type="button" role="tab"
+                  aria-controls="tab-incheon-gyeonggi-cont">인천/경기</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-gangwon" data-bs-toggle="pill" data-bs-target="#tab-gangwon-cont"
+                  type="button" role="tab" aria-controls="tab-gangwon-cont">강원도</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-chungbuk" data-bs-toggle="pill" data-bs-target="#tab-chungbuk-cont"
+                  type="button" role="tab" aria-controls="tab-chungbuk-cont">충북</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-daejeon-sejong-chungnam" data-bs-toggle="pill"
+                  data-bs-target="#tab-daejeon-sejong-chungnam-cont" type="button" role="tab"
+                  aria-controls="tab-daejeon-sejong-chungnam-cont">대전/세종/충남</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-daegu-gyeongbuk" data-bs-toggle="pill"
+                  data-bs-target="#tab-daegu-gyeongbuk-cont" type="button" role="tab"
+                  aria-controls="tab-daegu-gyeongbuk-cont">대구/경북</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-busan-ulsan-gyeongnam" data-bs-toggle="pill"
+                  data-bs-target="#tab-busan-ulsan-gyeongnam-cont" type="button" role="tab"
+                  aria-controls="tab-busan-ulsan-gyeongnam-cont">부산/울산/경남</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-gwangju-jeonnam" data-bs-toggle="pill"
+                  data-bs-target="#tab-gwangju-jeonnam-cont" type="button" role="tab"
+                  aria-controls="tab-gwangju-jeonnam-cont">광주/전남</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-jeonbuk" data-bs-toggle="pill" data-bs-target="#tab-jeonbuk-cont"
+                  type="button" role="tab" aria-controls="tab-jeonbuk-cont">전북</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-jeju" data-bs-toggle="pill" data-bs-target="#tab-jeju-cont"
+                  type="button" role="tab" aria-controls="tab-jeju-cont">제주</button>
+              </li>
+            </ul>
+            <!--지역 탭 end-->
+
+
+            <!--탭 조회 내용 start-->
+            <div class="tab-content" id="local-tabContent">
+              <div class="tab-pane fade show active" id="tab-seoul-cont" role="tabpanel" tabindex="0">
+                <div class="local-contents">
+                  <div class="search-center-area">
+                    <input type="text" class="form-control" placeholder="법원명 조회">
+                    <button type="submit" class="btn btn-primary btn-search">조회</button>
+                  </div>
+
+                                    <div class="borderBox-style01">
+                    <div class="checkbox-group">
+                      <input type="checkbox" name="all_courts" id="all_courts" onclick="toggleAllCheckboxes(this)">
+                      <label for="all_courts">전체</label>
+                    </div>
+                    <ul class="court-list">
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_high_court">
+                        <label for="seoul_high_court">서울고등법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_family_court">
+                        <label for="seoul_family_court">서울가정법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_administrative_court">
+                        <label for="seoul_administrative_court">서울행정법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_bankruptcy_court">
+                        <label for="seoul_bankruptcy_court">서울회생법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_central_district_court">
+                        <label for="seoul_central_district_court">서울중앙지방법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_eastern_district_court">
+                        <label for="seoul_eastern_district_court">서울동부지방법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_southern_district_court">
+                        <label for="seoul_southern_district_court">서울남부지방법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_northern_district_court">
+                        <label for="seoul_northern_district_court">서울북부지방법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_western_district_court">
+                        <label for="seoul_western_district_court">서울서부지방법원</label>
+                      </li>
+                    </ul>
+                  
+                    <div class="d-flex justify-content-center mt-3">
+                      <button type="button" class="btn btn-primary">추가</button>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    //전체 선택/해제
+                    function toggleAllCheckboxes(source) {
+                      const checkboxes = document.querySelectorAll('.court-list input[type="checkbox"]');
+                      checkboxes.forEach(checkbox => {
+                        checkbox.checked = source.checked;
+                      });
+                    }
+                  </script>
+                  <ul class="add-view-list">
+                    <li class="add-item">
+                      <span>서울고등법원</span>
+                      <button type="button" class="btn-close-del" aria-label="Close"></button>
+                    </li>
+                    <li class="add-item">
+                      <span>서울지방법원</span>
+                      <button type="button" class="btn-close-del" aria-label="Close"></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+
+
+
+              <div class="tab-pane fade" id="tab-incheon-gyeonggi-cont" role="tabpanel" tabindex="0">
+                인천/경기
+              </div>
+              <div class="tab-pane fade" id="tab-gangwon-cont" role="tabpanel" tabindex="0">
+                강원도
+              </div>
+              <div class="tab-pane fade" id="tab-chungbuk-cont" role="tabpanel" tabindex="0">
+                충북
+              </div>
+              <div class="tab-pane fade" id="tab-daejeon-sejong-chungnam-cont" role="tabpanel" tabindex="0">
+                대전/세종/충남
+              </div>
+              <div class="tab-pane fade" id="tab-daegu-gyeongbuk-cont" role="tabpanel" tabindex="0">
+                대구/경북
+              </div>
+              <div class="tab-pane fade" id="tab-busan-ulsan-gyeongnam-cont" role="tabpanel" tabindex="0">
+                부산/울산/경남
+              </div>
+              <div class="tab-pane fade" id="tab-gwangju-jeonnam-cont" role="tabpanel" tabindex="0">
+                광주/전남
+              </div>
+              <div class="tab-pane fade" id="tab-jeonbuk-cont" role="tabpanel" tabindex="0">
+                전북
+              </div>
+              <div class="tab-pane fade" id="tab-jeju-cont" role="tabpanel" tabindex="0">
+                제주
+              </div>
+            </div>
+
+            <!--탭 조회 내용 end-->
+
+
+
+
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-button">
+            <button class="cancel" type="button" onclick="window.close()">닫기</button>
+            <button class="submit" type="submit">저장</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--컨텐츠 [end] -->
+
+  </div>
+  <script>
+    function initializeDatepicker() {
+      $(".datepicker").datepicker({
+        dateFormat: 'yy-mm-dd',
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'],
+        dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
+        showMonthAfterYear: true,
+      });
+      $(".datepicker").datepicker('setDate', 'today');
+    }
+
+    $(function () {
+      initializeDatepicker();
+    });
+  </script>
+</body>
+
+
+
+</html>

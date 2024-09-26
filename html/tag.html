@@ -150,7 +150,7 @@
 
 </head>
 
-<body style="background:#fff">
+<body >
   <div class="tagWrap ">
 
     <div class="tagLeft">
@@ -252,8 +252,42 @@
         });
       </script>
 
+      <h2 id="button">버튼</h2>
+      <div class="switch-box">
+        <input type="checkbox" id="switch1" class="chk-switch">
+        <label for="switch1" class="on">나의 지역만 보기</label>
+        <p class="chk_y" onclick="document.getElementById('switch1').click();">진행중</p>
+        <p class="chk_n" onclick="document.getElementById('switch1').click();">종료</p>
+      </div>
+
+      <div class="form-button">
+        <button class="cancel" type="submit">취소</button>
+        <button class="submit" type="submit">등록</button>
+      </div>
+
+      <div class="board-btn-area flex-js-spaced">
+        <button type="button" class="btn btn-write btn-red">신청하기</button>
+        <button type="button" class="btn btn-write btn-primary">목록</button>
+      </div>
+
       <h2 id="tab">#탭</h2>
       
+      <h3>꽉 채우는 탭</h3>
+      <ul class="nav nav-pills nav-fill localTab" id="local-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-seoul" data-bs-toggle="pill" data-bs-target="#tab-seoul-cont"
+            type="button" role="tab" aria-controls="tab-seoul-cont" aria-selected="true">서울</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-incheon-gyeonggi" data-bs-toggle="pill"
+            data-bs-target="#tab-incheon-gyeonggi-cont" type="button" role="tab"
+            aria-controls="tab-incheon-gyeonggi-cont">인천/경기</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-gangwon" data-bs-toggle="pill" data-bs-target="#tab-gangwon-cont"
+            type="button" role="tab" aria-controls="tab-gangwon-cont">강원도</button>
+        </li>
+        </ul>
       
       <section class="sec-box sec01">
         <h3 class="sec-box__title">최근알림</h3>
@@ -350,8 +384,302 @@
 
             </ul>
           </div>
+
+          <div>
+            <h2 id="board">board</h2>
+            <div class="board-top-search-container">
+              <div class="board-menuList">
+                <div class="sub-link-list left">
+                  <a href="#" class="subMenuLink">복대리 신청</a>
+                  <a href="#" title="선택됨" class="subMenuLink on">복대리 지원</a>
+                  <a href="#" class="subMenuLink">내 복대리</a>
+                </div>
+                <div class="right">
+                  <div class="switch-box">
+                    <input type="checkbox" id="switch1" class="chk-switch">
+                    <label for="switch1">나의 지역만 보기</label>
+                    <p class="chk_y" onclick="document.getElementById('switch1').click();">진행중</p>
+                    <p class="chk_n" onclick="document.getElementById('switch1').click();">종료</p>
+                  </div>
+  
+                  <button type="button" class="btn-alSet">관심지역 알림설정</button>
+                </div>
+              </div>
+  
+              <div class="search-area">
+                <div class="letf">
+                  <div class="search-area__inputList">
+                    <select class="form-select formStyle01" aria-label="지역선택">
+                      <option selected="">지역선택</option>
+                      <option value="전체">전체</option>
+                      <option value="서울">서울</option>
+                      <option value="인천/경기도">인천/경기도</option>
+                      <option value="강원도">강원도</option>
+                      <option value="충청북도">충청북도</option>
+                      <option value="대전/세종/충청남도">대전/세종/충청남도</option>
+                      <option value="대구/경상북도">대구/경상북도</option>
+                      <option value="부산/울산/경상남도">부산/울산/경상남도</option>
+                      <option value="광주/전라남도">광주/전라남도</option>
+                      <option value="전라북도">전라북도</option>
+                      <option value="제주도">제주도</option>
+                    </select>
+  
+                    <select class="form-select formStyle01" aria-label="각급법원 선택">
+                      <option selected="">각급법원 선택</option>
+                      <option value="1">고등법원</option>
+                      <option value="2">지방법원</option>
+                      <option value="3">전문법원</option>
+                    </select>
+  
+          
+  
+                    <button type="submit" class="btn btn-primary btn-search">조회</button>
+                  </div>
+                </div>
+  
+                <div class="right">
+                  <div class="search-area__inputList">
+                    <select class="form-select formStyle01" aria-label="정렬순">
+                      <option value="등록일순">등록일순</option>
+                      <option value="기일임박">기일임박</option>
+                    </select>
+                    <select class="form-select formStyle01">
+                      <option value="제목순">제목순</option>
+                      <option value="관할법원순">관할법원순</option>
+                      <option value="작성자순">작성자순</option>
+                    </select>
+                    <input type="text" class="form-control formStyle240" placeholder="검색어를 입력하세요.">
+                    <button type="submit" class="btn-search btn btn-primary">검색</button>
+                  </div>
+                </div>
+  
+  
+              </div>
+  
+              <div class="border-contents">
+                <div class="whiteTable">
+  
+                  <div class="table-board board-list">
+                    <table>
+                      <caption class="sr-only">복대리 신청 게시물 목록입니다. 번호, 구분, 법원구분, 제목, 작성자, 금액, 재판일시, 진행상황 항목을 제공합니다.</caption>
+                      <colgroup>
+                        <col width="10%;">
+                        <col width="110px;">
+                        <col width="auto">
+                        <col width="10%">
+                        <col width="10%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">NO</th>
+                          <th scope="col">법원구분</th>
+                          <th scope="col">제목</th>
+                          <th scope="col">작성자</th>
+                          <th scope="col">관심</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="no-contents" colspan="5">등록 된 게시물이 없습니다.</td>
+                        </tr>
+                        <tr>
+                          <td class="num mobNone">1203</td>
+                          <td>경기, 북부지방법원, 동부지방법원 </td>
+                          <td class="cell-subject">
+                            <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
+                            <img src="../resources/images/ico/new.svg" alt="new" class="new">
+                          </td>
+                          <td class="mobNone">홍길동</td>
+                          <td>
+                            <div class="bookmark-area">
+                              <button type="button" class="bookmark" onclick="toggleBookmark(this)">
+                                <span class="sr-only">즐겨찾기</span>
+                              </button>
+                            </div>
+                          </td>
+  
+                        </tr>
+   
+                        <tr>
+                          <td class="num mobNone">1203</td>
+                          <td>경기, 북부지방법원, 동부지방법원 </td>
+                          <td class="cell-subject">
+                            <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
+                            <img src="../resources/images/ico/new.svg" alt="new" class="new">
+                          </td>
+                          <td class="mobNone">홍길동</td>
+                          <td>
+                            <div class="bookmark-area">
+                              <button type="button" class="bookmark" onclick="toggleBookmark(this)">
+                                <span class="sr-only">즐겨찾기</span>
+                              </button>
+                            </div>
+                          </td>
+  
+                        </tr>
+   
+                        <tr>
+                          <td class="num mobNone">1203</td>
+                          <td>경기, 북부지방법원, 동부지방법원 </td>
+                          <td class="cell-subject">
+                            <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
+                            <img src="../resources/images/ico/new.svg" alt="new" class="new">
+                          </td>
+                          <td class="mobNone">홍길동</td>
+                          <td>
+                            <div class="bookmark-area">
+                              <button type="button" class="bookmark on" onclick="toggleBookmark(this)">
+                                <span class="sr-only">즐겨찾기</span>
+                              </button>
+                            </div>
+                          </td>
+  
+                        </tr>
+   
+            
+  
+                      </tbody>
+                    </table>
+                  </div>
+  
+                </div>
+                <div class="board-btn-area">
+                  <button type="button" class="btn btn-write btn-primary">복대리 지원</button>
+                </div>
+  
+  
+                <!--pc버전 페이징 start-->
+                <div class="page only-pc-flex">
+                  <a href="#none" class="a-firstpage" aria-label="처음 페이지 그룹으로">처음</a>
+                  <a href="#none" class="a-prevpage" aria-label="이전 페이지 그룹으로">이전 페이지</a>
+                  <ul class="ul-page-list" aria-label="페이지 목록">
+                    <li><a href="#none" class="a-page-el a-current-page" aria-current="page" title="페이지 1">1</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 2 이동">2</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 3 이동">3</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 4 이동">4</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 5 이동">5</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 6 이동">6</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 7 이동">7</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 8 이동">8</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 9 이동">9</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 10 이동">10</a></li>
+                  </ul>
+                  <a href="#none" class="a-nextpage" aria-label="다음 페이지 그룹으로">다음 페이지</a>
+                  <a href="#none" class="a-lastpage" aria-label="마지막 페이지 그룹으로">마지막</a>
+                </div>
+                <!--pc버전 페이징 end-->
+  
+                <!--mob버전 페이징 start-->
+                <div class="page only-mob-flex">
+                  <a href="#none" class="a-firstpage" aria-label="처음 페이지 그룹으로">처음</a>
+                  <a href="#none" class="a-prevpage" aria-label="이전 페이지 그룹으로">이전 페이지</a>
+                  <ul class="ul-page-list" aria-label="페이지 목록">
+                    <li><a href="#none" class="a-page-el a-current-page" aria-current="page" title="페이지 1">1</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 2 이동">2</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 3 이동">3</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 4 이동">4</a></li>
+                    <li><a href="#none" class="a-page-el" title="페이지 5 이동">5</a></li>
+                  </ul>
+                  <a href="#none" class="a-nextpage" aria-label="다음 페이지 그룹으로">다음 페이지</a>
+                  <a href="#none" class="a-lastpage" aria-label="마지막 페이지 그룹으로">마지막</a>
+                </div>
+                <!--mob버전 페이징 end-->
+  
+              </div>
+  
+  
+            </div>
+          </div>
         </div>
       </section>
+
+      <div class="board-contents board-viewPage">
+        <div class="whiteTable">
+          <div class="board-viewPage__con">
+            <div class="title">
+              <span class="ico-state state-ing">진행중</span>
+              9/4 11:00 여주지원 복대리 요청드립니다.
+            </div>
+
+            <div class="view-list">
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">작성자</div>
+                  <div class="inline-row-form__conf">홍길동</div>
+                </div>
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">등록일</div>
+                  <div class="inline-row-form__conf">2024.08.10 15:37:23</div>
+                </div>
+              </div>
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">기능법원</div>
+                  <div class="inline-row-form__conf">고등법원, 서울행정법원, 서울가정법원, 서울중앙지방법원, 서울동부지방법원, 서울서부지방법원, 서울남부지방법원, 서울북부지방법원</div>
+                </div>
+              </div>
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">사무실명</div>
+                  <div class="inline-row-form__conf">사무실</div>
+                </div>
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">성명</div>
+                  <div class="inline-row-form__conf">홍길동</div>
+                </div>
+              </div>
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">연락처</div>
+                  <div class="inline-row-form__conf"> <p class="text-danger">매칭시 확인 가능</p></div>
+                </div>
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">이메일</div>
+                  <div class="inline-row-form__conf"> <p class="text-danger">매칭시 확인 가능</p></div>
+                </div>
+              </div>
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">팩스</div>
+                  <div class="inline-row-form__conf"> <p class="text-danger">매칭시 확인 가능</p></div>
+                </div>
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">주소</div>
+                  <div class="inline-row-form__conf"> <p class="text-danger">매칭시 확인 가능</p></div>
+                </div>
+              </div>
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">세금계산서 발행여부</div>
+                  <div class="inline-row-form__conf">
+                    <p class="text-danger">매칭 시 확인 가능</p>
+                  </div>
+                </div>
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">부가세 포함 여부</div>
+                  <div class="inline-row-form__conf">
+                    <p class="text-danger">매칭시 확인 가능</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="view-contents">
+              1. 서울 지역 전체 복대리, 제소전 화해 가능합니다.<br><br>
+              
+              
+
+              2. 세금계산서 발행 가능합니다(부가세 10% 가산)<br><br>
+              
+              
+              
+              3. 이메일로 재판진행내용 정리해서 보내드립니다
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
 
 </body>
 

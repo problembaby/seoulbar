@@ -107,6 +107,19 @@ td.cell-subject > * {
 
 .board-btn-area.flex-js-spaced{justify-content: space-between;}
 
+.form-area-title{
+  font-size: 22px;
+  padding-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  padding: 0;
+}
+
+
+.address-list{display: flex; flex-direction: column; width: 100%; padding: 10px 0; gap:10px}
+.address-list .address-item{display: flex; width: 100%; gap:10px}
+.address-input{max-width: 300px;}
 
 @media (max-width: 1024px) {
 

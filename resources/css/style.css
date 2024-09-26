@@ -757,6 +757,12 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   background-size: cover;
 }
 
+.board-noticeView__con{border-top:2px solid #0F3966}
+.board-top-row{background: #E7ECFF; display: flex; justify-content: space-between;  padding:20px;}
+.board-top-row .title{font-size: 22px; font-weight: 500;}
+
+
+
 @media screen and (max-width: 1800px) {
   .notification-list li a {
     width: 160px;

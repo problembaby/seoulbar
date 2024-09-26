@@ -128,7 +128,10 @@ td.cell-subject > * {
   gap: 40px;
   color: var(--white);
 }
-.sh_s_bar_fr_021 .table-board table tbody tr td {font-size: 12px;}
+.sh_s_bar_fr_021 .table-board table tbody tr td {
+  font-size: 12px;
+  font-weight: 500;
+}
 .sh_s_bar_fr_021 .board-btn-area {
   gap: 10px;
 }

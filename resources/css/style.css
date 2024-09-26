@@ -728,10 +728,23 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   box-shadow: 0 10px 0 #184F88;
 }
 
+
+
+
 .board-btn-area.ali-right{
   gap:10px
 }
 
+
+.notification-list li a.on .tit, .notification-list li a:hover .tit {
+  background: linear-gradient(to bottom, #7c99ff, #6b85dd);
+  color: #fff;
+}
+
+.notification-list li a.on .value, .notification-list li a:hover .value {
+  color: #fff;
+  background-color: #7C99FF;
+}
 
 @media screen and (max-width: 1800px) {
   .notification-list li a {
@@ -904,7 +917,7 @@ width: 100%;
 
 .notification-list.sub{margin-bottom: 10px; justify-content: center;}
 
-.formStyle240{max-width: 240px; width: 100%;}
+.formStyle240{width: 100%;}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */

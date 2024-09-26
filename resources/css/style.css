@@ -690,7 +690,24 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   background: url(../images/ico/bookmark_action.svg) no-repeat;
 }
 
+.search-center-area{display: flex; align-items: center; justify-content: center; max-width: 300px; gap:10px; margin:30px auto; }
+.borderBox-style01{ border:1px solid #999999; border-radius: 4px; padding:20px 30px;}
 
+.borderBox-style01 .checkbox-group{ padding:5px; margin-bottom: 10px;} 
+.borderBox-style01 .court-list{ display: flex; flex-wrap: wrap; justify-content: flex-start;}
+.borderBox-style01 .court-list li{flex:0 1 250px; padding:5px}
+
+.add-view-list{display: flex; gap:10px; flex-wrap: wrap; margin-top: 10px;} 
+.add-view-list .add-item{border:1px solid #BBBBBB; border-radius: 4px; display: flex; justify-content: space-between; padding:5px; gap:10px}
+.btn-close-del{background-color: transparent;}
+.btn-close-del::before{
+  content: "";
+  background: url(../images/common/close-del.svg);
+  width: 13px;
+  height: 13px;
+  display: block;
+  background-size: 100% 100%;
+}
 
 @media screen and (max-width: 1800px) {
   .notification-list li a {
@@ -840,6 +857,21 @@ width: 100%;
   padding-right: 0px;
 }
 
+/*가능법원 팝업*/
+.search-center-area {
+  max-width: 100%;
+}
+.search-center-area .btn-search{ width:100px;}
+
+.borderBox-style01 .court-list{justify-content: center;}
+.borderBox-style01 .court-list li {
+  flex: 0 1 30%;
+}
+.borderBox-style01 .checkbox-group {
+  text-align: center;
+}
+.localTab li{margin: 2px;}
+
 }
 
 @media screen and (max-width: 882px) {
@@ -920,6 +952,17 @@ width: 100%;
 .formStyle02 {
   width: 50%;
   max-width: none;
+}
+
+.borderBox-style01 .court-list li {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.borderBox-style01 {
+  border: 1px solid #999999;
+  border-radius: 4px;
+  padding: 20px 5px;
 }
 
   }    

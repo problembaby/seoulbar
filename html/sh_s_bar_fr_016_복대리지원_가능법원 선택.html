@@ -73,6 +73,7 @@
           </div>
           <div class="form-area__searchList">
 
+            <!--지역 탭 start-->
             <ul class="nav nav-pills nav-fill localTab" id="local-tab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="tab-seoul" data-bs-toggle="pill" data-bs-target="#tab-seoul-cont"
@@ -120,6 +121,124 @@
                   type="button" role="tab" aria-controls="tab-jeju-cont">제주</button>
               </li>
             </ul>
+            <!--지역 탭 end-->
+
+
+            <!--탭 조회 내용 start-->
+            <div class="tab-content" id="local-tabContent">
+              <div class="tab-pane fade show active" id="tab-seoul-cont" role="tabpanel" tabindex="0">
+                <div class="local-contents">
+                  <div class="search-center-area">
+                    <input type="text" class="form-control" placeholder="법원명 조회">
+                    <button type="submit" class="btn btn-primary btn-search">조회</button>
+                  </div>
+
+                                    <div class="borderBox-style01">
+                    <div class="checkbox-group">
+                      <input type="checkbox" name="all_courts" id="all_courts" onclick="toggleAllCheckboxes(this)">
+                      <label for="all_courts">전체</label>
+                    </div>
+                    <ul class="court-list">
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_high_court">
+                        <label for="seoul_high_court">서울고등법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_family_court">
+                        <label for="seoul_family_court">서울가정법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_administrative_court">
+                        <label for="seoul_administrative_court">서울행정법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_bankruptcy_court">
+                        <label for="seoul_bankruptcy_court">서울회생법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_central_district_court">
+                        <label for="seoul_central_district_court">서울중앙지방법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_eastern_district_court">
+                        <label for="seoul_eastern_district_court">서울동부지방법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_southern_district_court">
+                        <label for="seoul_southern_district_court">서울남부지방법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_northern_district_court">
+                        <label for="seoul_northern_district_court">서울북부지방법원</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="court" id="seoul_western_district_court">
+                        <label for="seoul_western_district_court">서울서부지방법원</label>
+                      </li>
+                    </ul>
+                  
+                    <div class="d-flex justify-content-center mt-3">
+                      <button type="button" class="btn btn-primary">추가</button>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    //전체 선택/해제
+                    function toggleAllCheckboxes(source) {
+                      const checkboxes = document.querySelectorAll('.court-list input[type="checkbox"]');
+                      checkboxes.forEach(checkbox => {
+                        checkbox.checked = source.checked;
+                      });
+                    }
+                  </script>
+                  <ul class="add-view-list">
+                    <li class="add-item">
+                      <span>서울고등법원</span>
+                      <button type="button" class="btn-close-del" aria-label="Close"></button>
+                    </li>
+                    <li class="add-item">
+                      <span>서울지방법원</span>
+                      <button type="button" class="btn-close-del" aria-label="Close"></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+
+
+
+              <div class="tab-pane fade" id="tab-incheon-gyeonggi-cont" role="tabpanel" tabindex="0">
+                인천/경기
+              </div>
+              <div class="tab-pane fade" id="tab-gangwon-cont" role="tabpanel" tabindex="0">
+                강원도
+              </div>
+              <div class="tab-pane fade" id="tab-chungbuk-cont" role="tabpanel" tabindex="0">
+                충북
+              </div>
+              <div class="tab-pane fade" id="tab-daejeon-sejong-chungnam-cont" role="tabpanel" tabindex="0">
+                대전/세종/충남
+              </div>
+              <div class="tab-pane fade" id="tab-daegu-gyeongbuk-cont" role="tabpanel" tabindex="0">
+                대구/경북
+              </div>
+              <div class="tab-pane fade" id="tab-busan-ulsan-gyeongnam-cont" role="tabpanel" tabindex="0">
+                부산/울산/경남
+              </div>
+              <div class="tab-pane fade" id="tab-gwangju-jeonnam-cont" role="tabpanel" tabindex="0">
+                광주/전남
+              </div>
+              <div class="tab-pane fade" id="tab-jeonbuk-cont" role="tabpanel" tabindex="0">
+                전북
+              </div>
+              <div class="tab-pane fade" id="tab-jeju-cont" role="tabpanel" tabindex="0">
+                제주
+              </div>
+            </div>
+
+            <!--탭 조회 내용 end-->
 
 
 
@@ -128,7 +247,7 @@
 
           <!-- Submit Button -->
           <div class="form-button">
-            <button class="cancel" type="submit">닫기</button>
+            <button class="cancel" type="button" onclick="window.close()">닫기</button>
             <button class="submit" type="submit">저장</button>
           </div>
         </form>

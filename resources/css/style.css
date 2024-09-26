@@ -299,39 +299,39 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 
 .mobile-logo{max-width: 300px; width: 100%;}
 .menuRightClosePosi{position: absolute; right: 30px; top:30px}
-.form-container {
+.form-container{
   max-width: 1144px;
   margin: 0 auto;
   padding: 25px 30px;
   border-radius: 15px;
   background-color: #fff;
 }
-.form-container .form-area__inputList {
+.form-area__inputList {
   border-top: 2px solid #0F3966;
 }
-.form-container .form-item {
+.form-item {
   border-bottom: 1px solid #999;
   padding-right: 20px;
 }
-.form-container .form-row {
+.form-row {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-.form-container .form-row .form-date-area {
+.form-row .form-date-area {
   display: flex;
   gap: 10px;
 }
-.form-container .form-row .form-date-area .form-control {
+.form-row .form-date-area .form-control {
   width: 175px;
 }
-.form-container .form-group {
+.form-group {
   display: flex;
   gap: 20px;
   align-items: center;
   width: 100%;
 }
-.form-container .form-group .form-group__inputWarp {
+.form-group .form-group__inputWarp {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -344,23 +344,23 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   cursor: pointer;
 }
 
-.form-container .title__area {
+.title__area {
   padding-bottom: 8px;
   border-bottom: 0.5px solid var(--main-color);
   margin-bottom: 23px;
   display: flex;
   justify-content: space-between;
 }
-.form-container .title__area .form__title {
+.title__area .form__title {
   font-size: 22px;
   font-weight: 700;
   color: #1E356D;
 }
-.form-container .title__area .btn-close {
+.title__area .btn-close {
   width: 16px;
   height: 16px;
 }
-.form-container .form-group .label__title {
+.form-group .label__title {
   max-width: 140px;
   width: 100%;
   height: 75px;
@@ -374,49 +374,48 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   justify-content: center;
   padding: 0 5px;
 }
-.form-container .form-group .label__title .required {
+.required {
   color:#FF5545;
   margin-left: 3px;
 }
-.form-container .form-group .label__title.tax_invoice__title .required {
+.form-group .label__title.tax_invoice__title .required {
   margin-top: 22px;
   margin-left: -2px;
 }
-.form-container .form-group .details__title{
+.form-group .details__title{
   height: 182px !important;
 }
-.form-container .form-group .form-row {
+.form-group .form-row {
   display: flex;
   gap: 10px;
   width: 100%;
 }
-.form-container .form-group input[type="text"],
-.form-container .form-group input[type="tel"],
-.form-container .form-group input[type="email"],
-.form-container .form-group input[type="number"]{
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="number"]{
   width: 100%;
   height: 36px;
   border-radius: 4px;
   border: 1px solid var(--gray-2);
 }
-.form-container .form-group textarea{
+.form-group textarea{
   width: 100%;
   border: 1px solid var(--gray-2);
 }
-.form-container .form-group input::placeholder,
-.form-container .form-group textarea::placeholder{
+.form-group input::placeholder,
+.form-group textarea::placeholder{
   color: #B3B3B3;
 }
 
-.form-container .form-button {
-  margin-top: 30px;
-}
 .form-button {
   max-width: 290px;
   margin: 0 auto;
+  margin-top: 30px;
   display: flex;
   gap: 10px;
 }
+
 .btn-set {
   width: 50%;
   height: 36px;
@@ -427,9 +426,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  font-weight: 4
-  
-  00;
+  font-weight: 400;
   color: var(--white);
 }
 .gray-color {
@@ -569,7 +566,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .sub-container .inner{min-height: 830px;}
 
 .formStyle01{max-width:160px; width: 100%; font-size: 14px;}
-.formStyle02{max-width:82px; width: 100%; font-size: 14px; border-color: var(--gray-2); flex-shrink: inherit;}
+.formStyle02{width:82px; font-size: 14px; border-color: var(--gray-2); flex-shrink: inherit;}
 .formStyle03{width: 100%; font-size: 14px; border-color: var(--gray-2);}
 .formStyle240{width: 240px;; font-size: 14px;}
 .btn-search{display: flex; gap:10px; max-width:84px ;}
@@ -689,7 +686,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .view-list .inline-row{display: flex; width: 100%; border-bottom:1px solid #999999 }
 .inline-row-form{display: flex ; align-items: center; flex:1 40%; gap:20px}
 .inline-row-form__tit{flex:0 0 140px; color:#000; padding:10px; height: 50px; display: flex; align-items: center; background-color: #EEEEEE; font-weight: 700; justify-content: center; justify-content: center;}
-.inline-row-form__conf{flex:1 auto; display: flex; align-items: center; padding:10px; background-color: #fff; font-size: 500;}
+.inline-row-form__conf{flex:1 auto; display: flex; align-items: center; padding:10px; background-color: #fff; font-weight: 500;}
 
 .view-contents{padding:20px}
 
@@ -787,15 +784,15 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 @media screen and (max-width: 1280px) {
   /*갤럭시탭 해상도*/
-  .form-container .form-row {
+  .form-row {
     flex-direction: column;
     gap: 0px;
     align-items: baseline;
   }
-  .form-container .form-group .start-date {
+  .form-group .start-date__Double {
     height: 160px;
   }
-  .form-container .form-row .form-group.col:first-child {
+  .form-row .form-group.col:first-child {
     border-bottom: 1px solid #999;
   }
 }
@@ -892,17 +889,17 @@ width: 100%;
 }
 
 
-.form-container .form-row {
+.form-row {
   flex-direction: column;
   gap: 0px;
   align-items: baseline;
 }
 
-.form-container .form-row .form-date-area {
+.form-row .form-date-area {
   align-items: center;
   width: 100%;
 }
-.form-container .form-item {
+.form-item {
   padding-right: 0px;
 }
 
@@ -965,7 +962,7 @@ width: 100%;
     transition: all 0.2s;
   }
 
-.form-container .form-row .form-date-area .form-control {
+.form-row .form-date-area .form-control {
   width: 140px;
 }
 
@@ -990,19 +987,22 @@ width: 100%;
   padding: 20px 0;
 }
 
-.form-container .form-row .form-date-area {
+.form-row .form-date-area {
   flex-direction: column;
   align-items: baseline;
 }
-.form-container .form-row .form-date-area > div {
+.form-row .form-date-area > div {
   width: 100%;
 }
 
-.form-container .form-group .start-date {
+.form-group .start-date__Double {
   height: 290px !important;
 }
+.form-group .start-date {
+  height: 100px !important;
+}
 
-.form-container .form-row .form-date-area .form-control {
+.form-row .form-date-area .form-control {
   width: 100%;
 }
 .formStyle02 {
@@ -1026,23 +1026,23 @@ width: 100%;
 
 
 @media screen and (max-width: 576px) {
-  .form-container {
+  .form-container{
     padding: 25px 15px;
   }
-  .form-container .form-group .form-group__inputWarp {
+  .form-group .form-group__inputWarp {
     display: flex;
     flex-direction: column;
     align-items: baseline;
   }
-  .form-container .form-group .label__title {
+  .form-group .label__title {
     height: 100px;
     width: 80px;
   }
-  .form-container .form-group .trial_date__title {
+  .form-group .trial_date__title {
     height: 150px;
-  }  .inline-row-form{
+  }  
+  .inline-row-form{
     border-bottom: 1px solid #999999;
-    background-color: #EEEEEE;
   }
 
 

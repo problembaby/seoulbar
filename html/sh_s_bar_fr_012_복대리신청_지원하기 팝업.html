@@ -131,20 +131,21 @@
               <div class="view-list">
                 <div class="inline-row">
                   <div class="inline-row-form form-group">
-                    <div class="inline-row-form__tit">사무실 명</div>
+                    <div class="inline-row-form__tit">사무실 명<span class="required">*</span></div>
                     <div class="inline-row-form__conf">
                       <input type="text" id="title" name="title" required>
                     </div>
-                  </div>                </div>
+                  </div>                
+                </div>
                 <div class="inline-row">
                   <div class="inline-row-form form-group">
-                    <div class="inline-row-form__tit">성명</div>
+                    <div class="inline-row-form__tit">성명<span class="required">*</span></div>
                     <div class="inline-row-form__conf">
                       <input type="text" id="title" name="title" required>
                     </div>
                   </div>
                   <div class="inline-row-form form-group">
-                    <div class="inline-row-form__tit">이메일</div>
+                    <div class="inline-row-form__tit">이메일<span class="required">*</span></div>
                     <div class="inline-row-form__conf position-relative">
                       <input type="email" id="email" name="email" required placeholder="example@example.com" onblur="validateEmail()">
                       <!-- <span id="emailError" class="position-absolute" style="color:red; display:none; font-size: 11px;
@@ -154,25 +155,25 @@
                 </div>
                 <div class="inline-row">
                   <div class="inline-row-form form-group">
-                    <div class="inline-row-form__tit">연락처</div>
+                    <div class="inline-row-form__tit">연락처<span class="required">*</span></div>
                     <div class="inline-row-form__conf">
                       <input type="tel" id="contact" name="contact" placeholder="010 0000 0000" required oninput="formatPhoneNumber(this)">
                     </div>
                   </div>
                   <div class="inline-row-form form-group">
-                    <div class="inline-row-form__tit">금액</div>
+                    <div class="inline-row-form__tit">팩스<span class="required">*</span></div>
                     <div class="inline-row-form__conf">
-                      <input type="number" id="amount" name="amount" required>
+                      <input type="tel" id="contact" name="contact" required>
                     </div>
                   </div>
                 </div>
                 <div class="inline-row ">
                   <div class="inline-row-form form-group address__input">
-                    <div class="inline-row-form__tit">주소</div>
+                    <div class="inline-row-form__tit">주소<span class="required">*</span></div>
                     <div class="inline-row-form__conf">
                       <div class="d-flex">
-                        <input type="text" id="postal-code" name="postal-code" placeholder="우편번호" style="flex: 1;">
-                        <button type="button" class="btn-set navy-color">주소검색</button>
+                        <input type="text" id="postal_code" name="postal_code" class="form-control address-input" placeholder="우편번호">
+                        <button type="button" class="btn btn-primary">주소 검색</button>
                       </div>
                       <input type="text" id="address" name="address" placeholder="주소">
                       <input type="text" id="detail-address" name="detail-address" placeholder="상세주소">

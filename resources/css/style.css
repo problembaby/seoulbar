@@ -532,6 +532,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 
 .sub-title .ico{background:url(../images/sub-titleBg.png); width: 42px; height: 43px; display: flex; align-items: center; justify-content: center; position: relative;}
 .sub-title .pos-ss::before{position: absolute; top:10px; left:13px}
+.sub-title .pos-at::before{position: absolute; top:8px;}
 
 .board-top-search-container{margin-top: 26px;}
 .board-menuList{display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap:12px}

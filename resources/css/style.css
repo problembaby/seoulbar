@@ -460,6 +460,9 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   position: relative;
   border:4px solid #fff;
 }
+.chk-switch.border-d + label {
+  border:4px solid #ddd;
+}
 .chk-switch + label:after {
   content: "";
   position: absolute;
@@ -744,6 +747,11 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .notification-list li a.on .value, .notification-list li a:hover .value {
   color: #fff;
   background-color: #7C99FF;
+}
+
+/* 모달창 */
+.modal-content {
+  padding: 25px 30px;
 }
 
 @media screen and (max-width: 1800px) {

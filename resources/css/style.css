@@ -374,7 +374,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   justify-content: center;
   padding: 0 5px;
 }
-.form-container .form-group .label__title .required {
+.required {
   color:#FF5545;
   margin-left: 3px;
 }
@@ -692,7 +692,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .view-list .inline-row{display: flex; width: 100%; border-bottom:1px solid #999999 }
 .inline-row-form{display: flex ; align-items: center; flex:1 40%; gap:20px}
 .inline-row-form__tit{flex:0 0 140px; color:#000; padding:10px; height: 50px; display: flex; align-items: center; background-color: #EEEEEE; font-weight: 700; justify-content: center; justify-content: center;}
-.inline-row-form__conf{flex:1 auto; display: flex; align-items: center; padding:10px; background-color: #fff; font-size: 500;}
+.inline-row-form__conf{flex:1 auto; display: flex; align-items: center; padding:10px; background-color: #fff; font-weight: 500;}
 
 .view-contents{padding:20px}
 
@@ -1011,9 +1011,9 @@ width: 100%;
   }
   .form-container .form-group .trial_date__title {
     height: 150px;
-  }  .inline-row-form{
+  }  
+  .inline-row-form{
     border-bottom: 1px solid #999999;
-    background-color: #EEEEEE;
   }
 }
 

@@ -416,28 +416,6 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   gap: 10px;
 }
 
-.btn-set {
-  width: 50%;
-  height: 36px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--white);
-}
-.gray-color {
-  background-color: #A2A2B5;
-  color: #fff;
-}
-.navy-color {
-  background-color: var(--main-color);
-  color: #fff;
-}
-
 /* fr_012_popup 복대리신청 지원하기 팝업 */
 .fr_012_popup .inline-row-form__conf {
   width: auto;

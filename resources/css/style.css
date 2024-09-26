@@ -542,7 +542,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   gap: 12px;
 }
 .search-area .left{flex:0 40%}
-.search-area .right{flex:0 40%}
+.search-area .right{ display: flex; justify-content: flex-end; align-items: center;}
 .search-area__inputList{display: flex; gap:10px}
 .date-input-wrap{display: flex; align-items: center; gap:10px}
 
@@ -571,14 +571,11 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .formStyle01{max-width:160px; width: 100%; font-size: 14px;}
 .formStyle02{max-width:82px; width: 100%; font-size: 14px; border-color: var(--gray-2); flex-shrink: inherit;}
 .formStyle03{width: 100%; font-size: 14px; border-color: var(--gray-2);}
-.formStyle240{max-width: 240px; width: 100%; font-size: 14px;}
+.formStyle240{width: 240px;; font-size: 14px;}
 .btn-search{display: flex; gap:10px; max-width:84px ;}
 .btn-search::before{content: ""; background: url(../images/ico/ico-btnSearch.svg); width: 20px; height: 20px; display: block; background-size: 100% 100%;}
 
-.border-contents .inner{
-
-}
-
+.formStyle04{max-width: 100px;}
 
 
 /* 페이징 넘버링 */
@@ -736,6 +733,30 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
   display: block;
   background-size: 100% 100%;
 }
+
+.notification-list.sub li a .tit {
+  height: 50px;
+}
+.notification-list li a .value {
+  height: 50px;
+}
+.notification-list.sub li a {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 10px 0 #184F88;
+}
+
+.board-btn-area.ali-right{
+  gap:10px
+}
+
 
 @media screen and (max-width: 1800px) {
   .notification-list li a {
@@ -899,9 +920,17 @@ width: 100%;
   text-align: center;
 }
 .localTab li{margin: 2px;}
-
+.notification-list.sub li {
+  display: flex;
+  flex: 1 1 120px;
+  justify-content: center;
 }
 
+
+.notification-list.sub{margin-bottom: 10px; justify-content: center;}
+
+.formStyle240{max-width: 240px; width: 100%;}
+}
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
 }
@@ -1015,6 +1044,21 @@ width: 100%;
     border-bottom: 1px solid #999999;
     background-color: #EEEEEE;
   }
+
+
+  .notification-list.sub li a {
+    width: 140px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 16px;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 10px 0 #184F88;
+}
+
 }
 
 @media screen and (max-width: 480px) {

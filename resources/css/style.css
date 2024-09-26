@@ -480,7 +480,7 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 
 .switch-box{position: relative;     width: 90px;
-  height: 32px;}
+  height: 32px; font-size: 14px;}
 
 .switch-box .chk_y {
   position: absolute;

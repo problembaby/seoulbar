@@ -227,13 +227,13 @@
               <div class="letf">
                 <ul class="notification-list sub">
                   <li>
-                    <a href="#" title="페이지이동" class="notification-item" title="선택됨">
+                    <a href="#" title="페이지이동" class="notification-item">
                       <div class="tit">의뢰한 복대리</div>
                       <div class="value">1건</div>
                     </a>
                   </li>
                   <li>
-                    <a href="#" title="페이지이동" class="notification-item">
+                    <a href="#" title="페이지이동" class="notification-item on" title="선택됨">
                       <div class="tit">지원요청 복대리</div>
                       <div class="value">4건</div>
                     </a>
@@ -283,177 +283,161 @@
                   <table>
                     <caption class="sr-only">복대리 신청 게시물 목록입니다. 번호, 구분, 법원구분, 제목, 작성자, 금액, 재판일시, 진행상황 항목을 제공합니다.</caption>
                     <colgroup>
-                      <col width="6%;">
-                      <col width="6%;">
                       <col width="10%;">
-                      <col width="auto">
                       <col width="110px;">
-                      <col width="120px">
+                      <col width="auto">
                       <col width="10%">
-                      <col width="100px">
+                      <col width="10%">
                     </colgroup>
                     <thead>
                       <tr>
                         <th scope="col">NO</th>
-                        <th scope="col">구분</th>
-                        <th scope="col">관할법원</th>
+                        <th scope="col">법원구분</th>
                         <th scope="col">제목</th>
                         <th scope="col">작성자</th>
-                        <th scope="col">금액</th>
-                        <th scope="col">재판일시</th>
-                        <th scope="col">진행상황</th>
+                        <th scope="col">관심</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="no-contents" colspan="8">등록 된 게시물이 없습니다.</td>
+                        <td class="no-contents" colspan="5">등록 된 게시물이 없습니다.</td>
                       </tr>
                       <tr>
-                        <td class="num">1203</td>
-                        <td class="mobNone">복대리</td>
-                        <td>서울중앙지방법원</td>
+                        <td class="num mobNone">1203</td>
+                        <td>경기, 북부지방법원, 동부지방법원 </td>
                         <td class="cell-subject">
                           <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
                           <img src="../resources/images/ico/new.svg" alt="new" class="new">
                         </td>
                         <td class="mobNone">홍길동</td>
-                        <td>110,000</td>
-                        <td class="mobNone">2024. 9. 4. 11:00</td>
                         <td>
-                          <span class="ico-state state-ing">진행중</span>
+                          <div class="bookmark-area">
+                            <button type="button" class="bookmark" onclick="toggleBookmark(this)">
+                              <span class="sr-only">즐겨찾기</span>
+                            </button>
+                          </div>
                         </td>
 
                       </tr>
  
                       <tr>
-                        <td class="num">1203</td>
-                        <td class="mobNone">복대리</td>
-                        <td>서울중앙지방법원</td>
+                        <td class="num mobNone">1203</td>
+                        <td>경기, 북부지방법원, 동부지방법원 </td>
                         <td class="cell-subject">
                           <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
                           <img src="../resources/images/ico/new.svg" alt="new" class="new">
                         </td>
                         <td class="mobNone">홍길동</td>
-                        <td>110,000</td>
-                        <td class="mobNone">2024. 9. 4. 11:00</td>
                         <td>
-                          <span class="ico-state state-close">종료</span>
+                          <div class="bookmark-area">
+                            <button type="button" class="bookmark" onclick="toggleBookmark(this)">
+                              <span class="sr-only">즐겨찾기</span>
+                            </button>
+                          </div>
                         </td>
 
                       </tr>
+ 
                       <tr>
-                        <td class="num">1203</td>
-                        <td class="mobNone">복대리</td>
-                        <td>서울중앙지방법원</td>
+                        <td class="num mobNone">1203</td>
+                        <td>경기, 북부지방법원, 동부지방법원 </td>
                         <td class="cell-subject">
                           <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
-                      
+                          <img src="../resources/images/ico/new.svg" alt="new" class="new">
                         </td>
                         <td class="mobNone">홍길동</td>
-                        <td>110,000</td>
-                        <td class="mobNone">2024. 9. 4. 11:00</td>
                         <td>
-                          <span class="ico-state state-complete">위임완료</span>
+                          <div class="bookmark-area">
+                            <button type="button" class="bookmark on" onclick="toggleBookmark(this)">
+                              <span class="sr-only">즐겨찾기</span>
+                            </button>
+                          </div>
                         </td>
 
                       </tr>
-                      <tr>
-                        <td class="num">1203</td>
-                        <td class="mobNone">복대리</td>
-                        <td>서울중앙지방법원</td>
-                        <td class="cell-subject">
-                          <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
-                       
-                        </td>
-                        <td class="mobNone">홍길동</td>
-                        <td>110,000</td>
-                        <td class="mobNone">2024. 9. 4. 11:00</td>
-                        <td>
-                          <span class="ico-state state-complete">위임완료</span>
-                        </td>
-
-                      </tr>
+ 
+          
 
                     </tbody>
                   </table>
                 </div>
 
-                </div>
-
-              </div>
-              <div class="board-btn-area ali-right">
-                <button type="button" class="btn btn-write btn-primary">의뢰하기</button>
-                <button type="button" class="btn btn-write btn-primary">지원하기</button>
               </div>
 
-
-              <!--pc버전 페이징 start-->
-              <div class="page only-pc-flex">
-                <a href="#none" class="a-firstpage" aria-label="처음 페이지 그룹으로">처음</a>
-                <a href="#none" class="a-prevpage" aria-label="이전 페이지 그룹으로">이전 페이지</a>
-                <ul class="ul-page-list" aria-label="페이지 목록">
-                  <li><a href="#none" class="a-page-el a-current-page" aria-current="page" title="페이지 1">1</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 2 이동">2</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 3 이동">3</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 4 이동">4</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 5 이동">5</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 6 이동">6</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 7 이동">7</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 8 이동">8</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 9 이동">9</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 10 이동">10</a></li>
-                </ul>
-                <a href="#none" class="a-nextpage" aria-label="다음 페이지 그룹으로">다음 페이지</a>
-                <a href="#none" class="a-lastpage" aria-label="마지막 페이지 그룹으로">마지막</a>
-              </div>
-              <!--pc버전 페이징 end-->
-
-              <!--mob버전 페이징 start-->
-              <div class="page only-mob-flex">
-                <a href="#none" class="a-firstpage" aria-label="처음 페이지 그룹으로">처음</a>
-                <a href="#none" class="a-prevpage" aria-label="이전 페이지 그룹으로">이전 페이지</a>
-                <ul class="ul-page-list" aria-label="페이지 목록">
-                  <li><a href="#none" class="a-page-el a-current-page" aria-current="page" title="페이지 1">1</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 2 이동">2</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 3 이동">3</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 4 이동">4</a></li>
-                  <li><a href="#none" class="a-page-el" title="페이지 5 이동">5</a></li>
-                </ul>
-                <a href="#none" class="a-nextpage" aria-label="다음 페이지 그룹으로">다음 페이지</a>
-                <a href="#none" class="a-lastpage" aria-label="마지막 페이지 그룹으로">마지막</a>
-              </div>
-              <!--mob버전 페이징 end-->
-
+            </div>
+            <div class="board-btn-area ali-right">
+              <button type="button" class="btn btn-write btn-primary">의뢰하기</button>
+              <button type="button" class="btn btn-write btn-primary">지원하기</button>
             </div>
 
 
+            <!--pc버전 페이징 start-->
+            <div class="page only-pc-flex">
+              <a href="#none" class="a-firstpage" aria-label="처음 페이지 그룹으로">처음</a>
+              <a href="#none" class="a-prevpage" aria-label="이전 페이지 그룹으로">이전 페이지</a>
+              <ul class="ul-page-list" aria-label="페이지 목록">
+                <li><a href="#none" class="a-page-el a-current-page" aria-current="page" title="페이지 1">1</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 2 이동">2</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 3 이동">3</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 4 이동">4</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 5 이동">5</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 6 이동">6</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 7 이동">7</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 8 이동">8</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 9 이동">9</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 10 이동">10</a></li>
+              </ul>
+              <a href="#none" class="a-nextpage" aria-label="다음 페이지 그룹으로">다음 페이지</a>
+              <a href="#none" class="a-lastpage" aria-label="마지막 페이지 그룹으로">마지막</a>
+            </div>
+            <!--pc버전 페이징 end-->
+
+            <!--mob버전 페이징 start-->
+            <div class="page only-mob-flex">
+              <a href="#none" class="a-firstpage" aria-label="처음 페이지 그룹으로">처음</a>
+              <a href="#none" class="a-prevpage" aria-label="이전 페이지 그룹으로">이전 페이지</a>
+              <ul class="ul-page-list" aria-label="페이지 목록">
+                <li><a href="#none" class="a-page-el a-current-page" aria-current="page" title="페이지 1">1</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 2 이동">2</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 3 이동">3</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 4 이동">4</a></li>
+                <li><a href="#none" class="a-page-el" title="페이지 5 이동">5</a></li>
+              </ul>
+              <a href="#none" class="a-nextpage" aria-label="다음 페이지 그룹으로">다음 페이지</a>
+              <a href="#none" class="a-lastpage" aria-label="마지막 페이지 그룹으로">마지막</a>
+            </div>
+            <!--mob버전 페이징 end-->
+
           </div>
+
+
         </div>
-
-        <script>
-          //북마크 버튼 클릭 이벤트
-          function toggleBookmark(element) {
-            $(element).toggleClass('on');
-            if ($(element).hasClass('on')) {
-              alert('관심 등록되었습니다');
-            } else {
-              alert('관심 취소되었습니다');
-            }
-          }
-        </script>
-
-
-
-        <!--footer [start]-->
-        <footer id="footer">
-          <div class="copiright">
-            Copyright(c) SEOUL BAR ASSOCIATION. All Rights Reserved.
-          </div>
-        </footer>
-        <!--footer [end]-->
       </div>
+
+      <script>
+        //북마크 버튼 클릭 이벤트
+        function toggleBookmark(element) {
+          $(element).toggleClass('on');
+          if ($(element).hasClass('on')) {
+            alert('관심 등록되었습니다');
+          } else {
+            alert('관심 취소되었습니다');
+          }
+        }
+      </script>
+
+
+
+      <!--footer [start]-->
+      <footer id="footer">
+        <div class="copiright">
+          Copyright(c) SEOUL BAR ASSOCIATION. All Rights Reserved.
+        </div>
+      </footer>
+      <!--footer [end]-->
     </div>
-    <!--컨텐츠 [end] -->
+  </div>
+  <!--컨텐츠 [end] -->
 
   </div>
 </body>

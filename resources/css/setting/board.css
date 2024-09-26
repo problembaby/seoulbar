@@ -121,6 +121,18 @@ td.cell-subject > * {
 .address-list .address-item{display: flex; width: 100%; gap:10px}
 .address-input{max-width: 300px;}
 
+
+.board-List__con {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: var(--white);
+}
+.sh_s_bar_fr_021 .table-board table tbody tr td {font-size: 12px;}
+.sh_s_bar_fr_021 .board-btn-area {
+  gap: 10px;
+}
+
 @media (max-width: 1024px) {
 
   .no-contents, .table-board .no-contents {
@@ -287,6 +299,13 @@ td.cell-subject > * {
   }
   .table-board table tbody tr + tr {
     margin-top: 10px;
+  }
+
+  
+  .board-List__con {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
 }

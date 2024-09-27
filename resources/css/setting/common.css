@@ -1250,7 +1250,7 @@ Box Sizing 정의 (Margin & Padding)
 
 .btn-white {
   --btn-color: #202632;
-  --btn-bg: #fff;
+  --btn-bg: #fff!important;
   --btn-border-color: #fff;
   --btn-hover-color: var(--main-color);
   --btn-hover-bg: #fff;

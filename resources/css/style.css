@@ -10,7 +10,7 @@
 }
 #gnb{
   background-color:transparent; 
-  width: 290px; 
+  width: 250px; 
   justify-content: center; 
   flex-basis: 1;
   flex-shrink: 0;
@@ -517,17 +517,20 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   display: none;
   cursor: pointer;
 }
+
 .switch-box .chk_n {
   position: absolute;
-  top:6px;
-  right: 20%;
-  transform: translateX(-50%);
-  color:#fff;
+  top: 6px;
+  right: -24%;
+  transform: translateX(-94%);
+  color: #fff;
   text-align: center;
   display: block;
   cursor: pointer;
+  text-align: center;
+  width: 45px;
+  text-align: center;
 }
-
 .chk-switch:checked + label + .chk_y{display: block;}
 .chk-switch:checked + label + .chk_y + .chk_n{display: none;}
 
@@ -804,8 +807,77 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   box-shadow: 0 5px 0 #AAAAAA; font-size: 18px; gap: 10px;}
 .btn-case.red{color: #FF4F4F}
 
+/* 사건관리*/
+
+.calendar-area{}
+.calendar-header{margin-top: 30px; margin-bottom: 25px; display: flex; justify-content: space-between}
+.calendar-header button{background: transparent;}
+.calendar-header .month-year{font-size: 30px; font-weight: 700; color:#fff;}
+.calendar-header .right{ align-self: flex-end;}
+.calendar-header .month{ display: flex; justify-content: space-between; align-items: center; gap:20px; }
 
 
+.calendar-month {width:100%; display: flex;}
+.calendar-month > div{width: calc(100% / 7); text-align: center; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 20px; color:#000; font-weight: 500; }
+.calendar-month > div.sunday{color: #FF4F4F; }
+
+.prev-month::before{
+  content:"";
+  background: url(../images/ico/ico-calPrev.svg);
+  display: block;
+  width: 38px;
+  height: 24px;
+}
+.next-month::before{
+  content:"";
+  background: url(../images/ico/ico-calNext.svg);
+  display: block;
+  width: 38px;
+  height: 24px;
+}
+
+.calendar-header .settings-list{display: flex; gap:10px; align-items: center;}
+.calendar-header .settings-list li{display: flex; gap:10px; align-items: center;}
+.calendar-header .settings-list li .title{color:#fff; font-size: 16px; display: flex; gap:10px; align-items: center;}
+
+.ico-googleCal::before{
+  content:"";
+  background: url(../images/ico/ico-google.svg);
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.ico-naverCal::before{
+  content:"";
+  background: url(../images/ico/ico-naverCal.svg);
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.calendar-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.calendar-day {
+  --cal-gap: 12px; 
+  display: flex;
+  gap: var(--cal-gap);
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.calendar-day > div {
+  width: calc((100% - 6 * var(--cal-gap)) / 7); /* 6개의 gap을 고려하여 너비 계산 */
+}
+
+.calendar-day .data-item {
+  background-color: #fff;
+  border: 1px solid #CCCCCC;
+}
 @media screen and (max-width: 1800px) {
   .notification-list li a {
     width: 160px;

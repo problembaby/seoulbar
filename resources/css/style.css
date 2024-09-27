@@ -192,6 +192,23 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
     background-size: 100% 100%;
 }
 
+.ico-plus::before {
+    content: "";
+    background: url(../images/common/ico-plus.svg);
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-size: 100% 100%;
+}
+.ico-danger::before {
+    content: "";
+    background: url(../images/common/ico-danger.svg);
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-size: 100% 100%;
+}
+
 .btn-menuSizeToggle{background-color: transparent; margin:30px 0;}
 .btn-menuSizeToggle::before{content: ""; background: url(../images/ico/ico-menuSmall.svg); width: 22px; height: 22px; display: block; background-size: 100% 100%;}
 .btn-menuSizeToggle.on::before{content: ""; background: url(../images/ico/ico-menurlarge.svg); width: 22px; height: 22px; display: block; background-size: 100% 100%;}
@@ -762,15 +779,32 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 }
 
 .board-noticeView__con{border-top:2px solid #0F3966}
-.board-top-row{background: #E7ECFF; display: flex; justify-content: space-between;  padding:20px;}
+.board-top-row{background: #E7ECFF; display: flex; justify-content: space-between;  padding:20px; border-bottom: 1px solid #999999;}
 .board-top-row .title{font-size: 22px; font-weight: 500;}
+.board-top-row .right{display: flex; flex-direction: row; gap:20px;}
+.board-top-row .board-top-cate .tit::after{display: block; content:""; height: 10px; background-color: #728199; width: 1px; margin:0 10px; }
+.board-top-cate{display: flex; align-items: center;}
+.board-top-row .board-top-cate .tit{display: flex; align-items: center; font-weight: 700;}
+.board-top-row .board-top-cate .conf{font-size: 12px;}
+.file-text{font-size: 14px;}
+.file-text:hover{text-decoration: underline;}
 
 
+.borad-contents{padding:10px; min-height: 300px;}
+.board-noticeView .whiteTable{padding: 30px;}
 
 /* 모달창 */
 .modal-content {
   padding: 25px 30px;
 }
+
+.btnList{display: flex; gap:10px}
+.btnList.right{justify-content: flex-end;}
+.btn-case{width: 160px; height: 48px; color:#0F3966;   border:none;
+  box-shadow: 0 5px 0 #AAAAAA; font-size: 18px; gap: 10px;}
+.btn-case.red{color: #FF4F4F}
+
+
 
 @media screen and (max-width: 1800px) {
   .notification-list li a {
@@ -944,6 +978,14 @@ width: 100%;
 .notification-list.sub{margin-bottom: 10px; justify-content: center;}
 
 .formStyle240{width: 100%;}
+.board-noticeView .whiteTable {
+  padding: 10px;
+}
+.board-top-row {
+  padding: 10px 20px;
+  flex-direction: column;
+  gap:5px
+}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */

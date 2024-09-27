@@ -1266,13 +1266,13 @@ Box Sizing 정의 (Margin & Padding)
   --btn-border-width: 1px
 }
 
-.btn-gray {
+.btn-white-gray {
   --btn-color: #666666;
-  --btn-bg: #CCCCCC;
-  --btn-border-color: none;
-  --btn-hover-color: var(--main-color);
-  --btn-hover-bg: #fff;
-  --btn-hover-border-color: var(--main-color);
+  --btn-bg: #fff;
+  --btn-border-color: #ccc;
+  --btn-hover-color: #000;
+  --btn-hover-bg: #ccc;
+  --btn-hover-border-color: #ccc;
   --btn-focus-shadow-rgb: 60, 153, 110;
   --btn-active-color: #CBD5E1;
   --btn-active-bg: #CBD5E1;
@@ -1282,6 +1282,11 @@ Box Sizing 정의 (Margin & Padding)
   --btn-disabled-bg: #fff;
   --btn-disabled-border-color: #E1E1E1;
   --btn-border-width: 1px
+}
+:not(.btn-check)+.btn-white-gray:active {
+  color: #000;
+  background-color: #ccc;
+  border-color: #ccc;
 }
 
 .btn-arrow-secondary {

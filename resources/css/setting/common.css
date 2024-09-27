@@ -1251,10 +1251,10 @@ Box Sizing 정의 (Margin & Padding)
 .btn-white {
   --btn-color: #202632;
   --btn-bg: #fff;
-  --btn-border-color: #CBD5E1;
+  --btn-border-color: #fff;
   --btn-hover-color: var(--main-color);
   --btn-hover-bg: #fff;
-  --btn-hover-border-color: var(--main-color);
+  --btn-hover-border-color:none;
   --btn-focus-shadow-rgb: 60, 153, 110;
   --btn-active-color: #CBD5E1;
   --btn-active-bg: #CBD5E1;
@@ -1263,7 +1263,7 @@ Box Sizing 정의 (Margin & Padding)
   --btn-disabled-color: #aaa;
   --btn-disabled-bg: #fff;
   --btn-disabled-border-color: #E1E1E1;
-  --btn-border-width: 1px
+
 }
 
 .btn-gray {

@@ -192,6 +192,23 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
     background-size: 100% 100%;
 }
 
+.ico-plus::before {
+    content: "";
+    background: url(../images/common/ico-plus.svg);
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-size: 100% 100%;
+}
+.ico-danger::before {
+    content: "";
+    background: url(../images/common/ico-danger.svg);
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-size: 100% 100%;
+}
+
 .btn-menuSizeToggle{background-color: transparent; margin:30px 0;}
 .btn-menuSizeToggle::before{content: ""; background: url(../images/ico/ico-menuSmall.svg); width: 22px; height: 22px; display: block; background-size: 100% 100%;}
 .btn-menuSizeToggle.on::before{content: ""; background: url(../images/ico/ico-menurlarge.svg); width: 22px; height: 22px; display: block; background-size: 100% 100%;}
@@ -780,6 +797,14 @@ a.points, a.messages{display: flex; align-items: center; font-weight: 700; font-
 .modal-content {
   padding: 25px 30px;
 }
+
+.btnList{display: flex; gap:10px}
+.btnList.right{justify-content: flex-end;}
+.btn-case{width: 160px; height: 48px; color:#0F3966;   border:none;
+  box-shadow: 0 5px 0 #AAAAAA; font-size: 18px; gap: 10px;}
+.btn-case.red{color: #FF4F4F}
+
+
 
 @media screen and (max-width: 1800px) {
   .notification-list li a {

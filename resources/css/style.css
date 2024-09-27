@@ -931,12 +931,12 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   padding: 10px;
   cursor: pointer;
 }
-.sh_s_bar_fr_027 .right-contents .chat-list li.on:hover {
+.sh_s_bar_fr_027 .right-contents .chat-list li:hover {
   background-color: #ffffff10;
   border-radius: 4px;
   position: relative;
 }
-.sh_s_bar_fr_027 .right-contents .chat-list li.on::before {
+.sh_s_bar_fr_027 .right-contents .chat-list li:hover::before {
   content: "";
   background: url(../images/ico/chat-opt.svg);
   width: 19px;

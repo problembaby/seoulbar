@@ -308,7 +308,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .mainTab .nav-link{width: 70px; height: 40px; padding:0 0px}
 
 
-.whiteTable{padding:12px; border-radius: 16px; background-color: #d9d9d920;}
+.whiteTable{padding:12px; border-radius: 16px; background-color: #fff;}
 .opacityTable{padding:30px; border-radius: 16px; background-color: #fff;}
 .thead-bg{background: #fff; position: relative;}
 .thead-bg tr th{background-color: #D3DBF9; text-align: center; }
@@ -543,7 +543,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   left: 2px;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: linear-gradient(#A8B1B5,#fff);
   border-radius: 18px;
   transition: 0.3s;
 }
@@ -956,11 +956,11 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 /* 사건관리*/
 
 .calendar-area{}
-.calendar-header{margin-top: 30px; margin-bottom: 25px; display: flex; justify-content: space-between}
+.calendar-header{margin-top: 30px; margin-bottom: 25px; display: flex; justify-content: flex-end; gap:200px}
 .calendar-header button{background: transparent;}
 .calendar-header .month-year{font-size: 30px; font-weight: 700; color:#fff;}
 .calendar-header .right{ align-self: flex-end;}
-.calendar-header .month{ display: flex; justify-content: space-between; align-items: center; gap:20px; }
+.calendar-header .month{ display: flex; justify-content: space-between; align-items: center; gap:20px; align-self: flex-end; }
 
 
 .calendar-month {width:100%; display: flex;}
@@ -1016,6 +1016,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   justify-content: flex-start;
 }
 
+
 .calendar-day > div {
   width: calc((100% - 6 * var(--cal-gap)) / 7); /* 6개의 gap을 고려하여 너비 계산 */
 }
@@ -1023,7 +1024,27 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .calendar-day .data-item {
   background-color: #fff;
   border: 1px solid #CCCCCC;
+  height: 190px;
+  border-radius: 16px;
+  position: relative;
 }
+
+.calendar-day > div:nth-child(7n + 1) .day {
+  color: #FF4F4F;
+}
+.calendar-day > div .day {
+  position: absolute;
+  top:15px;
+  right: 15px;
+}
+
+.calendar-day > div .ale{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+}
+
 @media screen and (max-width: 1800px) {
   .notification-list li a {
     width: 160px;

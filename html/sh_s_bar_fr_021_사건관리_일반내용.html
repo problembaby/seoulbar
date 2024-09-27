@@ -198,6 +198,129 @@
     </script>
     <!--왼쪽 메뉴 [end] -->
 
+    <!-- Modal [start]-->
+    <!-- 사건등록 모달 -->
+    <div class="modal fade" id="sh_s_bar_fr_Modal1" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="title__area">
+            <h2 class="form__title">사건등록하기</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-area__inputList">
+            <div class="form-group col form-item">
+              <label class="label__title" for="region">법원</label>
+              <div class="form-group__inputWarp">
+                <select id="region" class="form-select formStyle03 col" name="region" required>
+                  <option value="">지역 선택</option>
+                  <option value="서울">서울</option>
+                  <option value="부산">부산</option>
+                  <option value="인천">인천</option>
+                  <option value="대구">대구</option>
+                  <option value="광주">광주</option>
+                  <option value="대전">대전</option>
+                  <option value="울산">울산</option>
+                  <option value="세종">세종</option>
+                  <option value="경기">경기</option>
+                  <option value="강원">강원</option>
+                  <option value="충북">충북</option>
+                  <option value="충남">충남</option>
+                  <option value="전북">전북</option>
+                  <option value="전남">전남</option>
+                  <option value="경북">경북</option>
+                  <option value="경남">경남</option>
+                  <option value="제주">제주</option>
+                  <!-- Add more options as needed -->
+                </select>
+                <select id="court" class="form-select formStyle03 col" name="court" required>
+                  <option value="">각급법원 선택</option>
+                  <option value="서울고등법원">서울고등법원</option>
+                  <option value="서울가정법원">서울가정법원</option>
+                  <option value="서울행정법원">서울행정법원</option>
+                  <option value="서울회생법원">서울회생법원</option>
+                  <option value="서울중앙지방법원">서울중앙지방법원</option>
+                  <option value="서울동부지방법원">서울동부지방법원</option>
+                  <option value="서울남부지방법원">서울남부지방법원</option>
+                  <option value="서울북부지방법원">서울북부지방법원</option>
+                  <option value="서울서부지방법원">서울서부지방법원</option>
+                  <!-- Add options for courts here -->
+                </select>
+              </div>
+            </div>
+            <!-- 사건번호 -->
+            <div class="form-group form-item">
+              <label class="label__title" for="title">사건번호</label>
+              <input type="text" id="title" name="title" placeholder="1999가나123456" required>
+            </div>
+            <!-- 당사자 명 -->
+            <div class="form-group form-item">
+              <label class="label__title" for="title">당사자 명</label>
+              <input type="text" id="title" name="title" placeholder="홍길동" required>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-primary">사건등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 오류신고 모달 -->
+    <div class="modal fade" id="sh_s_bar_fr_Modal3" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="title__area">
+            <h2 class="form__title">오류 신고하기</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- 내용 -->
+          <div class="form-group mb20">
+            <textarea id="details" name="details" placeholder="오류 사항을 구체적으로 설명해주세요." rows="5"></textarea>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-primary">보내기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 관리명칭 관리 모달 -->
+    <div class="modal fade" id="sh_s_bar_fr_Modal2" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="title__area">
+            <h2 class="form__title">관리명칭 관리</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="form-area__inputList">
+            <!-- 사건상태 -->
+            <div class="form-group form-item">
+              <label class="label__title" for="title">사건상태</label>
+              <div class="switch-box">
+                <input type="checkbox" id="switch1" class="chk-switch border-d">
+                <label for="switch1" class="on">사건상태</label>
+                <p class="chk_y" onclick="document.getElementById('switch1').click();">진행중</p>
+                <p class="chk_n" onclick="document.getElementById('switch1').click();">종료</p>
+              </div>
+            </div>
+            <!-- 관리명칭 -->
+            <div class="form-group form-item">
+              <label class="label__title" for="title">관리명칭</label>
+              <input type="text" id="title" name="title" placeholder="관리명칭" required>
+            </div>
+            <!-- 내용 -->
+            <div class="form-group form-item">
+              <label class="label__title details__title" for="details">내용</label>
+              <textarea id="details" name="details" placeholder="오류 사항을 구체적으로 설명해주세요." rows="5"></textarea>
+            </div>
+          </div>
+          <div class="board-btn-area flex-js-spaced">
+            <button type="button" class="btn btn-write btn-red">사건삭제</button>
+            <button type="button" class="btn btn-write btn-primary">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal [end]-->
+
 
     <!--컨텐츠 [start] -->
     <div id="contents" class="sh_s_bar_fr_021">
@@ -208,13 +331,21 @@
               <i class="ico ico-case pos-at"></i>
               <h2>사건관리</h2>
             </div>
-            <div>
-              
-            </div>
           </div>
 
+          <div class="btnList right">
+            <button type="button" class="btn btn-white btn-case" data-bs-toggle="modal" data-bs-target="#sh_s_bar_fr_Modal1">
+              <i class="ico ico-plus"></i>
+              사건 등록
+            </button>
+            <button type="button" class="btn btn-white btn-case red" data-bs-toggle="modal" data-bs-target="#sh_s_bar_fr_Modal3">
+              <i class="ico ico-danger"></i>
+              오류 신고
+            </button>
+          </div>
+          
           <div class="board-top-search-container">
-            <div class="board-menuList">
+            <div class="board-menuList mb40">
               <div class="sub-link-list left">
                 <a href="#" title="선택됨" class="subMenuLink on">사건일반내용</a>
                 <a href="#" class="subMenuLink">사건진행내용</a>
@@ -230,68 +361,118 @@
                   <div class="view-list">
                     <div class="inline-row">
                       <div class="inline-row-form">
-                        <div class="inline-row-form__tit">작성자</div>
-                        <div class="inline-row-form__conf">홍길동</div>
-                      </div>
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">등록일</div>
-                        <div class="inline-row-form__conf">2024.08.10 15:37:23</div>
-                      </div>
-                    </div>
-                    <div class="inline-row">
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">구분</div>
-                        <div class="inline-row-form__conf">복대리</div>
-                      </div>
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">관할 법원</div>
-                        <div class="inline-row-form__conf">서울지방중앙법원</div>
-                      </div>
-                    </div>
-                    <div class="inline-row">
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">사무실명</div>
-                        <div class="inline-row-form__conf">법률사무소</div>
-                      </div>
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">담당자 명</div>
-                        <div class="inline-row-form__conf">홍길동</div>
-                      </div>
-                    </div>
-                    <div class="inline-row">
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">공고기간</div>
-                        <div class="inline-row-form__conf">2024.08.04 10:00 ~2024.09.04 11:00</div>
-                      </div>
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">금액</div>
-                        <div class="inline-row-form__conf">100,000원(계산서 발행, vat별도)</div>
-                      </div>
-                    </div>
-                    <div class="inline-row">
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">사건(구분)</div>
-                        <div class="inline-row-form__conf">대여금사건 피고 소송대리(피고)</div>
-                      </div>
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">재판일시</div>
-                        <div class="inline-row-form__conf">2024.09.04 11:00</div>
-                      </div>
-                    </div>
-                    <div class="inline-row">
-                      <div class="inline-row-form">
-                        <div class="inline-row-form__tit">연락처</div>
-                        <div class="inline-row-form__conf">
-                          <p class="text-danger">매칭 시 확인 가능</p>
+                        <div class="inline-row-form__tit h60p">관리명칭</div>
+                        <div class="inline-row-form__conf justify-content-between">
+                          <div>가합</div>
+                          <button type="button" class="btn btn-white-gray" data-bs-toggle="modal" data-bs-target="#sh_s_bar_fr_Modal2">관리명칭 관리</button>
                         </div>
                       </div>
                       <div class="inline-row-form">
-                        <div class="inline-row-form__tit">이메일</div>
+                        <div class="inline-row-form__tit h60p">법원</div>
+                        <div class="inline-row-form__conf">수원지방법원</div>
+                      </div>
+                    </div>
+                    <div class="inline-row">
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">사건번호</div>
+                        <div class="inline-row-form__conf">2001헌바82645</div>
+                      </div>
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">사건명</div>
+                        <div class="inline-row-form__conf">[전자] 하자보수 보증금 등 청구의 소</div>
+                      </div>
+                    </div>
+
+                    <div class="inline-row">
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">원고</div>
+                        <div class="inline-row-form__conf">광교 호반 베르디움 트라엘아파트 입주자 대표회의</div>
+                      </div>
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">피고</div>
+                        <div class="inline-row-form__conf">티에스자산개발 주식회사 외 3명</div>
+                      </div>
+                    </div>
+
+                    <div class="inline-row">
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">재판부</div>
+                        <div class="inline-row-form__conf"> 제11민사부(나) (전화:031-210-1361 [목요일은 재판으로 통화가 어렵습니다])</div>
+                      </div>
+                    </div>
+
+                    <div class="inline-row">
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">접수일</div>
                         <div class="inline-row-form__conf">
-                          <p class="text-danger">매칭시 확인 가능</p>
+                          2022.05.03
+                        </div>
+                      </div>
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">원고소가</div>
+                        <div class="inline-row-form__conf">
+                          2,096,764,876
                         </div>
                       </div>
                     </div>
+
+                    <div class="inline-row">
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">수리구분</div>
+                        <div class="inline-row-form__conf">
+                          제소
+                        </div>
+                      </div>
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">병합구분</div>
+                        <div class="inline-row-form__conf">
+                          없음
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="inline-row">
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">상소인</div>
+                        <div class="inline-row-form__conf"></div>
+                      </div>
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">상소일</div>
+                        <div class="inline-row-form__conf"></div>
+                      </div>
+                    </div>
+
+                    <div class="inline-row">
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">상소각하일</div>
+                        <div class="inline-row-form__conf"></div>
+                      </div>
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">인지액</div>
+                        <div class="inline-row-form__conf"></div>
+                      </div>
+                    </div>
+
+                    <div class="inline-row">
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">송달료, 보관금, 종결에 다른 잔액조회</div>
+                        <div class="inline-row-form__conf">
+                          사건이 종결되고 송달료 종결 혹은 보관금 계좌가 종결된 경우에만 조회 가능합니다.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="inline-row">
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">판결 도달일</div>
+                        <div class="inline-row-form__conf"></div>
+                      </div>
+                      <div class="inline-row-form">
+                        <div class="inline-row-form__tit h60p">확정일</div>
+                        <div class="inline-row-form__conf"></div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>

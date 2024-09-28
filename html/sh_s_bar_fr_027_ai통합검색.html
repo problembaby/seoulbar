@@ -257,14 +257,14 @@
                 </div>
               </div>
             </div>
-            <div class="right-contents">
+            <div class="right-contents" id="right-contents">
               <div class="header d-flex gap-2">
                   <div class="icon-group"><span class="sr-only">그룹 아이콘</span></div>
                   <span class="group-title">Seoul Group</span>
               </div>
               
               <div class="ai-btn d-flex justify-content-between">
-                  <button type="button" class="ico-btn side-bar__close"><span class="sr-only">사이드바 닫기</span></button>
+                  <button type="button" class="ico-btn chat-side-bar" id="side-bar__close"><span class="sr-only">사이드바 닫기</span></button>
                   <button type="button" class="ico-btn new-chat"><span class="sr-only">새 채팅</span></button>
               </div>
               
@@ -285,8 +285,20 @@
                     </ul>
                 </div>
               </div>
-
             </div>
+
+            <div class="absolute-side-bar position-absolute">
+              <div class="header d-flex gap-2">
+                  <div class="icon-group"><span class="sr-only">그룹 아이콘</span></div>
+                  <span class="group-title">Seoul Group</span>
+              </div>
+              
+              <div class="ai-btn d-flex justify-content-between">
+                  <button type="button" class="ico-btn chat-side-bar" id="side-bar__open"><span class="sr-only">사이드바 닫기</span></button>
+                  <button type="button" class="ico-btn new-chat"><span class="sr-only">새 채팅</span></button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -306,6 +318,21 @@
   <!--컨텐츠 [end] -->
 
   </div>
+
+  <script>
+    const contentWrap = document.getElementById('contents');
+    const rightContents = document.getElementById('right-contents');
+    const closeBtn = document.getElementById('side-bar__close');
+    const openBtn = document.getElementById('side-bar__open');
+
+    closeBtn.addEventListener('click', () => {
+        contentWrap.classList.add('closed');
+    });
+
+    openBtn.addEventListener('click', () => {
+        contentWrap.classList.remove('closed');
+    });
+  </script>
 </body>
 
 

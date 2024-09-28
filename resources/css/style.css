@@ -242,7 +242,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
     display: block;
     background-size: 100% 100%;
 }
-.side-bar__close::before {
+.chat-side-bar::before {
     content: "";
     background: url(../images/ico/side-bar__close.svg);
     width: 21px;
@@ -259,7 +259,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
     background-size: 100% 100%;
 }
 
-.side-bar__close,
+.chat-side-bar,
 .new-chat {
   background-color: unset;
 }
@@ -862,12 +862,15 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .btn-case.red{color: #FF4F4F}
 
 /* 챗 gpt */
-.sh_s_bar_fr_027 .whiteTable {padding: 30px; color: #fff;}
-.sh_s_bar_fr_027 .left-contents {width: 100%;  flex-grow: 1; }
-.sh_s_bar_fr_027 .left-contents .chatting {
-  overflow: hidden;
-  flex: 1 1 0%;
+.sh_s_bar_fr_027 .whiteTable {padding: 30px; color: #fff; background-color: #d9d9d920; overflow: hidden; position: relative;}
+.sh_s_bar_fr_027 .left-contents {
+  width: 75%;
+  transition: width 0.5s ease;
 }
+.sh_s_bar_fr_027.closed .left-contents{
+  width: 100%;
+}
+.sh_s_bar_fr_027 .left-contents .chatting {overflow: hidden;}
 .sh_s_bar_fr_027 .left-contents .enter-letters-area {width: 100%;}
 .sh_s_bar_fr_027 .left-contents .enter-letters {
   max-width: 785px;
@@ -906,17 +909,34 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   -webkit-line-clamp: 3;
   overflow: hidden; 
 }
-.sh_s_bar_fr_027 .right-contents {width: 100%;  max-width: 260px; background-color: #0F3966; border-radius: 8px; padding: 20px; color: #fff;}
-.sh_s_bar_fr_027 .right-contents .header {
+.sh_s_bar_fr_027 .right-contents {
+  width: 100%;  
+  max-width: 260px; 
+  background-color: #0F3966; 
+  border-radius: 8px; 
+  padding: 20px; 
+  color: #fff; 
+  display: block;
+  transition: transform 0.3s ease;
+  z-index: 9;
+  position: absolute;
+  right: 30px;
+  height: calc(100% - 60px);
+}
+.sh_s_bar_fr_027.closed .right-contents{
+  transform: translateX(150%);
+}
+
+.sh_s_bar_fr_027 .header {
   padding-bottom: 17px;
   border-bottom: 1px solid #999999;
   margin-bottom: 20px;
 }
-.sh_s_bar_fr_027 .right-contents .header .group-title {
+.sh_s_bar_fr_027 .header .group-title {
   font-size: 18px;
   font-weight: 500;
 }
-.sh_s_bar_fr_027 .right-contents .ai-btn {
+.sh_s_bar_fr_027 .ai-btn {
   margin-bottom: 20px;
 }
 .sh_s_bar_fr_027 .right-contents .today-section,
@@ -927,9 +947,6 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   color: #07BDFF;
 }
 
-.sh_s_bar_fr_027 .right-contents .chat-list {
-  
-}
 .sh_s_bar_fr_027 .right-contents .chat-list li {
   padding: 10px;
   cursor: pointer;
@@ -951,6 +968,23 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   position: absolute;
 }
 
+.absolute-side-bar {
+  width: 100%;
+  max-width: 260px;
+  background-color: #0F3966;
+  border-radius: 8px;
+  padding: 20px;
+  right: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.sh_s_bar_fr_027.closed .absolute-side-bar {
+  display: block;
+  opacity: 1;
+}
+.absolute-side-bar .ai-btn {
+  margin: 0;
+}
 
 
 /* 사건관리*/

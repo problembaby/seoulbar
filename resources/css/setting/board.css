@@ -136,6 +136,8 @@ td.cell-subject > * {
   gap: 10px;
 }
 
+.cal-search-area{display: flex; justify-content: space-between;}
+
 @media (max-width: 1024px) {
 
   .no-contents, .table-board .no-contents {

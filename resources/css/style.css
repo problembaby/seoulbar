@@ -1227,6 +1227,16 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 
 .regist-box__img{overflow: hidden; width: 94px; height: 94px; border-radius: 50%;}
 .regist-box__txt{display: flex; flex-direction: column;}
+.regist-box__txt span{display: block; font-size: 12px;}
+.regist-box__txt .name{font-size: 20px;}
+.regist-box__txt .name small{font-size: 12px;  margin-left: 5px;}
+
+.user-info{border-bottom: 1px solid #999999; display: flex; justify-content: space-between; padding:0 20px 20px 20px}
+.user-info .left{display: flex; align-items: center; gap:30px;}
+
+.user-info__img{width: 120px; height: 120px; overflow: hidden;}
+.user-info__img img{width: 100%;}
+
 
 @media screen and (max-width: 1800px) {
   .notification-list li a {

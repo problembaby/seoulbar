@@ -1108,7 +1108,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   height: 36px; display: flex; align-items: center; gap:10px; border-radius: 8px; padding: 0 10px; background-color: #0F3966; color:#000;
 }
 
-.case-state{width: 36px; height: 26px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 12px; font-weight: 500; color:#fff; background-color: #48526E; flex: 0 0 36px; }
+.case-state{width: 36px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 12px; font-weight: 500; color:#fff; background-color: #48526E; flex: 0 0 36px; }
 
 .case-submitted {background-color: #CCE4F8!important;}
 .case-ordered {background-color: #F8F5CC!important;}
@@ -1453,6 +1453,8 @@ width: 100%;
   align-self: flex-end;
 }
 .cal-borad{margin-top: 50px;}
+
+.sg-tableTwo{display: flex; flex-direction: column;}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
@@ -1482,7 +1484,7 @@ width: 100%;
     color: #fff;
     width: 100%;
     flex:1 auto;
-    height: 40px;
+    height: 36px;
     background-color: var(--main3-color);
     border-radius: 6px;
     transition: all 0.2s;
@@ -1509,7 +1511,7 @@ width: 100%;
   gap: 5px;
 }
 
-.inline-row-form__conf{flex:0 auto; width: calc(100% - 80px); }
+.inline-row-form__conf{flex:0 auto; width: calc(100% - 80px); flex-wrap: wrap; }
 .board-viewPage__con .title {
   font-size: 18px;
 }

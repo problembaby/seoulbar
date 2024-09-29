@@ -286,6 +286,12 @@
         <button type="button" class="btn">상세보기</button>
       </div>
 
+      <h3>상태</h3>
+      <span class="case-state submitted">제출</span>
+                        <span class="case-state scheduled">기일</span>
+                        <span class="case-state ordered">명령</span>
+                        <span class="case-state service">송달</span> 
+
       <h2 id="tab">#탭</h2>
       
       <h3>꽉 채우는 탭</h3>
@@ -697,6 +703,702 @@
         </div>
       </div>
 
+      <h2 id="layout">레이아웃</h2>
+
+      <h3> 사건관리 </h3>
+      
+
+    <!--컨텐츠 [start] -->
+    <div id="contents">
+      <div class="sub-container">
+        <div class="inner">
+          <div class="subBg-line">
+            <div class="sub-title">
+              <i class="ico ico-case pos-at"></i>
+              <h2>사건관리</h2>
+            </div>
+          </div>
+
+          <div class="btnList right">
+            <button type="button" class="btn btn-white btn-case" data-bs-toggle="modal" data-bs-target="#sh_s_bar_fr_Modal1">
+              <i class="ico ico-plus"></i>
+              사건 등록
+            </button>
+            <button type="button" class="btn btn-white btn-case red" data-bs-toggle="modal" data-bs-target="#sh_s_bar_fr_Modal3">
+              <i class="ico ico-danger"></i>
+              오류 신고
+            </button>
+          </div>
+
+          <div class="calendar-area">
+            <div class="calendar-header">
+              <div class="month">
+                <button id="prev-month" class="prev-month"></button>
+                <h3 id="month-year" class="month-year">2024년 9월</h3>
+                <button id="next-month" class="next-month"></button>
+              </div>
+              <div class="right">
+                <ul class="settings-list">
+                  <li>
+                    <div class="title">
+                      <i class="ico ico-googleCal"></i>
+                      구글캘린더 연동
+                    </div>
+                    <div class="switch-box">
+                      <input type="checkbox" id="googleCalendarSync" class="chk-switch">
+                      <label for="googleCalendarSync">구글캘린더 연동</label>
+                      <p class="chk_y" onclick="document.getElementById('googleCalendarSync').click();">연동</p>
+                      <p class="chk_n" onclick="document.getElementById('googleCalendarSync').click();">비연동</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="title">
+                      <i class="ico ico-naverCal"></i>
+                      네이버캘린더 연동
+                    </div>
+                    <div class="switch-box">
+                      <input type="checkbox" id="naverCalendarSync" class="chk-switch">
+                      <label for="naverCalendarSync">네이버캘린더 연동</label>
+                      <p class="chk_y" onclick="document.getElementById('naverCalendarSync').click();">연동</p>
+                      <p class="chk_n" onclick="document.getElementById('naverCalendarSync').click();">비연동</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="calendar-container">
+              <!-- 달력 month start-->
+              <div class="calendar-month">
+                <div class="sunday">Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div class="saturday">Sat</div>
+              </div>
+              <!-- 달력 month end-->
+
+              <!-- 달력 day start-->
+              <div class="calendar-day">
+                <div class="prev-date" tabindex="0">
+                  <div class="data-item">
+                    <span class="day">29</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div class="prev-date" tabindex="0">
+                  <div class="data-item">
+                    <span class="day">30</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">1</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">2</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">3</span>
+                    <span class="ale">+3</span>
+                    <div class="list">
+                      <!-- 
+                      클래스명
+                        case-submitted : 제출
+                        case-ordered : 명령
+                        case-scheduled : 기일
+                      -->
+                      <div class="list-item case-submitted">
+                        <span class="case-state">제출</span>
+                        <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                      </div>
+                      <div class="list-item case-ordered">
+                        <span class="case-state">명령</span>
+                        <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                      </div>
+                      <div class="list-item case-scheduled">
+                        <span class="case-state">기일</span>
+                        <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                      </div>
+                    </div>
+                    <!-- 클리시 자세한 내용 영역 [start] -->
+                    <div class="popDetails">
+                      <div class="popDetails__day">9월 3일</div>
+                      <button class="btn-close"  tabindex="0"></button>
+                      <div class="list">
+                        <div class="list-item case-submitted">
+                          <span class="case-state">제출</span>
+                          <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                          <a href="#" title="페이지 이동" class="case-link"></a>
+                        </div>
+                        <div class="list-item case-ordered">
+                          <span class="case-state">명령</span>
+                          <p class="txt">수원지방법원 2020가합15802방법원 2020가합15802방법원 2020가합15802방법원 </p>
+                          <a href="#" title="페이지 이동" class="case-link"></a>
+                        </div>
+                        <div class="list-item case-scheduled">
+                          <span class="case-state">기일</span>
+                          <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                          <a href="#" title="페이지 이동" class="case-link"></a>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary btn-popClose" >닫기</button>
+                    </div>
+                    <!-- 클리시 자세한 내용 영역 [end] -->
+                  </div>
+                </div>
+
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">4</span>
+                    <span class="ale">+2</span>
+                    <div class="list">
+
+                      <div class="list-item case-ordered">
+                        <span class="case-state">명령</span>
+                        <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                      </div>
+                      <div class="list-item case-scheduled">
+                        <span class="case-state">기일</span>
+                        <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                      </div>
+                    </div>
+                    <!-- 클리시 자세한 내용 영역 [start] -->
+                    <div class="popDetails">
+                      <div class="popDetails__day">9월 4일</div>
+                      <button class="btn-close"  tabindex="0"></button>
+                      <div class="list">
+                        <div class="list-item case-ordered">
+                          <span class="case-state">명령</span>
+                          <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                          <a href="#" title="페이지 이동" class="case-link"></a>
+                        </div>
+                        <div class="list-item case-scheduled">
+                          <span class="case-state">기일</span>
+                          <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                          <a href="#" title="페이지 이동" class="case-link"></a>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary btn-popClose" >닫기</button>
+                    </div>
+                    <!-- 클리시 자세한 내용 영역 [end] -->
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">5</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">6</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">7</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">8</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">9</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <!-- 현재 날짜 : current-data -->
+                <div class="current-data" tabindex="0">
+                  <div class="data-item">
+                    <span class="day">10</span>
+                    <span class="ale">+4</span>
+                    <div class="list">
+                      <!--3개까지만 노출-->
+                      <div class="list-item case-service">
+                        <span class="case-state">송달</span>
+                        <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                      </div>
+                      <div class="list-item case-ordered">
+                        <span class="case-state">명령</span>
+                        <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                      </div>
+                      <div class="list-item case-scheduled">
+                        <span class="case-state">기일</span>
+                        <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                      </div>
+
+
+                    </div>
+                    <!-- 클리시 자세한 내용 영역 [start] -->
+                    <div class="popDetails">
+                      <div class="popDetails__day">9월 14일</div>
+                      <button class="btn-close"  tabindex="0"></button>
+                      <div class="list">
+                        <div class="list-item case-service">
+                          <span class="case-state">송달</span>
+                          <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                          <a href="#" title="페이지 이동" class="case-link"></a>
+                        </div>
+                        <div class="list-item case-ordered">
+                          <span class="case-state">명령</span>
+                          <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                          <a href="#" title="페이지 이동" class="case-link"></a>
+                        </div>
+                        <div class="list-item case-scheduled">
+                          <span class="case-state">기일</span>
+                          <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                          <a href="#" title="페이지 이동" class="case-link"></a>
+                        </div>
+                        <div class="list-item case-submitted">
+                          <span class="case-state">제출</span>
+                          <p class="txt">수원지방법원 2020가합15802 [전자] 하자보수보증금 청구의 소</p>
+                          <a href="#" title="페이지 이동" class="case-link"></a>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary btn-popClose" >닫기</button>
+                    </div>
+                    <!-- 클리시 자세한 내용 영역 [end] -->
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">11</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">12</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">13</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">14</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">15</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">16</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">17</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">18</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">19</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">20</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">21</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">22</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">23</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">24</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">25</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">26</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">27</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">28</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">29</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div tabindex="0">
+                  <div class="data-item">
+                    <span class="day">30</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div class="next-date" tabindex="0">
+                  <div class="data-item">
+                    <span class="day">1</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div class="next-date" tabindex="0">
+                  <div class="data-item">
+                    <span class="day">2</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+                <div class="next-date" tabindex="0">
+                  <div class="data-item">
+                    <span class="day">3</span>
+                    <span class="ale"></span>
+                    <div class="list"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- 달력 day end-->
+
+            </div>
+
+          </div>
+
+
+          <div class="border-contents cal-borad">
+            <div class="board-List__con pb20">
+              <div class="title fs-4">전체일정</div>
+            </div>
+            <div>
+              <div class="cal-search-area">
+                <div class="left">
+                  <div class="slink-padding">
+                    <a href="#" class="subMenuLink on" title="선택됨">진행중</a>
+                    <a href="#" class="subMenuLink">전체사건</a>
+                  </div>
+                </div>
+                <div class="search-area__inputList">
+                  <input type="text" class="form-control" placeholder="사건번호 검색">
+                  <button type="submit" class="btn btn-primary btn-search">조회</button>
+                </div>
+                <div class="right">
+                  <button class="btn btn-excel" type="button">엑셀 다운로드</button>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="whiteTable">
+              <div class="table-board board-list">
+                <table>
+                  <caption class="sr-only">전체일정 목록입니다. 선택, 사건, 다음기일, 당사자, 관리명칭, 상태 항목을 제공합니다.</caption>
+                  <colgroup>
+                    <col width="15%;">
+                    <col width="auto%;">
+                    <col width="15%;">
+                    <col width="30%">
+                    <col width="5%;">
+                    <col width="5%;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">사건</th>
+                      <th scope="col">다음기일</th>
+                      <th scope="col">당사자</th>
+                      <th scope="col">관리명칭</th>
+                      <th scope="col">상태</th>
+                    </tr>
+                  </thead>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <!--
+                        제출 : submitted
+                        기일 : scheduled
+                        명령 : ordered
+                        송달 : service
+                        <span class="case-state submitted">제출</span>
+                        <span class="case-state scheduled">기일</span>
+                        <span class="case-state ordered">명령</span>
+                        <span class="case-state service">송달</span> 
+                        -->
+                        <p class="state-td-p">
+                          <span class="case-state scheduled">기일</span>
+                          사건기일이 변경되었습니다.
+                        </p>
+                      </td>
+                      <td class="cell-subject">
+                        <a href="#" title="페이지 이동">
+                          수원지방법원 2022가합15802
+                          [전자] 하자보수보증금 등 청구의 소
+                        </a>
+                      </td>
+                      <td>[변론기일] 2024년 09월 26일 10:20</td>
+                      <td class="cell-subject">
+                        <p>
+                          [원고] 광교호반베르디움트라엘아파트
+                          입주자대표회의<br>
+                          [피고] 티에스자산개발 주식회사 외 3명
+                        </p>
+                      </td>
+                      <td>3</td>
+                      <td>진행중</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="state-td-p">
+                          <span class="case-state submitted">제출</span>
+                          원고 소송대리인 법무법인…
+                        </p>
+                      </td>
+                      <td class="cell-subject">
+                        <a href="#" title="페이지 이동">
+                          수원지방법원 2022가합15802
+                          [전자] 하자보수보증금 등 청구의 소
+                        </a>
+                      </td>
+                      <td>[변론기일] 2024년 09월 26일 10:20</td>
+                      <td class="cell-subject">
+                        <p>
+                          [원고] 광교호반베르디움트라엘아파트
+                          입주자대표회의<br>
+                          [피고] 티에스자산개발 주식회사 외 3명
+                        </p>
+                      </td>
+                      <td>3</td>
+                      <td>진행중</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="state-td-p">
+                          <span class="case-state submitted">제출</span>
+                          원고 소송대리인 법무법인…
+                        </p>
+                      </td>
+                      <td class="cell-subject">
+                        <a href="#" title="페이지 이동">
+                          수원지방법원 2022가합15802
+                          [전자] 하자보수보증금 등 청구의 소
+                        </a>
+                      </td>
+                      <td>[변론기일] 2024년 09월 26일 10:20</td>
+                      <td class="cell-subject">
+                        <p>
+                          [원고] 광교호반베르디움트라엘아파트
+                          입주자대표회의<br>
+                          [피고] 티에스자산개발 주식회사 외 3명
+                        </p>
+                      </td>
+                      <td>3</td>
+                      <td>진행중</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="state-td-p">
+                          <span class="case-state ordered">명령</span>
+                          원고 소송대리인 법무법인…
+                        </p>
+                      </td>
+                      <td class="cell-subject">
+                        <a href="#" title="페이지 이동">
+                          수원지방법원 2022가합15802
+                          [전자] 하자보수보증금 등 청구의 소
+                        </a>
+                      </td>
+                      <td>[변론기일] 2024년 09월 26일 10:20</td>
+                      <td class="cell-subject">
+                        <p>
+                          [원고] 광교호반베르디움트라엘아파트
+                          입주자대표회의<br>
+                          [피고] 티에스자산개발 주식회사 외 3명
+                        </p>
+                      </td>
+                      <td>3</td>
+                      <td>진행중</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="state-td-p">
+                          <span class="case-state scheduled">기일</span>
+                          사건기일이 변경되었습니다
+                        </p>
+                      </td>
+                      <td class="cell-subject">
+                        <a href="#" title="페이지 이동">
+                          수원지방법원 2022가합15802
+                          [전자] 하자보수보증금 등 청구의 소
+                        </a>
+                      </td>
+                      <td>[변론기일] 2024년 09월 26일 10:20</td>
+                      <td class="cell-subject">
+                        <p>
+                          [원고] 광교호반베르디움트라엘아파트
+                          입주자대표회의<br>
+                          [피고] 티에스자산개발 주식회사 외 3명
+                        </p>
+                      </td>
+                      <td>3</td>
+                      <td>진행중</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+
+
+
+        </div>
+
+          <script>
+            $(document).ready(function () {
+              // 상세 보기를 클릭하면 popDetails를 표시
+              function detailPop() {
+                const popDetails = $(this).find('.popDetails');
+                if (popDetails.length) {
+                  popDetails.show();
+                }
+              }
+          
+              // 닫기 버튼을 클릭하면 popDetails를 숨김
+              function popDetailClose(event) {
+                event.stopPropagation();
+                const popDetails = $(this).closest('.popDetails');
+                if (popDetails.length) {
+                  popDetails.hide();
+                }
+              }
+          
+              // 달력의 날짜 클릭 시 detailPop 함수 실행
+              $('.calendar-day > div').on('click', detailPop);
+          
+              // 닫기 버튼 클릭 시 popDetailClose 함수 실행
+              $('.calendar-day').on('click', '.btn-close, .btn-popClose', popDetailClose);
+          
+              // 포커스 상태에서 Enter 키를 눌렀을 때도 작동
+              $('.calendar-day > div').on('keydown', function (event) {
+                if (event.key === 'Enter') {
+                  detailPop.call(this);
+                }
+              });
+          
+              $('.calendar-day').on('keydown', '.btn-close', function (event) {
+                if (event.key === 'Enter') {
+                  popDetailClose.call(this, event);
+                }
+              });
+            });
+          </script>
+          
+
+   
+
+        <!--footer [start]-->
+        <footer id="footer">
+          <div class="copiright">
+            Copyright(c) SEOUL BAR ASSOCIATION. All Rights Reserved.
+          </div>
+        </footer>
+        <!--footer [end]-->
+      </div>
+    </div>
+    <!--컨텐츠 [end] -->
+
+
+      
 </body>
 
 </html>

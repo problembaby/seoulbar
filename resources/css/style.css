@@ -1221,11 +1221,20 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .legal-list__cont{padding:20px}
 .legal-list__cont .no-contents{align-items: center; display: flex; justify-content: center; color:#AAAAAA; font-weight: 500; font-size: 20px;}
 
+.view-result .list{display: grid;
+  grid-template-columns: 1fr 1fr 1fr; gap:20px}
+.regist-box{display: flex; align-items: center; border:1px solid #999999; padding: 20px; border-radius: 8px; gap:10px;  justify-content: space-between;}
+
+.regist-box__img{overflow: hidden; width: 94px; height: 94px; border-radius: 50%;}
+.regist-box__txt{display: flex; flex-direction: column;}
 
 @media screen and (max-width: 1800px) {
   .notification-list li a {
     width: 160px;
 }
+
+.view-result .list{display: grid;
+  grid-template-columns: 1fr 1fr; gap:20px}
 
 }
 @media screen and (max-width: 1440px) {
@@ -1288,6 +1297,11 @@ display: none; top:5px ; left: 5px; cursor: auto;}
     align-self: flex-end;
     flex-wrap: wrap;
   }
+
+  .list-row .list-item .tit {
+    flex: 0 0 50px;
+
+}
 
 }
 
@@ -1498,6 +1512,22 @@ width: 100%;
 .formStyle170 {
   width: 100%;
 }
+
+.legal-list__cont {
+  padding: 20px 0px;
+}
+
+
+.regist-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #999999;
+  padding: 10px;
+  border-radius: 8px;
+  gap: 10px;
+  justify-content: space-between;
+  flex-direction: column;
+}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
@@ -1623,6 +1653,8 @@ width: 100%;
   padding: 20px 10px;
 }
 
+.view-result .list{ gap:10px}
+
   }
 
 
@@ -1660,6 +1692,8 @@ width: 100%;
     overflow: hidden;
     box-shadow: 0 10px 0 #184F88;
 }
+
+.regist-box__btn button{width: 100px;}
 
 }
 

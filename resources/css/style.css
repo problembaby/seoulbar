@@ -1206,6 +1206,22 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 
 .cal-borad{margin-top: 100px;}
 
+
+/* 법조인명부  */
+.legal-list .whiteTable{padding:20px}
+.legal-list__searchArea{border-top: 2px solid #0F3966;}
+.list-row { background: #E7ECFF; display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid #999999; width: 100%; gap:10px }
+.list-row .list-item { display: flex; align-items: center; flex:1 0 20%; gap:5px}
+.list-row .list-item .tit {white-space: nowrap; flex:0 0 120px; font-weight: 700; text-align: center;}
+
+.formStyle170{width: 170px;}
+.searchW600{width: 600px;}
+.alert-txt{ color:#FF5545; margin-bottom:20px}
+
+.legal-list__cont{padding:20px}
+.legal-list__cont .no-contents{align-items: center; display: flex; justify-content: center; color:#AAAAAA; font-weight: 500; font-size: 20px;}
+
+
 @media screen and (max-width: 1800px) {
   .notification-list li a {
     width: 160px;
@@ -1230,6 +1246,13 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 
 .search-area .right {
   flex: 1 100%;
+}
+
+.list-row .list-item .tit {
+  white-space: nowrap;
+  flex: 0 0 90px;
+  font-weight: 700;
+  text-align: center;
 }
 
 }
@@ -1329,7 +1352,7 @@ background-size: cover;
 width: 100%;
 }
 .search-area__inputList{flex-direction: column; width: 100%;}
-.search-area__inputList > *{flex:1 100%; max-width: 100%;}
+.search-area__inputList > *{/* flex:1 100%; */ max-width: 100%;}
 .date-input-wrap > * {
  max-width: 100%;
 }
@@ -1455,6 +1478,26 @@ width: 100%;
 .cal-borad{margin-top: 50px;}
 
 .sg-tableTwo{display: flex; flex-direction: column;}
+
+.list-row {
+  flex-direction: column;
+}
+.list-row .list-item {
+  display: flex;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  gap: 5px;
+  flex-direction: column;
+}
+.list-row .list-item .tit {
+  white-space: nowrap;
+  flex: 0 0 100%;
+  font-weight: 700;
+  text-align: center;
+}
+.formStyle170 {
+  width: 100%;
+}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
@@ -1575,6 +1618,9 @@ width: 100%;
   display: flex;
   color: #FF4F4F;
   font-size: 12px;
+}
+.legal-list .whiteTable {
+  padding: 20px 10px;
 }
 
   }

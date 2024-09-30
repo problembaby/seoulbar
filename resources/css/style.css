@@ -252,9 +252,25 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
     display: block;
     background-size: 100% 100%;
 }
+.chat-side-bar-white::before {
+    content: "";
+    background: url(../images/ico/side-bar__close-white.svg);
+    width: 21px;
+    height: 18px;
+    display: block;
+    background-size: 100% 100%;
+}
 .new-chat::before {
     content: "";
     background: url(../images/ico/new-chat.svg);
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-size: 100% 100%;
+}
+.new-chat-white::before {
+    content: "";
+    background: url(../images/ico/new-chat-white.svg);
     width: 18px;
     height: 18px;
     display: block;
@@ -297,7 +313,9 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .new-chat,
 .fromport,
 .file-att,
-.file-att-gray {
+.file-att-gray,
+.new-chat-white,
+.chat-side-bar-white {
   background-color: unset;
 }
 
@@ -929,17 +947,37 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .btn-case.red{color: #FF4F4F}
 
 /* 챗 gpt */
-.sh_s_bar_fr_027 .whiteTable {padding: 30px; color: #fff; background-color: #d9d9d920; overflow: hidden; position: relative;}
+.sh_s_bar_fr_027 .only-tap {
+  display: none;
+}
+.sh_s_bar_fr_027 .whiteTable {
+  padding: 30px; 
+  color: #fff; 
+  background-color: #d9d9d920; 
+  overflow: hidden; 
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
 .sh_s_bar_fr_027 .left-contents {
   width: 75%;
-  transition: width 0.5s ease;
 }
 .sh_s_bar_fr_027.closed .left-contents{
   margin: 0 auto;
+  padding-right: 30px;
+}
+.sh_s_bar_fr_027 .left-contents .lg-logo {
+  margin-top: 30px;
+}
+.sh_s_bar_fr_027 .left-contents .lg-logo .chat-logo-img img {
+  max-width: 354px;
+  width: 100%;
 }
 .sh_s_bar_fr_027 .left-contents .chatting {overflow: hidden;}
 .sh_s_bar_fr_027 .left-contents .enter-letters-area {
   width: 100%;
+  max-width: 785px;
+  margin: 0 auto;
   background-color: #fff;
   border-radius: 20px;
   display: flex;
@@ -960,7 +998,6 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   align-items: center;
 }
 .sh_s_bar_fr_027 .left-contents .enter-letters {
-  max-width: 785px;
   width: 100%;
   height: 60px;
 }
@@ -976,7 +1013,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .sh_s_bar_fr_027 .left-contents .example-box {
   border: 1px solid #fff;
   padding: 14px;
-  max-height: 160px;
+  max-height: 190px;
   display: flex;
   gap: 10px;
   border-radius: 14px;
@@ -1062,13 +1099,9 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   border-radius: 8px;
   padding: 20px;
   right: 30px;
-  opacity: 0;
   transition: opacity 0.5s ease;
 }
-.sh_s_bar_fr_027.closed .absolute-side-bar {
-  display: block;
-  opacity: 1;
-}
+
 .absolute-side-bar .ai-btn {
   margin: 0;
 }
@@ -1409,10 +1442,14 @@ display: none; top:5px ; left: 5px; cursor: auto;}
   font-weight: 700;
   text-align: center;
 }
+.sh_s_bar_fr_027 .left-contents {
+  width: 65%;
+}
 
 }
 @media screen and (max-width: 1280px) {
   /*갤럭시탭 해상도*/
+  
   .form-row {
     flex-direction: column;
     gap: 0px;
@@ -1424,11 +1461,8 @@ display: none; top:5px ; left: 5px; cursor: auto;}
   .form-row .form-group.col:first-child {
     border-bottom: 1px solid #999;
   }
-  .sh_s_bar_fr_027 .left-contents .example-box-area {
-    grid-template-columns: repeat(1, 1fr);
-    margin-top: 150px;
-    margin-bottom: 100px;
-  }
+  
+  
 
   .calendar-header {
     justify-content: center;
@@ -1446,8 +1480,48 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 
   .list-row .list-item .tit {
     flex: 0 0 50px;
+  }
+  
 
+.sh_s_bar_fr_027 .only-tap {
+  display: block;
 }
+.absolute-side-bar {
+  display: none;
+}
+.sh_s_bar_fr_027 .gnbMenuToggle::before {
+  width: 20px;
+  height: 18px;
+}
+.sh_s_bar_fr_027 .left-contents .lg-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.sh_s_bar_fr_027 .left-contents .lg-logo .chat-logo-img{
+  flex: 1;
+}
+.sh_s_bar_fr_027 .left-contents .example-box-area {
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 150px;
+  margin-bottom: 100px;
+  max-width: none;
+}
+
+.sh_s_bar_fr_027 .left-contents {
+  width: 100%;
+  padding-right: 0;
+}
+.sh_s_bar_fr_027.closed .left-contents {
+  padding-right: 0;
+}
+.sh_s_bar_fr_027 .right-contents {
+  max-width: 230px;
+}
+
 
 }
 
@@ -1688,6 +1762,42 @@ width: 100%;
 .user-info .right {
   flex: 1 0 100%;
   margin-bottom: 20px;
+}
+
+.sh_s_bar_fr_027 .whiteTable {
+  justify-content: center;
+  padding: 20px;
+}
+
+.sh_s_bar_fr_027 .left-contents {
+  width: 100%;
+  padding-right: 0;
+  max-width: max-content;
+  margin: 0;
+}
+.sh_s_bar_fr_027.closed .left-contents {
+  padding-right: 0;
+}
+.sh_s_bar_fr_027 .left-contents .lg-logo {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.sh_s_bar_fr_027 .left-contents .lg-logo .chat-logo-img {
+  flex: 1;
+}
+.sh_s_bar_fr_027 .left-contents .lg-logo img{
+  width: 100%;
+}
+.sh_s_bar_fr_027.closed .absolute-side-bar {
+  display: none;
+}
+.sh_s_bar_fr_027 .left-contents .example-box-area {
+  margin-top: 100px;
+}
+.sh_s_bar_fr_027 .right-contents {
+  right: 15px;
+  height: calc(100% - 40px);
 }
 }
 @media screen and (max-width: 882px) {

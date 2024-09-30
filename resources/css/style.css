@@ -887,6 +887,36 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .borad-contents{padding:10px; min-height: 300px;}
 .board-noticeView .whiteTable{padding: 30px;}
 
+/* 로그인 */
+.login {
+  background-image: url("../images/common/drawing-about-legal-profession.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right;
+}
+.login-container {
+  max-width: 600px; 
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 200px;
+}
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  align-items: center;
+}
+.login-box img {
+  width: 100%;
+}
+.login-box form {
+  width: 100%;
+  padding: 0 30px;
+}
+.login-box form .input-group {
+  width: 100%;
+}
+
 /* 모달창 */
 .modal-content {
   padding: 25px 30px;

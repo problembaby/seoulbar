@@ -1270,10 +1270,29 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .regist-box__txt .name small{font-size: 12px;  margin-left: 5px;}
 
 .user-info{border-bottom: 1px solid #999999; display: flex; justify-content: space-between; padding:0 20px 20px 20px}
-.user-info .left{display: flex; align-items: center; gap:30px;}
+.user-info .left{display: flex; align-items: center; gap:30px; flex:1 0 50%;}
+.user-info .right{flex:1 0 50%;}
 
 .user-info__img{width: 120px; height: 120px; overflow: hidden;}
 .user-info__img img{width: 100%;}
+
+.btn-secondary{
+  --btn-bg: #444444;
+  --btn-border-color: #444444;
+
+}
+.user-info__cont .txt {display: flex; flex-direction: column; margin-bottom: 10px;}
+.user-info__cont .txt .role{font-size:12px;}
+.user-info__cont .txt .full-name{font-size:20px; font-weight: 500;}
+.user-info__cont .txt .irth-date{font-size:12px; font-weight: 500;}
+
+.ico-print:before{content:""; display: block; background: url(../images/ico/ico-print.svg); width: 18px; height: 19px; background-size: cover; margin-right: 10px;}
+.ico-update:before{content:""; display: block; background: url(../images/ico/ico-fixed.svg); width: 18px; height: 19px; background-size: cover; margin-right: 10px;}
+
+.user-info__text{display: flex; flex-direction: column; gap:10px}
+.user-info__text .li{display: flex; gap:10px}
+.user-info__text .li .tit{display:flex; gap:10px; align-items: center; font-weight: bold;}
+.user-info__text .li .tit::after{display: block; content:""; height: 9px; width: 1px; background-color: #999;}
 
 
 @media screen and (max-width: 1800px) {
@@ -1576,6 +1595,21 @@ width: 100%;
   justify-content: space-between;
   flex-direction: column;
 }
+
+.user-info{flex-direction: column; justify-content: center; align-items: center; padding:0;}
+.user-info .left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1 1 100%;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.user-info .right {
+  flex: 1 0 100%;
+  margin-bottom: 20px;
+}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
@@ -1742,6 +1776,11 @@ width: 100%;
 }
 
 .regist-box__btn button{width: 100px;}
+
+.modal-content {
+  padding: 25px 10px;
+}
+
 
 }
 

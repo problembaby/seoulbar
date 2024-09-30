@@ -815,22 +815,48 @@
 
 
           <section class="sec-box sec04">
-            <div class="calender-container">
-              <div class="cal-top">
-                <div class="calendar-year">
-                  <span class="year-nav prev"></span>
-                  <div class="year-display">2024.09</div>
-                  <span class="year-nav next"></span>
+            <div class="calender-container main-cal">
+              
+              <div class="main-cal__header">
+                <div class="calendar-month">
+                  <button id="prev-month" class="prev-month"></button>
+                  <h3 id="month-year" class="month-year">2024년 9월</h3>
+                  <button id="next-month" class="next-month"></button>
                 </div>
 
-                <div>
-                  <button>Week</button>
-                  <button>Month</button>
+                <div class="main-cal__tab">
+                  <ul class="nav nav-pills mainTab" id="calendar-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="calendar-week" data-bs-toggle="pill"
+                        data-bs-target="#calendar-week-cont" type="button" role="tab" aria-controls="calendar-week-cont"
+                        aria-selected="true">Week</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="calendar-month" data-bs-toggle="pill"
+                        data-bs-target="#calendar-month-cont" type="button" role="tab"
+                        aria-controls="calendar-month-cont">Month</button>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
-              <div class="cal-cont">
 
+              <div class="main-cal__cont tab-content">
+                <!--Week [start]-->
+                <div class="tab-pane fade show active" id="calendar-week-cont" role="tabpanel"
+                  aria-labelledby="calendar-week" tabindex="0">
+                  Weekㅇㅇ
+                </div>
+                <!--Week [end]-->
+
+                <!--Month [start]-->
+                <div class="tab-pane fade" id="calendar-month-cont" role="tabpanel"
+                  aria-labelledby="calendar-month" tabindex="0">
+                  Monthㅇㅇ
+                </div>
+                <!--Month [end]-->
               </div>
+
             </div>
 
 

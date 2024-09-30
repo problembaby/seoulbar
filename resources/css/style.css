@@ -259,9 +259,27 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
     display: block;
     background-size: 100% 100%;
 }
+.file-att::before {
+    content: "";
+    background: url(../images/ico/ico-attachment.svg);
+    width: 14px;
+    height: 20px;
+    display: block;
+    background-size: 100% 100%;
+}
+.fromport::before {
+    content: "";
+    background: url(../images/ico/ico-fromport.svg);
+    width: 13px;
+    height: 15px;
+    display: block;
+    background-size: 100% 100%;
+}
 
 .chat-side-bar,
-.new-chat {
+.new-chat,
+.fromport,
+.file-att {
   background-color: unset;
 }
 
@@ -869,10 +887,30 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   transition: width 0.5s ease;
 }
 .sh_s_bar_fr_027.closed .left-contents{
-  width: 100%;
+  margin: 0 auto;
 }
 .sh_s_bar_fr_027 .left-contents .chatting {overflow: hidden;}
-.sh_s_bar_fr_027 .left-contents .enter-letters-area {width: 100%;}
+.sh_s_bar_fr_027 .left-contents .enter-letters-area {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sh_s_bar_fr_027 .left-contents .enter-letters-area textarea {
+  flex: 1;
+  outline: none;
+}
+.sh_s_bar_fr_027 .left-contents .enter-letters-area .fromport {
+  width: 40px;
+  height: 40px;
+  background-color: #0F3966;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .sh_s_bar_fr_027 .left-contents .enter-letters {
   max-width: 785px;
   width: 100%;

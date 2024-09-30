@@ -175,6 +175,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
     height: 21px;
     display: block;
     background-size: 100% 100%;
+    margin-bottom: 6px;
 }
 
 .ico-law::before {
@@ -1317,6 +1318,12 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .sh_s_bar_fr_024 .file-area .label__title {
   height: auto;
 }
+
+/* 회원 서식자료실 상세 */
+.sh_s_bar_fr_025 .board-btn-area {
+  gap: 20px;
+}
+
 
 @media screen and (max-width: 1800px) {
   .notification-list li a {

@@ -175,6 +175,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
     height: 21px;
     display: block;
     background-size: 100% 100%;
+    margin-bottom: 6px;
 }
 
 .ico-law::before {
@@ -275,11 +276,28 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
     display: block;
     background-size: 100% 100%;
 }
+.file-att-gray::before {
+    content: "";
+    background: url(../images/ico/ico-attachment-gray.svg);
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-size: 100% 100%;
+}
+.ico-delete::before {
+    content: "";
+    background: url(../images/ico/ico-delete.svg);
+    width: 12px;
+    height: 12px;
+    display: block;
+    background-size: 100% 100%;
+}
 
 .chat-side-bar,
 .new-chat,
 .fromport,
-.file-att {
+.file-att,
+.file-att-gray {
   background-color: unset;
 }
 
@@ -1275,6 +1293,37 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 
 .user-info__img{width: 120px; height: 120px; overflow: hidden;}
 .user-info__img img{width: 100%;}
+
+/* 회원 서식자료실 목록 */
+.sh_s_bar_fr_023 .search-area {justify-content: flex-end;}
+
+.sh_s_bar_fr_023 .table-board .ico-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sh_s_bar_fr_023 .table-board .file-att {vertical-align: bottom;}
+
+
+/* 회원 서식자료실 팝업 */
+.sh_s_bar_fr_024 .file-area {
+  flex-direction: row;
+  align-items: unset;
+}
+.sh_s_bar_fr_024 .file-area .file-item {
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.sh_s_bar_fr_024 .file-area .label__title {
+  height: auto;
+}
+
+/* 회원 서식자료실 상세 */
+.sh_s_bar_fr_025 .board-btn-area {
+  gap: 20px;
+}
 
 .btn-secondary{
   --btn-bg: #444444;

@@ -1407,6 +1407,139 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .user-info__text .li .tit::after{display: block; content:""; height: 9px; width: 1px; background-color: #999;}
 
 
+.main-cal__header{width: 100%; position: relative; display: flex; justify-content: center; margin-bottom: 30px;}
+
+.calendar-month{ display: flex; justify-content: center; align-items: center; gap:10px}
+.main-cal__tab{position: absolute; right:0; display: flex; gap:10px}
+.main-cal__tab .nav-item{ display: flex; align-items: center; justify-content: center;}
+.main-cal__tab .nav-item .nav-link{width: 74px; height: 30px; border-radius: 30px; border:1px solid #999999; background-color: transparent;}
+.main-cal__tab .nav-item .nav-link.active{border-color:#0F3966 ; background-color: #0F3966;}
+
+.main-cal__tab ul .nav-item:first-child::after{content:""; display: block; width: 1px; height: 10px; background-color:#D9D9D9; margin: 0 10px}
+
+.calendar-month .month-year{  font-size: 25px;
+  font-weight: 700;
+  color: #fff;}
+.calendar-month .next-month{ background-color: transparent;}
+.calendar-month .prev-month{background-color: transparent;}
+
+.calendar-month .prev-month::before {
+  content: "";
+  background: url(../images/ico/ico-calPrev.svg);
+  display: block;
+  width: 38px;
+  height: 24px;
+}
+
+.calendar-month .next-month::before {
+  content: "";
+  background: url(../images/ico/ico-calNext.svg);
+  display: block;
+  width: 38px;
+  height: 24px;
+}
+
+.main-cal__cont .tab-pane{ width: 100%;}
+.tab-pane .inner{display: flex; align-items: center; justify-content: center; width: 100%;}
+
+/* 주 스와이퍼*/
+.weekSwiper{display: flex; gap:10px; overflow: hidden; position: relative; width: 100%; max-width: 720px;}
+.weekSwiper .swiper-slide{ text-align: center; display: flex; justify-content: center;
+ height: 177px; align-items: center; }
+
+.week-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 14px;
+  /*그림자*/  
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.week-item .value{
+  display: none;
+  width: 50px;
+  height:50px;
+  border: 4px solid #0F3966;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+.week-item .week-number{
+ font-size: 36px;
+ color: #AAAAAA;
+ font-weight: 500;
+}
+.week-item .week-day{
+  font-size: 16px;
+ color: #AAAAAA;
+ font-weight: 500;
+}
+
+.weekSwiper .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background-image: url("../images/ico-mainSwper-prev.svg");
+  left: 0px;
+  right: auto;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image: url("../images/ico-mainSwper-next.svg");
+  right: 0;
+  left: auto;
+}
+
+.weekSwiper .swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: 36px 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.weekSwiper .swiper-slide.current .week-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80px;
+  height: 165px;
+  background-color: #fff;
+  border-radius: 14px;
+  /*그림자*/  
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.weekSwiper .swiper-slide.current .week-item .value{
+  display: flex;
+}
+.weekSwiper .swiper-slide.current .week-item .week-number{
+ font-size: 36px;
+ color: #0F3966;
+ font-weight: 500;
+}
+.weekSwiper .swiper-slide.current .week-item .week-day{
+  font-size: 16px;
+ color: #000;
+ font-weight: 500;
+}
+
+.calendar-container.main-cal-month {
+  background: transparent;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
 @media screen and (max-width: 1800px) {
   .notification-list li a {
     width: 160px;

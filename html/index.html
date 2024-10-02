@@ -460,7 +460,7 @@
 
 
           <!--[pc버전] 사건진행 업데이트 현황 [start]-->
-          <section class="sec-box sec02 ">
+          <section class="sec-box sec02 only-pc">
             <h3 class="sec-box__title">사건진행 업데이트 현황</h3>
             <ul class="nav nav-pills mainTab" id="caseUpdate-tab" role="tablist">
               <li class="nav-item" role="presentation">
@@ -777,6 +777,13 @@
           <!--[pc버전] 사건진행 업데이트 현황 [end]-->
 
 
+          <!--[mob버전] 사건진행 업데이트 현황 [start]-->
+          <section class="sec-box sec02 only-mob">
+
+          </section>
+          <!--[mob버전] 사건진행 업데이트 현황 [end]-->
+
+
         </div>
         <div class="right">
           <section class="sec-box sec03">
@@ -843,7 +850,7 @@
                 <div class="tab-pane fade show active" id="calendar-week-cont" role="tabpanel"
                   aria-labelledby="calendar-week" tabindex="0">
                   <!-- week swiper -->
-                 <div class="inner">
+                  <div class="inner">
                     <div class="swiper weekSwiper">
                       <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -913,9 +920,9 @@
                       <!-- Add Navigation -->
                       <div class="swiper-button-prev"></div>
                       <div class="swiper-button-next"></div>
-  
+
                     </div>
-                 </div>
+                  </div>
 
                   <script>
                     var swiper = new Swiper(".weekSwiper", {
@@ -930,8 +937,11 @@
                       spaceBetween: 0,
                       //중앙 슬라이드에 클래스 .current 추가
                       slideActiveClass: "current",
-
-                      
+                      breakpoints: {
+                        500: {
+                          slidesPerView: 3
+                        }
+                      }
                     });
                   </script>
 
@@ -953,258 +963,258 @@
                       <div class="saturday">Sat</div>
                     </div>
                     <!-- 달력 month end-->
-      
+
                     <!-- 달력 day start-->
                     <div class="calendar-day">
                       <div class="prev-date" tabindex="0">
                         <div class="data-item">
                           <span class="day">29</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div class="prev-date" tabindex="0">
                         <div class="data-item">
                           <span class="day">30</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">1</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">2</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">3</span>
-                          <span class="ale">+3</span>
+                          <span class="ale">3</span>
                         </div>
                       </div>
-      
+
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">4</span>
-                          <span class="ale">+2</span>
-        
+                          <span class="ale">2</span>
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">5</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">6</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">7</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">8</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">9</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <!-- 현재 날짜 : current-data -->
                       <div class="current-data" tabindex="0">
                         <div class="data-item">
                           <span class="day">10</span>
-                          <span class="ale">+4</span>
+                          <span class="ale">4</span>
 
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">11</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">12</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">13</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">14</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">15</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">16</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">17</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">18</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">19</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">20</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">21</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">22</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">23</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">24</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">25</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">26</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">27</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">28</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">29</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div tabindex="0">
                         <div class="data-item">
                           <span class="day">30</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div class="next-date" tabindex="0">
                         <div class="data-item">
                           <span class="day">1</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div class="next-date" tabindex="0">
                         <div class="data-item">
                           <span class="day">2</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                       <div class="next-date" tabindex="0">
                         <div class="data-item">
                           <span class="day">3</span>
-                          <span class="ale"></span>
-                          <div class="list"></div>
+
+
                         </div>
                       </div>
                     </div>
                     <!-- 달력 day end-->
-      
+
                   </div>
                 </div>
                 <!--Month [end]-->

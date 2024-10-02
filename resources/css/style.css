@@ -1536,9 +1536,75 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .calendar-container.main-cal-month {
   background: transparent;
   border-radius: 10px;
-  padding: 20px;
+  padding: 0px;
+}
+.calendar-container.main-cal-month .data-item {
+  background-color: #fff;
+  border: 1px solid #CCCCCC;
+  height: 45px;
+  border-radius: 8px;
+  position: relative;
+}
+.calendar-container.main-cal-month .calendar-day > div .day {
+  position: absolute;
+  top: 4px;
+  right: 9px;
+  font-size: 14px;
 }
 
+.calendar-container.main-cal-month .calendar-day > div .ale {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  color: #FF3636;
+  font-size: 14px;
+  width: 18px;
+  height: 18px;
+  background-color:  #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.calendar-container.main-cal-month .calendar-day > div:nth-child(7n + 1) .data-item {
+  background-color: #FFD1D1;
+}
+.calendar-container.main-cal-month .calendar-day > div:nth-child(7n) .data-item {
+  background-color: #D0DDFF;
+}
+.calendar-container.main-cal-month .calendar-day > div.current-data .data-item {
+  background-color: #BDC0FF;
+}
+
+.calendar-container.main-cal-month .calendar-day {
+  --cal-gap: 8px;
+  display: flex;
+  gap: var(--cal-gap);
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.calendar-container.main-cal-month .calendar-month > div {
+  width: calc(100% / 7);
+  text-align: center;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.calendar-container.main-cal-month .next-date, .calendar-container.main-cal-month .prev-date {
+  color: #AAAAAA!important;
+}
 
 @media screen and (max-width: 1800px) {
   .notification-list li a {
@@ -1668,6 +1734,11 @@ display: none; top:5px ; left: 5px; cursor: auto;}
   width: 100%;
 }
 
+.main-container .left, .main-container .right {
+  width: 100%;
+   flex: 1 1 100%;
+}
+
 .gnbMenuToggle::before {
 content: "";
 background: url(../images/meneBtn.svg);
@@ -1682,7 +1753,8 @@ background-size: cover;
   height: 100%;
   display: flex;
   gap: 30px;
-  flex-direction: column;
+ flex-direction: column;
+ flex-wrap: nowrap;
 }
 #gnb {
   width: 0;
@@ -1695,7 +1767,7 @@ background-size: cover;
 }
 .notification-list li {
   display: flex;
-  flex: 1 1 48%;
+  flex: 1 1 45%;
 }
 .notification-list {
   display: flex;
@@ -1932,6 +2004,49 @@ width: 100%;
   right: 15px;
   height: calc(100% - 40px);
 }
+
+.main-cal__tab {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+    top:50px;
+    display: flex;
+    gap: 10px;
+    justify-content: center
+}
+
+
+.tab-pane .inner {
+  margin-top: 80px;
+}
+
+.calendar-container.main-cal-month {
+  margin-top:80px
+}
+
+.notice-list .state {
+  width: 63px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  gap: 5px;
+  flex: 0 0 63px;
+}
+
+.whiteList li .writer {
+  font-size: 12px;
+  flex: 0 0 auto;
+  font-weight: 500;
+}
+
+
+
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
@@ -2130,6 +2245,36 @@ width: 100%;
 .btnList.right {
   justify-content: center;
 }
+
+.whiteList li .writer {
+  font-size: 12px;
+  flex: 0 0 10%;
+  font-weight: 500;
+}
+.whiteList li .date {
+  font-size: 12px;
+  flex: 0 0 10%;
+  text-align: center;
+  font-weight: 500;
+}
+.notice-list .state {
+  width: 50px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  gap: 5px;
+  flex: 0 0 50px;
+}
+.whiteList li {
+  padding: 0 7px;
+  gap: 10px;
+}
+
 }
 
 @media screen and (max-width: 320px) {

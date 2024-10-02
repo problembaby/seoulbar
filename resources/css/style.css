@@ -1017,7 +1017,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 .sh_s_bar_fr_027.closed .left-contents{
   margin: 0 auto;
-  padding-right: 30px;
+  padding-right: 0px;
 }
 .sh_s_bar_fr_027 .left-contents .lg-logo {
   margin-top: 30px;
@@ -2138,7 +2138,7 @@ width: 100%;
     .input-box .input-group input:focus {
       border: 2px solid #fff;
       box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
+    }
     .login-box form .login-btn {
       font-size: 28px;
     }

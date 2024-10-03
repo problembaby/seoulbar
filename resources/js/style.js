@@ -3,20 +3,6 @@
 $(document).ready(function () {
 
 
-  //데이터피커  
-  $(".datepicker").datepicker({
-    dateFormat: 'yy-mm-dd', // 달력 포맷
-    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월',], // 월 텍스트
-    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월',], //월 툴팁
-    dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], // 요일텍스트
-    dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일',], //요일툴팁
-    showMonthAfterYear: true,
-    //showOtherMonths:true, // 달력에 앞뒤 날짜표시
-
-  });
-
-
-
   //onlyNumber 클래스 추가시 숫자만 입력 하게 하는 함수
   $('.onlyNumber').on('input', function () {
     if (!$(this).val().match(/^[0-9]*$/)) {

@@ -132,7 +132,8 @@ td.cell-subject > * {
   font-size: 12px;
   font-weight: 500;
 }
-.sh_s_bar_fr_021 .board-btn-area {
+.sh_s_bar_fr_021 .board-btn-area,
+.sh_s_bar_fr_022 .board-btn-area {
   gap: 10px;
 }
 

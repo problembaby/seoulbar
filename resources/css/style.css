@@ -387,7 +387,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .opacityTable{padding:30px; border-radius: 16px; background-color: #fff;}
 .thead-bg{background: #fff; position: relative;}
 .thead-bg tr th{background-color: #D3DBF9; text-align: center; }
-.tr-link tr td{cursor: pointer; text-align: center; height: 50px; font-size: 12px; vertical-align: middle; font-weight: 500;}
+.tr-link tr td{cursor: pointer; text-align: center; height: 50px; font-size: 12px; vertical-align: middle; font-weight: 500; padding:4px}
 
 .td-subect{
   white-space: nowrap;
@@ -579,27 +579,27 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 
 /* fr_012_popup 복대리신청 지원하기 팝업 */
-.fr_012_popup .inline-row-form__conf {
+ .inline-row-form__conf {
   width: auto;
   padding: 10px;
   flex: 1;
 }
-.fr_012_popup .inline-row-form__tit {
+ .inline-row-form__tit {
   height: 60px;
 }
-.fr_012_popup .address__input .inline-row-form__tit {
+ .address__input .inline-row-form__tit {
   height: 155px;
 }
-.fr_012_popup .address__input .inline-row-form__conf {
+ .address__input .inline-row-form__conf {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   gap: 10px;
 }
-.fr_012_popup .address__input .inline-row-form__conf .d-flex {
+ .address__input .inline-row-form__conf .d-flex {
   gap: 10px;
 }
-.fr_012_popup .address__input .inline-row-form__conf button {
+ .address__input .inline-row-form__conf button {
   display: flex;
   gap: 10px;
 }
@@ -710,7 +710,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .btn-alSet{background-color: var(--main2-color); height: 36px; padding: 0 20px; border-radius: 6px; color:#fff; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap:10px; cursor: pointer; border:1px solid #CCCCCC}
 
-.sub-container .inner{min-height: 830px;}
+/* .sub-container .inner{min-height: 830px;} */
 
 .formStyle01{max-width:160px; width: 100%; font-size: 14px;}
 .formStyle02{width:82px; font-size: 14px; border-color: var(--gray-2); flex-shrink: inherit;}
@@ -1777,6 +1777,16 @@ body.zoom-125 .notification-list {
   gap: 10px;
   justify-content: space-between;
 }
+
+body.zoom-125 .notification-list.sub li a {
+  width: 135px;
+  height: 100px;
+}
+
+
+
+
+
 #gnb.smallMenu ~ #contents {
   margin-left: 70px;
 }
@@ -1825,8 +1835,8 @@ body.zoom-125 .notification-list {
 @media screen and (max-width: 1800px) {
 
 
-.view-result .list{display: grid;
-  grid-template-columns: 1fr 1fr; gap:20px}
+.view-result .list{display: grid; gap:20px}
+  .regist-box__btn button{width: 100px;}
 
 }
 @media screen and (max-width: 1440px) {
@@ -1835,6 +1845,11 @@ body.zoom-125 .notification-list {
     width: 230px;
 
 }
+
+.view-result .list{display: grid;
+  grid-template-columns: 1fr 1fr; gap:20px}
+  .regist-box__btn button{width: auto;}
+
 
 .notification-list {
   display: flex;
@@ -2302,6 +2317,7 @@ width: 100%;
   gap: 30px;
 }
 
+.menu-list{overflow-y: auto;}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */

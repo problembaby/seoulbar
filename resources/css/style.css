@@ -2361,7 +2361,7 @@ width: 100%;
 
 .view-result .list{ gap:10px}
 
-    #contents.login {
+    .login {
       padding: 0 20px;
       background-position: center center;
     }
@@ -2373,7 +2373,7 @@ width: 100%;
     .login-container {
       padding-top: 150px;
     }
-    #contents.login .login-box {
+    .login .login-box {
       margin-bottom: 0px;
       gap: 80px;
     }

@@ -1133,6 +1133,21 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   position: absolute;
   right: 30px;
   height: calc(100% - 60px);
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 7px;  
+    height: 7px;
+}
+
+&::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4); /* 스크롤바 색상 */
+    border-radius: 10px; /* 스크롤바 둥근 테두리 */
+}
+
+&::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);  /*스크롤바 뒷 배경 색상*/
+    
+}
 }
 .sh_s_bar_fr_027.closed .right-contents{
   transform: translateX(150%);
@@ -1769,6 +1784,44 @@ body.zoom-125 .notification-list {
   width: calc(100vw - 70px - 70px);
 }
 
+
+
+/*ai 챗봇*/
+.chat-box{display: none; margin:30px; flex-direction: column; gap:30px}
+.input-ai{width: 100%; border:0!important; height: 60px;}
+.input-ai:focus{outline: 0;}
+
+
+.chat-box .message{display: flex; gap:5px; }
+.chat-box .message.fadeUp{ animation: fadeIn 1s ease-in;}
+.chat-box .message.ai{justify-content: flex-start;}
+.chat-box .message.me{justify-content: flex-end;}
+
+
+.chat-box .message.ai .ai-icon::before{
+  content: "";
+  background: #fff;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  border-radius: 50%;
+}
+.chat-box .message.me .my-icon{
+  content: "";
+  background: #fff;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  border-radius: 50%;
+}
+.chat-box .message.ai .text, .chat-box .message.me .text{ padding: 10px; border-radius: 10px; max-width: 70%; border:1px solid #fff; height: auto; padding:10px; border-radius: 10px;}
+
+
+.chatting.ing .example-box-area{display: none;}
+.chatting.ing .chat-box{display: flex;}
+
 @media screen and (max-width: 1800px) {
 
 
@@ -1888,6 +1941,8 @@ body.zoom-125 .notification-list {
 }
 .sh_s_bar_fr_027 .right-contents {
   max-width: 230px;
+  height:auto;
+  overflow-y: auto;
 }
 .calendar-month {
   display: flex;
@@ -1959,7 +2014,7 @@ background-size: cover;
 
 
 #footer {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .search-area .letf{
@@ -2238,6 +2293,13 @@ width: 100%;
   width: calc(100vw - 21px);
   padding: 10px;
   border-radius: 20px;
+}
+
+.chat-box {
+  display: none;
+  margin: 0px;
+  flex-direction: column;
+  gap: 30px;
 }
 
 }

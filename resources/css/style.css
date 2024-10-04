@@ -17,8 +17,27 @@
   transition: width 0s; /* width를 대상으로 transition 설정 */
   padding-top: var(--pc-content-topPadding);
   background-color: var(--main2-color);
+  position: fixed;
+  z-index: 9;
+  height: 100vh;
+  overflow-y: auto;
+  
+  &::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
 }
-#contents{background-color: transparent; width: 100%; padding: 0 30px; padding-top: var(--pc-content-topPadding); }
+
+&::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4); /* 스크롤바 색상 */
+    border-radius: 10px; /* 스크롤바 둥근 테두리 */
+}
+
+&::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);  /*스크롤바 뒷 배경 색상*/
+
+}
+}
+#contents{background-color: transparent; width: 100%; padding: 0 30px; padding-top: var(--pc-content-topPadding); margin-left:250px }
 #footer{
   bottom:0px;
   background-color: var(--main2-color);
@@ -36,7 +55,7 @@
 .whiteList li:last-child{border-bottom: 0;}
 
 
-.notice-list .state{width:63px; height: 26px; display: flex; justify-content: center; align-items: center; background-color: gray; color:#fff; border-radius: 5px; font-size: 12px; gap:5px; flex:0 63px}
+.notice-list .state{width:63px; height: 26px; display: flex; justify-content: center; align-items: center; background-color: gray; color:#fff; border-radius: 5px; font-size: 12px; gap:5px; flex:0 0 63px}
 
 .notice-list .state.state-notice{background-color: #455785;}
 .notice-list .state.state-notice::before{content:""; display: block; background: url(../images/ico/ico-state-notice.svg); width: 12px; height: 10px;}
@@ -117,9 +136,8 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .ico-error::before{display: block; content:""; width: 18px; height: 19px; background:url("../images/ico/ico-error.svg") no-repeat; background-size: 100% 100%; margin-right: 5px;}
 
-.menu{width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden;
+.menu{width: 100%;  overflow-y: auto; overflow-x: hidden;
 
-  padding-top: env(safe-area-inset-top, 0);
   &::-webkit-scrollbar {
     width: 7px;
     height: 7px;
@@ -137,6 +155,8 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 .menu-list{display: flex; flex-direction: column; gap:10px; align-items: center;}
 .menu-list .menuBtn{display: flex; flex-direction: column; align-items:center ; width: 160px; height:70px; justify-content: center; border-radius: 16px; transition: all 0.2s ease-in-out;}
+
+
 .menu-list .menuBtn.on, .menu-list .menuBtn:hover{background-color: var(--main-color);}
 
 .menuBtn span{color:#fff; font-size: 16px; font-weight: 500;  text-align: center; display: block; margin-top:5px}
@@ -326,9 +346,9 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .logo-simg{display: none;}
 
 
-.main-container{width: 100%;  display: flex;  gap:0 30px; flex-wrap: wrap;}
-.main-container .left {width: 100%;  flex:1 1 45%; }
-.main-container .right {width: 100%;  flex:1 1 45%;  }
+.main-container{width: calc(100vw - 250px - 70px);  display: flex;  gap:0 30px; justify-content: space-between; flex-wrap:nowrap;}
+ .main-container .left { flex:1 1 40vw; }
+.main-container .right { flex:1 1 40vw  } 
 
 .sub-container{width: 100%; height: 100%;  min-height: calc(100vh - 40px);}
 
@@ -377,12 +397,26 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 
 .sec02 .whiteTable, .calTable .whiteTable{max-height:330px; overflow: auto;
+  &::-webkit-scrollbar {
+    width: 7px;  
+    height: 7px;
+}
+
+&::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4); /* 스크롤바 색상 */
+    border-radius: 10px; /* 스크롤바 둥근 테두리 */
+}
+
+&::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);  /*스크롤바 뒷 배경 색상*/
+    
+}
 }
 
 
 .notification-list{display: flex; gap:25px; justify-content: space-between;}
 .notification-list li{display: flex;}
-.notification-list li a{width: 180px; height: 110px; display: flex; flex-direction: column; align-items: center; background-color: #fff; border-radius: 16px; justify-content: space-between; overflow: hidden;
+.notification-list li a{width: 9vw; height: 110px; display: flex; flex-direction: column; align-items: center; background-color: #fff; border-radius: 16px; justify-content: space-between; overflow: hidden;
   box-shadow: 0 10px 0 #184F88;}
 
 .notification-list li a .tit {
@@ -1496,7 +1530,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .tab-pane .inner{display: flex; align-items: center; justify-content: center; width: 100%;}
 
 /* 주 스와이퍼*/
-.weekSwiper{display: flex; gap:10px; overflow: hidden; position: relative; width: 100%; max-width: 720px;}
+.weekSwiper{display: flex; gap:10px; overflow: hidden; position: relative; width: 100%; max-width: 38vw;}
 .weekSwiper .swiper-slide{ text-align: center; display: flex; justify-content: center;
  height: 177px; align-items: center; }
 
@@ -1535,7 +1569,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
  font-weight: 500;
 }
 
-.weekSwiper .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+ .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
   background-image: url("../images/ico-mainSwper-prev.svg");
   left: 0px;
   right: auto;
@@ -1546,7 +1580,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
   left: auto;
 }
 
-.weekSwiper .swiper-button-prev, .swiper-button-next {
+ .swiper-button-prev, .swiper-button-next {
   position: absolute;
   top: 50%;
   width: 36px;
@@ -1589,14 +1623,148 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .calendar-container.main-cal-month {
   background: transparent;
   border-radius: 10px;
-  padding: 20px;
+  padding: 0px;
+}
+.calendar-container.main-cal-month .data-item {
+  background-color: #fff;
+  border: 1px solid #CCCCCC;
+  height: 45px;
+  border-radius: 8px;
+  position: relative;
+}
+.calendar-container.main-cal-month .calendar-day > div .day {
+  position: absolute;
+  top: 4px;
+  right: 9px;
+  font-size: 14px;
 }
 
+.calendar-container.main-cal-month .calendar-day > div .ale {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  color: #FF3636;
+  font-size: 14px;
+  width: 18px;
+  height: 18px;
+  background-color:  #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.calendar-container.main-cal-month .calendar-day > div:nth-child(7n + 1) .data-item {
+  background-color: #FFD1D1;
+}
+.calendar-container.main-cal-month .calendar-day > div:nth-child(7n) .data-item {
+  background-color: #D0DDFF;
+}
+.calendar-container.main-cal-month .calendar-day > div.current-data .data-item {
+  background-color: #BDC0FF;
+}
+
+.calendar-container.main-cal-month .calendar-day {
+  --cal-gap: 8px;
+  display: flex;
+  gap: var(--cal-gap);
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.calendar-container.main-cal-month .calendar-month > div {
+  width: calc(100% / 7);
+  text-align: center;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+.mob-main-swiper{width: 100%; overflow: hidden; position: relative; display: flex;}
+
+.calendar-container.main-cal-month .next-date, .calendar-container.main-cal-month .prev-date {
+  color: #AAAAAA!important;
+}
+
+.td-item{background-color: #fff; width: calc(100vw - 20px); padding:20px; border-radius: 20px;} 
+.td-item ul li{display: flex; gap:10px} 
+.td-item ul li:first-child .tit{border-top-left-radius: 10px; border-top-right-radius: 10px; overflow: hidden;} 
+.td-item ul li:last-child .tit{border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; overflow: hidden;} 
+.td-item ul li .tit{background-color: #B0DEF1; padding:10px; font-weight: 700; width: 100px; text-align: center; flex: 0 0 100px} 
+.td-item ul li .cont{ padding:10px; font-weight: 700;} 
+
+.mob-main-swiper .swiper-button-prev, .mob-main-swiper .swiper-container-rtl .swiper-button-next {
+  background-image: url("../images/common/mainSwiper.png");
+  transform: rotate(180deg);
+  left: 0px;
+  right: auto;
+}
+.mob-main-swiper .swiper-button-next, .mob-main-swiper .swiper-container-rtl .swiper-button-prev {
+  background-image: url("../images/common/mainSwiper.png");
+  right: 0;
+  left: auto;
+}
+
+ .mob-main-swiper .swiper-button-prev, .mob-main-swiper .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: 36px 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 줌125% */
+body.zoom-125 .menu-list .menuBtn{display: flex; flex-direction: column; align-items:center ; width: 160px; height:55px; justify-content: center; border-radius: 16px; transition: all 0.2s ease-in-out;}
+
+body.zoom-125 .menuBtn span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+}
+body.zoom-125 .btn-menuSizeToggle {
+  background-color: transparent;
+  margin: 20px 0px 30px 0;
+}
+
+
+body.zoom-125 .user-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+  flex-direction: column;
+  gap: 3px;
+}
+
+body.zoom-125 #gnb.smallMenu .menu{height: 60vh;}
+
+body.zoom-125 .gnb-title {
+  margin-bottom: 20px;
+}
+#gnb.smallMenu ~ #contents {
+  margin-left: 70px;
+}
+#gnb.smallMenu ~ #contents .main-container{
+  width: calc(100vw - 70px - 70px);
+}
 
 @media screen and (max-width: 1800px) {
-  .notification-list li a {
-    width: 160px;
-}
+
 
 .view-result .list{display: grid;
   grid-template-columns: 1fr 1fr; gap:20px}
@@ -1605,13 +1773,14 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 @media screen and (max-width: 1440px) {
   /* 노트북 해상도  */
   #gnb {
-    width: 220px;
+    width: 230px;
+
 }
+
 .notification-list {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 .td-subect {
   max-width: 120px;
@@ -1632,6 +1801,13 @@ display: none; top:5px ; left: 5px; cursor: auto;}
   width: 65%;
 }
 
+/* .notification-list li a {
+  width: 133px;
+} */
+/* .weekSwiper {
+  max-width: 597px;
+}
+ */
 }
 @media screen and (max-width: 1280px) {
   /*갤럭시탭 해상도*/
@@ -1707,11 +1883,17 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .sh_s_bar_fr_027 .right-contents {
   max-width: 230px;
 }
-
+.calendar-month {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
 
 }
 
 @media screen and (max-width: 1024px) {
+
+  #contents{margin-left: 0;}
   /* 태블릿 해상도 */
   #header {
     height: 60px;
@@ -1719,6 +1901,11 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .mobile-logo {
   max-width: 200px;
   width: 100%;
+}
+
+.main-container .left, .main-container .right {
+  width: 100%;
+   flex: none;
 }
 
 .gnbMenuToggle::before {
@@ -1732,10 +1919,11 @@ background-size: cover;
 #contents{padding: 0 10px;}
 .main-container {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
-  gap: 30px;
-  flex-direction: column;
+  gap: 0;
+ flex-direction: column;
+ flex-wrap: nowrap;
 }
 #gnb {
   width: 0;
@@ -1748,7 +1936,7 @@ background-size: cover;
 }
 .notification-list li {
   display: flex;
-  flex: 1 1 48%;
+  flex: 1 1 45%;
 }
 .notification-list {
   display: flex;
@@ -1985,6 +2173,67 @@ width: 100%;
   right: 15px;
   height: calc(100% - 40px);
 }
+
+.main-cal__tab {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+    top:50px;
+    display: flex;
+    gap: 10px;
+    justify-content: center
+}
+
+
+.tab-pane .inner {
+  margin-top: 80px;
+}
+
+.calendar-container.main-cal-month {
+  margin-top:80px
+}
+
+.notice-list .state {
+  width: 63px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  gap: 5px;
+  flex: 0 0 63px;
+}
+
+.whiteList li .writer {
+  font-size: 12px;
+  flex: 0 0 auto;
+  font-weight: 500;
+}
+
+.calendar-month {
+  display: flex;
+  justify-content:center;
+  gap: 10px;
+}
+.weekSwiper {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
+.td-item {
+  background-color: #fff;
+  width: calc(100vw - 21px);
+  padding: 10px;
+  border-radius: 20px;
+}
+
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
@@ -2213,6 +2462,36 @@ width: 100%;
 .btnList.right {
   justify-content: center;
 }
+
+.whiteList li .writer {
+  font-size: 12px;
+  flex: 0 0 15%;
+  font-weight: 500;
+}
+.whiteList li .date {
+  font-size: 12px;
+  flex: 0 0 10%;
+  text-align: center;
+  font-weight: 500;
+}
+.notice-list .state {
+  width: 50px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  gap: 5px;
+  flex: 0 0 50px;
+}
+.whiteList li {
+  padding: 0 7px;
+  gap: 10px;
+}
+
 }
 
 @media screen and (max-width: 320px) {

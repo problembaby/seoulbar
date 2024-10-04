@@ -144,6 +144,8 @@ td.cell-subject > * {
 .table-gray thead th{background-color: #EEEEEE!important; height: 60px; vertical-align: middle; text-align: center; font-weight: 500; border-top:2px solid #0F3966; border-bottom:1px solid #999999}
 .table-gray tbody td{text-align: center; vertical-align: middle; border-bottom:1px solid #999999}
 
+
+.table-line td{border-bottom:1px dotted #999999;}
 @media (max-width: 1024px) {
 
   .no-contents, .table-board .no-contents {

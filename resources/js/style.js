@@ -3,6 +3,29 @@
 $(document).ready(function () {
 
 
+  //줌 125%일때 body에 클래스 추가
+
+  function getZoomLevel() {
+    // window.devicePixelRatio로 줌 비율 확인
+    const zoomLevel = Math.round(window.devicePixelRatio * 100);
+    return zoomLevel;
+  }
+
+  function applyZoomCSS() {
+    const zoomLevel = getZoomLevel();
+
+    if (zoomLevel === 125) {
+      document.body.classList.add('zoom-125');
+    } else {
+      document.body.classList.remove('zoom-125');
+    }
+  }
+
+  window.addEventListener('load', applyZoomCSS);
+  window.addEventListener('resize', applyZoomCSS);
+  
+
+
   //onlyNumber 클래스 추가시 숫자만 입력 하게 하는 함수
   $('.onlyNumber').on('input', function () {
     if (!$(this).val().match(/^[0-9]*$/)) {

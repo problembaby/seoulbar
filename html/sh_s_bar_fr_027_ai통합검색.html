@@ -423,19 +423,46 @@
   </div>
 
   <script>
-const contentWrap = document.getElementById('sh_s_bar_fr_027');
+const contentWrap = document.querySelector('.right-contents');
 const closeBtn = document.getElementById('side-bar__close');
 const openBtns = document.querySelectorAll('.side-bar__open');
 
-    closeBtn.addEventListener('click', () => {
+function setInitialContentState() {
+  if (contentWrap) {
+    if (window.innerWidth > 1280) {
+      contentWrap.classList.remove('closed');
+    } else {
       contentWrap.classList.add('closed');
-    });
+    }
+  }
+}
 
-    openBtns.forEach((openBtn) => {
-      openBtn.addEventListener('click', () => {
+window.addEventListener('resize', () => {
+  setInitialContentState();
+});
+
+// 닫기 버튼 이벤트
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    if (contentWrap) {
+      contentWrap.classList.add('closed');
+    }
+  });
+}
+
+// 열기 버튼 이벤트
+if (openBtns.length > 0) {
+  openBtns.forEach((openBtn) => {
+    openBtn.addEventListener('click', () => {
+      if (contentWrap) {
         contentWrap.classList.remove('closed');
-      });
+      }
     });
+  });
+}
+
+setInitialContentState();
+
   </script>
 </body>
 

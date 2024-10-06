@@ -18,7 +18,7 @@
   padding-top: var(--pc-content-topPadding);
   background-color: var(--main2-color);
   position: fixed;
-  z-index: 9;
+  z-index: 99!important;
   height: 100vh;
   overflow-y: auto;
   
@@ -107,7 +107,7 @@
 .gnb-title{margin-bottom: 38px;}
 
 
-.leftMenu{width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.leftMenu{width: 100%; display: flex; flex-direction: column; align-items: center; }
 .user-profile{display: flex; align-items: center; margin-bottom: 35px; flex-direction: column; gap:10px}
 .user-profile__thumbnail{position: relative;}
 .user-profile__thumbnail .images{width: 82px; height: 82px; overflow: hidden; border-radius: 50%; }

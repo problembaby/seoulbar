@@ -951,11 +951,14 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   background-color: unset;
 }
 .login-container {
-  max-width: 600px; 
+  max-width: 690px; 
   margin: 0 auto;
   width: 100%;
-  padding-top: 200px;
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
 }
+
 .login-box {
   display: flex;
   flex-direction: column;
@@ -965,7 +968,9 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 .login-box img {
   width: 100%;
+  max-width: 560px;
 }
+.login #footer{position: relative; bottom:0; left:0; padding:100px 0 20px 0;}
 .login-box form {
   width: 100%;
   padding: 0 30px;

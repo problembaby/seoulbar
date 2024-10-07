@@ -883,7 +883,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 
 .notification-list.sub li a {
-  width: 150px;
+  width: 135x;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -1836,6 +1836,14 @@ body.zoom-125 .notification-list.sub li a {
 
 .chatting.ing .example-box-area{display: none;}
 .chatting.ing .chat-box{display: flex; margin:50px 0; padding:0 10px}
+
+.alert-modal .modal-content{position: relative; padding:10px;}
+.alert-modal .alertClose{position: absolute; right:20px; top:20px}
+.alert-modal .text-area{min-height: 50px; height: auto; width: 100%; margin-top: 50px; text-align: center;}
+
+.modal .modal-footer button {
+  width: auto;
+}
 
 @media screen and (max-width: 1800px) {
 

@@ -41,6 +41,82 @@ body{background-color: #fff;}
 .admBtn-area{display: flex; justify-content: center; align-items: center; margin-top: 20px; width: 100%; }
 .admBtn-area.right{justify-content: flex-end;     align-items: flex-end; }
 
+.admin-container .sub-title h2{color:#222222}
+.admin-container .whiteTable {
+  padding: 12px;
+  border-radius: 16px;
+  background-color: #fff;
+  border:1px solid #CCCCCC
+}
+
+/*관리자 버전 페이징*/
+
+.admin-container .a-firstpage::after {
+  display: inline-block;
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  margin-top: -2px;
+  vertical-align: middle;
+  background: url(../images/common/a-firstpage_gray.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  content: "";
+}
+
+.admin-container .a-prevpage::after {
+  display: inline-block;
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  margin-top: -2px;
+  vertical-align: middle;
+  background: url(../images/common/a-prevpage_gray.png) no-repeat;
+  content: "";
+  background-size: cover;
+  background-position: center center;
+}
+
+.admin-container .a-nextpage::after {
+  display: inline-block;
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  margin-top: -2px;
+  vertical-align: middle;
+  background: url(../images/common/a-nextpage_gray.png) no-repeat;
+  content: "";
+  background-size: cover;
+  background-position: center;
+}
+
+.admin-container .a-lastpage::after {
+  display: inline-block;
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  margin-top: -2px;
+  vertical-align: middle;
+  background: url(../images/common/a-lastpage_gray.png) no-repeat;
+  content: "";
+  background-size: cover;
+  background-position: center;
+}
+
+.admin-container .a-page-el {
+  width: var(--page-el-width);
+  height: var(--page-el-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0);
+  color: #222222;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.admin-container .a-current-page {
+  background:#0F3966;
+  color: #fff;
+  border-radius: 4px;
+}
+
 
 @media screen and (max-width: 1024px){
   .inline-form-group li .title{ flex:1 0 200px; }

@@ -699,7 +699,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .search-area {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
   gap: 12px;
 }

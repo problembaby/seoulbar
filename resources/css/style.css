@@ -161,6 +161,23 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .menuBtn span{color:#fff; font-size: 16px; font-weight: 500;  text-align: center; display: block; margin-top:5px}
 
+.ico-home::before {
+  content: "";
+  background: url(../images/ico/ico-home.svg);
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-size: 100% 100%;
+}
+.ico-errorsg::before {
+  content: "";
+  background: url(../images/ico/ico-errorsg.svg);
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: 100% 100%;
+}
+
 .ico-chatGpt::before {
     content: "";
     background: url(../images/ico/ico-chatGPT.png);
@@ -339,7 +356,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   background-color: unset;
 }
 
-.btn-menuSizeToggle{background-color: transparent; margin:30px 0; }
+.btn-menuSizeToggle{background-color: transparent; margin:30px 0; position: absolute; bottom:0; }
 .btn-menuSizeToggle::before{content: ""; background: url(../images/ico/ico-menuSmall.svg); width: 22px; height: 22px; display: block; background-size: 100% 100%;}
 .btn-menuSizeToggle.on::before{content: ""; background: url(../images/ico/ico-menurlarge.svg); width: 22px; height: 22px; display: block; background-size: 100% 100%;}
 

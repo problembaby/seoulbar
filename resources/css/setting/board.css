@@ -146,6 +146,20 @@ td.cell-subject > * {
 
 
 .table-line td{border-bottom:1px dotted #999999;}
+
+
+.table-puple{width: 100%; border-top:2px solid #0F3966; padding:10px 0; overflow-x: auto;} 
+.table-puple th{background-color:#D3DBF9; padding:5px; text-align: center;} 
+.table-puple td{ padding:5px; border-bottom:1px solid #999999;} 
+.table-puple td.num{text-align: center;} 
+.btn-w80{width: 80px;}
+
+.input-alert-txt{border: 0!important; background-color: transparent!important; color:#000!important}
+.input-alert-txt:focus{border: 0!important; outline: none!important;}
+
+.table-puple table{min-width: 500px;} /* 테이블 최소 너비 */
+
+
 @media (max-width: 1024px) {
 
   .no-contents, .table-board .no-contents {

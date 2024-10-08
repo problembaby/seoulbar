@@ -54,7 +54,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="../resources/css/style.css">
-  <link rel="stylesheet" href="../resources/css/admin-style.css">  <!--어드민 스타일 추가-->
+  <link rel="stylesheet" href="../resources/css/admin-style.css"> <!--어드민 스타일 추가-->
 
   <!-- JS -->
   <script src="../resources/js/style.js"></script>
@@ -167,28 +167,173 @@
 
     <!--컨텐츠 [start] -->
     <div id="contents">
-      <div class="sub-container">
-        <h2 class="sr-only">복대리 신청</h2>
+      <div class="admin-container">
+        <div class="chatAdmin-wrap">
+          <article class="chat-stats">
+            Chat GPT 통계 영역 추후 재정의
+          </article>
+          <article class="chatAdmin-wrap__setting">
+            <div class="left">
+              <!--복대리 관심법원 등록 설정 [start]-->
+              <section class="adm-sec chatSet01">
+                <div class="adm-secTitle">
+                  <h3 class="adm-h3">복대리 관심법원 등록 설정</h3>
+                </div>
+                <ul class="inline-form-group">
+                  <li>
+                    <div class="title">
+                      <label for="max-courts">관심법원 최대 등록 건수</label>
+                    </div>
+                    <div class="input-box">
+                      <div class="input-box__row">
+                        <input type="number" id="max-courts" name="max-courts" class="form-control">
+                        개
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="admBtn-area right">
+                  <button class="btn btn-primary">설정저장</button>
+                </div>
+              </section>
+              <!--복대리 관심법원 등록 설정 [end]-->
 
-        <div>
+              <!--종합업무서비스 알림 설정 [start]-->
+              <section class="adm-sec chatSet02">
+                <div class="adm-secTitle">
+                  <h3 class="adm-h3">종합업무서비스 알림 설정</h3>
+                </div>
+                <ul class="inline-form-group">
+                  <li>
+                    <div class="title">종합업무서비스 알림 관리</div>
+                    <div class="input-box">
+                      <button class="btn btn-primary">알림설정</button>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <!--종합업무서비스 알림 설정 [end]-->
+            </div>
+            <div class="right">
+              <!--ChatGPT 설정 관리 [start]-->
+              <section class="adm-sec chatSet03">
+                <div class="adm-secTitle">
+                  <h3 class="adm-h3">ChatGPT 설정 관리</h3>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sh_s_bar_ad_001">GPT등록 키 관리</button>
+                </div>
+                <ul class="inline-form-group">
+                  <li>
+                    <div class="title">
+                      <label for="max-characters">최대 사용 가능 글자수</label>
+                    </div>
+                    <div class="input-box">
+                      <div class="input-box__row">
 
-          컨텐츠
+                        <input type="number" id="max-characters" name="max-characters" class="form-control"> 자
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="title">
+                      <label for="warning-message">주의문구</label>
+                    </div>
+                    <div class="input-box">
+                      <textarea name="warning-message" id="warning-message" class="form-control"
+                        placeholder="주의문구 입력"></textarea>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <!--ChatGPT 설정 관리 [end]-->
+            </div>
+
+          </article>
+
+          <div class="admBtn-area right">
+            <button class="btn btn-primary">설정 저장</button>
+          </div>
         </div>
 
 
-      
-        <!--footer [start]-->
-        <footer id="footer">
-          <div class="copiright">
-            Copyright(c) SEOUL BAR ASSOCIATION. All Rights Reserved.
-          </div>
-        </footer>
-        <!--footer [end]-->
+
       </div>
     </div>
     <!--컨텐츠 [end] -->
 
   </div>
+
+
+
+  <!-- GPT등록 키 관리 Modal -->
+  <div class="modal fade" id="sh_s_bar_ad_001" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="title__area">
+          <h2 class="form__title">사건등록하기</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="form-area__inputList">
+          <div class="form-group col form-item">
+            <label class="label__title" for="region">법원</label>
+            <div class="form-group__inputWarp">
+              <select id="region" class="form-select formStyle03 col" name="region" required>
+                <option value="">지역 선택</option>
+                <option value="서울">서울</option>
+                <option value="부산">부산</option>
+                <option value="인천">인천</option>
+                <option value="대구">대구</option>
+                <option value="광주">광주</option>
+                <option value="대전">대전</option>
+                <option value="울산">울산</option>
+                <option value="세종">세종</option>
+                <option value="경기">경기</option>
+                <option value="강원">강원</option>
+                <option value="충북">충북</option>
+                <option value="충남">충남</option>
+                <option value="전북">전북</option>
+                <option value="전남">전남</option>
+                <option value="경북">경북</option>
+                <option value="경남">경남</option>
+                <option value="제주">제주</option>
+                <!-- Add more options as needed -->
+              </select>
+              <select id="court" class="form-select formStyle03 col" name="court" required>
+                <option value="">각급법원 선택</option>
+                <option value="서울고등법원">서울고등법원</option>
+                <option value="서울가정법원">서울가정법원</option>
+                <option value="서울행정법원">서울행정법원</option>
+                <option value="서울회생법원">서울회생법원</option>
+                <option value="서울중앙지방법원">서울중앙지방법원</option>
+                <option value="서울동부지방법원">서울동부지방법원</option>
+                <option value="서울남부지방법원">서울남부지방법원</option>
+                <option value="서울북부지방법원">서울북부지방법원</option>
+                <option value="서울서부지방법원">서울서부지방법원</option>
+                <!-- Add options for courts here -->
+              </select>
+            </div>
+          </div>
+          <!-- 사건번호 -->
+          <div class="form-group form-item">
+            <label class="label__title" for="title">사건번호</label>
+            <input type="text" id="title" name="title" placeholder="1999가나123456" required>
+          </div>
+          <!-- 당사자 명 -->
+          <div class="form-group form-item">
+            <label class="label__title" for="title">당사자 명</label>
+            <input type="text" id="title" name="title" placeholder="홍길동" required>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary">사건등록</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</p>
+<p>
+  
+
+
 </body>
 
 

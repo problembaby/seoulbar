@@ -178,7 +178,7 @@
             </div>
           </div>
 
-          
+
           <div class="board-top-search-container">
 
 
@@ -188,9 +188,109 @@
                 <div class="view-list">
                   <div class="inline-row">
                     <div class="inline-row-form">
-                      <div class="inline-row-form__tit"><label>재목</label></div>
+                      <div class="inline-row-form__tit"><label>제목</label></div>
                       <div class="inline-row-form__conf">
                         <input type="text" class="form-control" name="" id="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inline-row">
+                    <div class="inline-row-form">
+                      <div class="inline-row-form__tit"><label>공지팝업여부</label></div>
+                      <div class="inline-row-form__conf">
+                        <input type="text" class="form-control" name="" id="">
+                      </div>
+                    </div>
+                  </div>
+
+                               <div class="inline-row">
+                    <div class="inline-row-form">
+                      <div class="inline-row-form__tit"><label>첨부파일</label></div>
+                      <div class="inline-row-form__conf">
+                        <ul class="file-list">
+                          <li class="file-item">
+                            <input type="text" class="upload_text " readonly="readonly">
+                            <!--button-->
+                            <div class="upload-btn_wrap">
+                              <button type="button" title="파일선택">
+                                <span>파일선택</span>
+                              </button>
+                              <input type="file" class="input_file" title="파일선택">
+                            </div>
+                            <div class="file-btnList">
+                              <button class="btn btn-blue btn-w80p btn-add">추가</button>
+                            </div>
+                            <div class="uploadText" style="display: none;">
+                              <p class="text"></p>
+                              <button class="input_file-del" type="button" title="파일삭제"></button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    $(function () {
+                      // 파일 추가 버튼 클릭 시 새로운 file-item 추가
+                      $('.file-list').on('click', '.btn-add', function () {
+                        var newItem = `
+                          <li class="file-item">
+                            <input type="text" class="upload_text" readonly="readonly">
+                            <div class="upload-btn_wrap">
+                              <button type="button" title="파일선택">
+                                <span>파일선택</span>
+                              </button>
+                              <input type="file" class="input_file" title="파일선택">
+                            </div>
+                            <div class="file-btnList">
+                              <button class="btn btn-del btn-w80p">삭제</button>
+                            </div>
+                            <div class="uploadText" style="display: none;">
+                              <p class="text"></p>
+                              <button class="input_file-del" type="button" title="파일삭제"></button>
+                            </div>
+                          </li>
+                        `;
+                  
+                        // 새로운 file-item을 목록에 추가
+                        $('.file-list').append(newItem);
+                      });
+                  
+                      // 파일 삭제 버튼 클릭 시 해당 file-item 삭제
+                      $('.file-list').on('click', '.btn-del', function () {
+                        $(this).closest('.file-item').remove();
+                      });
+                  
+                      // 파일 선택 시 파일명 표시 및 .uploadText 보이기
+                      $('.file-list').on('change', '.input_file', function () {
+                        var fileName = $(this).val().split('\\').pop(); // 파일명 추출
+                        var fileItem = $(this).closest('.file-item'); // 현재 파일 input이 속한 file-item 찾기
+                  
+                        fileItem.find('.upload_text').val(fileName); // 해당 file-item 안의 upload_text 업데이트
+                        fileItem.find('.uploadText p.text').text(fileName); // 파일명을 p.text에도 표시
+                        fileItem.find('.uploadText').show(); // .uploadText 보이기
+                      });
+                  
+                      // 파일 삭제 버튼 클릭 시 파일명 삭제 및 .uploadText 숨기기
+                      $('.file-list').on('click', '.input_file-del', function () {
+                        var fileItem = $(this).closest('.file-item'); // 현재 버튼이 속한 file-item 찾기
+                  
+                        //초기화
+                        fileItem.find('.upload_text').val('');
+                        fileItem.find('.uploadText p.text').text('');
+                        fileItem.find('.input_file').val(''); 
+                        fileItem.find('.uploadText').hide(); 
+                      });
+                    });
+                  </script>
+
+                  <div class="inline-row">
+                    <div class="inline-row-form">
+                      <div class="inline-row-form__tit"><label>내용</label></div>
+                      <div class="inline-row-form__conf">
+                        <textarea name="" id="" class="form-control h200p" placeholder="내용을 입력하세요."></textarea>
                       </div>
                     </div>
                   </div>
@@ -199,9 +299,8 @@
               </div>
             </div>
             <div class="board-btn-area gap-2">
-              <button type="button" class="btn btn-write btn-del">삭제</button>
-              <button type="button" class="btn btn-write btn-dark">수정</button>
-              <button type="button" class="btn btn-write btn-primary">목록</button>
+              <button type="button" class="btn btn-secondary">취소</button>
+              <button type="button" class="btn btn-write btn-primary">등록</button>
             </div>
 
 
@@ -211,10 +310,10 @@
 
         </div>
 
-    </div>
-    <!--컨텐츠 [end] -->
+      </div>
+      <!--컨텐츠 [end] -->
 
-  </div>
+    </div>
 
 
 

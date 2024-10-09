@@ -916,8 +916,13 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 
 
-
-.board-btn-area.ali-right{
+.board-btn-area-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.board-btn-area.ali-right,
+.board-btn-area.ali-left{
   gap:10px
 }
 

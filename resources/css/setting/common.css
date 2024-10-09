@@ -545,6 +545,9 @@ input[readonly], text-area[readonly] {
 .gray {
   color: #728199!important;
 }
+.cor-rd {
+  color: #FF5545;
+}
 
 
 .text-overflow {

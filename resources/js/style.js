@@ -167,15 +167,15 @@ function activateTabs() {
 
 
 //파일 업로드시 파일명 표시
-$(function () {
+/* $(function () {
   $('.upload_text').val('미리보여줄 텍스트.');
   $('.input_file').change(function () {
     var i = $(this).val();
     $('.upload_text').val(i);
+    $('.uploadText p.text').text(i);
   });
 });
-
-
+ */
 
 
 // 각각의 기능 호출

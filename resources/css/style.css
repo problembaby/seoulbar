@@ -604,10 +604,10 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   flex: 1;
 }
  .inline-row-form__tit {
-  height: 60px;
+  height: 100%;
 }
  .address__input .inline-row-form__tit {
-  height: 155px;
+  height: 100%;
 }
  .address__input .inline-row-form__conf {
   display: flex;
@@ -851,7 +851,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .view-list{border-top: 1px solid #999; border-top: 2px solid #0F3966; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; }
 .view-list .inline-row{display: flex; width: 100%; border-bottom:1px solid #999999 }
 .inline-row-form{display: flex ; align-items: center; flex:1 40%; gap:20px}
-.inline-row-form__tit{flex:0 0 140px; color:#000; padding:10px; height: 50px; display: flex; align-items: center; background-color: #EEEEEE; font-weight: 700; justify-content: center; justify-content: center; text-align: center;}
+.inline-row-form__tit{flex:0 0 140px; color:#000; padding:10px; height: 100%; display: flex; align-items: center; background-color: #EEEEEE; font-weight: 700; justify-content: center; justify-content: center; text-align: center;}
 .inline-row-form__conf{flex:1 auto; display: flex; align-items: center; padding:10px; background-color: #fff; font-weight: 500;}
 
 .view-contents{padding:20px}
@@ -1961,6 +1961,16 @@ input[type="checkbox"]:checked + .check-icon::before {
 }
 
 
+.file-list{display: flex; gap:5px; flex-direction: column; width: 100%;}
+.file-list .file-item{display: flex; gap:10px; flex-wrap: wrap; width: 100%;}
+.file-list .file-item .file-btnList{display: flex; gap:10px; align-items: center;}
+
+.btn-w80p{width: 80px;}
+
+.uploadText{display: flex; align-items: center;}
+.input_file-del{background-color: transparent;}
+.input_file-del::before{content:""; background: url(../images/ico/ico-redClose.svg); width: 12px; height: 13px; display: block; margin-left:10px}
+
 @media screen and (max-width: 1800px) {
 
 
@@ -2469,6 +2479,18 @@ width: 100%;
 }
 
 .menu-list{overflow-y: auto;}
+
+.inline-row-form {
+  gap: 5px;
+  flex-direction: column;
+}
+
+.inline-row-form__tit {
+  flex: 1 1 100%;
+  height: 100%;
+  width: 100%;
+
+}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
@@ -2513,12 +2535,7 @@ width: 100%;
 .sh_s_bar_fr_021 .inline-row-form__tit {
   flex: 0 0 100%;
 }
-.inline-row-form__tit {
-  flex: 1 1 100%;
-  height: 50px;
-  width: 100%;
 
-}
 
 .board-viewPage .whiteTable {
   padding: 30px 10px;

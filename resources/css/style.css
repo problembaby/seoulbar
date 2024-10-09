@@ -1988,6 +1988,16 @@ input[type="checkbox"]:checked + .check-icon::before {
 .input_file-del{background-color: transparent;}
 .input_file-del::before{content:""; background: url(../images/ico/ico-redClose.svg); width: 12px; height: 13px; display: block; margin-left:10px}
 
+.btn_login{
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+/*   border: 1px solid #fff;
+  padding: 3px 5px;
+  border-radius: 4px; */
+  font-size: 14px;
+}
+
 @media screen and (max-width: 1800px) {
 
 

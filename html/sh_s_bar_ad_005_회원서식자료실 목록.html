@@ -103,19 +103,19 @@
           <div class="menu">
             <ul class="menu-list">
               <li>
-                <a href="#" class="menuBtn on" title="선택됨">
+                <a href="#" class="menuBtn">
                   <i class="ico ico-home"></i>
                   <span>홈</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="menuBtn">
+                <a href="#" class="menuBtn on">
                   <i class="ico ico-notice"></i>
                   <span>공지사항 관리</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="menuBtn">
+                <a href="#" class="menuBtn" title="선택됨">
                   <i class="ico ico-library"></i>
                   <span>자료실</span>
                 </a>
@@ -180,15 +180,15 @@
             </div>
           </div>
 
-          
+
           <div class="board-top-search-container">
             <div class="search-area">
               <div class="letf">
                 <div class="board-btn-area ali-left">
-                  <button type="button" class="btn btn-write btn-primary"
-                  data-bs-toggle="modal" data-bs-target="#sh_s_bar_ad_008">포인트 설정관리</button>
-                  <button type="button" class="btn btn-write btn-primary"
-                  data-bs-toggle="modal" data-bs-target="#sh_s_bar_ad_009">자료실 구분관리</button>
+                  <button type="button" class="btn btn-write btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#sh_s_bar_ad_008">포인트 설정관리</button>
+                  <button type="button" class="btn btn-write btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#sh_s_bar_ad_009">자료실 구분관리</button>
                 </div>
               </div>
               <div class="right">
@@ -247,7 +247,8 @@
                         </td>
                         <td class="mobNone">홍길동</td>
                         <td>
-                          <button type="button" class="ico-btn file-att-gray"><span class="sr-only">파일 첨부</span></button>
+                          <button type="button" class="ico-btn file-att-gray"><span class="sr-only">파일
+                              첨부</span></button>
                         </td>
                         <td class="mobNone">2024.09.04</td>
                         <td>
@@ -262,7 +263,8 @@
                         </td>
                         <td class="mobNone">홍길동</td>
                         <td>
-                          <button type="button" class="ico-btn file-att-gray"><span class="sr-only">파일 첨부</span></button>
+                          <button type="button" class="ico-btn file-att-gray"><span class="sr-only">파일
+                              첨부</span></button>
                         </td>
                         <td class="mobNone">2024.09.04</td>
                         <td>
@@ -277,14 +279,15 @@
                         </td>
                         <td class="mobNone">홍길동</td>
                         <td>
-                          <button type="button" class="ico-btn file-att-gray"><span class="sr-only">파일 첨부</span></button>
+                          <button type="button" class="ico-btn file-att-gray"><span class="sr-only">파일
+                              첨부</span></button>
                         </td>
                         <td class="mobNone">2024.09.04</td>
                         <td>
                           11997
                         </td>
                       </tr>
- 
+
 
                     </tbody>
                   </table>
@@ -293,8 +296,8 @@
               </div>
 
               <div class="board-btn-area">
-                <button type="button" class="btn btn-write btn-primary"
-                data-bs-toggle="modal" data-bs-target="#sh_s_bar_ad_006">등록하기</button>
+                <button type="button" class="btn btn-write btn-primary" data-bs-toggle="modal"
+                  data-bs-target="#sh_s_bar_ad_006">등록하기</button>
               </div>
 
 
@@ -344,312 +347,518 @@
 
         </div>
 
+      </div>
+      <!--컨텐츠 [end] -->
+
     </div>
-    <!--컨텐츠 [end] -->
 
-  </div>
+    <script>
+      //[퍼블작업시 모달확인] 스크립트
+      document.addEventListener('DOMContentLoaded', function () {
+        var myModal = new bootstrap.Modal(document.getElementById('sh_s_bar_ad_006'));
+        var myModal2 = new bootstrap.Modal(document.getElementById('sh_s_bar_ad_008'));
+        var myModal3 = new bootstrap.Modal(document.getElementById('sh_s_bar_ad_009'));
+         myModal.show();
+        // myModal2.show();
+        // myModal3.show();
+      });
 
-  <script>
-    //[퍼블작업시 모달확인] 스크립트
-    document.addEventListener('DOMContentLoaded', function() {
-      var myModal = new bootstrap.Modal(document.getElementById('sh_s_bar_ad_006'));
-      var myModal2 = new bootstrap.Modal(document.getElementById('sh_s_bar_ad_008'));
-      var myModal3 = new bootstrap.Modal(document.getElementById('sh_s_bar_ad_009'));
-     // myModal.show();
-      //myModal2.show();
-      myModal3.show();
-    });
-
-  </script>
+    </script>
 
     <!-- 회원서식자료실 등록 Modal -->
-<div class="modal fade modal-lg" id="sh_s_bar_ad_006" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="title__area">
-        <h2 class="form__title">회원서식 자료실 등록</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+    <div class="modal fade modal-lg" id="sh_s_bar_ad_006" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="title__area">
+            <h2 class="form__title">회원서식 자료실 등록</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
 
-      <div class="table table-puple">
-        <table>
-          <caption class="sr-only">GPT 등록 키 데이터 목록</caption>
-          <colgroup>
-            <col width="10%">
-            <col width="auto">
-            <col width="20%">
-            <col width="10%">
-          </colgroup>
-          <thead>
-            <tr>
-              <th scope="col">NO</th>
-              <th scope="col">GPT Key</th>
-              <th scope="col">사용ID</th>
-              <th scope="col">기능</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="num">030</td>
-              <td class="cell-subject">
-                Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
-              </td>
-              <td class="text-center">
-                newuserid
-              </td>
-              <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
-            </tr>
-            <tr>
-              <td class="num">030</td>
-              <td class="cell-subject">
-                Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
-              </td>
-              <td class="text-center">
-                newuserid
-              </td>
-              <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
-            </tr>
-            <tr>
-              <td class="num">030</td>
-              <td class="cell-subject">
-                Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
-              </td>
-              <td class="text-center">
-                newuserid
-              </td>
-              <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
-            </tr>
-            <tr>
-              <td class="num">030</td>
-              <td class="cell-subject">
-                Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
-              </td>
-              <td class="text-center">
-                newuserid
-              </td>
-              <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
-            </tr>
-            <tr>
-              <td class="num">030</td>
-              <td class="cell-subject">
-                Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
-              </td>
-              <td class="text-center">
-                newuserid
-              </td>
-              <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
-            </tr>
-            <tr>
-              <td class="num">030</td>
-              <td class="cell-subject">
-                Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
-              </td>
-              <td class="text-center">
-                newuserid
-              </td>
-              <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-        <button type="button" class="btn btn-primary">등록</button>
-      </div>
-    </div>
-  </div>
-</div>
+          <div class="table table-puple">
+            <table>
+              <caption class="sr-only">GPT 등록 키 데이터 목록</caption>
+              <colgroup>
+                <col width="10%">
+                <col width="auto">
+                <col width="20%">
+                <col width="10%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">GPT Key</th>
+                  <th scope="col">사용ID</th>
+                  <th scope="col">기능</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="num">030</td>
+                  <td class="cell-subject">
+                    Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
+                  </td>
+                  <td class="text-center">
+                    newuserid
+                  </td>
+                  <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
+                </tr>
+                <tr>
+                  <td class="num">030</td>
+                  <td class="cell-subject">
+                    Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
+                  </td>
+                  <td class="text-center">
+                    newuserid
+                  </td>
+                  <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
+                </tr>
+                <tr>
+                  <td class="num">030</td>
+                  <td class="cell-subject">
+                    Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
+                  </td>
+                  <td class="text-center">
+                    newuserid
+                  </td>
+                  <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
+                </tr>
+                <tr>
+                  <td class="num">030</td>
+                  <td class="cell-subject">
+                    Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
+                  </td>
+                  <td class="text-center">
+                    newuserid
+                  </td>
+                  <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
+                </tr>
+                <tr>
+                  <td class="num">030</td>
+                  <td class="cell-subject">
+                    Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
+                  </td>
+                  <td class="text-center">
+                    newuserid
+                  </td>
+                  <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
+                </tr>
+                <tr>
+                  <td class="num">030</td>
+                  <td class="cell-subject">
+                    Sdakn;kasdf1aas3d76fa6s4f5a4s5d4f3as4fa54
+                  </td>
+                  <td class="text-center">
+                    newuserid
+                  </td>
+                  <td class="text-center"><button class="btn btn-del btn-w80">해제</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
 
 
-
-<!-- 포인트 설정 관리 Modal -->
-<div class="modal fade modal-lg" id="sh_s_bar_ad_008" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="title__area">
-        <h2 class="form__title">종합업무서비스 알림 관리</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="table table-puple">
-        <table>
-          <caption class="sr-only">GPT 등록 키 데이터 목록</caption>
-          <colgroup>
-            <col width="15%">
-            <col width="20%">
-            <col width="auto">
-            <col width="10%">
-          </colgroup>
-          <thead>
-            <tr>
-              <th scope="col">구분</th>
-              <th scope="col">대상</th>
-              <th scope="col">알림 메시지</th>
-              <th scope="col">관리</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-center">공지 등록</td>
-              <td class="text-center">전체회원</td>
-              <td class="cell-subject">
-                <input type="text" class="form-control input-alert-txt" value="새로운 공지가 올라왔습니다. 확인하시길 바랍니다." readonly>
-              </td>
-              <td class="text-center">
-                <button class="btn btn-del btn-w80 btn-modify">수정</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">사건 업데이트</td>
-              <td class="text-center">사건등록인</td>
-              <td class="cell-subject">
-                <input type="text" class="form-control input-alert-txt" value="<%사무실명%>/<%성명%>이(가) <%복대리 신청 등록일%> 등록한 복대리에 지원하였습니다." readonly>
-              </td>
-              <td class="text-center">
-                <button class="btn btn-del btn-w80 btn-modify">수정</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">복대리 신청 등록</td>
-              <td class="text-center">관심법원 등록자</td>
-              <td class="cell-subject">
-                <input type="text" class="form-control input-alert-txt" value="관심법원으로 등록된 법원의 신청 복대리가 올라왔습니다." readonly>
-              </td>
-              <td class="text-center">
-                <button class="btn btn-del btn-w80 btn-modify">수정</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <script>
-        //btn-modify 클릭시 해당 행의 input-alert-txt 수정 가능
-        $(document).ready(function () {
-          $('.btn-modify').click(function () {
-            var $this = $(this);
-            var $input = $this.closest('tr').find('.input-alert-txt');
-            if ($input.prop('readonly')) {
-              $input.prop('readonly', false).focus();
-              $input.removeClass('input-alert-txt');
-            } 
-          });
-        });
-      </script>
-
-
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-        <button type="button" class="btn btn-primary">저장</button>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary">등록</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
 
-<!-- 회원서식자료실 구분 관리 Modal -->
-<div class="modal fade modal-lg" id="sh_s_bar_ad_009" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="title__area">
-        <h2 class="form__title">회원서식자료실 구분 관리</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+    <!-- 포인트 설정 관리 Modal -->
+    <div class="modal fade" id="sh_s_bar_ad_008" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="title__area">
+            <h2 class="form__title">포인트 설정 관리</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
 
-      <div class="table table-puple">
-        <table>
-          <caption class="sr-only">회원서식자료실 구분 목록</caption>
-          <colgroup>
-            <col width="15%">
-            <col width="auto">
-            <col width="30%">
-          </colgroup>
-          <thead>
-            <tr>
-              <th scope="col">NO</th>
-              <th scope="col">구분명</th>
-              <th scope="col">기능</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-center">A000001</td>
-              <td class="text-center">회원서식자료실</td>
-              <td class="text-center d-flex gap-2 justify-content-center">
-                <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
-                <button class="btn btn-del btn-w80 btn-modify">삭제</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">A000001</td>
-              <td class="text-center">회원서식자료실</td>
-              <td class="text-center d-flex gap-2 justify-content-center">
-                <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
-                <button class="btn btn-del btn-w80 btn-modify">삭제</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">A000001</td>
-              <td class="text-center">회원서식자료실</td>
-              <td class="text-center d-flex gap-2 justify-content-center">
-                <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
-                <button class="btn btn-del btn-w80 btn-modify">삭제</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">A000001</td>
-              <td class="text-center">회원서식자료실</td>
-              <td class="text-center d-flex gap-2 justify-content-center">
-                <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
-                <button class="btn btn-del btn-w80 btn-modify">삭제</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">A000001</td>
-              <td class="text-center">회원서식자료실</td>
-              <td class="text-center d-flex gap-2 justify-content-center">
-                <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
-                <button class="btn btn-del btn-w80 btn-modify">삭제</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center">A000001</td>
-              <td class="text-center">회원서식자료실</td>
-              <td class="text-center d-flex gap-2 justify-content-center">
-                <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
-                <button class="btn btn-del btn-w80 btn-modify">삭제</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <div class="point__area">
+            <div class="point__item">
+              <div class="group">
+                <div class="point-tit" for="document1">회원서식자료실</div>
+                <label class="check-container">
+                  <input type="checkbox" id="checkbox">
+                  <div class="check-icon"></div>
+                  <div class="check-text">적용</div>
+                </label>
+              </div>
 
-      <script>
-        //btn-modify 클릭시 해당 행의 input-alert-txt 수정 가능
-        $(document).ready(function () {
-          $('.btn-modify').click(function () {
-            var $this = $(this);
-            var $input = $this.closest('tr').find('.input-alert-txt');
-            if ($input.prop('readonly')) {
-              $input.prop('readonly', false).focus();
-              $input.removeClass('input-alert-txt');
-            } 
-          });
-        });
-      </script>
+              <div class="group gap-2">
+                <label for="reward1">등록 시 지급</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
 
+              <div class="group gap-2">
+                <label for="deduct1">삭제 시 차감</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
 
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-        <button type="button" class="btn btn-primary">저장</button>
+              <div class="group gap-2">
+                <label for="size1">파일 용량</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>Mbyte</div>
+                </div>
+              </div>
+            </div>
+            <div class="point__item">
+              <div class="group">
+                <div class="point-tit" for="document1">일반자료실</div>
+                <label class="check-container">
+                  <input type="checkbox" id="checkbox">
+                  <div class="check-icon"></div>
+                  <div class="check-text">적용</div>
+                </label>
+              </div>
+
+              <div class="group gap-2">
+                <label for="reward1">등록 시 지급</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="deduct1">삭제 시 차감</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="size1">파일 용량</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>Mbyte</div>
+                </div>
+              </div>
+            </div>
+            <div class="point__item">
+              <div class="group">
+                <div class="point-tit" for="document1">커뮤니티자료실</div>
+                <label class="check-container">
+                  <input type="checkbox" id="checkbox">
+                  <div class="check-icon"></div>
+                  <div class="check-text">적용</div>
+                </label>
+              </div>
+
+              <div class="group gap-2">
+                <label for="reward1">등록 시 지급</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="deduct1">삭제 시 차감</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="size1">파일 용량</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>Mbyte</div>
+                </div>
+              </div>
+            </div>
+            <div class="point__item">
+              <div class="group">
+                <div class="point-tit" for="document1">대법원판례</div>
+                <label class="check-container">
+                  <input type="checkbox" id="checkbox">
+                  <div class="check-icon"></div>
+                  <div class="check-text">적용</div>
+                </label>
+              </div>
+
+              <div class="group gap-2">
+                <label for="reward1">등록 시 지급</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="deduct1">삭제 시 차감</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="size1">파일 용량</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>Mbyte</div>
+                </div>
+              </div>
+            </div>
+            <div class="point__item">
+              <div class="group">
+                <div class="point-tit" for="document1">업무신청 서식</div>
+                <label class="check-container">
+                  <input type="checkbox" id="checkbox">
+                  <div class="check-icon"></div>
+                  <div class="check-text">적용</div>
+                </label>
+              </div>
+
+              <div class="group gap-2">
+                <label for="reward1">등록 시 지급</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="deduct1">삭제 시 차감</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="size1">파일 용량</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>Mbyte</div>
+                </div>
+              </div>
+            </div>
+            <div class="point__item">
+              <div class="group">
+                <div class="point-tit" for="document1">공익활동 서식</div>
+                <label class="check-container">
+                  <input type="checkbox" id="checkbox">
+                  <div class="check-icon"></div>
+                  <div class="check-text">적용</div>
+                </label>
+              </div>
+
+              <div class="group gap-2">
+                <label for="reward1">등록 시 지급</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="deduct1">삭제 시 차감</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="size1">파일 용량</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>Mbyte</div>
+                </div>
+              </div>
+            </div>
+            <div class="point__item">
+              <div class="group">
+                <div class="point-tit" for="document1">기타서식</div>
+                <label class="check-container">
+                  <input type="checkbox" id="checkbox">
+                  <div class="check-icon"></div>
+                  <div class="check-text">적용</div>
+                </label>
+              </div>
+
+              <div class="group gap-2">
+                <label for="reward1">등록 시 지급</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="deduct1">삭제 시 차감</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>포인트 지급</div>
+                </div>
+              </div>
+
+              <div class="group gap-2">
+                <label for="size1">파일 용량</label>
+                <div class="d-flex gap-2 align-items-center">
+                  <input type="text" class="form-control formStyle240">
+                  <div>Mbyte</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary">등록</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+
+
+    <!-- 회원서식자료실 구분 관리 Modal -->
+    <div class="modal fade modal-lg" id="sh_s_bar_ad_009" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="title__area">
+            <h2 class="form__title">회원서식자료실 구분 관리</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-input-text">
+            <div class="fw-bold">자료실 구분명</div>
+            <div class="d-flex gap-2">
+              <input type="text" class="form-control">
+              <button class="btn btn-primary btn-w8">등록</button>
+            </div>
+          </div>
+          <div class="table table-puple">
+            <table>
+              <caption class="sr-only">회원서식자료실 구분 목록</caption>
+              <colgroup>
+                <col width="15%">
+                <col width="auto">
+                <col width="30%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">구분명</th>
+                  <th scope="col">기능</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">A000001</td>
+                  <td class="cell-subject">
+                    <input type="text" class="form-control input-alert-txt" value="회원서식자료실" readonly>
+                  </td>
+                  <td class="text-center">
+                    <div class="d-flex gap-2 justify-content-center">
+                      <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
+                      <button class="btn btn-del btn-w80">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">A000001</td>
+                  <td class="cell-subject">
+                    <input type="text" class="form-control input-alert-txt" value="회원서식자료실" readonly>
+                  </td>
+                  <td class="text-center">
+                    <div class="d-flex gap-2 justify-content-center">
+                      <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
+                      <button class="btn btn-del btn-w80">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">A000001</td>
+                  <td class="cell-subject">
+                    <input type="text" class="form-control input-alert-txt" value="회원서식자료실" readonly>
+                  </td>
+                  <td class="text-center">
+                    <div class="d-flex gap-2 justify-content-center">
+                      <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
+                      <button class="btn btn-del btn-w80">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">A000001</td>
+                  <td class="cell-subject">
+                    <input type="text" class="form-control input-alert-txt" value="회원서식자료실" readonly>
+                  </td>
+                  <td class="text-center">
+                    <div class="d-flex gap-2 justify-content-center">
+                      <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
+                      <button class="btn btn-del btn-w80">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">A000001</td>
+                  <td class="cell-subject">
+                    <input type="text" class="form-control input-alert-txt" value="회원서식자료실" readonly>
+                  </td>
+                  <td class="text-center">
+                    <div class="d-flex gap-2 justify-content-center">
+                      <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
+                      <button class="btn btn-del btn-w80">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">A000001</td>
+                  <td class="cell-subject">
+                    <input type="text" class="form-control input-alert-txt" value="회원서식자료실" readonly>
+                  </td>
+                  <td class="text-center">
+                    <div class="d-flex gap-2 justify-content-center">
+                      <button class="btn btn-write btn-dark btn-w80 btn-modify">수정</button>
+                      <button class="btn btn-del btn-w80">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+
+          <script>
+            //btn-modify 클릭시 해당 행의 input-alert-txt 수정 가능
+            $(document).ready(function () {
+              $('.btn-modify').click(function () {
+                var $this = $(this);
+                var $input = $this.closest('tr').find('.input-alert-txt');
+                if ($input.prop('readonly')) {
+                  $input.prop('readonly', false).focus();
+                  $input.removeClass('input-alert-txt');
+                }
+              });
+            });
+          </script>
+
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+            <button type="button" class="btn btn-primary">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 </body>

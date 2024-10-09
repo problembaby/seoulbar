@@ -926,6 +926,14 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   gap:10px
 }
 
+.modal-input-text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
 
 .notification-list li a.on .tit, .notification-list li a:hover .tit {
   background: linear-gradient(to bottom, #7c99ff, #6b85dd);
@@ -1874,6 +1882,84 @@ body.zoom-125 .notification-list.sub li a {
 .alert-modal .modal-footer button {
   width: auto;
 }
+#sh_s_bar_ad_008 .modal-dialog {
+  max-width: 1115px;
+  margin: 0 auto;
+}
+.point__area {
+  width: 100%;
+  border-top: 2px solid #0F3966;
+  overflow-x: auto;
+}
+.point__area .point__item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #999;
+}
+
+.point__area .point__item .group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0;
+}
+.point__area .point__item .group .point-tit {
+  background-color: #E7ECFF;
+  padding: 20px 15px;
+  width: 116px;
+}
+.point__area .point__item .group label {
+  background-color: #eee;
+  padding: 20px 10px;
+}
+.point__area .point__item .group > div {
+  padding-right: 20px;
+}
+.point__area .point__item .group input[type="text"] {
+  width: 120px;
+}
+.point__area .point__item .group .check-container {
+  display: flex;
+  align-items: center;
+  background-color: #E7ECFF;
+  padding: 20px 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: 1px solid #BBBBBB;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.check-icon::before {
+  content: "";
+  color: white;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .check-icon::before {
+  width: 18px;
+  height: 18px;
+  background-color: #1a3d65;
+  border-radius: 5px;
+  content: "\2713";
+  text-align: center;
+}
+
 
 @media screen and (max-width: 1800px) {
 
@@ -2007,7 +2093,29 @@ body.zoom-125 .notification-list.sub li a {
   justify-content: flex-start;
   gap: 10px;
 }
-
+.point__area .point__item .group input[type="text"] {
+  width: 50%;
+}
+.point__area .point__item .group > div {
+  padding-right: 0;
+}
+.point__area .point__item {
+  flex-direction: column;
+  border: none;
+}
+.point__area .point__item .group {
+  width: 100%;
+}
+.point__area .point__item .group.gap-2 {
+  border-bottom: 1px solid #999;
+}
+.point__area .point__item .group > * {
+  flex: 1;
+}
+.point__area .point__item .group .point-tit,
+.point__area .point__item .group label {
+  text-align: center;
+}
 }
 
 @media screen and (max-width: 1024px) {

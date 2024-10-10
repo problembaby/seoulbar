@@ -106,25 +106,16 @@
               <div class="form-group file-area">
                 <label class="label__title" for="title">첨부파일</label>
                 <div class="py-4">
-                  <div class="d-flex gap-2">
-                    <input type="text" class="file-input" placeholder="파일을 선택하세요">
-                    <button class="btn btn-primary">파일선택</button>
-                    <button class="btn btn-add-primary">추가</button>
-                  </div>
-                  <div class="file-list">
-                      <div class="file-item">
-                          <span class="file-name">가나다라마바사아자차카타파하가나다라마바사아자차카타파하.PDF</span>
-                          <span class="ico-delete"></span>
-                      </div>
-                      <div class="file-item">
-                          <span class="file-name">가나다라마바사아자차카타파하가나다라마바사아자차카타파하.PDF</span>
-                          <span class="ico-delete"></span>
-                      </div>
-                      <div class="file-item">
-                          <span class="file-name">가나다라마바사아자차카타파하가나다라마바사아자차카타파하.PDF</span>
-                          <span class="ico-delete"></span>
-                      </div>
-                  </div>
+                <ul class="file-list">
+                  <li class="file-item">
+                    <input type="text" class="upload_text " readonly="readonly">
+                    <!--button-->
+                    <div class="file-btnList">
+                      <button class="btn btn-blue btn-w80p btn-add">추가</button>
+                      <button class="btn btn-write btn-red">파일 삭제</button>
+                    </div>
+                  </li>
+                </ul>
                 </div>
               </div>
             </div>

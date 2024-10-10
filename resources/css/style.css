@@ -2520,9 +2520,32 @@ width: 100%;
   width: 100%;
 
 }
+  #sh_s_bar_fr_017 .date_wrap {
+    align-items: unset;
+  }
+  #sh_s_bar_fr_017 .date_wrap .start-date {
+    height: auto;
+  }
+  #sh_s_bar_fr_017 .date_wrap .form-row {
+    padding: 15px 0;
+  }
+  .form-row .form-date-area {flex-direction: column; align-items: baseline;}
+
+  .form-row .form-date-area .form-control {
+    width: 100%;
+  }
+  .form-row .form-date-area > div {
+    width: 100%;
+  }
+  .formStyle02 {
+    width: 50%;
+    max-width: none;
+  }
+
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -2555,10 +2578,6 @@ width: 100%;
     transition: all 0.2s;
   }
 
-.form-row .form-date-area .form-control {
-  width: 140px;
-}
-
 
 /* sh_s_bar_fr_021 사건관리 일반내용 */
 .sh_s_bar_fr_021 .inline-row-form__tit {
@@ -2588,24 +2607,16 @@ width: 100%;
   flex-direction: column;
   align-items: baseline;
 }
-.form-row .form-date-area > div {
-  width: 100%;
-}
+
 
 .form-group .start-date__Double {
   height: 290px !important;
-}
-.form-group .start-date {
-  height: 100px !important;
 }
 
 .form-row .form-date-area .form-control {
   width: 100%;
 }
-.formStyle02 {
-  width: 50%;
-  max-width: none;
-}
+
 
 .borderBox-style01 .court-list li {
   flex: 1 1 100%;

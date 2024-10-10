@@ -80,11 +80,11 @@
   </script>
 
   <!-- 복대리 지원 요청팝업 Modal -->
-  <div class="modal fade modal-lg" id="sh_s_bar_fr_017" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
+  <div class="modal fade modal-xl" id="sh_s_bar_fr_017" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
-        <form class="form-container" action="/submit" method="POST">
+        <form action="/submit" method="POST">
           <div class="title__area">
             <h2 class="form__title">복대리 신청</h2>
             <button type="button" class="btn-close" aria-label="Close" onclick="window.close();"></button>
@@ -184,7 +184,8 @@
             
             <div class="form-item form-row">
               <!-- 재판 일시 -->
-              <div class="form-group col">
+               <!-- 2024.10.10 .date_wrap 클래스 추가 -->
+              <div class="form-group col date_wrap">
                 <label class="label__title start-date" for="start_date">재판일시</label>
                 <div class="form-row">
                   <div class="form-date-area">

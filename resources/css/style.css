@@ -479,12 +479,12 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .mobile-logo{max-width: 300px; width: 100%;}
 .menuRightClosePosi{position: absolute; right: 30px; top:30px}
+#sh_s_bar_fr_011 .modal-dialog {
+  max-width: 1140px;
+  width: 100%;
+}
 .form-container{
-  max-width: 1144px;
   margin: 0 auto;
-  padding: 25px 30px;
-  border-radius: 15px;
-  background-color: #fff;
 }
 .form-area__inputList {
   border-top: 2px solid #0F3966;
@@ -2061,7 +2061,9 @@ input[type="checkbox"]:checked + .check-icon::before {
   .form-row .form-group.col:first-child {
     border-bottom: 1px solid #999;
   }
-  
+  #sh_s_bar_fr_011 .modal-dialog {
+    max-width: var(--bs-modal-width);
+  }
   
 
   .calendar-header {
@@ -2252,7 +2254,9 @@ width: 100%;
   border-bottom: 1px solid #999999;
 }
 
-
+#sh_s_bar_fr_011 .modal-dialog {
+  max-width: 600px;
+}
 .form-row {
   flex-direction: column;
   gap: 0px;

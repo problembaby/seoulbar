@@ -63,11 +63,27 @@
 </head>
 
 <body>
+
   <!--컨텐츠 [start] -->
-  <div >
-    <div class="sub-container">
-      <h2 class="sr-only">소송복대리 지원 팝업</h2>
-      <div class="form-sec sec-box">
+  <div class="mt50 ml100">
+    <button type="button" class="btn btn-write btn-red" data-bs-toggle="modal"
+      data-bs-target="#sh_s_bar_fr_017">등록하기</button>
+  </div>
+
+  <script>
+    //[퍼블작업시 모달확인] 스크립트
+    document.addEventListener('DOMContentLoaded', function () {
+      var myModal17 = new bootstrap.Modal(document.getElementById('sh_s_bar_fr_017'));
+      //  myModal17.show();
+    });
+
+  </script>
+
+  <!-- 복대리 지원 요청팝업 Modal -->
+  <div class="modal fade modal-lg" id="sh_s_bar_fr_017" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
         <form class="form-container" action="/submit" method="POST">
           <div class="title__area">
             <h2 class="form__title">복대리 신청</h2>
@@ -273,8 +289,6 @@
                 " required></textarea>
               </div>
             </div>
-
-
           </div>
 
           <!-- Submit Button -->
@@ -285,10 +299,10 @@
         </form>
       </div>
     </div>
- 
+  </div>
   <!--컨텐츠 [end] -->
 
-  </div>
+
   <script>
     function initializeDatepicker() {
       $(".datepicker").datepicker({

@@ -64,82 +64,101 @@
 
 <body>
   <!--컨텐츠 [start] -->
-    <div class="sub-container">
-      <h2 class="sr-only">회원서식자료실 등록 팝업</h2>
-      <div class="form-sec sec-box sh_s_bar_fr_024">
-        <form class="form-container" action="/submit" method="POST">
+  <div class="sub-container">
+    <h2 class="sr-only">회원서식자료실 등록 팝업</h2>
+
+    <div class="mt50 ml100">
+      <button type="button" class="btn btn-write btn-primary" data-bs-toggle="modal"
+        data-bs-target="#sh_s_bar_fr_024">등록하기</button>
+    </div>
+
+
+    <script>
+      //[퍼블작업시 모달확인] 스크립트
+      document.addEventListener('DOMContentLoaded', function () {
+        var myModal = new bootstrap.Modal(document.getElementById('sh_s_bar_fr_024'));
+        //  myModal.show();
+      });
+
+    </script>
+
+    <!-- 회원서식자료실 등록 Modal -->
+    <div class="modal fade modal-lg" id="sh_s_bar_fr_024" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
           <div class="title__area">
             <h2 class="form__title">회원서식 자료실 등록</h2>
-            <button type="button" class="btn-close" aria-label="Close" onclick="window.close();"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="form-area__inputList">
-            <div class="form-item form-row">
-              <!-- 관할 법원 -->
-              <div class="form-group col">
-                <label class="label__title">구분</label>
-                <div class="form-group__inputWarp">
+
+          <div class="view-list">
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit"><label>구분</label></div>
+                <div class="inline-row-form__conf">
                   <select id="region" class="form-select formStyle03 col" name="region" required>
+                    <option value="">자료실을 선택하세요</option>
+                    <option value="">자료실을 선택하세요</option>
                     <option value="">자료실을 선택하세요</option>
                   </select>
                 </div>
               </div>
-              <!-- 사건명 -->
-              <div class="form-group col">
-                <div class="label__title">작성자</div>
-                <div>홍길동</div>
-              </div>
-            </div>
-
-
-
-            <div class="form-item form-row">
-              <!-- 사무실명 -->
-              <div class="form-group">
-                <label class="label__title" for="title">제목</label>
-                <input type="text" id="title" name="title" required>
-              </div>
-            </div>
-
-
-            <div class="form-item form-row">
-              <!-- 금액 -->
-              <div class="form-group file-area">
-                <label class="label__title" for="title">첨부파일</label>
-                <div class="py-4">
-                <ul class="file-list">
-                  <li class="file-item">
-                    <input type="text" class="upload_text " readonly="readonly">
-                    <!--button-->
-                    <div class="file-btnList">
-                      <button class="btn btn-blue btn-w80p btn-add">추가</button>
-                      <button class="btn btn-write btn-red">파일 삭제</button>
-                    </div>
-                  </li>
-                </ul>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit"><label>작성자</label></div>
+                <div class="inline-row-form__conf">
+                  홍길동
                 </div>
               </div>
             </div>
 
-
-            <div class="form-item">
-              <!-- 지원내용 -->
-              <div class="form-group">
-                <label class="label__title h200p" for="title">내용</label>
-                <textarea name="content" id="content" rows="5" placeholder="내용을 입력하세요" required></textarea>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit"><label>제목</label></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" name="" id="">
+                </div>
               </div>
             </div>
 
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit"><label>첨부파일</label></div>
+                <div class="inline-row-form__conf">
+                  <ul class="file-list">
+                    <li class="file-item">
+                      <input type="text" class="upload_text " readonly="readonly">
+                      <!--button-->
+                      <div class="file-btnList">
+                        <button class="btn btn-blue btn-w80p btn-add">추가</button>
+                        <button class="btn btn-write btn-red">파일 삭제</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit"><label>내용</label></div>
+                <div class="inline-row-form__conf">
+                  <textarea name="" id="" class="form-control h200p" placeholder="내용을 입력하세요."></textarea>
+                </div>
+              </div>
+            </div>
 
           </div>
 
-          <!-- Submit Button -->
-          <div class="form-button">
-            <button class="btn btn-write btn-secondary" type="submit">취소</button>
-            <button class="btn btn-write btn-primary" type="submit">등록</button>
+
+
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-primary">등록</button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
+  </div>
   </div>
   <!--컨텐츠 [end] -->
 

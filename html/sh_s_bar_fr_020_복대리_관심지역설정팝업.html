@@ -61,10 +61,27 @@
 </head>
 
 <body>
+  
   <!--컨텐츠 [start] -->
-    <div class="sub-container">
-      <h2 class="sr-only">가능법원 팝업</h2>
-      <div class="form-sec sec-box">
+  <div class="mt50 ml100">
+    <button type="button" class="btn-alSet" data-bs-toggle="modal"
+      data-bs-target="#sh_s_bar_fr_020">관심지역 알림설정</button>
+  </div>
+
+  <script>
+    //[퍼블작업시 모달확인] 스크립트
+    document.addEventListener('DOMContentLoaded', function () {
+      var myModal20 = new bootstrap.Modal(document.getElementById('sh_s_bar_fr_020'));
+      //  myModal20.show();
+    });
+
+  </script>
+
+  <!-- 관심지역설정팝업 등록 Modal -->
+  <div class="modal fade modal-lg" id="sh_s_bar_fr_020" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
         <form class="form-container" action="/submit" method="POST">
           <div class="title__area">
             <h2 class="form__title">가능법원 선택</h2>
@@ -242,10 +259,6 @@
             </div>
 
             <!--탭 조회 내용 end-->
-
-
-
-
           </div>
 
           <!-- Submit Button -->
@@ -259,23 +272,6 @@
   </div>
   <!--컨텐츠 [end] -->
 
-  <script>
-    function initializeDatepicker() {
-      $(".datepicker").datepicker({
-        dateFormat: 'yy-mm-dd',
-        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-        dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'],
-        dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
-        showMonthAfterYear: true,
-      });
-      $(".datepicker").datepicker('setDate', 'today');
-    }
-
-    $(function () {
-      initializeDatepicker();
-    });
-  </script>
 </body>
 
 

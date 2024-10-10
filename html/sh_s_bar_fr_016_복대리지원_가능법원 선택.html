@@ -61,11 +61,27 @@
 </head>
 
 <body>
-  <!--컨텐츠 [start] -->
 
-    <div class="sub-container">
-      <h2 class="sr-only">가능법원 팝업</h2>
-      <div class="form-sec sec-box">
+  <!--컨텐츠 [start] -->
+  <div class="mt50 ml100">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#sh_s_bar_fr_016">법원선택</button>
+  </div>
+
+  <script>
+    //[퍼블작업시 모달확인] 스크립트
+    document.addEventListener('DOMContentLoaded', function () {
+      var myModal16 = new bootstrap.Modal(document.getElementById('sh_s_bar_fr_016'));
+      //  myModal16.show();
+    });
+
+  </script>
+
+  <!-- 가능법원선택팝업 Modal -->
+  <div class="modal fade modal-lg" id="sh_s_bar_fr_016" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
         <form class="form-container" action="/submit" method="POST">
           <div class="title__area">
             <h2 class="form__title">가능법원 선택</h2>
@@ -239,10 +255,6 @@
             </div>
 
             <!--탭 조회 내용 end-->
-
-
-
-
           </div>
 
           <!-- Submit Button -->
@@ -255,7 +267,6 @@
     </div>
   </div>
   <!--컨텐츠 [end] -->
-
 
 </body>
 

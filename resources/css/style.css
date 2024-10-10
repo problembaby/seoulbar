@@ -16,7 +16,6 @@
   flex-shrink: 0;
   transition: width 0s; /* width를 대상으로 transition 설정 */
   padding-top: var(--pc-content-topPadding);
-  background-color: var(--main2-color);
   position: fixed;
   z-index: 99!important;
   height: 100vh;

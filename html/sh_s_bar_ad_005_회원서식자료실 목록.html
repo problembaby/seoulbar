@@ -412,18 +412,9 @@
                     <li class="file-item">
                       <input type="text" class="upload_text " readonly="readonly">
                       <!--button-->
-                      <div class="upload-btn_wrap">
-                        <button type="button" title="파일선택">
-                          <span>파일선택</span>
-                        </button>
-                        <input type="file" class="input_file" title="파일선택">
-                      </div>
                       <div class="file-btnList">
                         <button class="btn btn-blue btn-w80p btn-add">추가</button>
-                      </div>
-                      <div class="uploadText" style="display: none;">
-                        <p class="text"></p>
-                        <button class="input_file-del" type="button" title="파일삭제"></button>
+                        <button class="btn btn-write btn-red">파일 삭제</button>
                       </div>
                     </li>
                   </ul>
@@ -431,7 +422,7 @@
               </div>
             </div>
             
-            <script>
+            <!-- <script>
               $(function () {
                 // 파일 추가 버튼 클릭 시 새로운 file-item 추가
                 $('.file-list').on('click', '.btn-add', function () {
@@ -484,7 +475,7 @@
                   fileItem.find('.uploadText').hide(); 
                 });
               });
-            </script>
+            </script> -->
 
             <div class="inline-row">
               <div class="inline-row-form">

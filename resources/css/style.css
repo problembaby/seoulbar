@@ -16,7 +16,6 @@
   flex-shrink: 0;
   transition: width 0s; /* width를 대상으로 transition 설정 */
   padding-top: var(--pc-content-topPadding);
-  background-color: var(--main2-color);
   position: fixed;
   z-index: 99!important;
   height: 100vh;
@@ -1977,10 +1976,9 @@ input[type="checkbox"]:checked + .check-icon::before {
   text-align: center;
 }
 
-
-.file-list{display: flex; gap:5px; flex-direction: column; width: 100%;}
-.file-list .file-item{display: flex; gap:10px; flex-wrap: wrap; width: 100%;}
-.file-list .file-item .file-btnList{display: flex; gap:10px; align-items: center;}
+.file-list{display: flex; gap:5px; width: 100%; max-width: 500px;}
+.file-list .file-item{display: flex; gap:10px; flex-wrap: wrap; width: 100%; max-width: 500px; flex-direction: column;}
+.file-list .file-item .file-btnList{display: flex; gap:10px; align-items: center; justify-content: space-between;}
 
 .btn-w80p{width: 80px;}
 

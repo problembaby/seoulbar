@@ -167,6 +167,7 @@ body {
   background-color: var(--body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: linear-gradient(90deg, #0083BD 0%, #1F275E 100%);
 }
 
 /* 수평선 초기화 */
@@ -2102,7 +2103,8 @@ input.upload_text {/*읽기전용 인풋텍스트*/
 	height:36px;
 	border:1px solid #bbb;
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
+  height: 250px;
 }
 
 div.upload-btn_wrap input.input_file {/*파일찾기 폼 투명하게*/

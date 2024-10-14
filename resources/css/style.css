@@ -980,9 +980,10 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 .login #footer {
   background-color: unset;
+  text-align: center;
 }
 .login-container {
-  max-width: 690px; 
+  max-width: 440px; 
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -993,13 +994,13 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .login-box {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 80px;
   align-items: center;
   margin-bottom: 0;
 }
 .login-box img {
   width: 100%;
-  max-width: 560px;
+  max-width: 350px;
 }
 .login #footer{position: absolute; bottom:0; left:0; padding:100px 0 20px 0;}
 .login-box form {
@@ -1007,7 +1008,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   padding: 0 30px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
 .login-box .input-box {
   display: flex;
@@ -1016,46 +1017,39 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 .login-box form .input-group input {
   width: 100%;
-  height: 70px;
+  height: 55px;
   background-color: #ffffff50;
   border-radius: 16px !important;
   border: 2px solid #ffffff00;
   outline: none;
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
   padding-left: 70px;
   padding-right: 20px;
 }
 .login-box form .input-group input::placeholder {
   color: #fff;
-  font-size: 22px;
+  font-size: 18px;
   opacity: 1;
 }
 .login-box form .login-btn {
   width: 100%;
-  height: 80px;
+  height: 60px;
   border-radius: 16px;
   background-color: #0F3966;
   color: #fff;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 500;
 }
 .login-box form .input-group .ico-id {
-  width: 26px;
+  width: 20px;
   height: 25px;
   position: absolute;
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
 }
-.login-box form .input-group .ico-id {
-  width: 26px;
-  height: 30px;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-}
+
 
 
 /* 모달창 */
@@ -2671,21 +2665,18 @@ width: 100%;
     }
     .login .login-box {
       margin-bottom: 0px;
-      gap: 80px;
+      gap: 40px;
     }
     .login-box form {
       padding: 0;
     }
     .login-box form .input-group input,
     .login-box form .input-group input::placeholder {
-      font-size: 20px;
+      font-size: 16px;
     }
     .input-box .input-group input:focus {
       border: 2px solid #fff;
       box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    }
-    .login-box form .login-btn {
-      font-size: 28px;
     }
 
     .chatting.ing .chat-box {

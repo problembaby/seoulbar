@@ -2644,7 +2644,7 @@ width: 100%;
   right: 3px;
   font-size: 16px;
 }
-.calendar-day > div .ale {
+.calendar-container.main-cal-month .calendar-day > div .ale {
   position: absolute;
   left: 3px;
   top:auto;
@@ -2652,6 +2652,7 @@ width: 100%;
   display: flex;
   color: #FF4F4F;
   font-size: 12px;
+  transform: none;
 }
 .legal-list .whiteTable {
   padding: 20px 10px;

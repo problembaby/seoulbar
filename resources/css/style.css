@@ -79,8 +79,9 @@
   box-sizing: border-box;
 }
 .whiteList li .subject a:hover{text-decoration: underline;}
-.whiteList li .writer{font-size: 12px; flex: 0 0 100px; font-weight: 500;}
-.whiteList li .date{font-size: 12px; flex: 0 0 100px; text-align: center; font-weight: 500;}
+.whiteList li .writer{font-size: 12px; flex: 0 0 100px; font-weight: 500;   text-align: right;
+}
+.whiteList li .date{font-size: 12px; flex: 0 0 75px; text-align: center; font-weight: 500;}
 
 /*스몰 메뉴 css*/
 #gnb.smallMenu{width:70px; background-color: var(--main-color);   transition: width 0.2s; /* width를 대상으로 transition 설정 */ }

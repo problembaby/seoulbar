@@ -164,10 +164,10 @@ body {
   line-height: var(--body-line-height);
   color: var(--body-color);
   text-align: var(--body-text-align);
-  background-color: var(--body-bg);
+/*   background-color: var(--body-bg); */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background: linear-gradient(90deg, #0083BD 0%, #1F275E 100%);
+  background: linear-gradient(90deg, #0083BD 0%, #134B82 100%);
 }
 
 /* 수평선 초기화 */

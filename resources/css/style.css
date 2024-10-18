@@ -1478,7 +1478,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
   grid-template-columns: 1fr 1fr 1fr; gap:20px}
 .regist-box{display: flex; align-items: center; border:1px solid #999999; padding: 20px; border-radius: 8px; gap:10px;  justify-content: space-between;}
 
-.regist-box__img{overflow: hidden; width: 94px; height: 94px; border-radius: 50%;}
+.regist-box__img{overflow: hidden; width: 94px; height: 94px; border-radius: 50%; border:1px solid #ddd;}
 .regist-box__txt{display: flex; flex-direction: column;}
 .regist-box__txt span{display: block; font-size: 12px;}
 .regist-box__txt .name{font-size: 20px;}
@@ -1989,6 +1989,13 @@ input[type="checkbox"]:checked + .check-icon::before {
   border-radius: 4px; */
   font-size: 14px;
 }
+
+.localTab{margin-bottom: 15px;}
+
+.search-area .letf{
+  flex:1 1 auto
+  }
+
 
 @media screen and (max-width: 1800px) {
 
@@ -2687,6 +2694,15 @@ width: 100%;
     justify-content: center;
     padding: 20px 5px;
 }
+
+
+.table-board table tbody tr td.cell-subject a {
+  font-size: 14px;
+}
+ .table-board table tbody tr td {
+  font-size: 12px;
+}
+
   }
 
 
@@ -2729,6 +2745,11 @@ width: 100%;
 
 .modal-content {
   padding: 25px 10px;
+}
+
+.calendar-month > div {
+  height: 30px;
+  font-size: 12px;
 }
 
 

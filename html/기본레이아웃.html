@@ -177,8 +177,8 @@
 
 
     <script>
-      //.btn-menuSizeToggle 클릭시 메뉴 사이즈 조절
-      $(document).ready(function () {
+         //.btn-menuSizeToggle 클릭시 메뉴 사이즈 조절
+         $(document).ready(function () {
         $('.btn-menuSizeToggle').click(function () {
           if ($('#gnb').hasClass('smallMenu')) {
             $('#gnb').removeClass('smallMenu');
@@ -199,6 +199,8 @@
             $('#offcanvasRight').removeClass('offcanvas');
           }
         });
+
+        //gnbMenuToggle 클릭시 #offcanvasRight에 .offcanvas 추가
       });
     </script>
     <!--왼쪽 메뉴 [end] -->

@@ -16,6 +16,12 @@ $(document).ready(function () {
   
     });
 
+
+    //1024px 이하일 때 메뉴 토글 버튼 클릭시 #offcanvasRight에 .offcanvas 추가
+    // 모바일시 로드시 창 안나오는 문제 수정
+    $('.gnbMenuToggle').click(function () {
+      $('#offcanvasRight').addClass('offcanvas');
+    });
     
   //줌 125%일때 body에 클래스 추가
 

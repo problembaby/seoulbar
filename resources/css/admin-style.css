@@ -5,6 +5,10 @@
   --adm-bg: #D3DBF9
 }
 body{background: #fff;}
+#header{background-color:  var(--main2-color);}
+#gnb {
+  background-color: var(--main2-color);
+}
 .admin-container {
   width: 100%;
   height: 100%;

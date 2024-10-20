@@ -1830,7 +1830,7 @@ body.zoom-125 .notification-list.sub li a {
 
 
 /*ai 챗봇*/
-.chat-box{display: none; margin:30px; flex-direction: column; gap:30px}
+.chat-box{display: none; margin:30px; flex-direction: column; gap:30px; height: 420px; overflow: hidden; }
 .input-ai{width: 100%; border:0!important; height: 60px; flex: 1;}
 .input-ai:focus{outline: 0;}
 

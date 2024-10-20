@@ -173,6 +173,9 @@
 
     <script>
       //.btn-menuSizeToggle 클릭시 메뉴 사이즈 조절
+
+
+      
       $(document).ready(function () {
         $('.btn-menuSizeToggle').click(function () {
           if ($('#gnb').hasClass('smallMenu')) {
@@ -194,6 +197,13 @@
             $('#offcanvasRight').removeClass('offcanvas');
           }
         });
+      });
+
+      //  모바일에서 로드될시 #offcanvasRight에 .offcanvas 추가
+      $(document).ready(function () {
+        if ($(window).width() <= 1024) {
+          $('#offcanvasRight').addClass('offcanvas');
+        }
       });
     </script>
     <!--왼쪽 메뉴 [end] -->
@@ -288,16 +298,18 @@
                       접근 제어
                     </div>
                   </div>
+            
+
+
                   <div class="message me">
                     <div class="text">
                       복대리란?
                     </div>
                     <div class="my-icon">
-                     <!--  <img src="../resources/images/common/no-img-user.png" alt="기본 회원 이미지"> -->
+                       <!--  <img src="../resources/images/common/no-img-user.png" alt="기본 회원 이미지"> -->
                       <img src="../resources/images/user-img01.svg" alt="회원 이미지">
                     </div>
                   </div>
-
                   <div class="message ai">
                     <div class="ai-icon">
                       <img src="../resources/images/ico/ico-ai.svg" alt="ai 썸네일">
@@ -327,9 +339,7 @@
                       접근 제어
                     </div>
                   </div>
-
-
-
+            
                 </div>
                 <!--채팅영역 [end]-->
               </div>

@@ -5,7 +5,7 @@
 @import url(setting/board.css); /*board*/
 
 /** layout */
-#header{ background-color: var(--main2-color);; width: 100%; display: flex; height: 0; justify-content: space-between; padding:20px; align-items: center;}
+#header{ background-color: transparent;; width: 100%; display: flex; height: 0; justify-content: space-between; padding:20px; align-items: center;}
 #dashboard{display: flex; width: 100%; height: auto;  padding: 0; align-items: stretch;
 }
 #gnb{
@@ -16,7 +16,6 @@
   flex-shrink: 0;
   transition: width 0s; /* width를 대상으로 transition 설정 */
   padding-top: var(--pc-content-topPadding);
-  background-color: var(--main2-color);
   position: fixed;
   z-index: 99!important;
   height: 100vh;
@@ -40,7 +39,7 @@
 #contents{background-color: transparent; width: 100%; padding: 0 30px; padding-top: var(--pc-content-topPadding); margin-left:250px }
 #footer{
   bottom:0px;
-  background-color: var(--main2-color);
+  background-color: transparent;
   width: 100%;
   height: 50px;
   display: flex;
@@ -80,8 +79,9 @@
   box-sizing: border-box;
 }
 .whiteList li .subject a:hover{text-decoration: underline;}
-.whiteList li .writer{font-size: 12px; flex: 0 0 100px; font-weight: 500;}
-.whiteList li .date{font-size: 12px; flex: 0 0 100px; text-align: center; font-weight: 500;}
+.whiteList li .writer{font-size: 12px; flex: 0 0 100px; font-weight: 500;   text-align: right;
+}
+.whiteList li .date{font-size: 12px; flex: 0 0 75px; text-align: center; font-weight: 500;}
 
 /*스몰 메뉴 css*/
 #gnb.smallMenu{width:70px; background-color: var(--main-color);   transition: width 0.2s; /* width를 대상으로 transition 설정 */ }
@@ -356,7 +356,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   background-color: unset;
 }
 
-.btn-menuSizeToggle{background-color: transparent; margin:30px 0; position: absolute; bottom:0; }
+.btn-menuSizeToggle{background-color: transparent; margin:30px 0; /* position: absolute; bottom:0;  */}
 .btn-menuSizeToggle::before{content: ""; background: url(../images/ico/ico-menuSmall.svg); width: 22px; height: 22px; display: block; background-size: 100% 100%;}
 .btn-menuSizeToggle.on::before{content: ""; background: url(../images/ico/ico-menurlarge.svg); width: 22px; height: 22px; display: block; background-size: 100% 100%;}
 
@@ -480,12 +480,12 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .mobile-logo{max-width: 300px; width: 100%;}
 .menuRightClosePosi{position: absolute; right: 30px; top:30px}
+#sh_s_bar_fr_011 .modal-dialog {
+  max-width: 1140px;
+  width: 100%;
+}
 .form-container{
-  max-width: 1144px;
   margin: 0 auto;
-  padding: 25px 30px;
-  border-radius: 15px;
-  background-color: #fff;
 }
 .form-area__inputList {
   border-top: 2px solid #0F3966;
@@ -981,9 +981,10 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 .login #footer {
   background-color: unset;
+  text-align: center;
 }
 .login-container {
-  max-width: 690px; 
+  max-width: 440px; 
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -994,13 +995,13 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .login-box {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 80px;
   align-items: center;
   margin-bottom: 0;
 }
 .login-box img {
   width: 100%;
-  max-width: 560px;
+  max-width: 350px;
 }
 .login #footer{position: absolute; bottom:0; left:0; padding:100px 0 20px 0;}
 .login-box form {
@@ -1008,7 +1009,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   padding: 0 30px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
 .login-box .input-box {
   display: flex;
@@ -1017,46 +1018,39 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 .login-box form .input-group input {
   width: 100%;
-  height: 70px;
+  height: 55px;
   background-color: #ffffff50;
   border-radius: 16px !important;
   border: 2px solid #ffffff00;
   outline: none;
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
   padding-left: 70px;
   padding-right: 20px;
 }
 .login-box form .input-group input::placeholder {
   color: #fff;
-  font-size: 22px;
+  font-size: 18px;
   opacity: 1;
 }
 .login-box form .login-btn {
   width: 100%;
-  height: 80px;
+  height: 60px;
   border-radius: 16px;
   background-color: #0F3966;
   color: #fff;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 500;
 }
 .login-box form .input-group .ico-id {
-  width: 26px;
+  width: 20px;
   height: 25px;
   position: absolute;
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
 }
-.login-box form .input-group .ico-id {
-  width: 26px;
-  height: 30px;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-}
+
 
 
 /* 모달창 */
@@ -1485,7 +1479,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
   grid-template-columns: 1fr 1fr 1fr; gap:20px}
 .regist-box{display: flex; align-items: center; border:1px solid #999999; padding: 20px; border-radius: 8px; gap:10px;  justify-content: space-between;}
 
-.regist-box__img{overflow: hidden; width: 94px; height: 94px; border-radius: 50%;}
+.regist-box__img{overflow: hidden; width: 94px; height: 94px; border-radius: 50%; border:1px solid #ddd;}
 .regist-box__txt{display: flex; flex-direction: column;}
 .regist-box__txt span{display: block; font-size: 12px;}
 .regist-box__txt .name{font-size: 20px;}
@@ -1837,7 +1831,7 @@ body.zoom-125 .notification-list.sub li a {
 
 /*ai 챗봇*/
 .chat-box{display: none; margin:30px; flex-direction: column; gap:30px}
-.input-ai{width: 100%; border:0!important; height: 60px;}
+.input-ai{width: 100%; border:0!important; height: 60px; flex: 1;}
 .input-ai:focus{outline: 0;}
 
 
@@ -1977,10 +1971,9 @@ input[type="checkbox"]:checked + .check-icon::before {
   text-align: center;
 }
 
-
-.file-list{display: flex; gap:5px; flex-direction: column; width: 100%;}
-.file-list .file-item{display: flex; gap:10px; flex-wrap: wrap; width: 100%;}
-.file-list .file-item .file-btnList{display: flex; gap:10px; align-items: center;}
+.file-list{display: flex; gap:5px; width: 100%; max-width: 500px;}
+.file-list .file-item{display: flex; gap:10px; flex-wrap: wrap; width: 100%; max-width: 500px; flex-direction: column;}
+.file-list .file-item .file-btnList{display: flex; gap:10px; align-items: center; justify-content: space-between;}
 
 .btn-w80p{width: 80px;}
 
@@ -1998,6 +1991,13 @@ input[type="checkbox"]:checked + .check-icon::before {
   font-size: 14px;
   text-decoration: underline;
 }
+
+.localTab{margin-bottom: 15px;}
+
+.search-area .letf{
+  flex:1 1 auto
+  }
+
 
 @media screen and (max-width: 1800px) {
 
@@ -2064,7 +2064,9 @@ input[type="checkbox"]:checked + .check-icon::before {
   .form-row .form-group.col:first-child {
     border-bottom: 1px solid #999;
   }
-  
+  #sh_s_bar_fr_011 .modal-dialog {
+    max-width: var(--bs-modal-width);
+  }
   
 
   .calendar-header {
@@ -2181,7 +2183,7 @@ height: 20px;
 display: block;
 background-size: cover;
 }
-#contents{padding: 0 10px;}
+#contents{padding: 0 20px;}
 .main-container {
   width: 100%;
   height: auto;
@@ -2255,7 +2257,9 @@ width: 100%;
   border-bottom: 1px solid #999999;
 }
 
-
+#sh_s_bar_fr_011 .modal-dialog {
+  max-width: 600px;
+}
 .form-row {
   flex-direction: column;
   gap: 0px;
@@ -2519,9 +2523,32 @@ width: 100%;
   width: 100%;
 
 }
+  #sh_s_bar_fr_017 .date_wrap {
+    align-items: unset;
+  }
+  #sh_s_bar_fr_017 .date_wrap .start-date {
+    height: auto;
+  }
+  #sh_s_bar_fr_017 .date_wrap .form-row {
+    padding: 15px 0;
+  }
+  .form-row .form-date-area {flex-direction: column; align-items: baseline;}
+
+  .form-row .form-date-area .form-control {
+    width: 100%;
+  }
+  .form-row .form-date-area > div {
+    width: 100%;
+  }
+  .formStyle02 {
+    width: 50%;
+    max-width: none;
+  }
+
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -2554,10 +2581,6 @@ width: 100%;
     transition: all 0.2s;
   }
 
-.form-row .form-date-area .form-control {
-  width: 140px;
-}
-
 
 /* sh_s_bar_fr_021 사건관리 일반내용 */
 .sh_s_bar_fr_021 .inline-row-form__tit {
@@ -2587,24 +2610,16 @@ width: 100%;
   flex-direction: column;
   align-items: baseline;
 }
-.form-row .form-date-area > div {
-  width: 100%;
-}
+
 
 .form-group .start-date__Double {
   height: 290px !important;
-}
-.form-group .start-date {
-  height: 100px !important;
 }
 
 .form-row .form-date-area .form-control {
   width: 100%;
 }
-.formStyle02 {
-  width: 50%;
-  max-width: none;
-}
+
 
 .borderBox-style01 .court-list li {
   flex: 1 1 100%;
@@ -2630,7 +2645,7 @@ width: 100%;
   right: 3px;
   font-size: 16px;
 }
-.calendar-day > div .ale {
+.calendar-container.main-cal-month .calendar-day > div .ale {
   position: absolute;
   left: 3px;
   top:auto;
@@ -2638,6 +2653,7 @@ width: 100%;
   display: flex;
   color: #FF4F4F;
   font-size: 12px;
+  transform: none;
 }
 .legal-list .whiteTable {
   padding: 20px 10px;
@@ -2659,21 +2675,18 @@ width: 100%;
     }
     .login .login-box {
       margin-bottom: 0px;
-      gap: 80px;
+      gap: 40px;
     }
     .login-box form {
       padding: 0;
     }
     .login-box form .input-group input,
     .login-box form .input-group input::placeholder {
-      font-size: 20px;
+      font-size: 16px;
     }
     .input-box .input-group input:focus {
       border: 2px solid #fff;
       box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    }
-    .login-box form .login-btn {
-      font-size: 28px;
     }
 
     .chatting.ing .chat-box {
@@ -2684,6 +2697,15 @@ width: 100%;
     justify-content: center;
     padding: 20px 5px;
 }
+
+
+.table-board table tbody tr td.cell-subject a {
+  font-size: 14px;
+}
+ .table-board table tbody tr td {
+  font-size: 12px;
+}
+
 
 
 .calendar-container.main-cal-month .calendar-day > div .ale {
@@ -2746,6 +2768,11 @@ width: 100%;
 
 .modal-content {
   padding: 25px 10px;
+}
+
+.calendar-month > div {
+  height: 30px;
+  font-size: 12px;
 }
 
 

@@ -1668,7 +1668,80 @@
 
 
   </div>
+  <!-- Modal -->
+  <div class="modal fade" id="alert-pop" tabindex="-1" aria-labelledby="미확인 알림" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="title__area">
+          <h2 class="form__title">미확인 알림</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div>
+          <ul class="whiteList notice-list">
+            <li class="p0">
+              <span class="state state-notice">공지</span>
+              <div class="subject">
+                <a href="#" title="페이지 이동">
 
+                  신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                </a>
+              </div>
+              <div class="writer">홍길동</div>
+              <div class="date">2024.08.16</div>
+            </li>
+            <li class="p0">
+              <span class="state state-case">사건</span>
+              <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 </a>
+              </div>
+              <div class="writer">2022가합15802</div>
+              <div class="date">2024.08.16</div>
+            </li>
+            <li class="p0">
+              <span class="state state-deputy">복대리</span>
+              <div class="subject">
+                <a href="#" title="페이지 이동">
+                  복대리 신청이 완료되었습니다.
+                </a>
+              </div>
+              <div class="writer">서울중앙지방법원</div>
+              <div class="date">2024.08.16</div>
+            </li>
+            <li class="p0">
+              <span class="state state-notice">공지</span>
+              <div class="subject">
+                <a href="#" title="페이지 이동">
+
+                  신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                </a>
+              </div>
+              <div class="writer">홍길동</div>
+              <div class="date">2024.08.16</div>
+            </li>
+            <li class="p0">
+              <span class="state state-notice">공지</span>
+              <div class="subject">
+                <a href="#" title="페이지 이동">
+
+                  신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                </a>
+              </div>
+              <div class="writer">홍길동</div>
+              <div class="date">2024.08.16</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  </div>
+
+  <script>
+
+  //모달 띄우는 스크립트
+  document.addEventListener('DOMContentLoaded', function() {
+    var myModal = new bootstrap.Modal(document.getElementById('alert-pop'));
+    myModal.show();
+  });
+  </script>
 
 
 </body>

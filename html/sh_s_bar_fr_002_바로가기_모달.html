@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>알림</title>
+
+
+  <!-- 기본 파비콘 설정 -->
+  <link rel="icon" href="../resources/images/meta/favicon.ico" type="image/x-icon">
+
+  <!-- PNG 포맷 파비콘 (더 많은 브라우저와 플랫폼에서 지원) -->
+  <link rel="icon" href="../resources/images/meta/favicon-16x16.png" type="image/png">
+
+  <!-- 애플 터치 아이콘 (iOS) -->
+  <link rel="apple-touch-icon" href="../resources/images/meta/apple-icon.png">
+
+  <!-- 다양한 크기의 애플 터치 아이콘 -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../resources/images/meta/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../resources/images/meta/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../resources/images/meta/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../resources/images/meta/apple-icon-144x144.png">
+
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- 다양한 크기의 파비콘 설정 -->
+  <link rel="icon" sizes="16x16" href="../resources/images/meta/favicon-16x16.png">
+  <link rel="icon" sizes="32x32" href="../resources/images/meta/favicon-32x32.png">
+  <link rel="icon" sizes="96x96" href="../resources/images/meta/favicon-96x96.png">
+  <link rel="icon" sizes="192x192" href="../resources/images/meta/android-icon-192x192.png">
+
+  <!-- swiper -->
+  <script src="../resources/plugin/swiper-4.5.3/swiper.min.js"></script>
+  <link rel="stylesheet" href="../resources/plugin/swiper-4.5.3/swiper.css">
+
+  <!--jquery-->
+  <script src="../resources/plugin/jquery/jquery.min.js"></script>
+  <script src="../resources/plugin/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="../resources/plugin/jquery-ui-1.13.2/jquery-ui.min.css">
+  <script src="../resources/plugin/jquery-cookie/jquery.cookie.min.js"></script>
+
+  <!--aos-->
+  <link rel="stylesheet" href="../resources/plugin/aos/aos.css">
+  <script src="../resources/plugin/aos/aos.js"></script>
+
+  <!--fontawesome-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!--bootstrap-->
+  <link rel="stylesheet" href="../resources/plugin/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <script src="../resources/plugin/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../resources/css/style.css">
+
+  <!-- JS -->
+  <script src="../resources/js/style.js"></script>
+  <script src="../resources/js/modal.js"></script>
+  <script src="../resources/js/check.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="alert-pop" tabindex="-1" aria-labelledby="바로가기" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="title__area">
+          <h2 class="form__title">바로가기</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div>
+          <ul class="whiteList notice-list">
+            <li class="p0">
+              <img src="../resources/images/logo1.png" alt="서울지방변호사회 로고">
+              <a href="#" target="_blank" class="btn btn-write btn-primary">바로가기</a>
+            </li>
+            <li class="p0">
+              <img src="../resources/images/logo2.png" alt="대한변호사협회 로고">
+              <a href="#" target="_blank" class="btn btn-write btn-primary">바로가기</a>
+            </li>
+            <li class="p0">
+              <img src="../resources/images/logo3.png" alt="로앤비 로고">
+              <a href="#" target="_blank" class="btn btn-write btn-primary">바로가기</a>
+            </li>
+            <li class="p0">
+              <img src="../resources/images/logo4.png" alt="나의 변호사 로고">
+              <a href="#" target="_blank" class="btn btn-write btn-primary">바로가기</a>
+            </li>
+            <li class="p0">
+              <img src="../resources/images/logo5.png" alt="서울지방변호사회 로고">
+              <a href="#" target="_blank" class="btn btn-write btn-primary">바로가기</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  </div>
+
+
+      <script>
+
+        //모달 띄우는 스크립트
+        document.addEventListener('DOMContentLoaded', function() {
+          var myModal = new bootstrap.Modal(document.getElementById('alert-pop'));
+          myModal.show();
+        });
+      </script>
+
+</body>
+
+
+
+</html>

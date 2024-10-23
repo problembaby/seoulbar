@@ -1091,7 +1091,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   max-width: 354px;
   width: 100%;
 }
-.sh_s_bar_fr_027 .left-contents .chatting {overflow: hidden;}
+.sh_s_bar_fr_027 .left-contents .chatting {overflow: hidden; padding:0 50px}
 .sh_s_bar_fr_027 .left-contents .enter-letters-area {
   width: 100%;
   max-width: 785px;
@@ -1481,9 +1481,15 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 
 .regist-box__img{overflow: hidden; width: 94px; height: 94px; border-radius: 50%; border:1px solid #ddd;}
 .regist-box__txt{display: flex; flex-direction: column;}
-.regist-box__txt span{display: block; font-size: 12px;}
+.regist-box__txt span{display: block; font-size: 12px; }
 .regist-box__txt .name{font-size: 20px;}
 .regist-box__txt .name small{font-size: 12px;  margin-left: 5px;}
+.text-class{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 6vw;
+}
 
 .user-info{border-bottom: 1px solid #999999; display: flex; justify-content: space-between; padding:0 20px 20px 20px}
 .user-info .left{display: flex; align-items: center; gap:30px; flex:1 0 50%;}
@@ -1830,12 +1836,11 @@ body.zoom-125 .notification-list.sub li a {
 
 
 /*ai 챗봇*/
-.chat-box{display: none; margin:30px; flex-direction: column; gap:30px; height: 420px; overflow: hidden; }
 .input-ai{width: 100%; border:0!important; height: 60px; flex: 1;}
 .input-ai:focus{outline: 0;}
 
 
-.chat-box .message{display: flex; gap:5px; }
+.chat-box .message{display: flex; gap:5px; width: 100%; }
 .chat-box .message.fadeUp{ animation: fadeIn 1s ease-in;}
 .chat-box .message.ai{justify-content: flex-start;}
 .chat-box .message.me{justify-content: flex-end;}
@@ -1860,8 +1865,14 @@ body.zoom-125 .notification-list.sub li a {
 .chat-box .message.ai .text, .chat-box .message.me .text{ padding: 10px; border-radius: 10px; max-width: 70%; border:1px solid #fff; height: auto; padding:10px; border-radius: 10px;}
 
 
-.chatting.ing .example-box-area{display: none;}
-.chatting.ing .chat-box{display: flex; padding:0 10px;  height: 500px; overflow: auto;
+ .chat-box{display: none;
+  flex-direction: column; /* 요소들을 역순으로 정렬 */
+  justify-content: flex-start;
+  padding: 0 10px;
+  height: 500px;
+  gap:30px;
+  
+  overflow-y: auto;
   max-width: 1000px;
   margin: 50px auto;
   &::-webkit-scrollbar {
@@ -1877,7 +1888,9 @@ body.zoom-125 .notification-list.sub li a {
 &::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.1);  /*스크롤바 뒷 배경 색상*/
     
-}}
+}
+
+}
 
 
 .alert-modal .modal-content{position: relative; padding:10px;}
@@ -2053,6 +2066,8 @@ input[type="checkbox"]:checked + .check-icon::before {
   max-width: 597px;
 }
  */
+ .formStyle170{width: 130px;}
+
 }
 @media screen and (max-width: 1280px) {
   /*갤럭시탭 해상도*/
@@ -2508,10 +2523,11 @@ width: 100%;
 }
 
 .chat-box {
-  display: none;
+
   margin: 0px;
   flex-direction: column;
   gap: 30px;
+  margin-bottom:30px
 }
 
 .menu-list{overflow-y: auto;}
@@ -2548,7 +2564,11 @@ width: 100%;
     width: 50%;
     max-width: none;
   }
-
+  .text-class{
+    max-width: 30vw;
+  }
+  
+  .sh_s_bar_fr_027 .left-contents .chatting { padding:0 10px}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */

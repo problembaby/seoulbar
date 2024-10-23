@@ -1836,8 +1836,6 @@ body.zoom-125 .notification-list.sub li a {
 
 
 /*ai 챗봇*/
-.chat-box{margin:30px;  height: 420px; 
-}
 .input-ai{width: 100%; border:0!important; height: 60px; flex: 1;}
 .input-ai:focus{outline: 0;}
 
@@ -1867,11 +1865,13 @@ body.zoom-125 .notification-list.sub li a {
 .chat-box .message.ai .text, .chat-box .message.me .text{ padding: 10px; border-radius: 10px; max-width: 70%; border:1px solid #fff; height: auto; padding:10px; border-radius: 10px;}
 
 
- .chat-box{display: flex;
+ .chat-box{display: none;
   flex-direction: column; /* 요소들을 역순으로 정렬 */
   justify-content: flex-start;
   padding: 0 10px;
   height: 500px;
+  gap:30px;
+  
   overflow-y: auto;
   max-width: 1000px;
   margin: 50px auto;
@@ -2523,6 +2523,7 @@ width: 100%;
   margin: 0px;
   flex-direction: column;
   gap: 30px;
+  margin-bottom:30px
 }
 
 .menu-list{overflow-y: auto;}

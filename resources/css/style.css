@@ -1998,6 +1998,10 @@ input[type="checkbox"]:checked + .check-icon::before {
   flex:1 1 auto
   }
 
+  .brand-logo-list .brand-logo {
+    width: 136px;
+
+  }
 
 @media screen and (max-width: 1800px) {
 

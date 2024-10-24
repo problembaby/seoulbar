@@ -1815,9 +1815,7 @@ Box Sizing 정의 (Margin & Padding)
     margin: 5px;
     flex: 1 1 0;
   }
-  .search-tab01.tab-dropdown li {
-    width: 100% !important;
-  }
+
   .search-tab01 li:last-child {
     border-radius: 7px;
   }
@@ -1912,6 +1910,48 @@ Box Sizing 정의 (Margin & Padding)
 .search-tab01.dark li.on {
   background: #fff;
   color: #6496f1;
+}
+
+
+
+.tab-dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  z-index: 1;
+}
+.tab-dropdown li {
+  flex: 0 104.5px;
+  display: none;
+}
+.tab-dropdown li button {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#222;
+}
+.tab-dropdown li.on button {
+  background-color: #f6f9ff!important;
+  color: #222!important;
+  border: 1px solid #cbd5e1;
+}
+
+.tab-dropdown li.on {
+  border: 0;
+}
+
+.tab-dropdown.opened li:first-child {
+  margin-top: 50px;
+}
+.tab-dropdown.opened li.on:first-child {
+  margin-top: 0;
 }
 
 

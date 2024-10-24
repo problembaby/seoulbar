@@ -90,8 +90,14 @@
           <div class="form-area__searchList">
 
             <!--지역 탭 start-->
-            <ul class="nav nav-pills nav-fill localTab" id="local-tab" role="tablist">
-              <li class="nav-item" role="presentation">
+
+            <!-- 
+             2024.10.24 탭 모바일시 셀릭트요소로 수정
+             1. ul에 .tab-dropdown 클래스 추가
+             2. 첫번째 li에 .on 클래스 추가 
+            -->
+            <ul class="nav nav-pills nav-fill localTab tab-dropdown" id="local-tab" role="tablist">
+              <li class="nav-item on" role="presentation">
                 <button class="nav-link active" id="tab-seoul" data-bs-toggle="pill" data-bs-target="#tab-seoul-cont"
                   type="button" role="tab" aria-controls="tab-seoul-cont" aria-selected="true">서울</button>
               </li>
@@ -206,7 +212,8 @@
                         checkbox.checked = source.checked;
                       });
                     }
-                  </script>
+
+           </script>
                   <ul class="add-view-list">
                     <li class="add-item">
                       <span>서울고등법원</span>

@@ -1,30 +1,32 @@
-
-
 $(document).ready(function () {
-
-
-
-    //데이터피커  
-    $(".datepicker").datepicker({
-      dateFormat: 'yy-mm-dd', // 달력 포맷
-      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월',], // 월 텍스트
-      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월',], //월 툴팁
-      dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], // 요일텍스트
-      dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일',], //요일툴팁
-      showMonthAfterYear: true,
-      //showOtherMonths:true, // 달력에 앞뒤 날짜표시
-  
-    });
-
-
-    //1024px 이하일 때 메뉴 토글 버튼 클릭시 #offcanvasRight에 .offcanvas 추가
-    // 모바일시 로드시 창 안나오는 문제 수정
-    $('.gnbMenuToggle').click(function () {
-      $('#offcanvasRight').addClass('offcanvas');
-    });
+  // 탭이 변경될 때 실행되는 이벤트
+  $(document).on('shown.bs.tab', 'button[data-bs-toggle="pill"]', function (e) {
+    // 모든 li 요소에서 on 클래스를 제거
+    $('li.nav-item').removeClass('on');
     
-  //줌 125%일때 body에 클래스 추가
+    // 활성화된 탭의 부모 li 요소에 on 클래스를 추가
+    $(e.target).closest('li.nav-item').addClass('on');
+  });
 
+  // 모바일시 탭 드롭다운
+  $(document).on('click', '.tab-dropdown li', function (e) {
+    $(this).parent().toggleClass('opened');
+  });
+
+  // 브라우저 크기 변경 시 드롭다운 초기화
+  $(window).resize(function () {
+    if ($(window).width() > 1024) {
+      $('.tab-dropdown').removeClass('opened');
+    }
+  });
+
+  // 1024px 이하일 때 메뉴 토글 버튼 클릭시 #offcanvasRight에 .offcanvas 추가
+  // 모바일시 로드시 창 안나오는 문제 수정
+  $(document).on('click', '.gnbMenuToggle', function () {
+    $('#offcanvasRight').addClass('offcanvas');
+  });
+
+  // 줌 125%일때 body에 클래스 추가
   function getZoomLevel() {
     // window.devicePixelRatio로 줌 비율 확인
     const zoomLevel = Math.round(window.devicePixelRatio * 100);
@@ -43,17 +45,14 @@ $(document).ready(function () {
 
   window.addEventListener('load', applyZoomCSS);
   window.addEventListener('resize', applyZoomCSS);
-  
 
-
-  //onlyNumber 클래스 추가시 숫자만 입력 하게 하는 함수
-  $('.onlyNumber').on('input', function () {
+  // onlyNumber 클래스 추가시 숫자만 입력 하게 하는 함수
+  $(document).on('input', '.onlyNumber', function () {
     if (!$(this).val().match(/^[0-9]*$/)) {
       alert('숫자만 입력해주세요.');
       $(this).val($(this).val().replace(/[^0-9]/g, ''));
-
     }
-  })
+  });
 
   // main-tab on 오버스크롤 가운데 고정 (모바일만 적용)
   const mainTab = $('.main-tab');
@@ -62,18 +61,11 @@ $(document).ready(function () {
     mainTab.scrollLeft(ulOn.offset().left - (mainTab.width() / 2) + (ulOn.width() / 2));
   }
 
-  //모바일시 탭 드롭다운
-  $('.tab-dropdown').on('click', 'li', function (e) {
-    $(this).parent().toggleClass('opened');
-
-  });
-
-
   // .dropdown 클릭 이벤트
-  $("#lnb .dropdown").click(function (e) {
+  $(document).on('click', '#lnb .dropdown', function (e) {
     e.preventDefault(); // 기본 이벤트를 막습니다.
-    let expanded = $(this).attr("aria-expanded") === "true" || false;
-    $(this).attr("aria-expanded", !expanded);
+    let expanded = $(this).attr('aria-expanded') === 'true' || false;
+    $(this).attr('aria-expanded', !expanded);
     if ($(this).hasClass('on')) {
       $(this).removeClass('on');
       $(this).siblings('.menu-depth2').slideUp('fast'); // .menu-depth2를 슬라이드 업합니다.
@@ -83,12 +75,9 @@ $(document).ready(function () {
     }
   });
 
-
-  //체크박스 스위치
-  $('.chk-switch').change(function () {
-    let id = $(this).attr('id');
+  // 체크박스 스위치
+  $(document).on('change', '.chk-switch', function () {
     let chkConf = $(this).siblings('.chk-switch__conf');
-
     if ($(this).is(':checked')) {
       chkConf.show();
     } else {
@@ -96,21 +85,12 @@ $(document).ready(function () {
     }
   });
 
-
-});
-
-
-
-
-// 셀렉트 박스 토글 기능
-function toggleSelectBox() {
-  $(document).on("click", "select", function () {
-    $(this).toggleClass("on");
+  // 셀렉트 박스 토글 기능
+  $(document).on('click', 'select', function () {
+    $(this).toggleClass('on');
   });
-}
 
-// 위로 드롭다운 셀렉트 기능
-function setupTopDropSelect() {
+  // 위로 드롭다운 셀렉트 기능
   $(document).on('click', '.select_topDrop .selected', function (event) {
     event.preventDefault();
     let $this = $(this);
@@ -135,60 +115,29 @@ function setupTopDropSelect() {
       $('.select_topDrop ul.list').slideUp();
     }
   });
-}
 
-// 탭 기능 설정
-function setupTabFunction(tabSelector, sheetSelector) {
-  $(document).on('click', tabSelector + ' > li', function (e) {
-    e.preventDefault();
-    let $tabList = $(tabSelector);
-    $tabList.find('> li').removeClass('on').children('a').removeAttr('title');
-    $(this).addClass('on').children('a').attr('title', '선택됨');
-    $(sheetSelector + ' > li').removeClass('show').eq($(this).index()).addClass('show');
+  // 탭 기능 설정
+  function setupTabFunction(tabSelector, sheetSelector) {
+    $(document).on('click', tabSelector + ' > li', function (e) {
+      e.preventDefault();
+      let $tabList = $(tabSelector);
+      $tabList.find('> li').removeClass('on').children('a').removeAttr('title');
+      $(this).addClass('on').children('a').attr('title', '선택됨');
+      $(sheetSelector + ' > li').removeClass('show').eq($(this).index()).addClass('show');
 
-    //메인 풀페이지 스크롤 이슈 해결
-    if( $.fn.fullpage.reBuild ) {$.fn.fullpage.reBuild();}
+      // 포커스 유지
+      $(this).children('a').focus();
+    });
+  }
 
-    //포커스 유지
-    $(this).children('a').focus();
-  });
-}
+  // 탭 기능 활성화
+  function activateTabs() {
+    setupTabFunction("#fnTabList1", "#fnTabSheet1");
+    setupTabFunction("#fnTabList2", "#fnTabSheet2");
+    setupTabFunction("#fnTabList3", "#fnTabSheet3");
+  }
 
-// 탭 기능 활성화
-function activateTabs() {
-  setupTabFunction("#fnTabList1", "#fnTabSheet1");
-  setupTabFunction("#fnTabList2", "#fnTabSheet2");
-  setupTabFunction("#fnTabList3", "#fnTabSheet3");
-}
-
-// 탭이 있는 경우 드롭다운 설정
-// function setupTabDropdown() {
-//   let tabDropdown = $('.search-tab01');
-//   tabDropdown.addClass('tab-dropdown').on('click', 'li', function (e) {
-//     $(this).parent().toggleClass('opened');
-//     console.log('click');
-//   });
-// }
-
-
-
-//파일 업로드시 파일명 표시
-/* $(function () {
-  $('.upload_text').val('미리보여줄 텍스트.');
-  $('.input_file').change(function () {
-    var i = $(this).val();
-    $('.upload_text').val(i);
-    $('.uploadText p.text').text(i);
-  });
+  // 각각의 기능 호출
+  activateTabs();
+  setupTopDropSelect();
 });
- */
-
-
-// 각각의 기능 호출
-toggleSelectBox();
-setupTopDropSelect();
-activateTabs();
-//setupTabDropdown();  // 탭 모바일시 드롭다운  
-
-
-

@@ -486,6 +486,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 .form-container{
   margin: 0 auto;
+  width: 100%;
 }
 .form-area__inputList {
   border-top: 2px solid #0F3966;
@@ -2306,7 +2307,7 @@ width: 100%;
 .borderBox-style01 .checkbox-group {
   text-align: center;
 }
-.localTab li{margin: 2px;}
+
 .notification-list.sub li {
   display: flex;
   flex: 1 1 120px;

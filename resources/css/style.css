@@ -486,14 +486,12 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 .form-container{
   margin: 0 auto;
-  width: 100%;
 }
 .form-area__inputList {
   border-top: 2px solid #0F3966;
 }
 .form-item {
   border-bottom: 1px solid #999;
-  padding-right: 20px;
 }
 .form-row {
   display: flex;
@@ -512,6 +510,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   gap: 20px;
   align-items: center;
   width: 100%;
+  padding-right: 20px;
 }
 .form-group .form-group__inputWarp {
   display: flex;
@@ -556,6 +555,9 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   justify-content: center;
   padding: 0 5px;
 }
+.form-group .label__title.h130p {
+  height: 130px;
+} 
 .required {
   color:#FF5545;
   margin-left: 3px;
@@ -2017,6 +2019,8 @@ input[type="checkbox"]:checked + .check-icon::before {
 
   }
 
+  
+
 @media screen and (max-width: 1800px) {
 
 
@@ -2072,6 +2076,13 @@ input[type="checkbox"]:checked + .check-icon::before {
 }
 @media screen and (max-width: 1280px) {
   /*갤럭시탭 해상도*/
+
+  .no-content {
+    display: none;
+  }
+  .border-bt {
+    border-bottom: 1px solid #999;
+  }
   
   .form-row {
     flex-direction: column;
@@ -2079,11 +2090,16 @@ input[type="checkbox"]:checked + .check-icon::before {
     align-items: baseline;
   }
   .form-group .start-date__Double {
+    height: 190px !important;
+  }
+  .form-group .label__title.h-cont3 {
     height: 160px;
   }
-  .form-row .form-group.col:first-child {
-    border-bottom: 1px solid #999;
+  .form-group .label__title.h-cont5 {
+    height: 250px;
   }
+
+
   #sh_s_bar_fr_011 .modal-dialog {
     max-width: var(--bs-modal-width);
   }
@@ -2175,6 +2191,13 @@ input[type="checkbox"]:checked + .check-icon::before {
 .point__area .point__item .group .point-tit,
 .point__area .point__item .group label {
   text-align: center;
+}
+
+
+.form-group .form-group__inputWarp {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 }
 
@@ -2307,7 +2330,7 @@ width: 100%;
 .borderBox-style01 .checkbox-group {
   text-align: center;
 }
-
+.localTab li{margin: 2px;}
 .notification-list.sub li {
   display: flex;
   flex: 1 1 120px;
@@ -2570,6 +2593,19 @@ width: 100%;
   }
   
   .sh_s_bar_fr_027 .left-contents .chatting { padding:0 10px}
+  
+  .form-group .start-date__Double {
+    height: 300px !important;
+  }
+  .form-group .h-cont2 {
+    height: 140px;
+  }
+  .form-group .label__title.h-cont3 {
+    height: 160px;
+  }
+  .form-group .label__title.h-cont5 {
+    height: 250px;
+  }
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
@@ -2759,14 +2795,9 @@ width: 100%;
   .form-container{
     padding: 25px 15px;
   }
-  .form-group .form-group__inputWarp {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-  }
   .form-group .label__title {
     height: 100px;
-    width: 80px;
+    width: 90px;
   }
   .form-group .trial_date__title {
     height: 150px;
@@ -2800,10 +2831,21 @@ width: 100%;
   font-size: 12px;
 }
 
-
+.mo-col {
+  flex-direction: column;
+  align-items: flex-start !important;
+  gap: 10px !important;
+}
+.h130p {
+  height: 200px !important;
+}
 }
 
 @media screen and (max-width: 480px) {
+  .mo-col {
+    flex-direction: column;
+    gap: 10px !important;
+  }
   .mobile-logo {
     max-width: 160px;
     width: 100%;

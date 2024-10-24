@@ -74,7 +74,7 @@
     //[퍼블작업시 모달확인] 스크립트
     document.addEventListener('DOMContentLoaded', function () {
       var myModal11 = new bootstrap.Modal(document.getElementById('sh_s_bar_fr_011'));
-      //  myModal11.show();
+      myModal11.show();
     });
 
   </script>
@@ -89,29 +89,62 @@
             <h2 class="form__title">복대리 신청</h2>
             <button type="button" class="btn-close" aria-label="Close" onclick="window.close();"></button>
           </div>
+          <!-- 2024.10.24 v0.81 추가 -->
+          <!-- 팝업 전반적으로 수정 -->
           <div class="form-area__inputList">
             <div class="form-item form-row">
               <!-- 신청 구분 -->
-              <div class="form-group col">
-                <label class="label__title">신청구분</label>
+              <div class="form-group">
+                <label class="label__title h-cont5">신청구분</label>
                 <div class="form-group__inputWarp">
                   <div class="d-flex gap-2 align-items-center">
-                    <input type="radio" id="bokdaeri" name="application_type" value="bokdaeri" checked>
+                    <input type="radio" id="bokdaeri" value="bokdaeri" checked>
                     <label for="bokdaeri">복대리</label>
                   </div>
                   <div class="d-flex gap-2 align-items-center">
-                    <input type="radio" id="jaesojeon" name="application_type" value="jaesojeon">
+                    <input type="radio" id="jaesojeon" value="jaesojeon">
                     <label for="jaesojeon">재소전 화해</label>
                   </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="girokdungsa" value="girokdungsa">
+                    <label for="girokdungsa">기록등사</label>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="josachamyeo" value="josachamyeo">
+                    <label for="josachamyeo">조사참여</label>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="jeopgyeon" value="jeopgyeon">
+                    <label for="jeopgyeon">접견</label>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="gangjejiphaeng" value="gangjejiphaeng">
+                    <label for="gangjejiphaeng">강제집행</label>
+                  </div>
+                  <select id="court" class="form-select formStyle03 col" name="court" required>
+                    <option value="">채권압류 및 추심명령</option>
+                    <option value="">구분</option>
+                    <option value="">구분</option>
+                    <!-- Add options for courts here -->
+                  </select>
                 </div>
               </div>
+            </div>
 
+
+            <div class="form-item form-row">
               <!-- 관할 법원 -->
-              <div class="form-group col">
-                <label class="label__title" for="region">관할법원<span class="required">*</span></label>
+              <div class="form-group">
+                <label class="label__title h-cont3" for="region">관할법원<span class="required">*</span></label>
                 <div class="form-group__inputWarp">
+                  <select id="court" class="form-select formStyle03 col" name="court" required>
+                    <option value="">구분</option>
+                    <option value="">구분</option>
+                    <option value="">구분</option>
+                    <!-- Add options for courts here -->
+                  </select>
                   <select id="region" class="form-select formStyle03 col" name="region" required>
-                    <option value="">지역 선택</option>
+                    <option value="">지역</option>
                     <option value="서울">서울</option>
                     <option value="부산">부산</option>
                     <option value="인천">인천</option>
@@ -132,7 +165,7 @@
                     <!-- Add more options as needed -->
                   </select>
                   <select id="court" class="form-select formStyle03 col" name="court" required>
-                    <option value="">각급법원 선택</option>
+                    <option value="">지역기관 선택</option>
                     <option value="서울고등법원">서울고등법원</option>
                     <option value="서울가정법원">서울가정법원</option>
                     <option value="서울행정법원">서울행정법원</option>
@@ -256,23 +289,212 @@
               </div>
 
             </div>
+            <div class="form-item form-row">
+              <div class="form-group col date_wrap border-bt">
+                <label class="label__title h-cont2" for="start_date">일시<span class="required">*</span></label>
+                <div class="form-row">
+                  <div class="form-date-area">
+                    <!-- 시작 날짜 -->
+                    <input type="text" id="form-date-start" class="form-control datepicker date-input" placeholder="시작일">
+                    <div class="d-flex gap-2">
+                      <!-- 시작 시간 (24시간 형식) -->
+                      <select id="start_time" class="form-select formStyle02" name="start_time" required>
+                        <option value="00">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                      </select>
+  
+                      <!-- 시작 분 (10분 단위) -->
+                      <select id="start_minute" class="form-select formStyle02" name="start_minute" required>
+                        <option value="00">00</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col">
+                <label class="label__title" for="amount">비용<span class="required">*</span></label>
+                <input type="number" id="amount" name="amount" required>
+              </div>
+            </div>  
+
+
+            <div class="form-item form-row">
+              <!-- 사건번호, 사건명 -->
+              <div class="form-group col border-bt">
+                <label class="label__title" for="sageonbeonho">사건번호<span class="required">*</span></label>
+                <input type="text" name="sageonbeonho">
+              </div>
+
+              <div class="form-group col">
+                <label class="label__title" for="sageonmyeong">사건명<span class="required">*</span></label>
+                <input type="text" name="sageonmyeong">
+              </div>
+            </div>
+
+
+            <div class="form-item form-row">
+              <!-- 수형자명, 수형번호 -->
+              <div class="form-group col border-bt">
+                <label class="label__title" for="suhyungjamyeong">수형자명</label>
+                <input type="text" name="suhyungjamyeong">
+              </div>
+
+              <div class="form-group col">
+                <label class="label__title" for="suhyungbeonho">수형번호</label>
+                <input type="text" name="suhyungbeonho">
+              </div>
+            </div>
+
+
+            <div class="form-item form-row">
+              <!-- 채권액 -->
+              <div class="form-group col">
+                <label class="label__title" for="chaegwonaek">채권액<span class="required">*</span></label>
+                <input type="number" id="amount" name="amount" required>
+              </div>
+
+              <div class="form-group col no-content">
+                <label class="label__title"></label>
+                <div></div>
+              </div>
+            </div>
+
+
+            <div class="form-item form-row">
+              <!-- 구분 -->
+              <div class="form-group col">
+                <label class="label__title">구분</label>
+                <div class="form-group__inputWarp">
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                    <label for="plaintiff">원고</label>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="radio" id="defendant" name="case_type" value="defendant">
+                    <label for="defendant">피고</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col no-content">
+                <label class="label__title"></label>
+                <div></div>
+              </div>
+            </div>
+
+            
+
+
+            <div class="form-item form-row">
+              <!-- 당사자명, 예상페이지수, 추가비용 -->
+              <div class="form-group col border-bt">
+                <label class="label__title" for="suhyungjamyeong">당사자명</label>
+                <input type="text" name="suhyungjamyeong">
+              </div>
+
+              <div class="form-group col">
+                <label class="label__title flex-column" for="suhyungbeonho">
+                  <div>
+                    예상페이지수<span class="required">*</span>
+                  </div>
+                  <div>
+                    추가비용<span class="required">*</span>
+                  </div>
+                </label>
+                <div class="d-flex flex-fill gap-4 mo-col">
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="text" name="suhyungbeonho">
+                    <span>쪽</span>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center">
+                    <input type="text" name="suhyungbeonho">
+                    <span class="flex-shrink-0">(10쪽당)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-item form-row">
+              <!-- 변호대상자, 추가비용 -->
+              <div class="form-group col border-bt">
+                <label class="label__title" for="daesangja">변호대상자</label>
+                <input type="text" name="daesangja">
+              </div>
+
+              <div class="form-group col">
+                <label class="label__title flex-column h130p" for="suhyungbeonho">추가비용</label>
+                <div class="d-flex flex-column gap-2">
+                  <div class="d-flex gap-2 align-items-center mo-col">
+                    <label class="check-container d-flex">
+                      <input type="checkbox" id="checkbox">
+                      <div class="check-icon"></div>
+                      <div class="check-text">있음</div>
+                    </label>
+                    <select id="court" class="form-select formStyle03 col" name="court" required>
+                      <option value="">2시간 초과시</option>
+                      <option value="">구분</option>
+                      <option value="">구분</option>
+                      <!-- Add options for courts here -->
+                    </select>
+                    <select id="court" class="form-select formStyle03 col" name="court" required>
+                      <option value="">일관(시간무관)</option>
+                      <option value="">구분</option>
+                      <option value="">구분</option>
+                      <!-- Add options for courts here -->
+                    </select>
+                  </div>
+                  <div>
+                    <input type="text" name="suhyungjamyeong">
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
             <div class="form-item form-row">
               <!-- 사무실명, 담당자명 -->
-              <div class="form-group col">
+              <div class="form-group col border-bt">
                 <label class="label__title" for="office_name">사무실명</label>
-                <input type="text" id="office_name" name="office_name">
+                <input type="text" name="office_name">
               </div>
 
               <div class="form-group col">
                 <label class="label__title" for="person_in_charge">담당자명<span class="required">*</span></label>
-                <input type="text" id="person_in_charge" name="person_in_charge">
+                <input type="text" name="person_in_charge">
               </div>
             </div>
             <div class="form-item form-row">
               <!-- 연락처 -->
-              <div class="form-group col">
-                <label class="label__title" for="contact">연락처<span class="required">*</span></label>
+              <div class="form-group col border-bt">
+                <label class="label__title h130p h-cont2" for="contact">연락처<span class="required">*</span></label>
                 <div class="form-group__inputWarp">
                   <input type="tel" id="contact" name="contact" placeholder="010 0000 0000" required oninput="formatPhoneNumber(this)">
                   <input type="text" id="contact" name="contact" placeholder="기타 입력" required>
@@ -291,7 +513,7 @@
             </div>
             <div class="form-item form-row">
               <!-- 사건명, 구분 -->
-              <div class="form-group col">
+              <div class="form-group col border-bt">
                 <label class="label__title" for="case_name">사건명</label>
                 <input type="text" id="case_name" name="case_name">
               </div>
@@ -312,25 +534,20 @@
             </div>
 
             <div class="form-item form-row">
-              <!-- 재판일시, 금액 -->
+              <!-- 재판일시 -->
               <div class="form-group col">
-                <label class="label__title trial_date__title" for="trial_date">재판일시</label>
+                <label class="label__title h-cont3" for="trial_date">재판일시</label>
                 <div class="form-group__inputWarp">
                   <input type="text" id="year" name="year">
                   <input type="text" id="month" name="month">
                   <input type="text" id="date" name="date">
                 </div>
               </div>
-
-              <div class="form-group col">
-                <label class="label__title" for="amount">금액<span class="required">*</span></label>
-                <input type="number" id="amount" name="amount" required>
-              </div>
             </div>
 
             <div class="form-item form-row">
               <!-- 세금계산서 발행 여부 -->
-              <div class="form-group col">
+              <div class="form-group col border-bt">
                 <label class="label__title tax_invoice__title">세금계산서<br> 발행 여부<span class="required">*</span></label>
                 <div class="form-group__inputWarp">
                   <div class="d-flex gap-2 align-items-center">

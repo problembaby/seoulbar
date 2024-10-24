@@ -90,7 +90,19 @@
             <button type="button" class="btn-close" aria-label="Close" onclick="window.close();"></button>
           </div>
           <h3 class="form-area-title">서울지역 복대리 가능합니다.</h3>
+          <!-- 2024.10.24 v0.81 추가 -->
+          <!-- 팝업 전반적으로 수정 -->
           <div class="form-area__inputList">
+            <div class="form-item">
+              <!-- 가능법원 -->
+              <div class="form-group">
+                <label class="label__title">신청구분</label>
+                <div class="d-flex gap-2">
+                  복대리
+                </div>
+              </div>
+            </div>
+
             <div class="form-item">
               <!-- 가능법원 -->
               <div class="form-group">
@@ -102,6 +114,23 @@
             </div>
 
 
+            <div class="form-item form-row">
+              <!-- 사무실명 -->
+              <div class="form-group col">
+                <label class="label__title">사무실명<span class="required">*</span></label>
+                <div class="form-group__inputWarp">
+                  사무실
+                </div>
+              </div>
+              <!-- 성명 -->
+              <div class="form-group col">
+                <label class="label__title">성명<span class="required">*</span></label>
+                <div class="form-group__inputWarp">
+                  홍길동
+                </div>
+              </div>
+
+            </div>
             <div class="form-item form-row">
               <!-- 사무실명 -->
               <div class="form-group col">

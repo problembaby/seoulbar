@@ -480,7 +480,8 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .mobile-logo{max-width: 300px; width: 100%;}
 .menuRightClosePosi{position: absolute; right: 30px; top:30px}
-#sh_s_bar_fr_011 .modal-dialog {
+#sh_s_bar_fr_011 .modal-dialog,
+#sh_s_bar_fr_015 .modal-dialog {
   max-width: 1140px;
   width: 100%;
 }
@@ -2018,6 +2019,63 @@ input[type="checkbox"]:checked + .check-icon::before {
     width: 136px;
 
   }
+ /* 2024.10.24 v0.81 복대리 신청 팝업 */
+  .form-popup-list .inline-row-form__tit {
+    padding: 20px 10px;
+  }
+  .form-popup-list .inline-row-form__conf {
+    gap:20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+  }
+  .form-popup-list .inline-row-form__conf textarea {
+    width: 100%;
+  }
+  .form-popup-list .inline-row-form__conf .radio-wrap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .form-popup-list .inline-row-form__conf .radio-box-th {
+    display: flex;
+    gap: 20px;
+  }
+  .form-popup-list .inline-row-form__conf .input-box {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+    align-items: center;
+  }
+  .form-popup-list .inline-row-form__conf .input-box label {
+    white-space: nowrap;
+  }
+  .form-popup-list .inline-row-form__conf .form-date-area {
+    display: flex;
+    gap: 10px;
+  }
+  .form-popup-list .inline-row-form__conf .form-date-area .data-select {
+    display: flex;
+    gap: 10px;
+  }
+  .form-popup-list .inline-row-form__conf .date-input-wrap {
+    width: 100%;
+  }
+  .form-popup-list .inline-row-form__conf .form-control {
+    border: 1px solid var(--outline-color);
+  }
+  .form-popup-list .inline-row-form__conf .checkbox-input-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .form-popup-list .inline-row-form__conf .radio-input-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
 
   
 
@@ -2076,6 +2134,14 @@ input[type="checkbox"]:checked + .check-icon::before {
 }
 @media screen and (max-width: 1280px) {
   /*갤럭시탭 해상도*/
+  .form-popup-list .inline-row-form__conf {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form-popup-list .inline-row-form__conf .checkbox-input-wrap > div {
+    flex-direction: column;
+  }
 
   .no-content {
     display: none;
@@ -2100,7 +2166,8 @@ input[type="checkbox"]:checked + .check-icon::before {
   }
 
 
-  #sh_s_bar_fr_011 .modal-dialog {
+  #sh_s_bar_fr_011 .modal-dialog,
+  #sh_s_bar_fr_015 .modal-dialog{
     max-width: var(--bs-modal-width);
   }
   
@@ -2205,6 +2272,10 @@ input[type="checkbox"]:checked + .check-icon::before {
 
   #contents{margin-left: 0;}
   /* 태블릿 해상도 */
+  
+  .form-popup-list .inline-row-form__conf .radio-wrap {
+    gap: 10px;
+  }
   #header {
     height: 60px;
 }
@@ -2300,7 +2371,8 @@ width: 100%;
   border-bottom: 1px solid #999999;
 }
 
-#sh_s_bar_fr_011 .modal-dialog {
+#sh_s_bar_fr_011 .modal-dialog,
+#sh_s_bar_fr_015 .modal-dialog {
   max-width: 600px;
 }
 .form-row {
@@ -2607,6 +2679,9 @@ width: 100%;
     height: 250px;
   }
   .board-menuList .sub-link-list{gap:0}
+  .form-popup-list .inline-row-form__conf .radio-wrap,
+  .form-popup-list .inline-row-form__conf .radio-input-wrap {width: 100%;}
+
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */

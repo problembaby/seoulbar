@@ -723,7 +723,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .board-top-search-container{margin-top: 26px;}
 .board-menuList{display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap:12px}
-.board-menuList .sub-link-list{display: flex;}
+.board-menuList .sub-link-list{display: flex; flex-wrap: wrap; width: 100%; gap:5px 0 } 
 
 .subMenuLink{display: flex; align-items: center; justify-content: center; color:#fff; width: 140px; height: 40px; background-color: var(--main3-color); border-radius: 6px; transition: all 0.2s;}
 .subMenuLink.on, .subMenuLink:hover{ background-color: var(--main-color);}
@@ -2011,7 +2011,7 @@ input[type="checkbox"]:checked + .check-icon::before {
 .localTab{margin-bottom: 15px;}
 
 .search-area .letf{
-  flex:1 1 auto
+  flex:0 auto
   }
 
   .brand-logo-list .brand-logo {
@@ -2606,6 +2606,7 @@ width: 100%;
   .form-group .label__title.h-cont5 {
     height: 250px;
   }
+  .board-menuList .sub-link-list{gap:0}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */

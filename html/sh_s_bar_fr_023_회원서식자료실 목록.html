@@ -212,16 +212,15 @@
 
           <div class="board-top-search-container">
 
+            <!--
+            2024.10.24 : 자료실 모바일시 셀릭트 박스로 디자인 변경 
+            .tab-dropdown 클래스 추가
+            -->
 
-            <!--2024.10.08  탭추가 [start] -->
             <div class="board-menuList">
-              <div class="sub-link-list left">
-                <a href="#" title="선택됨" class="subMenuLink on">회원서식자료실</a>
-                <a href="#" class="subMenuLink">업무신청서식</a>
-                <a href="#" class="subMenuLink">기타서식</a>
-              </div>
+              <div id="recsroomCode" class="sub-link-list left tab-dropdown">
+              <button type="button" id="code005" class="subMenuLink on" onclick="fnMenuClick('005')">전체</button><button type="button" id="code006" class="subMenuLink" onclick="fnMenuClick('006')">민사</button><button type="button" id="code007" class="subMenuLink" onclick="fnMenuClick('007')">가사</button><button type="button" id="code008" class="subMenuLink" onclick="fnMenuClick('008')">상사</button><button type="button" id="code009" class="subMenuLink" onclick="fnMenuClick('009')">민소</button><button type="button" id="code010" class="subMenuLink" onclick="fnMenuClick('010')">형사</button><button type="button" id="code011" class="subMenuLink" onclick="fnMenuClick('011')">형소</button><button type="button" id="code023" class="subMenuLink" onclick="fnMenuClick('023')">헌법</button><button type="button" id="code024" class="subMenuLink" onclick="fnMenuClick('024')">행정</button><button type="button" id="code025" class="subMenuLink" onclick="fnMenuClick('025')">기타</button><button type="button" id="code026" class="subMenuLink" onclick="fnMenuClick('026')">기타2</button></div>
             </div>
-            <!--2024.10.08  탭추가 [end]-->
       
             
             <div class="search-area">

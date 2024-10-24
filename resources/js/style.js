@@ -1,24 +1,54 @@
 $(document).ready(function () {
-  // 탭이 변경될 때 실행되는 이벤트
-  $(document).on('shown.bs.tab', 'button[data-bs-toggle="pill"]', function (e) {
-    // 모든 li 요소에서 on 클래스를 제거
-    $('li.nav-item').removeClass('on');
-    
-    // 활성화된 탭의 부모 li 요소에 on 클래스를 추가
-    $(e.target).closest('li.nav-item').addClass('on');
-  });
 
-  // 모바일시 탭 드롭다운
-  $(document).on('click', '.tab-dropdown li', function (e) {
-    $(this).parent().toggleClass('opened');
-  });
-
-  // 브라우저 크기 변경 시 드롭다운 초기화
-  $(window).resize(function () {
-    if ($(window).width() > 1024) {
+  
+    // 모바일시 탭 드롭다운
+    $(document).on('click', '.tab-dropdown .subMenuLink', function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      var $dropdown = $this.closest('.tab-dropdown');
+  
+      // 모든 항목에서 on 클래스를 제거하고 클릭된 항목에 추가
+      $dropdown.find('.subMenuLink').removeClass('on').removeAttr('title');
+      $this.addClass('on').attr('title', '선택됨');
+  
+      // 드롭다운 메뉴 열기/닫기
+      $dropdown.toggleClass('opened');
+    });
+  
+    // 브라우저 크기 변경 시 드롭다운 초기화
+    $(window).resize(function () {
+      if ($(window).width() > 1024) {
+        $('.tab-dropdown').removeClass('opened');
+      }
+    });
+  
+    // 초기화: 페이지 로드 시 드롭다운 초기화
+    if ($(window).width() <= 1024) {
       $('.tab-dropdown').removeClass('opened');
     }
-  });
+
+
+
+  // // 탭이 변경될 때 실행되는 이벤트
+  // $(document).on('shown.bs.tab', 'button[data-bs-toggle="pill"]', function (e) {
+  //   // 모든 li 요소에서 on 클래스를 제거
+  //   $('li.nav-item').removeClass('on');
+    
+  //   // 활성화된 탭의 부모 li 요소에 on 클래스를 추가
+  //   $(e.target).closest('li.nav-item').addClass('on');
+  // });
+
+  // // 모바일시 탭 드롭다운
+  // $(document).on('click', '.tab-dropdown li', function (e) {
+  //   $(this).parent().toggleClass('opened');
+  // });
+
+  // // 브라우저 크기 변경 시 드롭다운 초기화
+  // $(window).resize(function () {
+  //   if ($(window).width() > 1024) {
+  //     $('.tab-dropdown').removeClass('opened');
+  //   }
+  // });
 
   // 1024px 이하일 때 메뉴 토글 버튼 클릭시 #offcanvasRight에 .offcanvas 추가
   // 모바일시 로드시 창 안나오는 문제 수정

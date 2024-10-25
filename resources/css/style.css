@@ -2019,7 +2019,7 @@ input[type="checkbox"]:checked + .check-icon::before {
     width: 136px;
 
   }
- /* 2024.10.24 v0.81 복대리 신청 팝업 */
+ /* 2024.10.24 v0.81 추가 */
   .form-popup-list .inline-row-form__tit {
     padding: 20px 10px;
   }
@@ -2028,6 +2028,7 @@ input[type="checkbox"]:checked + .check-icon::before {
     justify-content: space-between;
     align-items: center;
     padding: 15px 10px;
+    width: 100%;
   }
   .form-popup-list .inline-row-form__conf textarea {
     width: 100%;
@@ -2102,7 +2103,19 @@ input[type="checkbox"]:checked + .check-icon::before {
 
 .user-infoSet__desc{display: flex; }
 .user-infoSet__desc .showBox{flex: 0 0 90px }
-  
+
+.gpt-fey-input {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.gpt-fey-input .inline-row-form {
+  gap: 0px;
+}
+.gpt-fey-input .board-btn-area {
+  margin-top: 0;
+}
 
 @media screen and (max-width: 1800px) {
 
@@ -2166,6 +2179,10 @@ input[type="checkbox"]:checked + .check-icon::before {
   }
   .form-popup-list .inline-row-form__conf .checkbox-input-wrap > div {
     flex-direction: column;
+  }
+  .form-popup-list .inline-row-form__conf .radio-wrap.mo-col {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .no-content {
@@ -2300,6 +2317,18 @@ input[type="checkbox"]:checked + .check-icon::before {
   
   .form-popup-list .inline-row-form__conf .radio-wrap {
     gap: 10px;
+  }
+  .form-popup-list .inline-row-form__conf .input-box {
+    flex: 0;
+  }
+  .gpt-fey-input {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+  .gpt-fey-input .inline-row-form {
+    border: none;
+    flex-direction: row;
   }
   #header {
     height: 60px;

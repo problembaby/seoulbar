@@ -74,7 +74,7 @@
     //[퍼블작업시 모달확인] 스크립트
     document.addEventListener('DOMContentLoaded', function () {
       var myModal17 = new bootstrap.Modal(document.getElementById('sh_s_bar_fr_017'));
-      //  myModal17.show();
+       myModal17.show();
     });
 
   </script>
@@ -92,107 +92,82 @@
           <h3 class="form-area-title">서울지역 복대리 가능합니다.</h3>
           <!-- 2024.10.24 v0.81 추가 -->
           <!-- 팝업 전반적으로 수정 -->
-          <div class="form-area__inputList">
-            <div class="form-item">
-              <!-- 가능법원 -->
-              <div class="form-group">
-                <label class="label__title">신청구분</label>
-                <div class="d-flex gap-2">
-                  복대리
-                </div>
+          <div class="view-list">
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">신청 구분</div>
+                <div class="inline-row-form__conf">복대리</div>
               </div>
             </div>
-
-            <div class="form-item">
-              <!-- 가능법원 -->
-              <div class="form-group">
-                <label class="label__title">가능법원</label>
-                <div class="d-flex gap-2">
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">가능기관</div>
+                <div class="inline-row-form__conf">
                   고등법원, 서울행정법원, 서울가정법원, 서울중앙지방법원, 서울동부지방법원, 서울서부지방법원, 서울남부지방법원, 서울북부지방법원
                 </div>
               </div>
             </div>
-
-
-            <div class="form-item form-row">
-              <!-- 사무실명 -->
-              <div class="form-group col">
-                <label class="label__title">사무실명<span class="required">*</span></label>
-                <div class="form-group__inputWarp">
-                  사무실
-                </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">사무실명</div>
+                <div class="inline-row-form__conf">사무실</div>
               </div>
-              <!-- 성명 -->
-              <div class="form-group col">
-                <label class="label__title">성명<span class="required">*</span></label>
-                <div class="form-group__inputWarp">
-                  홍길동
-                </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">성명</div>
+                <div class="inline-row-form__conf">홍길동</div>
               </div>
-
             </div>
-            <div class="form-item form-row">
-              <!-- 사무실명 -->
-              <div class="form-group col">
-                <label class="label__title">사무실명<span class="required">*</span></label>
-                <div class="form-group__inputWarp">
-                  사무실
-                </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">세금계산서 가능 여부</div>
+                <div class="inline-row-form__conf">가능</div>
               </div>
-              <!-- 성명 -->
-              <div class="form-group col">
-                <label class="label__title">성명<span class="required">*</span></label>
-                <div class="form-group__inputWarp">
-                  홍길동
-                </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">부가세</div>
+                <div class="inline-row-form__conf">00% 가산</div>
               </div>
-
             </div>
           </div>
 
 
           <h3 class="form-area-title">*복대리 위임장 기재사항</h3>
-          <div class="form-area__inputList">
-            <div class="form-item form-row">
-              <!-- 신청구분 -->
-              <div class="form-group col">
-                <label class="label__title">신청 구분</label>
-                <div class="form-group__inputWarp">
-                  <div class="d-flex gap-2 align-items-center">
-                    <input type="radio" id="proxy_application" name="application_type" value="proxy_application"
-                      checked="">
-                    <label for="proxy_application">복대리</label>
-                  </div>
-                  <div class="d-flex gap-2 align-items-center">
-                    <input type="radio" id="pretrial_settlement" name="application_type" value="pretrial_settlement">
-                    <label for="pretrial_settlement">제소전화해</label>
-                  </div>
-                </div>
+          <div class="form-popup-list view-list">
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">신청구분</div>
+                <div class="inline-row-form__conf">복대리</div>
               </div>
 
-              <!-- 관할 법원 -->
-              <div class="form-group col">
-                <label class="label__title" for="region">관할법원</label>
-                <div class="form-group__inputWarp">
-                  <select id="region" class="form-select formStyle03 col" name="region" required>
-                    <option value="">지역 선택</option>
-                    <option value="서울">서울</option>
-                    <option value="부산">부산</option>
-                    <option value="인천">인천</option>
-                    <option value="대구">대구</option>
-                    <option value="광주">광주</option>
-                    <option value="대전">대전</option>
-                    <option value="울산">울산</option>
-                    <option value="세종">세종</option>
-                    <option value="경기">경기</option>
-                    <option value="강원">강원</option>
-                    <option value="충북">충북</option>
-                    <option value="충남">충남</option>
-                    <option value="전북">전북</option>
-                    <option value="전남">전남</option>
-                    <option value="경북">경북</option>
-                    <option value="경남">경남</option>
-                    <option value="제주">제주</option>
+              <!-- 복대리 신청 팝업 시 start -->
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">관할법원</div>
+                <div class="inline-row-form__conf">
+                  <select id="court" class="form-select formStyle03 col" name="court" required>
+                    <option value="">각급법원 선택</option>
+                    <option value="서울고등법원">서울고등법원</option>
+                    <option value="서울가정법원">서울가정법원</option>
+                    <option value="서울행정법원">서울행정법원</option>
+                    <option value="서울회생법원">서울회생법원</option>
+                    <option value="서울중앙지방법원">서울중앙지방법원</option>
+                    <option value="서울동부지방법원">서울동부지방법원</option>
+                    <option value="서울남부지방법원">서울남부지방법원</option>
+                    <option value="서울북부지방법원">서울북부지방법원</option>
+                    <option value="서울서부지방법원">서울서부지방법원</option>
+                    <!-- Add options for courts here -->
+                  </select>
+                </div>
+              </div>
+              <!-- 복대리 신청 팝업 시 end -->
+            </div>
+            <div class="inline-row">
+              <!-- 기록등사 팝업 시 start -->
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">관할법원</div>
+                <div class="inline-row-form__conf">
+                  <select id="court" class="form-select formStyle03 col" name="court" required>
+                    <option value="">보관처구분</option>
+                    <option value="법원">법원</option>
+                    <option value="검찰청">검찰청</option>
                   </select>
                   <select id="court" class="form-select formStyle03 col" name="court" required>
                     <option value="">각급법원 선택</option>
@@ -205,118 +180,459 @@
                     <option value="서울남부지방법원">서울남부지방법원</option>
                     <option value="서울북부지방법원">서울북부지방법원</option>
                     <option value="서울서부지방법원">서울서부지방법원</option>
-                    <!-- Add more options for other regions and courts as needed -->
+                    <!-- Add options for courts here -->
                   </select>
                 </div>
               </div>
+              <!-- 기록등사 팝업 시 end -->
+              
+              <!-- 조사참여 팝업시 start -->
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">관할법원</div>
+                <div class="inline-row-form__conf">
+                  <select id="court" class="form-select formStyle03 col" name="court" required>
+                    <option value="">수사기관</option>
+                    <option value="경찰서">경찰서</option>
+                    <option value="검찰청">검찰청</option>
+                  </select>
+                  <select id="court" class="form-select formStyle03 col" name="court" required>
+                    <option value="">각급법원 선택</option>
+                    <option value="서울고등법원">서울고등법원</option>
+                    <option value="서울가정법원">서울가정법원</option>
+                    <option value="서울행정법원">서울행정법원</option>
+                    <option value="서울회생법원">서울회생법원</option>
+                    <option value="서울중앙지방법원">서울중앙지방법원</option>
+                    <option value="서울동부지방법원">서울동부지방법원</option>
+                    <option value="서울남부지방법원">서울남부지방법원</option>
+                    <option value="서울북부지방법원">서울북부지방법원</option>
+                    <option value="서울서부지방법원">서울서부지방법원</option>
+                    <!-- Add options for courts here -->
+                  </select>
+                </div>
+              </div>
+              <!-- 조사참여 팝업시 end -->
             </div>
-            
-            <div class="form-item form-row">
-              <!-- 재판 일시 -->
-              <!-- 2024.10.10 .date_wrap 클래스 추가 -->
-              <div class="form-group col date_wrap">
-                <label class="label__title start-date" for="start_date">재판일시</label>
-                <div class="form-row">
-                  <div class="form-date-area">
-                    <!-- 시작 날짜 -->
-                    <input type="text" id="form-date-start" class="form-control datepicker date-input" placeholder="시작일">
-                    <div class="d-flex gap-2">
-                      <!-- 시작 시간 (24시간 형식) -->
-                      <select id="start_time" class="form-select formStyle02" name="start_time" required>
-                        <option value="00">00</option>
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                      </select>
-  
-                      <!-- 시작 분 (10분 단위) -->
-                      <select id="start_minute" class="form-select formStyle02" name="start_minute" required>
-                        <option value="00">00</option>
-                        <option value="10">10</option>
-                        <option value="20">20</option>
-                        <option value="30">30</option>
-                        <option value="40">40</option>
-                        <option value="50">50</option>
-                      </select>
+            <div class="inline-row">
+              <!-- 접견 팝업 시 start -->
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">구치소</div>
+                <div class="inline-row-form__conf">
+                  <select id="court" class="form-select formStyle03 col" name="court" required>
+                    <option value="">기관선택</option>
+                    <option value="구치소">구치소</option>
+                  </select>
+                </div>
+              </div>
+              <!-- 접견 팝업 시 end -->
+              <div class="inline-row-form no-content">
+                <div class="inline-row-form__tit"></div>
+                <div class="inline-row-form__conf"></div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">일시<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <div class="date-input-wrap">
+                    <input type="text" id="search-date-start" class="form-control datepicker date-input" placeholder="일시">
+                  </div>
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">비용<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="number" class="form-control" id="amount" name="amount" required>
+                </div>
+              </div>
+            </div>
+            <!-- 복대리 팝업시 start -->
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">사건번호<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">사건명<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">구분<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <div class="radio-wrap">
+                    <div class="input-box">
+                      <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                      <label for="plaintiff">원고</label>
+                    </div>
+                    <div class="input-box">
+                      <input type="radio" id="defendant" name="case_type" value="defendant">
+                      <label for="defendant">피고</label>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- 사건명 -->
-              <div class="form-group col">
-                <label class="label__title" for="title">사건명</label>
-                <input type="text" id="title" name="title" required>
+              <div class="inline-row-form no-conten">
+                <div class="inline-row-form__tit"></div>
+                <div class="inline-row-form__conf"></div>
               </div>
             </div>
-
-
-            <div class="form-item form-row">
-              <!-- 사무실명 -->
-              <div class="form-group col">
-                <label class="label__title" for="title">사무실명<span class="required">*</span></label>
-                <input type="text" id="title" name="title" required>
+            <!-- 복대리 팝업시 end -->
+            
+            <!-- 기록등사 팝업시 start -->
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">사건번호<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
               </div>
-              <!-- 담당자명 -->
-              <div class="form-group col">
-                <label class="label__title" for="title">담당자명<span class="required">*</span></label>
-                <input type="text" id="title" name="title" required>
-              </div>
-            </div>
-
-
-            <div class="form-item form-row">
-              <!-- 금액 -->
-              <div class="form-group col">
-                <label class="label__title" for="title">금액<span class="required">*</span></label>
-                <input type="number" id="amount" name="amount" required>
-              </div>
-              <!-- 이메일 -->
-              <div class="form-group col">
-                <label class="label__title" for="title">이메일<span class="required">*</span></label>
-                <input type="email" id="email" name="email" required placeholder="example@example.com">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">사건명<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
               </div>
             </div>
-
-
-            <div class="form-item form-row">
-              <!-- 연락처 -->
-              <div class="form-group col">
-                <label class="label__title" for="title">연락처<span class="required">*</span></label>
-                <input type="tel" id="contact" name="contact" placeholder="010 0000 0000" required oninput="formatPhoneNumber(this)">
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">당사자명</div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
               </div>
-              <!-- 팩스 -->
-              <div class="form-group col">
-                <label class="label__title" for="title">팩스<span class="required">*</span></label>
-                <input type="tel" id="contact" name="contact" required>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit d-flex flex-column gap-0">
+                  <span class="d-flex">예상페이지 수<span class="required">*</span></span>
+                  <span>추가비용<span class="required">*</span></span>
+                </div>
+                <div class="inline-row-form__conf">
+                  <div class="checkbox-input-wrap d-flex flex-row align-items-center">
+                    <input type="text" class="form-control" placeholder="" id="title" required="">
+                    <span>쪽</span>
+                  </div>
+                  <div class="checkbox-input-wrap d-flex flex-row align-items-center">
+                    <input type="text" class="form-control" placeholder="" id="title" required="">
+                    <span class="flex-shrink-0">(10쪽당)</span>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- 기록등사 팝업시 end -->
+            
+            <!-- 조사참여 팝업시 start -->
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">사건번호<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">사건명<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">변호대상자</div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">추가비용</div>
+                <div class="inline-row-form__conf">
+                  <div class="checkbox-input-wrap">
+                    <div class="d-flex gap-2 align-items-center">
+                      <label class="check-container d-flex">
+                        <input type="checkbox" id="checkbox">
+                        <div class="check-icon"></div>
+                        <div class="check-text">있음</div>
+                      </label>
+                      <select id="court" class="form-select formStyle03 col" name="court" required>
+                        <option selected>2시간 초과시</option>
+                        <option value="변호대상자">변호대상자</option>
+                        <option value="추가비용">추가비용(1~10시간, 시간단위)</option>
+                        <!-- Add options for courts here -->
+                      </select>
+                      <select id="court" class="form-select formStyle03 col" name="court" required>
+                        <option selected>일관(시간무관)</option>
+                        <option value="30분당">30분당</option>
+                        <option value="60분당">60분당</option>
+                        <!-- Add options for courts here -->
+                      </select>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" id="title" required="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 조사참여 팝업시 end -->
+            
+            <!-- 접견 팝업시 start -->
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">수형자명</div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">수형번호</div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">변호대상자</div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">추가비용</div>
+                <div class="inline-row-form__conf">
+                  <div class="checkbox-input-wrap">
+                    <div class="d-flex gap-2 align-items-center">
+                      <label class="check-container d-flex">
+                        <input type="checkbox" id="checkbox">
+                        <div class="check-icon"></div>
+                        <div class="check-text">있음</div>
+                      </label>
+                      <select id="court" class="form-select formStyle03 col" name="court" required>
+                        <option selected>2시간 초과시</option>
+                        <option value="변호대상자">변호대상자</option>
+                        <option value="추가비용">추가비용(1~10시간, 시간단위)</option>
+                        <!-- Add options for courts here -->
+                      </select>
+                      <select id="court" class="form-select formStyle03 col" name="court" required>
+                        <option selected>일관(시간무관)</option>
+                        <option value="30분당">30분당</option>
+                        <option value="60분당">60분당</option>
+                        <!-- Add options for courts here -->
+                      </select>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" id="title" required="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 접견 팝업시 end -->
+            
+            <!-- 강제집행-채권압류 및 추심명령 팝업시 start -->
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">채권액<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form no-content">
+                <div class="inline-row-form__tit"></div>
+                <div class="inline-row-form__conf"></div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">의뢰내용</div>
+                <div class="inline-row-form__conf">
+                  <div class="radio-wrap">
+                    <div class="input-box">
+                      <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                      <label for="plaintiff">서류작업</label>
+                    </div>
+                    <div class="input-box">
+                      <input type="radio" id="defendant" name="case_type" value="defendant">
+                      <label for="defendant">추심일괄</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline-row-form no-conten">
+                <div class="inline-row-form__tit">성공보수</div>
+                <div class="inline-row-form__conf">
+                  <div class="radio-input-wrap">
+                    <div class="radio-wrap">
+                      <div class="input-box">
+                        <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                        <label for="plaintiff">없음</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="defendant" name="case_type" value="defendant">
+                        <label for="defendant">고정</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="defendant" name="case_type" value="defendant">
+                        <label for="defendant">비율</label>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <input type="number" class="form-control" id="amount" name="amount" required>
+                      <span class="flex-shrink-0">원(%)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">채권자/원고명<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">채무자/피고명<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+            </div>
+            <!-- 강제집행-채권압류 및 추심명령 팝업시 end -->
+            
+            <!-- 강제집행-채무불이행자명부 팝업시 start -->
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">채권액<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">성공보수</div>
+                <div class="inline-row-form__conf">
+                  <div class="radio-input-wrap">
+                    <div class="radio-wrap">
+                      <div class="input-box">
+                        <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                        <label for="plaintiff">없음</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="defendant" name="case_type" value="defendant">
+                        <label for="defendant">있음</label>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <input type="number" class="form-control" id="amount" name="amount" required>
+                      <span class="flex-shrink-0">원</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">채권자/원고명<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">채무자/피고명<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+            </div>
+            <!-- 강제집행-채무불이행자명부 팝업시 end -->
+            
+            <!-- 강제집행-건물명도 팝업시 start -->
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">채권액<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form no-content">
+                <div class="inline-row-form__tit"></div>
+                <div class="inline-row-form__conf"></div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">의뢰내용</div>
+                <div class="inline-row-form__conf">
+                  <div class="radio-wrap">
+                    <div class="input-box">
+                      <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                      <label for="plaintiff">서류작업</label>
+                    </div>
+                    <div class="input-box">
+                      <input type="radio" id="defendant" name="case_type" value="defendant">
+                      <label for="defendant">명도일괄</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline-row-form no-conten">
+                <div class="inline-row-form__tit">성공보수</div>
+                <div class="inline-row-form__conf">
+                  <div class="radio-input-wrap">
+                    <div class="radio-wrap">
+                      <div class="input-box">
+                        <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                        <label for="plaintiff">없음</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="defendant" name="case_type" value="defendant">
+                        <label for="defendant">있음</label>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <input type="number" class="form-control" id="amount" name="amount" required>
+                      <span class="flex-shrink-0">원</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">채권자/원고명<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">채무자/피고명<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+            </div>
+            <!-- 강제집행-건물명도 팝업시 end -->
 
-            <div class="form-item">
-              <!-- 지원내용 -->
-              <div class="form-group">
-                <label class="label__title h200p" for="title">내용</label>
-                <textarea name="content" id="content" rows="5" placeholder="본문 내용에는 연락처 및 메일주소를 입력하지 않습니다。
-                " required></textarea>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">연락처<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="tel" class="form-control" id="contact" name="contact" placeholder="010 0000 0000" required oninput="formatPhoneNumber(this)">
+                  <input type="text" class="form-control" placeholder="" id="title" required="">
+                </div>
+              </div>
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">이메일<span class="required">*</span></div>
+                <div class="inline-row-form__conf">
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="example@example.com">
+                </div>
+              </div>
+            </div>
+            <div class="inline-row">
+              <div class="inline-row-form">
+                <div class="inline-row-form__tit">내용</div>
+                <div class="inline-row-form__conf">
+                  <textarea id="details" name="details" placeholder="본문 내용에는 연락처 및 메일주소를 입력하지 않습니다" rows="5"></textarea>
+                </div>
               </div>
             </div>
           </div>

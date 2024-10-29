@@ -2667,7 +2667,7 @@ width: 100%;
 }
 .td-item {
   background-color: #fff;
-  width: calc(100vw - 21px);
+  width: calc(100vw - 47px);
   padding: 10px;
   border-radius: 20px;
 }
@@ -2732,7 +2732,8 @@ width: 100%;
   .form-group .label__title.h-cont5 {
     height: 250px;
   }
-  .board-menuList .sub-link-list{gap:0}
+  .board-menuList .sub-link-list{gap:0; flex-wrap: nowrap;}
+  .board-menuList .sub-link-list.tab-dropdown{gap:0; flex-wrap: wrap;}
 
   .user-infoSet__thum, .user-infoSet__desc{flex-direction: column;}
   .user-infoSet__item .ttl {
@@ -2781,13 +2782,14 @@ width: 100%;
     align-items: center;
     justify-content: center;
     color: #fff;
-    width: 100%;
-    flex:1 auto;
+   /*  width: 100%; */
+    /* flex:1 auto; */
     height: 36px;
     background-color: var(--main3-color);
     border-radius: 6px;
     transition: all 0.2s;
   }
+  
 
 
 /* sh_s_bar_fr_021 사건관리 일반내용 */

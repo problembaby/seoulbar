@@ -2762,6 +2762,7 @@ width: 100%;
   .form-popup-list .inline-row-form__conf .radio-wrap,
   .form-popup-list .inline-row-form__conf .radio-input-wrap {width: 100%;}
 
+  .board-top-cate{width:100%}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */
@@ -2942,6 +2943,12 @@ width: 100%;
   justify-content: center;
   align-items: center;
 }
+
+
+.board-top-row .board-top-cate .tit {
+  flex: 0 0 68px;
+}
+
 
 
   }

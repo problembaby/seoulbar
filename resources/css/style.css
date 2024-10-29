@@ -232,6 +232,14 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
     display: block;
     background-size: 100% 100%;
 }
+.ico-link::before {
+    content: "";
+    background: url(../images/ico/ico-link.svg);
+    width: 22px;
+    height: 20px;
+    display: block;
+    background-size: 100% 100%;
+}
 
 .ico-plus::before {
     content: "";

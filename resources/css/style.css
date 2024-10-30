@@ -591,7 +591,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .form-group input[type="email"],
 .form-group input[type="number"]{
   width: 100%;
-  height: 36px;
+  height: 45px;
   border-radius: 4px;
   border: 1px solid var(--gray-2);
 }
@@ -615,7 +615,6 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 /* fr_012_popup 복대리신청 지원하기 팝업 */
  .inline-row-form__conf {
   width: auto;
-  padding: 10px;
   flex: 1;
 }
  .inline-row-form__tit {
@@ -866,8 +865,8 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .view-list{border-top: 1px solid #999; border-top: 2px solid #0F3966; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; }
 .view-list .inline-row{display: flex; width: 100%; border-bottom:1px solid #999999 }
 .inline-row-form{display: flex ; align-items: center; flex:1 40%; gap:20px}
-.inline-row-form__tit{flex:0 0 140px; color:#000; padding:10px; height: 100%; display: flex; align-items: center; background-color: #EEEEEE; font-weight: 700; justify-content: center; justify-content: center; text-align: center;}
-.inline-row-form__conf{flex:1 auto; display: flex; align-items: center; padding:10px; background-color: #fff; font-weight: 500;}
+.inline-row-form__tit{flex:0 0 140px; color:#000; padding: 13px 10px; height: 100%; display: flex; align-items: center; background-color: #EEEEEE; font-weight: 700; justify-content: center; justify-content: center; text-align: center;}
+.inline-row-form__conf{flex:1 auto; display: flex; align-items: center; padding: 13px 10px; background-color: #fff; font-weight: 500;}
 
 .view-contents{padding:20px}
 
@@ -1352,8 +1351,8 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .calendar-day > div .ale{
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 20px;
+  left: 17px;
   display: flex;
   color:#FF4F4F;
   font-size: 16px;
@@ -2036,7 +2035,7 @@ input[type="checkbox"]:checked + .check-icon::before {
     padding: 20px 10px;
   }
   .form-popup-list .inline-row-form__conf {
-    gap:20px;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
     padding: 15px 10px;
@@ -2278,20 +2277,7 @@ input[type="checkbox"]:checked + .check-icon::before {
 }
 @media screen and (max-width: 1280px) {
   /*갤럭시탭 해상도*/
-  .main-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .sec01-1 { order: 1; }
-  .sec01 { order: 3; }
-  .sec02 { order: 4; }
-  .sec03 { order: 2; }
-  .sec04 { order: 5; }
-  .form-popup-list .inline-row-form__conf {
-    width: 100%;
-    flex-direction: column;
-    gap: 20px;
-  }
+
   .form-popup-list .inline-row-form__conf .checkbox-input-wrap > div {
     flex-direction: column;
   }
@@ -2758,7 +2744,20 @@ width: 100%;
   gap: 5px;
   flex: 0 0 63px;
 }
-
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+.sec01-1 { order: 1; }
+.sec01 { order: 3; }
+.sec02 { order: 4; }
+.sec03 { order: 2; }
+.sec04 { order: 5; }
+.form-popup-list .inline-row-form__conf {
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
 .whiteList li .writer {
   font-size: 12px;
   flex: 0 0 auto;
@@ -2786,7 +2785,6 @@ width: 100%;
 }
 
 .chat-box {
-
   margin: 0px;
   flex-direction: column;
   gap: 30px;
@@ -2796,7 +2794,7 @@ width: 100%;
 .menu-list{overflow-y: auto;}
 
 .inline-row-form {
-  gap: 5px;
+  gap: 0px;
   flex-direction: column;
 }
 
@@ -2929,11 +2927,6 @@ width: 100%;
 
 .board-viewPage .whiteTable {
   padding: 30px 10px;
-}
-.inline-row-form {
-  gap: 5px;
-  flex-direction: column;
-
 }
 
 .inline-row-form__conf{flex:1 auto; width: 100%; }

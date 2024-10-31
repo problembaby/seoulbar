@@ -315,7 +315,10 @@ td.cell-subject > * {
     padding: 10px;
   }
 
-
+  .table-board table tbody tr:hover td,
+  .table-board table tbody tr:hover td a {
+    background:transparent;
+  }
   
 }
 

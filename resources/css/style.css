@@ -2221,6 +2221,10 @@ input[type="checkbox"]:checked + .check-icon::before {
 .ai-select-wrap .form-select {
   width: 100px;
 }
+.sec02Swiper .swiper-button-prev.swiper-button-disabled, .sec02Swiper .swiper-button-next.swiper-button-disabled,
+.sec03Swiper .swiper-button-prev.swiper-button-disabled, .sec03Swiper .swiper-button-next.swiper-button-disabled{
+  opacity: 0;
+}
 
 @media screen and (max-width: 1800px) {
 

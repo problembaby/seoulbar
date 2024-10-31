@@ -2881,10 +2881,15 @@ width: 100%;
 
 @media screen and (max-width: 768px) {
 
+  .ul-page-list {
+    margin: 0 5px;
+}
+
+
     /*페이징 사이즈 조절*/
     .page {
-      --page-el-width: 30px;
-      --page-el-height: 30px;
+      --page-el-width: 33px;
+      --page-el-height: 33px;
     }
 
     .ai-select-wrap .form-select {

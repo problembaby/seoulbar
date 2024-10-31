@@ -164,6 +164,12 @@
                   <span>공지사항</span>
                 </a>
               </li>
+              <li>
+                <a href="#" class="menuBtn">
+                  <i class="ico ico-link"></i>
+                  <span>바로가기</span>
+                </a>
+              </li>
             </ul>
 
 
@@ -205,309 +211,1255 @@
 
     <!--컨텐츠 [start] -->
     <div id="contents">
+      <!-- 2024.10.30 v0.81 추가 -->
+      <!-- 메인 그리드 수정 start  -->
+      <h2 class="sr-only">메인보드</h2>
       <div class="main-container">
-        <h2 class="sr-only">메인보드</h2>
-        <div class="left">
+        <section class="sec-box sec03">
+          <ul class="notification-list">
+            <li>
+              <a href="#" title="페이지이동" class="notification-item">
+                <div class="tit">전체공지</div>
+                <div class="value">1</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="페이지이동" class="notification-item">
+                <div class="tit">사건업데이트현황</div>
+                <div class="value">4</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="페이지이동" class="notification-item">
+                <div class="tit">신규 복대리</div>
+                <div class="value">16</div>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="페이지이동" class="notification-item">
+                <div class="tit">내가 쓴 글</div>
+                <div class="value">299</div>
+              </a>
+            </li>
+          </ul>
 
 
-
-          <section class="sec-box sec01">
-            <h3 class="sec-box__title">최근알림</h3>
-            <ul class="nav nav-pills mainTab" id="notice-tab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="notice-all" data-bs-toggle="pill" data-bs-target="#notice-all-cont"
-                  type="button" role="tab" aria-controls="notice-all-cont" aria-selected="true">전체</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="notice-announcement" data-bs-toggle="pill"
-                  data-bs-target="#notice-announcement-cont" type="button" role="tab"
-                  aria-controls="notice-announcement-cont">공지</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="notice-case-management" data-bs-toggle="pill"
-                  data-bs-target="#notice-case-management-cont" type="button" role="tab"
-                  aria-controls="notice-case-management-cont">사건관리</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="notice-deputy" data-bs-toggle="pill" data-bs-target="#notice-deputy-cont"
-                  type="button" role="tab" aria-controls="notice-deputy-cont">복대리</button>
-              </li>
-            </ul>
-
-            <div class="tab-content" id="notice-tabContent">
-              <div class="tab-pane fade show active" id="notice-all-cont" role="tabpanel" aria-labelledby="notice-all"
-                tabindex="0">
-
-                <ul class="whiteList notice-list">
-                  <li>
-                    <span class="state state-notice">공지</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-
-                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
-                      </a>
-                    </div>
-                    <div class="writer">홍길동</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-case">사건</span>
-                    <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 </a>
-                    </div>
-                    <div class="writer">2022가합15802</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-deputy">복대리</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-                        복대리 신청이 완료되었습니다.
-                      </a>
-                    </div>
-                    <div class="writer">서울중앙지방법원</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-notice">공지</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-
-                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
-                      </a>
-                    </div>
-                    <div class="writer">홍길동</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-notice">공지</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-
-                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
-                      </a>
-                    </div>
-                    <div class="writer">홍길동</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                </ul>
-
+        </section>
+        <section class="sec-box sec01-1">
+          <div class="card">
+              <div class="profile">
+                  <div class="profile-image"></div>
+                  <p class="name">홍길동</p>
               </div>
-              <div class="tab-pane fade" id="notice-announcement-cont" role="tabpanel"
-                aria-labelledby="notice-announcement" tabindex="0">
-                <ul class="whiteList notice-list">
-                  <li>
-                    <span class="state state-notice">공지</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-
-                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
-                      </a>
-                    </div>
-                    <div class="writer">홍길동</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-notice">공지</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-
-                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
-                      </a>
-                    </div>
-                    <div class="writer">홍길동</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-notice">공지</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-
-                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
-                      </a>
-                    </div>
-                    <div class="writer">홍길동</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-notice">공지</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-
-                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
-                      </a>
-                    </div>
-                    <div class="writer">홍길동</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-notice">공지</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-
-                        신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
-                      </a>
-                    </div>
-                    <div class="writer">홍길동</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-
-                </ul>
-
+              <div class="info">
+                  <div class="job">
+                      <span>변호사</span>
+                      <span>|</span>
+                      <span>개업</span>
+                  </div>
+                  <div class="contact">
+                      <div class="item">
+                          <label>연락처</label>
+                          <span>010-1111-3333</span>
+                          <a href="#" class="edit-icon">✏️</a>
+                      </div>
+                      <div class="item">
+                          <label>이메일</label>
+                          <span>test@naver.com</span>
+                          <a href="#" class="edit-icon">✏️</a>
+                      </div>
+                  </div>
               </div>
-              <div class="tab-pane fade" id="notice-case-management-cont" role="tabpanel"
-                aria-labelledby="notice-case-management" tabindex="0">
-                <ul class="whiteList notice-list">
-                  <li>
-                    <span class="state state-case">사건</span>
-                    <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인 </a>
-                    </div>
-                    <div class="writer">2022가합15802</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-case">사건</span>
-                    <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인 </a>
-                    </div>
-                    <div class="writer">2022가합15802</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-case">사건</span>
-                    <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인</a>
-                    </div>
-                    <div class="writer">2022가합15802</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-case">사건</span>
-                    <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인</a>
-                    </div>
-                    <div class="writer">2022가합15802</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-case">사건</span>
-                    <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인</a>
-                    </div>
-                    <div class="writer">2022가합15802</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-
-                </ul>
-
+              <div class="point-box">
+                <div class="settings-icon">⚙️</div>
+                <div class="point">
+                  <span>보유 포인트</span>
+                  <p class="points-value">1100</p>
+                </div>
               </div>
-              <div class="tab-pane fade" id="notice-deputy-cont" role="tabpanel" aria-labelledby="notice-deputy"
-                tabindex="0">
+          </div>
+        </section>
 
-                <ul class="whiteList notice-list">
-                  <li>
-                    <span class="state state-deputy">복대리</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-                        복대리 신청이 완료되었습니다.
-                      </a>
-                    </div>
-                    <div class="writer">서울중앙지방법원</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-deputy">복대리</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-                        복대리 신청이 완료되었습니다.
-                      </a>
-                    </div>
-                    <div class="writer">서울중앙지방법원</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-deputy">복대리</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-                        복대리 신청이 완료되었습니다.
-                      </a>
-                    </div>
-                    <div class="writer">서울중앙지방법원</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-deputy">복대리</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-                        복대리 신청이 완료되었습니다.
-                      </a>
-                    </div>
-                    <div class="writer">서울중앙지방법원</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
-                  <li>
-                    <span class="state state-deputy">복대리</span>
-                    <div class="subject">
-                      <a href="#" title="페이지 이동">
-                        복대리 신청이 완료되었습니다.
-                      </a>
-                    </div>
-                    <div class="writer">서울중앙지방법원</div>
-                    <div class="date">2024.08.16</div>
-                  </li>
+        <section class="sec-box sec01">
+          <h3 class="sec-box__title">최근알림</h3>
+          <ul class="nav nav-pills mainTab" id="notice-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="notice-all" data-bs-toggle="pill" data-bs-target="#notice-all-cont"
+                type="button" role="tab" aria-controls="notice-all-cont" aria-selected="true">전체</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="notice-announcement" data-bs-toggle="pill"
+                data-bs-target="#notice-announcement-cont" type="button" role="tab"
+                aria-controls="notice-announcement-cont">공지</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="notice-case-management" data-bs-toggle="pill"
+                data-bs-target="#notice-case-management-cont" type="button" role="tab"
+                aria-controls="notice-case-management-cont">사건관리</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="notice-deputy" data-bs-toggle="pill" data-bs-target="#notice-deputy-cont"
+                type="button" role="tab" aria-controls="notice-deputy-cont">복대리</button>
+            </li>
+          </ul>
 
+          <div class="tab-content" id="notice-tabContent">
+            <div class="tab-pane fade show active" id="notice-all-cont" role="tabpanel" aria-labelledby="notice-all"
+              tabindex="0">
 
+              <ul class="whiteList notice-list">
+                <li>
+                  <span class="state state-notice">공지</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+
+                      신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                    </a>
+                  </div>
+                  <div class="writer">홍길동</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-case">사건</span>
+                  <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 </a>
+                  </div>
+                  <div class="writer">2022가합15802</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-deputy">복대리</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+                      복대리 신청이 완료되었습니다.
+                    </a>
+                  </div>
+                  <div class="writer">서울중앙지방법원</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-notice">공지</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+
+                      신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                    </a>
+                  </div>
+                  <div class="writer">홍길동</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-notice">공지</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+
+                      신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                    </a>
+                  </div>
+                  <div class="writer">홍길동</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+              </ul>
+
+            </div>
+            <div class="tab-pane fade" id="notice-announcement-cont" role="tabpanel"
+              aria-labelledby="notice-announcement" tabindex="0">
+              <ul class="whiteList notice-list">
+                <li>
+                  <span class="state state-notice">공지</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+
+                      신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                    </a>
+                  </div>
+                  <div class="writer">홍길동</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-notice">공지</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+
+                      신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                    </a>
+                  </div>
+                  <div class="writer">홍길동</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-notice">공지</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+
+                      신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                    </a>
+                  </div>
+                  <div class="writer">홍길동</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-notice">공지</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+
+                      신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                    </a>
+                  </div>
+                  <div class="writer">홍길동</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-notice">공지</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+
+                      신규회원 이용가이드[2] 업무가능시간을 설정해보세요.
+                    </a>
+                  </div>
+                  <div class="writer">홍길동</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+
+              </ul>
+
+            </div>
+            <div class="tab-pane fade" id="notice-case-management-cont" role="tabpanel"
+              aria-labelledby="notice-case-management" tabindex="0">
+              <ul class="whiteList notice-list">
+                <li>
+                  <span class="state state-case">사건</span>
+                  <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인 </a>
+                  </div>
+                  <div class="writer">2022가합15802</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-case">사건</span>
+                  <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인 </a>
+                  </div>
+                  <div class="writer">2022가합15802</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-case">사건</span>
+                  <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인</a>
+                  </div>
+                  <div class="writer">2022가합15802</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-case">사건</span>
+                  <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인</a>
+                  </div>
+                  <div class="writer">2022가합15802</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-case">사건</span>
+                  <div class="subject"><a href="#" title="페이지 이동">하자보수보증금 등 청구의 소 피고 소송대리인 법무법인 화인</a>
+                  </div>
+                  <div class="writer">2022가합15802</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+
+              </ul>
+
+            </div>
+            <div class="tab-pane fade" id="notice-deputy-cont" role="tabpanel" aria-labelledby="notice-deputy"
+              tabindex="0">
+
+              <ul class="whiteList notice-list">
+                <li>
+                  <span class="state state-deputy">복대리</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+                      복대리 신청이 완료되었습니다.
+                    </a>
+                  </div>
+                  <div class="writer">서울중앙지방법원</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+                <li>
+                  <span class="state state-deputy">복대리</span>
+                  <div class="subject">
+                    <a href="#" title="페이지 이동">
+                      복대리 신청이 완료되었습니다.
+                    </a>
+                  </div>
+                  <div class="writer">서울중앙지방법원</div>
+                  <div class="date">2024.08.16</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="sec-box sec04">
+          <div class="calender-container main-cal">
+
+            <div class="main-cal__header">
+              <div class="calendar-month">
+                <button id="prev-month" class="prev-month"></button>
+                <h3 id="month-year" class="month-year">2024.09</h3>
+                <button id="next-month" class="next-month"></button>
+              </div>
+
+              <div class="main-cal__tab">
+                <ul class="nav nav-pills mainTab" id="calendar-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="calendar-week" data-bs-toggle="pill"
+                      data-bs-target="#calendar-week-cont" type="button" role="tab" aria-controls="calendar-week-cont"
+                      aria-selected="true">Week</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="calendar-month" data-bs-toggle="pill"
+                      data-bs-target="#calendar-month-cont" type="button" role="tab"
+                      aria-controls="calendar-month-cont">Month</button>
+                  </li>
                 </ul>
+
               </div>
             </div>
-          </section>
+
+            <div class="main-cal__cont tab-content" id="mainCal-tabContent">
+              <!--Week [start]-->
+              <div class="tab-pane fade show active" id="calendar-week-cont" role="tabpanel"
+                aria-labelledby="calendar-week" tabindex="0">
+                <!-- week swiper -->
+                <div class="inner">
+                  <div class="swiper weekSwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="week-item">
+                          <div class="week-number">1</div>
+                          <div class="week-day">Mon</div>
+                          <div class="value">5</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="week-item">
+                          <div class="week-number">2</div>
+                          <div class="week-day">Tue</div>
+                          <div class="value">2</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="week-item">
+                          <div class="week-number">3</div>
+                          <div class="week-day">Wed</div>
+                          <div class="value">1</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="week-item">
+                          <div class="week-number">4</div>
+                          <div class="week-day">Thu</div>
+                          <div class="value">0</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="week-item">
+                          <div class="week-number">5</div>
+                          <div class="week-day">Fri</div>
+                          <div class="value">0</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="week-item">
+                          <div class="week-number">6</div>
+                          <div class="week-day">Sat</div>
+                          <div class="value">0</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="week-item">
+                          <div class="week-number">7</div>
+                          <div class="week-day">Sun</div>
+                          <div class="value">2</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="week-item">
+                          <div class="week-number">8</div>
+                          <div class="week-day">Mon</div>
+                          <div class="value">10</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="week-item">
+                          <div class="week-number">9</div>
+                          <div class="week-day">Tue</div>
+                          <div class="value">30</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                  </div>
+                </div>
+
+                <script>
+                  var swiperWeek = new Swiper(".weekSwiper", {
+                    slidesPerView: 5,
+                    navigation: {
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    },
+                    // 선택된게 슬라이드 중앙에 오도록
+                    centeredSlides: true,
+                    // 슬라이드 사이의 간격
+                    spaceBetween: 0,
+                    //중앙 슬라이드에 클래스 .current 추가
+                    slideActiveClass: "current",
+                    breakpoints: {
+                      500: {
+                        slidesPerView: 3
+                      }
+                    }
+                  });
+                </script>
+
+              </div>
+              <!--Week [end]-->
+
+              <!--Month [start]-->
+              <div class="tab-pane fade" id="calendar-month-cont" role="tabpanel" aria-labelledby="calendar-month"
+                tabindex="0">
+                <div class="calendar-container main-cal-month">
+                  <!-- 달력 month start-->
+                  <div class="calendar-month">
+                    <div class="sunday">Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div class="saturday">Sat</div>
+                  </div>
+                  <!-- 달력 month end-->
+
+                  <!-- 달력 day start-->
+                  <div class="calendar-day">
+                    <div class="prev-date" tabindex="0">
+                      <div class="data-item">
+                        <span class="day">29</span>
 
 
+                      </div>
+                    </div>
+                    <div class="prev-date" tabindex="0">
+                      <div class="data-item">
+                        <span class="day">30</span>
 
-          <section class="sec-box sec02">
-            <h3 class="sec-box__title">사건진행 업데이트 현황</h3>
-            <ul class="nav nav-pills mainTab" id="caseUpdate-tab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="caseUpdate-all" data-bs-toggle="pill"
-                  data-bs-target="#caseUpdate-all-cont" type="button" role="tab" aria-controls="caseUpdate-all-cont"
-                  aria-selected="true">
-                  전체
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="caseUpdate-date" data-bs-toggle="pill"
-                  data-bs-target="#caseUpdate-date-cont" type="button" role="tab" aria-controls="caseUpdate-date-cont"
-                  aria-selected="false">
-                  기일
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="caseUpdate-order" data-bs-toggle="pill"
-                  data-bs-target="#caseUpdate-order-cont" type="button" role="tab" aria-controls="caseUpdate-order-cont"
-                  aria-selected="false">
-                  명령
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="caseUpdate-documents" data-bs-toggle="pill"
-                  data-bs-target="#caseUpdate-documents-cont" type="button" role="tab"
-                  aria-controls="caseUpdate-documents-cont" aria-selected="false">
-                  제출서류
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="caseUpdate-delivery" data-bs-toggle="pill"
-                  data-bs-target="#caseUpdate-delivery-cont" type="button" role="tab"
-                  aria-controls="caseUpdate-delivery-cont" aria-selected="false">
-                  송달
-                </button>
-              </li>
-            </ul>
 
-            <div class="tab-content" id="caseUpdate-tabContent">
-              <div class="tab-pane fade show active" id="caseUpdate-all-cont" role="tabpanel"
-                aria-labelledby="caseUpdate-all" tabindex="0">
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">1</span>
 
-                <!--pc버전 [start]-->
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">2</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">3</span>
+                        <span class="ale">3</span>
+                      </div>
+                    </div>
+
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">4</span>
+                        <span class="ale">2</span>
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">5</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">6</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">7</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">8</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">9</span>
+
+
+                      </div>
+                    </div>
+                    <!-- 현재 날짜 : current-data -->
+                    <div class="current-data" tabindex="0">
+                      <div class="data-item">
+                        <span class="day">10</span>
+                        <span class="ale">4</span>
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">11</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">12</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">13</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">14</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">15</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">16</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">17</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">18</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">19</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">20</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">21</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">22</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">23</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">24</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">25</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">26</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">27</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">28</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">29</span>
+
+
+                      </div>
+                    </div>
+                    <div tabindex="0">
+                      <div class="data-item">
+                        <span class="day">30</span>
+
+
+                      </div>
+                    </div>
+                    <div class="next-date" tabindex="0">
+                      <div class="data-item">
+                        <span class="day">1</span>
+
+
+                      </div>
+                    </div>
+                    <div class="next-date" tabindex="0">
+                      <div class="data-item">
+                        <span class="day">2</span>
+
+
+                      </div>
+                    </div>
+                    <div class="next-date" tabindex="0">
+                      <div class="data-item">
+                        <span class="day">3</span>
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 달력 day end-->
+
+                </div>
+              </div>
+              <!--Month [end]-->
+            </div>
+
+          </div>          
+        </section>
+
+        <section class="sec-box sec02">
+          <h3 class="sec-box__title">사건진행 업데이트 현황</h3>
+          <ul class="nav nav-pills mainTab" id="caseUpdate-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="caseUpdate-all" data-bs-toggle="pill"
+                data-bs-target="#caseUpdate-all-cont" type="button" role="tab" aria-controls="caseUpdate-all-cont"
+                aria-selected="true">
+                전체
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="caseUpdate-date" data-bs-toggle="pill"
+                data-bs-target="#caseUpdate-date-cont" type="button" role="tab" aria-controls="caseUpdate-date-cont"
+                aria-selected="false">
+                기일
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="caseUpdate-order" data-bs-toggle="pill"
+                data-bs-target="#caseUpdate-order-cont" type="button" role="tab" aria-controls="caseUpdate-order-cont"
+                aria-selected="false">
+                명령
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="caseUpdate-documents" data-bs-toggle="pill"
+                data-bs-target="#caseUpdate-documents-cont" type="button" role="tab"
+                aria-controls="caseUpdate-documents-cont" aria-selected="false">
+                제출서류
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="caseUpdate-delivery" data-bs-toggle="pill"
+                data-bs-target="#caseUpdate-delivery-cont" type="button" role="tab"
+                aria-controls="caseUpdate-delivery-cont" aria-selected="false">
+                송달
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="caseUpdate-tabContent">
+            <div class="tab-pane fade show active" id="caseUpdate-all-cont" role="tabpanel"
+              aria-labelledby="caseUpdate-all" tabindex="0">
+
+              <!--pc버전 [start]-->
+              <div class="whiteTable only-pc">
+                <table class="table table-hover tr-link mb0 table-line">
+                  <caption>
+                    사건 진행 현황
+                  </caption>
+                  <colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 5%;">
+                    <col style="width: auto;">
+                    <col style="width: 10%;">
+                    <col style="width: 250px;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                  </colgroup>
+                  <thead class="thead-bg">
+                    <tr>
+                      <th scope="col">일자</th>
+                      <th scope="col">시간</th>
+                      <th scope="col">사건번호</th>
+                      <th scope="col">구분</th>
+                      <th scope="col">내용</th>
+                      <th scope="col">의뢰인</th>
+                      <th scope="col">변호사</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr onclick="window.location.href='#'" tabindex="0">
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+
+                    <tr onclick="window.location.href='#'" tabindex="0">
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+                    <tr onclick="window.location.href='#'" tabindex="0">
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+                    <tr onclick="window.location.href='#'" tabindex="0">
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+                    <tr onclick="window.location.href='#'" tabindex="0">
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--pc버전 [end]-->
+
+              <!--모바일버전 [start]-->
+              <div class="only-mob mob-main-swiper">
+                <!-- swiper -->
+                <div class="swiper sec02Swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="td-item">
+                        <ul>
+                          <li>
+                            <div class="tit">일자</div>
+                            <div class="cont">2024.08.16</div>
+                          </li>
+                          <li>
+                            <div class="tit">시간</div>
+                            <div class="cont">10:26</div>
+                          </li>
+                          <li>
+                            <div class="tit">사건번호</div>
+                            <div class="cont">2001헌바82645</div>
+                          </li>
+                          <li>
+                            <div class="tit">구분</div>
+                            <div class="cont">서면</div>
+                          </li>
+                          <li>
+                            <div class="tit">내용</div>
+                            <div class="cont">원고 소송 대리인 법무법인 원고
+                              소송 대리인 법무법인 주식회사..</div>
+                          </li>
+                          <li>
+                            <div class="tit">의뢰인</div>
+                            <div class="cont">주식회사 변호사 고법</div>
+                          </li>
+                          <li>
+                            <div class="tit">변호사</div>
+                            <div class="cont">홍길동</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="td-item">
+                        <ul>
+                          <li>
+                            <div class="tit">일자</div>
+                            <div class="cont">2024.08.16</div>
+                          </li>
+                          <li>
+                            <div class="tit">시간</div>
+                            <div class="cont">10:26</div>
+                          </li>
+                          <li>
+                            <div class="tit">사건번호</div>
+                            <div class="cont">2001헌바82645</div>
+                          </li>
+                          <li>
+                            <div class="tit">구분</div>
+                            <div class="cont">서면</div>
+                          </li>
+                          <li>
+                            <div class="tit">내용</div>
+                            <div class="cont">원고 소송 대리인 법무법인 원고
+                              소송 대리인 법무법인 주식회사..</div>
+                          </li>
+                          <li>
+                            <div class="tit">의뢰인</div>
+                            <div class="cont">주식회사 변호사 고법</div>
+                          </li>
+                          <li>
+                            <div class="tit">변호사</div>
+                            <div class="cont">홍길동</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add Navigation -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+
+                </div>
+
+
+                <script>
+                  var swiperMain01 = new Swiper(".sec02Swiper", {
+                    slidesPerView: 1,
+                    navigation: {
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    },
+                    // 슬라이드 사이의 간격
+                    spaceBetween: 20,
+                      on: {
+                        init: function () {
+                          this.allowTouchMove = false;
+                          if (this.slides.length <= 1) {
+                            document.querySelector(".sec02Swiper .swiper-button-next").style.display = "none";
+                            document.querySelector(".sec02Swiper .swiper-button-prev").style.display = "none";
+                          }
+                        }
+                      }
+                  });
+                </script>
+              </div>
+
+
+            </div>
+
+            <div class="tab-pane fade" id="caseUpdate-date-cont" role="tabpanel" aria-labelledby="caseUpdate-date"
+              tabindex="0">
+
+              <div class="whiteTable only-pc">
+                <table class="table table-hover tr-link mb0 table-line">
+                  <caption>
+                    사건 진행 현황
+                  </caption>
+                  <colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 5%;">
+                    <col style="width: auto;">
+                    <col style="width: 10%;">
+                    <col style="width: 250px;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                  </colgroup>
+                  <thead class="thead-bg">
+                    <tr>
+                      <th scope="col">일자</th>
+                      <th scope="col">시간</th>
+                      <th scope="col">사건번호</th>
+                      <th scope="col">구분</th>
+                      <th scope="col">내용</th>
+                      <th scope="col">의뢰인</th>
+                      <th scope="col">변호사</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr onclick="window.location.href='#'" tabindex="0">
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
+
+
+              <!--모바일버전 [start]-->
+              <div class="only-mob mob-main-swiper">
+                <!-- swiper -->
+                <div class="swiper sec02Swiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="td-item">
+                        <ul>
+                          <li>
+                            <div class="tit">일자</div>
+                            <div class="cont">2024.08.16</div>
+                          </li>
+                          <li>
+                            <div class="tit">시간</div>
+                            <div class="cont">10:26</div>
+                          </li>
+                          <li>
+                            <div class="tit">사건번호</div>
+                            <div class="cont">2001헌바82645</div>
+                          </li>
+                          <li>
+                            <div class="tit">구분</div>
+                            <div class="cont">서면</div>
+                          </li>
+                          <li>
+                            <div class="tit">내용</div>
+                            <div class="cont">원고 소송 대리인 법무법인 원고
+                              소송 대리인 법무법인 주식회사..</div>
+                          </li>
+                          <li>
+                            <div class="tit">의뢰인</div>
+                            <div class="cont">주식회사 변호사 고법</div>
+                          </li>
+                          <li>
+                            <div class="tit">변호사</div>
+                            <div class="cont">홍길동</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="td-item">
+                        <ul>
+                          <li>
+                            <div class="tit">일자</div>
+                            <div class="cont">2024.08.16</div>
+                          </li>
+                          <li>
+                            <div class="tit">시간</div>
+                            <div class="cont">10:26</div>
+                          </li>
+                          <li>
+                            <div class="tit">사건번호</div>
+                            <div class="cont">2001헌바82645</div>
+                          </li>
+                          <li>
+                            <div class="tit">구분</div>
+                            <div class="cont">서면</div>
+                          </li>
+                          <li>
+                            <div class="tit">내용</div>
+                            <div class="cont">원고 소송 대리인 법무법인 원고
+                              소송 대리인 법무법인 주식회사..</div>
+                          </li>
+                          <li>
+                            <div class="tit">의뢰인</div>
+                            <div class="cont">주식회사 변호사 고법</div>
+                          </li>
+                          <li>
+                            <div class="tit">변호사</div>
+                            <div class="cont">홍길동</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add Navigation -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+
+                </div>
+
+
+                <script>
+                  var swiperMain02 = new Swiper(".sec02Swiper2", {
+                    slidesPerView: 1,
+                    navigation: {
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    },
+                    // 슬라이드 사이의 간격
+                    spaceBetween: 20,
+                      on: {
+                        init: function () {
+                          if (this.slides.length <= 1) {
+                            this.allowTouchMove = false;
+                            document.querySelector(".sec02Swiper2 .swiper-button-next").style.display = "none";
+                            document.querySelector(".sec02Swiper2 .swiper-button-prev").style.display = "none";
+                          }
+                        }
+                      }
+                  });
+                </script>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="caseUpdate-order-cont" role="tabpanel" aria-labelledby="caseUpdate-order"
+              tabindex="0">
+              <div class="whiteTable only-pc">
+                <table class="table table-hover tr-link mb0 table-line">
+                  <caption>
+                    사건 진행 현황
+                  </caption>
+                  <colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 5%;">
+                    <col style="width: auto;">
+                    <col style="width: 10%;">
+                    <col style="width: 250px;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                  </colgroup>
+                  <thead class="thead-bg">
+                    <tr>
+                      <th scope="col">일자</th>
+                      <th scope="col">시간</th>
+                      <th scope="col">사건번호</th>
+                      <th scope="col">구분</th>
+                      <th scope="col">내용</th>
+                      <th scope="col">의뢰인</th>
+                      <th scope="col">변호사</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr onclick="window.location.href='#'" tabindex="0">
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="caseUpdate-documents-cont" role="tabpanel"
+              aria-labelledby="caseUpdate-documents" tabindex="0">
+              <div class="whiteTable only-pc">
+                <table class="table table-hover tr-link mb0 table-line">
+                  <caption>
+                    사건 진행 현황
+                  </caption>
+                  <colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 5%;">
+                    <col style="width: auto;">
+                    <col style="width: 10%;">
+                    <col style="width: 250px;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                  </colgroup>
+                  <thead class="thead-bg">
+                    <tr>
+                      <th scope="col">일자</th>
+                      <th scope="col">시간</th>
+                      <th scope="col">사건번호</th>
+                      <th scope="col">구분</th>
+                      <th scope="col">내용</th>
+                      <th scope="col">의뢰인</th>
+                      <th scope="col">변호사</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr onclick="window.location.href='#'" tabindex="0">
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="caseUpdate-delivery-cont" role="tabpanel"
+              aria-labelledby="caseUpdate-delivery" tabindex="0">
+              <div class="whiteTable only-pc">
+                <table class="table table-hover tr-link mb0 table-line">
+                  <caption>
+                    사건 진행 현황
+                  </caption>
+                  <colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 5%;">
+                    <col style="width: auto;">
+                    <col style="width: 10%;">
+                    <col style="width: 250px;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                  </colgroup>
+                  <thead class="thead-bg">
+                    <tr>
+                      <th scope="col">일자</th>
+                      <th scope="col">시간</th>
+                      <th scope="col">사건번호</th>
+                      <th scope="col">구분</th>
+                      <th scope="col">내용</th>
+                      <th scope="col">의뢰인</th>
+                      <th scope="col">변호사</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr onclick="window.location.href='#'" tabindex="0">
+                      <td>2024.08.16</td>
+                      <td>10:26</td>
+                      <td>2001헌바82645</td>
+                      <td>서면</td>
+                      <td>
+                        <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                      </td>
+                      <td>주식회사</td>
+                      <td>홍길동</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sec-box sec04">
+          <div class="calTable">
+            <div class="calTable__header">
+              <ul class="nav nav-pills mainTab" id="calender-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="calender-all" data-bs-toggle="pill"
+                    data-bs-target="#calender-all-cont" type="button" role="tab" aria-controls="calender-all-cont"
+                    aria-selected="true">통합</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="calender-case-management" data-bs-toggle="pill"
+                    data-bs-target="#calender-case-management-cont" type="button" role="tab"
+                    aria-controls="calender-case-management-cont">사건관리</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="calender-deputy" data-bs-toggle="pill"
+                    data-bs-target="#calender-deputy-cont" type="button" role="tab"
+                    aria-controls="calender-deputy-cont">복대리</button>
+                </li>
+              </ul>
+            </div>
+
+
+            <div class="tab-content" id="calender-tabContent">
+              <div class="tab-pane fade show active" id="calender-all-cont" role="tabpanel"
+                aria-labelledby="calender-all" tabindex="0">
                 <div class="whiteTable only-pc">
                   <table class="table table-hover tr-link mb0 table-line">
                     <caption>
-                      사건 진행 현황
+                      캘린더 별 사건 진행 현황
                     </caption>
                     <colgroup>
                       <col style="width: 10%;">
@@ -541,60 +1493,59 @@
                         <td>주식회사</td>
                         <td>홍길동</td>
                       </tr>
+                      <tr onclick="window.location.href='#'" tabindex="0">
+                        <td>2024.08.16</td>
+                        <td>10:26</td>
+                        <td>2001헌바82645</td>
+                        <td>서면</td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
+                        <td>주식회사</td>
+                        <td>홍길동</td>
+                      </tr>
+                      <tr onclick="window.location.href='#'" tabindex="0">
+                        <td>2024.08.16</td>
+                        <td>10:26</td>
+                        <td>2001헌바82645</td>
+                        <td>서면</td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
+                        <td>주식회사</td>
+                        <td>홍길동</td>
+                      </tr>
+                      <tr onclick="window.location.href='#'" tabindex="0">
+                        <td>2024.08.16</td>
+                        <td>10:26</td>
+                        <td>2001헌바82645</td>
+                        <td>서면</td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
+                        <td>주식회사</td>
+                        <td>홍길동</td>
+                      </tr>
+                      <tr onclick="window.location.href='#'" tabindex="0">
+                        <td>2024.08.16</td>
+                        <td>10:26</td>
+                        <td>2001헌바82645</td>
+                        <td>서면</td>
+                        <td>
+                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
+                        </td>
+                        <td>주식회사</td>
+                        <td>홍길동</td>
+                      </tr>
 
-                      <tr onclick="window.location.href='#'" tabindex="0">
-                        <td>2024.08.16</td>
-                        <td>10:26</td>
-                        <td>2001헌바82645</td>
-                        <td>서면</td>
-                        <td>
-                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                        </td>
-                        <td>주식회사</td>
-                        <td>홍길동</td>
-                      </tr>
-                      <tr onclick="window.location.href='#'" tabindex="0">
-                        <td>2024.08.16</td>
-                        <td>10:26</td>
-                        <td>2001헌바82645</td>
-                        <td>서면</td>
-                        <td>
-                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                        </td>
-                        <td>주식회사</td>
-                        <td>홍길동</td>
-                      </tr>
-                      <tr onclick="window.location.href='#'" tabindex="0">
-                        <td>2024.08.16</td>
-                        <td>10:26</td>
-                        <td>2001헌바82645</td>
-                        <td>서면</td>
-                        <td>
-                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                        </td>
-                        <td>주식회사</td>
-                        <td>홍길동</td>
-                      </tr>
-                      <tr onclick="window.location.href='#'" tabindex="0">
-                        <td>2024.08.16</td>
-                        <td>10:26</td>
-                        <td>2001헌바82645</td>
-                        <td>서면</td>
-                        <td>
-                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                        </td>
-                        <td>주식회사</td>
-                        <td>홍길동</td>
-                      </tr>
                     </tbody>
                   </table>
                 </div>
-                <!--pc버전 [end]-->
 
                 <!--모바일버전 [start]-->
                 <div class="only-mob mob-main-swiper">
                   <!-- swiper -->
-                  <div class="swiper sec02Swiper">
+                  <div class="swiper sec03Swiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <div class="td-item">
@@ -648,17 +1599,9 @@
                               <div class="cont">2001헌바82645</div>
                             </li>
                             <li>
-                              <div class="tit">구분</div>
-                              <div class="cont">서면</div>
-                            </li>
-                            <li>
                               <div class="tit">내용</div>
                               <div class="cont">원고 소송 대리인 법무법인 원고
                                 소송 대리인 법무법인 주식회사..</div>
-                            </li>
-                            <li>
-                              <div class="tit">의뢰인</div>
-                              <div class="cont">주식회사 변호사 고법</div>
                             </li>
                             <li>
                               <div class="tit">변호사</div>
@@ -676,7 +1619,7 @@
 
 
                   <script>
-                    var swiperMain01 = new Swiper(".sec02Swiper", {
+                    var swiperMain03 = new Swiper(".sec03Swiper", {
                       slidesPerView: 1,
                       navigation: {
                         nextEl: ".swiper-button-next",
@@ -684,975 +1627,55 @@
                       },
                       // 슬라이드 사이의 간격
                       spaceBetween: 20,
-                    });
-                  </script>
-                </div>
-
-
-              </div>
-
-              <div class="tab-pane fade" id="caseUpdate-date-cont" role="tabpanel" aria-labelledby="caseUpdate-date"
-                tabindex="0">
-
-                <div class="whiteTable only-pc">
-                  <table class="table table-hover tr-link mb0 table-line">
-                    <caption>
-                      사건 진행 현황
-                    </caption>
-                    <colgroup>
-                      <col style="width: 10%;">
-                      <col style="width: 5%;">
-                      <col style="width: auto;">
-                      <col style="width: 10%;">
-                      <col style="width: 250px;">
-                      <col style="width: 10%;">
-                      <col style="width: 10%;">
-                    </colgroup>
-                    <thead class="thead-bg">
-                      <tr>
-                        <th scope="col">일자</th>
-                        <th scope="col">시간</th>
-                        <th scope="col">사건번호</th>
-                        <th scope="col">구분</th>
-                        <th scope="col">내용</th>
-                        <th scope="col">의뢰인</th>
-                        <th scope="col">변호사</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr onclick="window.location.href='#'" tabindex="0">
-                        <td>2024.08.16</td>
-                        <td>10:26</td>
-                        <td>2001헌바82645</td>
-                        <td>서면</td>
-                        <td>
-                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                        </td>
-                        <td>주식회사</td>
-                        <td>홍길동</td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-
-                </div>
-
-
-                <!--모바일버전 [start]-->
-                <div class="only-mob mob-main-swiper">
-                  <!-- swiper -->
-                  <div class="swiper sec02Swiper2">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="td-item">
-                          <ul>
-                            <li>
-                              <div class="tit">일자</div>
-                              <div class="cont">2024.08.16</div>
-                            </li>
-                            <li>
-                              <div class="tit">시간</div>
-                              <div class="cont">10:26</div>
-                            </li>
-                            <li>
-                              <div class="tit">사건번호</div>
-                              <div class="cont">2001헌바82645</div>
-                            </li>
-                            <li>
-                              <div class="tit">구분</div>
-                              <div class="cont">서면</div>
-                            </li>
-                            <li>
-                              <div class="tit">내용</div>
-                              <div class="cont">원고 소송 대리인 법무법인 원고
-                                소송 대리인 법무법인 주식회사..</div>
-                            </li>
-                            <li>
-                              <div class="tit">의뢰인</div>
-                              <div class="cont">주식회사 변호사 고법</div>
-                            </li>
-                            <li>
-                              <div class="tit">변호사</div>
-                              <div class="cont">홍길동</div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="td-item">
-                          <ul>
-                            <li>
-                              <div class="tit">일자</div>
-                              <div class="cont">2024.08.16</div>
-                            </li>
-                            <li>
-                              <div class="tit">시간</div>
-                              <div class="cont">10:26</div>
-                            </li>
-                            <li>
-                              <div class="tit">사건번호</div>
-                              <div class="cont">2001헌바82645</div>
-                            </li>
-                            <li>
-                              <div class="tit">구분</div>
-                              <div class="cont">서면</div>
-                            </li>
-                            <li>
-                              <div class="tit">내용</div>
-                              <div class="cont">원고 소송 대리인 법무법인 원고
-                                소송 대리인 법무법인 주식회사..</div>
-                            </li>
-                            <li>
-                              <div class="tit">의뢰인</div>
-                              <div class="cont">주식회사 변호사 고법</div>
-                            </li>
-                            <li>
-                              <div class="tit">변호사</div>
-                              <div class="cont">홍길동</div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                  </div>
-
-
-                  <script>
-                    var swiperMain02 = new Swiper(".sec02Swiper2", {
-                      slidesPerView: 1,
-                      navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                      },
-                      // 슬라이드 사이의 간격
-                      spaceBetween: 20,
-                    });
-                  </script>
-                </div>
-
-              </div>
-              <div class="tab-pane fade" id="caseUpdate-order-cont" role="tabpanel" aria-labelledby="caseUpdate-order"
-                tabindex="0">
-                <div class="whiteTable only-pc">
-                  <table class="table table-hover tr-link mb0 table-line">
-                    <caption>
-                      사건 진행 현황
-                    </caption>
-                    <colgroup>
-                      <col style="width: 10%;">
-                      <col style="width: 5%;">
-                      <col style="width: auto;">
-                      <col style="width: 10%;">
-                      <col style="width: 250px;">
-                      <col style="width: 10%;">
-                      <col style="width: 10%;">
-                    </colgroup>
-                    <thead class="thead-bg">
-                      <tr>
-                        <th scope="col">일자</th>
-                        <th scope="col">시간</th>
-                        <th scope="col">사건번호</th>
-                        <th scope="col">구분</th>
-                        <th scope="col">내용</th>
-                        <th scope="col">의뢰인</th>
-                        <th scope="col">변호사</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr onclick="window.location.href='#'" tabindex="0">
-                        <td>2024.08.16</td>
-                        <td>10:26</td>
-                        <td>2001헌바82645</td>
-                        <td>서면</td>
-                        <td>
-                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                        </td>
-                        <td>주식회사</td>
-                        <td>홍길동</td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-
-                </div>
-              </div>
-
-              <div class="tab-pane fade" id="caseUpdate-documents-cont" role="tabpanel"
-                aria-labelledby="caseUpdate-documents" tabindex="0">
-                <div class="whiteTable only-pc">
-                  <table class="table table-hover tr-link mb0 table-line">
-                    <caption>
-                      사건 진행 현황
-                    </caption>
-                    <colgroup>
-                      <col style="width: 10%;">
-                      <col style="width: 5%;">
-                      <col style="width: auto;">
-                      <col style="width: 10%;">
-                      <col style="width: 250px;">
-                      <col style="width: 10%;">
-                      <col style="width: 10%;">
-                    </colgroup>
-                    <thead class="thead-bg">
-                      <tr>
-                        <th scope="col">일자</th>
-                        <th scope="col">시간</th>
-                        <th scope="col">사건번호</th>
-                        <th scope="col">구분</th>
-                        <th scope="col">내용</th>
-                        <th scope="col">의뢰인</th>
-                        <th scope="col">변호사</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr onclick="window.location.href='#'" tabindex="0">
-                        <td>2024.08.16</td>
-                        <td>10:26</td>
-                        <td>2001헌바82645</td>
-                        <td>서면</td>
-                        <td>
-                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                        </td>
-                        <td>주식회사</td>
-                        <td>홍길동</td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-
-                </div>
-              </div>
-              <div class="tab-pane fade" id="caseUpdate-delivery-cont" role="tabpanel"
-                aria-labelledby="caseUpdate-delivery" tabindex="0">
-                <div class="whiteTable only-pc">
-                  <table class="table table-hover tr-link mb0 table-line">
-                    <caption>
-                      사건 진행 현황
-                    </caption>
-                    <colgroup>
-                      <col style="width: 10%;">
-                      <col style="width: 5%;">
-                      <col style="width: auto;">
-                      <col style="width: 10%;">
-                      <col style="width: 250px;">
-                      <col style="width: 10%;">
-                      <col style="width: 10%;">
-                    </colgroup>
-                    <thead class="thead-bg">
-                      <tr>
-                        <th scope="col">일자</th>
-                        <th scope="col">시간</th>
-                        <th scope="col">사건번호</th>
-                        <th scope="col">구분</th>
-                        <th scope="col">내용</th>
-                        <th scope="col">의뢰인</th>
-                        <th scope="col">변호사</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr onclick="window.location.href='#'" tabindex="0">
-                        <td>2024.08.16</td>
-                        <td>10:26</td>
-                        <td>2001헌바82645</td>
-                        <td>서면</td>
-                        <td>
-                          <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                        </td>
-                        <td>주식회사</td>
-                        <td>홍길동</td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </section>
-
-
-
-
-        </div>
-        <div class="right">
-          <section class="sec-box sec03">
-            <ul class="notification-list">
-              <li>
-                <a href="#" title="페이지이동" class="notification-item">
-                  <div class="tit">전체공지</div>
-                  <div class="value">1</div>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="페이지이동" class="notification-item">
-                  <div class="tit">사건업데이트현황</div>
-                  <div class="value">4</div>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="페이지이동" class="notification-item">
-                  <div class="tit">신규 복대리</div>
-                  <div class="value">16</div>
-                </a>
-              </li>
-              <li>
-                <a href="#" title="페이지이동" class="notification-item">
-                  <div class="tit">내가 쓴 글</div>
-                  <div class="value">299</div>
-                </a>
-              </li>
-            </ul>
-
-
-          </section>
-
-
-          <section class="sec-box sec04">
-            <div class="calender-container main-cal">
-
-              <div class="main-cal__header">
-                <div class="calendar-month">
-                  <button id="prev-month" class="prev-month"></button>
-                  <h3 id="month-year" class="month-year">2024.09</h3>
-                  <button id="next-month" class="next-month"></button>
-                </div>
-
-                <div class="main-cal__tab">
-                  <ul class="nav nav-pills mainTab" id="calendar-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="calendar-week" data-bs-toggle="pill"
-                        data-bs-target="#calendar-week-cont" type="button" role="tab" aria-controls="calendar-week-cont"
-                        aria-selected="true">Week</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="calendar-month" data-bs-toggle="pill"
-                        data-bs-target="#calendar-month-cont" type="button" role="tab"
-                        aria-controls="calendar-month-cont">Month</button>
-                    </li>
-                  </ul>
-
-                </div>
-              </div>
-
-              <div class="main-cal__cont tab-content" id="mainCal-tabContent">
-                <!--Week [start]-->
-                <div class="tab-pane fade show active" id="calendar-week-cont" role="tabpanel"
-                  aria-labelledby="calendar-week" tabindex="0">
-                  <!-- week swiper -->
-                  <div class="inner">
-                    <div class="swiper weekSwiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div class="week-item">
-                            <div class="week-number">1</div>
-                            <div class="week-day">Mon</div>
-                            <div class="value">5</div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="week-item">
-                            <div class="week-number">2</div>
-                            <div class="week-day">Tue</div>
-                            <div class="value">2</div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="week-item">
-                            <div class="week-number">3</div>
-                            <div class="week-day">Wed</div>
-                            <div class="value">1</div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="week-item">
-                            <div class="week-number">4</div>
-                            <div class="week-day">Thu</div>
-                            <div class="value">0</div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="week-item">
-                            <div class="week-number">5</div>
-                            <div class="week-day">Fri</div>
-                            <div class="value">0</div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="week-item">
-                            <div class="week-number">6</div>
-                            <div class="week-day">Sat</div>
-                            <div class="value">0</div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="week-item">
-                            <div class="week-number">7</div>
-                            <div class="week-day">Sun</div>
-                            <div class="value">2</div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="week-item">
-                            <div class="week-number">8</div>
-                            <div class="week-day">Mon</div>
-                            <div class="value">10</div>
-                          </div>
-                        </div>
-                        <div class="swiper-slide">
-                          <div class="week-item">
-                            <div class="week-number">9</div>
-                            <div class="week-day">Tue</div>
-                            <div class="value">30</div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- Add Navigation -->
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-button-next"></div>
-
-                    </div>
-                  </div>
-
-                  <script>
-                    var swiperWeek = new Swiper(".weekSwiper", {
-                      slidesPerView: 5,
-                      navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                      },
-                      // 선택된게 슬라이드 중앙에 오도록
-                      centeredSlides: true,
-                      // 슬라이드 사이의 간격
-                      spaceBetween: 0,
-                      //중앙 슬라이드에 클래스 .current 추가
-                      slideActiveClass: "current",
-                      breakpoints: {
-                        500: {
-                          slidesPerView: 3
+                      on: {
+                        init: function () {
+                          if (this.slides.length <= 1) {
+                            this.allowTouchMove = false;
+                            document.querySelector(".sec03Swiper .swiper-button-next").style.display = "none";
+                            document.querySelector(".sec03Swiper .swiper-button-prev").style.display = "none";
+                          }
                         }
                       }
                     });
                   </script>
-
                 </div>
-                <!--Week [end]-->
 
-                <!--Month [start]-->
-                <div class="tab-pane fade" id="calendar-month-cont" role="tabpanel" aria-labelledby="calendar-month"
-                  tabindex="0">
-                  <div class="calendar-container main-cal-month">
-                    <!-- 달력 month start-->
-                    <div class="calendar-month">
-                      <div class="sunday">Sun</div>
-                      <div>Mon</div>
-                      <div>Tue</div>
-                      <div>Wed</div>
-                      <div>Thu</div>
-                      <div>Fri</div>
-                      <div class="saturday">Sat</div>
-                    </div>
-                    <!-- 달력 month end-->
 
-                    <!-- 달력 day start-->
-                    <div class="calendar-day">
-                      <div class="prev-date" tabindex="0">
-                        <div class="data-item">
-                          <span class="day">29</span>
-
-
-                        </div>
-                      </div>
-                      <div class="prev-date" tabindex="0">
-                        <div class="data-item">
-                          <span class="day">30</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">1</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">2</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">3</span>
-                          <span class="ale">3</span>
-                        </div>
-                      </div>
-
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">4</span>
-                          <span class="ale">2</span>
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">5</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">6</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">7</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">8</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">9</span>
-
-
-                        </div>
-                      </div>
-                      <!-- 현재 날짜 : current-data -->
-                      <div class="current-data" tabindex="0">
-                        <div class="data-item">
-                          <span class="day">10</span>
-                          <span class="ale">4</span>
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">11</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">12</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">13</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">14</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">15</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">16</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">17</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">18</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">19</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">20</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">21</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">22</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">23</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">24</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">25</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">26</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">27</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">28</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">29</span>
-
-
-                        </div>
-                      </div>
-                      <div tabindex="0">
-                        <div class="data-item">
-                          <span class="day">30</span>
-
-
-                        </div>
-                      </div>
-                      <div class="next-date" tabindex="0">
-                        <div class="data-item">
-                          <span class="day">1</span>
-
-
-                        </div>
-                      </div>
-                      <div class="next-date" tabindex="0">
-                        <div class="data-item">
-                          <span class="day">2</span>
-
-
-                        </div>
-                      </div>
-                      <div class="next-date" tabindex="0">
-                        <div class="data-item">
-                          <span class="day">3</span>
-
-
-                        </div>
-                      </div>
-                    </div>
-                    <!-- 달력 day end-->
-
-                  </div>
-                </div>
-                <!--Month [end]-->
               </div>
+              <div class="tab-pane fade" id="calender-case-management-cont" role="tabpanel"
+                aria-labelledby="calender-case-management" tabindex="0">
+                <!--pc-->
+                <div class="whiteTable only-pc">
+                  피씨
+                </div>
+                <!--모바일버전 [start]-->
+                <div class="only-mob mob-main-swiper">
+                  모바일
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="calender-deputy-cont" role="tabpanel" aria-labelledby="calender-deputy"
+                tabindex="0">
+                      <!--pc-->
+                      <div class="whiteTable only-pc">
+                        피씨
+                      </div>
+                      <!--모바일버전 [start]-->
+                      <div class="only-mob mob-main-swiper">
+                        모바일
+                      </div>
+              </div>
+
+
 
             </div>
-
-
-
-            <div class="calTable">
-              <div class="calTable__header">
-                <ul class="nav nav-pills mainTab" id="calender-tab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="calender-all" data-bs-toggle="pill"
-                      data-bs-target="#calender-all-cont" type="button" role="tab" aria-controls="calender-all-cont"
-                      aria-selected="true">통합</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="calender-case-management" data-bs-toggle="pill"
-                      data-bs-target="#calender-case-management-cont" type="button" role="tab"
-                      aria-controls="calender-case-management-cont">사건관리</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="calender-deputy" data-bs-toggle="pill"
-                      data-bs-target="#calender-deputy-cont" type="button" role="tab"
-                      aria-controls="calender-deputy-cont">복대리</button>
-                  </li>
-                </ul>
-              </div>
-
-
-              <div class="tab-content" id="calender-tabContent">
-                <div class="tab-pane fade show active" id="calender-all-cont" role="tabpanel"
-                  aria-labelledby="calender-all" tabindex="0">
-                  <div class="whiteTable only-pc">
-                    <table class="table table-hover tr-link mb0 table-line">
-                      <caption>
-                        캘린더 별 사건 진행 현황
-                      </caption>
-                      <colgroup>
-                        <col style="width: 10%;">
-                        <col style="width: 5%;">
-                        <col style="width: auto;">
-                        <col style="width: 10%;">
-                        <col style="width: 250px;">
-                        <col style="width: 10%;">
-                        <col style="width: 10%;">
-                      </colgroup>
-                      <thead class="thead-bg">
-                        <tr>
-                          <th scope="col">일자</th>
-                          <th scope="col">시간</th>
-                          <th scope="col">사건번호</th>
-                          <th scope="col">구분</th>
-                          <th scope="col">내용</th>
-                          <th scope="col">의뢰인</th>
-                          <th scope="col">변호사</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr onclick="window.location.href='#'" tabindex="0">
-                          <td>2024.08.16</td>
-                          <td>10:26</td>
-                          <td>2001헌바82645</td>
-                          <td>서면</td>
-                          <td>
-                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                          </td>
-                          <td>주식회사</td>
-                          <td>홍길동</td>
-                        </tr>
-                        <tr onclick="window.location.href='#'" tabindex="0">
-                          <td>2024.08.16</td>
-                          <td>10:26</td>
-                          <td>2001헌바82645</td>
-                          <td>서면</td>
-                          <td>
-                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                          </td>
-                          <td>주식회사</td>
-                          <td>홍길동</td>
-                        </tr>
-                        <tr onclick="window.location.href='#'" tabindex="0">
-                          <td>2024.08.16</td>
-                          <td>10:26</td>
-                          <td>2001헌바82645</td>
-                          <td>서면</td>
-                          <td>
-                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                          </td>
-                          <td>주식회사</td>
-                          <td>홍길동</td>
-                        </tr>
-                        <tr onclick="window.location.href='#'" tabindex="0">
-                          <td>2024.08.16</td>
-                          <td>10:26</td>
-                          <td>2001헌바82645</td>
-                          <td>서면</td>
-                          <td>
-                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                          </td>
-                          <td>주식회사</td>
-                          <td>홍길동</td>
-                        </tr>
-                        <tr onclick="window.location.href='#'" tabindex="0">
-                          <td>2024.08.16</td>
-                          <td>10:26</td>
-                          <td>2001헌바82645</td>
-                          <td>서면</td>
-                          <td>
-                            <p class="td-subect">원고 소송대리인 법무법인법무법인법무법인원고 소송대리인 법무법인법무법인법무법인</p>
-                          </td>
-                          <td>주식회사</td>
-                          <td>홍길동</td>
-                        </tr>
-
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <!--모바일버전 [start]-->
-                  <div class="only-mob mob-main-swiper">
-                    <!-- swiper -->
-                    <div class="swiper sec03Swiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div class="td-item">
-                            <ul>
-                              <li>
-                                <div class="tit">일자</div>
-                                <div class="cont">2024.08.16</div>
-                              </li>
-                              <li>
-                                <div class="tit">시간</div>
-                                <div class="cont">10:26</div>
-                              </li>
-                              <li>
-                                <div class="tit">사건번호</div>
-                                <div class="cont">2001헌바82645</div>
-                              </li>
-                              <li>
-                                <div class="tit">구분</div>
-                                <div class="cont">서면</div>
-                              </li>
-                              <li>
-                                <div class="tit">내용</div>
-                                <div class="cont">원고 소송 대리인 법무법인 원고
-                                  소송 대리인 법무법인 주식회사..</div>
-                              </li>
-                              <li>
-                                <div class="tit">의뢰인</div>
-                                <div class="cont">주식회사 변호사 고법</div>
-                              </li>
-                              <li>
-                                <div class="tit">변호사</div>
-                                <div class="cont">홍길동</div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                          <div class="td-item">
-                            <ul>
-                              <li>
-                                <div class="tit">일자</div>
-                                <div class="cont">2024.08.16</div>
-                              </li>
-                              <li>
-                                <div class="tit">시간</div>
-                                <div class="cont">10:26</div>
-                              </li>
-                              <li>
-                                <div class="tit">사건번호</div>
-                                <div class="cont">2001헌바82645</div>
-                              </li>
-                              <li>
-                                <div class="tit">내용</div>
-                                <div class="cont">원고 소송 대리인 법무법인 원고
-                                  소송 대리인 법무법인 주식회사..</div>
-                              </li>
-                              <li>
-                                <div class="tit">변호사</div>
-                                <div class="cont">홍길동</div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- Add Navigation -->
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-button-next"></div>
-
-                    </div>
-
-
-                    <script>
-                      var swiperMain03 = new Swiper(".sec03Swiper", {
-                        slidesPerView: 1,
-                        navigation: {
-                          nextEl: ".swiper-button-next",
-                          prevEl: ".swiper-button-prev",
-                        },
-                        // 슬라이드 사이의 간격
-                        spaceBetween: 20,
-                      });
-                    </script>
-                  </div>
-
-
-                </div>
-                <div class="tab-pane fade" id="calender-case-management-cont" role="tabpanel"
-                  aria-labelledby="calender-case-management" tabindex="0">
-                  <!--pc-->
-                  <div class="whiteTable only-pc">
-                    피씨
-                  </div>
-                  <!--모바일버전 [start]-->
-                  <div class="only-mob mob-main-swiper">
-                    모바일
-                  </div>
-                </div>
-
-                <div class="tab-pane fade" id="calender-deputy-cont" role="tabpanel" aria-labelledby="calender-deputy"
-                  tabindex="0">
-                        <!--pc-->
-                        <div class="whiteTable only-pc">
-                          피씨
-                        </div>
-                        <!--모바일버전 [start]-->
-                        <div class="only-mob mob-main-swiper">
-                          모바일
-                        </div>
-                </div>
-
-
-
-              </div>
-            </div>
-        </div>
-
+          </div>
+          
         </section>
 
 
       </div>
+      <!-- 메인 그리드 수정 end  -->
       <!--footer [start]-->
       <footer id="footer">
         <div class="copiright">
@@ -1737,10 +1760,10 @@
   <script>
 
   //모달 띄우는 스크립트
-  document.addEventListener('DOMContentLoaded', function() {
+/*   document.addEventListener('DOMContentLoaded', function() {
     var myModal = new bootstrap.Modal(document.getElementById('alert-pop'));
     myModal.show();
-  });
+  }); */
   </script>
 
 

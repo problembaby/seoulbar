@@ -83,152 +83,188 @@
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <form class="form-container" action="/submit" method="POST">
+          <form action="/submit" method="POST">
             <div class="title__area">
-              <h2 class="form__title">복대리 신청</h2>
+              <h2 class="form__title">복대리 지원</h2>
               <button type="button" class="btn-close" aria-label="Close" onclick="window.close();"></button>
             </div>
-            <div class="form-area__inputList">
-  
-              <div class="form-item">
-                <!-- 가능법원 -->
-                <div class="form-group">
-                  <label class="label__title" for="title">가능법원</label>
-                  <div class="d-flex gap-2">
-                    <button type="button" class="btn btn-primary">법원선택</button>
-                    <input type="text" id="title" name="title" class="form-control">
+            
+            <!-- 2024.10.24 v0.81 추가 -->
+            <!-- 팝업 전반적으로 수정 -->
+            <div class="form-popup-list view-list">
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <!-- 신청구분 -->
+                  <div class="inline-row-form__tit">신청구분<span class="required">*</span></div>
+                  <div class="inline-row-form__conf">
+                    <div class="radio-wrap">
+                      <div class="input-box">
+                        <input type="radio" id="bokdaeri" value="bokdaeri" checked>
+                        <label for="bokdaeri">복대리</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="jaesojeon" value="jaesojeon">
+                        <label for="jaesojeon">재소전 화해</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="girokdungsa" value="girokdungsa">
+                        <label for="girokdungsa">기록등사</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="josachamyeo" value="josachamyeo">
+                        <label for="josachamyeo">조사참여</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="jeopgyeon" value="jeopgyeon">
+                        <label for="jeopgyeon">접견</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="gangjejiphaeng" value="gangjejiphaeng">
+                        <label for="gangjejiphaeng">강제집행</label>
+                      </div>
+                    </div>
+                    <select id="court" class="form-select formStyle03 col" name="court" required>
+                      <option value="">채권압류 및 추심명령</option>
+                      <option value="">채무불이행자명부 등재</option>
+                      <option value="">추심+채무불이행자명부 등재</option>
+                      <option value="">건물명도</option>
+                      <!-- Add options for courts here -->
+                    </select>
                   </div>
                 </div>
               </div>
-  
-              <div class="form-item">
-                <!-- 제목 -->
-                <div class="form-group">
-                  <label class="label__title" for="title">제목<span class="required">*</span></label>
-                  <input type="text" id="title" name="title" placeholder="제목에는 연락처 및 메일주소를 입력하지 않습니다." required>
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <!-- 가능법원 -->
+                  <div class="inline-row-form__tit">가능법원</div>
+                  <div class="inline-row-form__conf">
+                    <div class="d-flex gap-2">
+                      <button type="button" class="btn btn-primary">법원선택</button>
+                      <input type="text" id="title" name="title" class="form-control">
+                    </div>
+                  </div>
                 </div>
               </div>
-  
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <!-- 제목 -->
+                  <div class="inline-row-form__tit">제목<span class="required">*</span></div>
+                  <div class="inline-row-form__conf">
+                    <input type="text" class="form-control" placeholder="제목에는 연락처 및 메일주소를 입력하지 않습니다." id="title" required="">
+                  </div>
+                </div>
+              </div>
+
             </div>
   
-  
             <h3 class="form-area-title">*복대리 위임장 기재사항</h3>
-            <div class="form-area__inputList">
-  
-              <div class="form-item">
-                <!-- 사무실명 -->
-                <div class="form-group">
-                  <label class="label__title" for="title">사무실명<span class="required">*</span></label>
-                  <input type="text" id="title" name="title" class="form-control"
+            
+            <div class="form-popup-list view-list">
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <!-- 사무실명 -->
+                  <div class="inline-row-form__tit">사무실명<span class="required">*</span></div>
+                  <div class="inline-row-form__conf">
+                    <input type="text" id="title" name="title" class="form-control"
                     placeholder="제목에는 연락처 및 메일주소를 입력하지 않습니다." required>
+                  </div>
                 </div>
               </div>
-  
-              <div class="form-item form-row">
-                <!-- 성명 -->
-                <div class="form-group col">
-                  <label class="label__title">성명<span class="required">*</span></label>
-                  <div class="form-group__inputWarp">
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <!-- 성명 -->
+                  <div class="inline-row-form__tit">성명<span class="required">*</span></div>
+                  <div class="inline-row-form__conf">
                     <input type="text" id="name" name="name" class="form-control" placeholder="" required>
                   </div>
                 </div>
-  
-                <!-- 이메일 -->
-                <div class="form-group col">
-                  <label class="label__title" for="region">이메일<span class="required">*</span></label>
-                  <div class="form-group__inputWarp">
+                <div class="inline-row-form">
+                  <!-- 이메일 -->
+                  <div class="inline-row-form__tit">이메일<span class="required">*</span></div>
+                  <div class="inline-row-form__conf">
                     <input type="email" id="region" name="region" class="form-control" required>
                   </div>
                 </div>
               </div>
-  
-  
-  
-              <div class="form-item form-row">
-                <!-- 연락처 -->
-                <div class="form-group col">
-                  <label class="label__title">연락처<span class="required">*</span></label>
-                  <div class="form-group__inputWarp">
-                    <input type="text" id="name" name="name" class="form-control" placeholder="" required>
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <!-- 연락처 -->
+                  <div class="inline-row-form__tit">연락처<span class="required">*</span></div>
+                  <div class="inline-row-form__conf">
+                    <input type="tel" class="form-control" id="contact" name="contact" placeholder="010 0000 0000" required oninput="formatPhoneNumber(this)">
                   </div>
                 </div>
-  
-                <!-- 팩스 -->
-                <div class="form-group col">
-                  <label class="label__title" for="region">팩스<span class="required">*</span></label>
-                  <div class="form-group__inputWarp">
-                    <input type="email" id="region" name="region" class="form-control" required>
+                <div class="inline-row-form">
+                  <!-- 팩스 -->
+                  <div class="inline-row-form__tit">팩스<span class="required">*</span></div>
+                  <div class="inline-row-form__conf">
+                    <input type="tel" class="form-control" id="contact" name="contact" placeholder="" required>
                   </div>
                 </div>
               </div>
-  
-  
-              <div class="form-item form-row">
-                <!-- 세금계산서 발행여부 -->
-                <div class="form-group col">
-                  <label class="label__title">세금계산서 발행여부<span class="required">*</span></label>
-                  <div class="form-group__inputWarp">
-  
-                    <div class="d-flex gap-2 align-items-center">
-                      <input type="radio" id="issued" name="tax_invoice" value="issued" checked="">
-                      <label for="issued">발행</label>
-                    </div>
-                    <div class="d-flex gap-2 align-items-center">
-                      <input type="radio" id="not_issued" name="tax_invoice" value="not_issued">
-                      <label for="not_issued">미발행</label>
-  
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">세금계산서 가능여부<span class="required">*</span></div>
+                  <div class="inline-row-form__conf">
+                    <div class="radio-wrap">
+                      <div class="input-box">
+                        <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                        <label for="plaintiff">가능</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="defendant" name="case_type" value="defendant">
+                        <label for="defendant">불가능</label>
+                      </div>
                     </div>
                   </div>
                 </div>
-  
-                <!-- 부가세 포함 여부 -->
-                <div class="form-group col">
-                  <label class="label__title" for="vat_included">부가세 포함 여부</label>
-                  <div class="form-group__inputWarp">
-                    <div class="d-flex gap-2 align-items-center">
-                      <input type="radio" id="vat_included" name="vat_option" value="included" checked="">
-                      <label for="vat_included">포함</label>
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">부가세<br>(세금계산서 발행시)</div>
+                  <div class="inline-row-form__conf">
+                    <div class="radio-wrap mo-col">
+                      <div class="input-box">
+                        <input type="radio" id="plaintiff" name="case_type" value="plaintiff" checked>
+                        <input type="text" class="form-control" style="flex:1" placeholder="%">
+                        <label for="plaintiff">가산</label>
+                      </div>
+                      <div class="input-box">
+                        <input type="radio" id="defendant" name="case_type" value="defendant">
+                        <label for="defendant">기타</label>
+                        <input type="text" class="form-control" style="flex:1" placeholder="">
+                      </div>
                     </div>
-                    <div class="d-flex gap-2 align-items-center">
-                      <input type="radio" id="vat_not_included" name="vat_option" value="not_included">
-                      <label for="vat_not_included">별도</label>
-                    </div>
-                    <input type="text" class="form-control" style="flex:1" placeholder="기타 내용입력">
                   </div>
                 </div>
               </div>
-  
-  
-              <div class="form-item">
-                <!-- 주소 -->
-                <div class="form-group">
-                  <label class="label__title h150p" for="title">주소<span class="required">*</span></label>
-                  <ul class="address-list">
-                    <li class="address-item">
-                      <input type="text" id="postal_code" name="postal_code" class="form-control address-input" placeholder="우편번호">
-                      <button type="button" class="btn btn-primary">주소 검색</button>
-                    </li>
-                    <li class="address-item">
-                      <input type="text" id="address" name="address" class="form-control" placeholder="주소">
-                    </li>
-                    <li class="address-item">
-                      <input type="text" id="detailed_address" name="detailed_address" class="form-control"
-                        placeholder="상세주소">
-                    </li>
-                  </ul>
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">주소<span class="required">*</span></div>
+                  <div class="inline-row-form__conf">
+                    <ul class="address-list">
+                      <li class="address-item">
+                        <input type="text" id="postal_code" name="postal_code" class="form-control address-input" placeholder="우편번호">
+                        <button type="button" class="btn btn-primary">주소 검색</button>
+                      </li>
+                      <li class="address-item">
+                        <input type="text" id="address" name="address" class="form-control" placeholder="주소">
+                      </li>
+                      <li class="address-item">
+                        <input type="text" id="detailed_address" name="detailed_address" class="form-control"
+                          placeholder="상세주소">
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-  
-              <div class="form-item">
-                <!-- 지원내용 -->
-                <div class="form-group">
-                  <label class="label__title h200p" for="title">지원내용</label>
-                  <textarea name="content" id="content"  rows="5" placeholder="본문 내용에는 연락처 및 메일주소를 입력하지 않습니다。
-                  " required></textarea>
+              <div class="inline-row">
+                <div class="inline-row-form">
+                  <div class="inline-row-form__tit">지원내용</div>
+                  <div class="inline-row-form__conf">
+                    <textarea id="details" name="details" placeholder="본문 내용에는 연락처 및 메일주소를 입력하지 않습니다" rows="5"></textarea>
+                  </div>
                 </div>
               </div>
-  
-  
+
             </div>
   
             <!-- Submit Button -->
@@ -257,6 +293,24 @@
     $(function () {
       initializeDatepicker();
     });
+
+    function formatPhoneNumber(input) {
+      // 숫자만 남기기
+      let numbers = input.value.replace(/[^0-9]/g, '');
+      
+      // 첫 3자리와 그다음 4자리, 그다음 4자리를 나눠서 하이픈 추가
+      let formattedNumber = '';
+      if (numbers.length <= 3) {
+          formattedNumber = numbers;
+      } else if (numbers.length <= 7) {
+          formattedNumber = numbers.slice(0, 3) + '-' + numbers.slice(3);
+      } else {
+          formattedNumber = numbers.slice(0, 3) + '-' + numbers.slice(3, 7) + '-' + numbers.slice(7, 11);
+      }
+      
+      // input 필드에 포맷된 전화번호 표시
+      input.value = formattedNumber;
+    }
   </script>
 </body>
 

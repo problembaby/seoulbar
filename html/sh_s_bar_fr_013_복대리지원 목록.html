@@ -233,6 +233,24 @@
             <div class="search-area">
               <div class="letf">
                 <div class="search-area__inputList">
+                  <!-- 2024.10.24 v0.81 추가 -->
+                  <!-- 복대리 구분 select 추가 -->
+                  <select class="form-select formStyle01" aria-label="복대리 구분">
+                    <option selected>복대리 구분</option>
+                    <option value="복대리">복대리</option>
+                    <option value="제소전화해">제소전화해</option>
+                    <option value="강제집행">강제집행</option>
+                  </select>
+                  <!-- 구분 select 추가 -->
+                  <select class="form-select formStyle01" aria-label="구분">
+                    <option selected>구분</option>
+                    <option value="복대리">복대리</option>
+                    <option value="제소전화해">제소전화해</option>
+                    <option value="기록등사">기록등사</option>
+                    <option value="조사참여">조사참여</option>
+                    <option value="접견">접견</option>
+                    <option value="강제집행">강제집행</option>
+                  </select>
                   <select class="form-select formStyle01" aria-label="지역선택">
                     <option selected>지역선택</option>
                     <option value="전체">전체</option>
@@ -263,9 +281,12 @@
 
               <div class="right">
                 <div class="search-area__inputList">
-                  <select class="form-select formStyle01" aria-label="정렬순">
-                    <option value="등록일순">등록일순</option>
-                    <option value="기일임박">기일임박</option>
+                  <!-- 세금계산서 select 추가 -->
+                  <select class="form-select formStyle01">
+                    <option selected>세금계산서</option>
+                    <option value="전체">전체</option>
+                    <option value="가능">가능</option>
+                    <option value="불가능">불가능</option>
                   </select>
                   <select class="form-select formStyle01">
                     <option value="제목순">제목순</option>
@@ -282,22 +303,26 @@
 
             <div class="border-contents">
               <div class="whiteTable">
-
+                <!-- 구분, 세금계산서 테이블 추가 -->
                 <div class="table-board board-list">
                   <table>
                     <caption class="sr-only">복대리 신청 게시물 목록입니다. 번호, 구분, 법원구분, 제목, 작성자, 금액, 재판일시, 진행상황 항목을 제공합니다.</caption>
                     <colgroup>
-                      <col width="10%;">
-                      <col width="110px;">
-                      <col width="auto">
+                      <col width="5%;">
+                      <col width="5%;">
+                      <col width="25%">
+                      <col width="40%">
+                      <col width="10%">
                       <col width="10%">
                       <col width="10%">
                     </colgroup>
                     <thead>
                       <tr>
                         <th scope="col">NO</th>
+                        <th scope="col">구분</th>
                         <th scope="col">법원구분</th>
                         <th scope="col">제목</th>
+                        <th scope="col">세금계산서</th>
                         <th scope="col">작성자</th>
                         <th scope="col">관심</th>
                       </tr>
@@ -308,11 +333,13 @@
                       </tr>
                       <tr>
                         <td class="num mobNone">1203</td>
+                        <td>복대리</td>
                         <td>경기, 북부지방법원, 동부지방법원 </td>
                         <td class="cell-subject">
                           <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
                           <img src="../resources/images/ico/new.svg" alt="new" class="new">
                         </td>
+                        <td>가능</td>
                         <td class="mobNone">홍길동</td>
                         <td>
                           <div class="bookmark-area">
@@ -326,11 +353,13 @@
  
                       <tr>
                         <td class="num mobNone">1203</td>
+                        <td>복대리</td>
                         <td>경기, 북부지방법원, 동부지방법원 </td>
                         <td class="cell-subject">
                           <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
                           <img src="../resources/images/ico/new.svg" alt="new" class="new">
                         </td>
+                        <td>가능</td>
                         <td class="mobNone">홍길동</td>
                         <td>
                           <div class="bookmark-area">
@@ -344,21 +373,24 @@
  
                       <tr>
                         <td class="num mobNone">1203</td>
+                        <td>복대리</td>
                         <td>경기, 북부지방법원, 동부지방법원 </td>
                         <td class="cell-subject">
                           <a href="#" title="페이지 이동" target="_self">서울중앙지법 9.4 오후 3시 40분 복대리 구합니다.</a>
                           <img src="../resources/images/ico/new.svg" alt="new" class="new">
                         </td>
+                        <td>가능</td>
                         <td class="mobNone">홍길동</td>
                         <td>
                           <div class="bookmark-area">
-                            <button type="button" class="bookmark on" onclick="toggleBookmark(this)">
+                            <button type="button" class="bookmark" onclick="toggleBookmark(this)">
                               <span class="sr-only">즐겨찾기</span>
                             </button>
                           </div>
                         </td>
 
                       </tr>
+ 
  
           
 

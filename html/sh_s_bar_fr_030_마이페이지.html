@@ -227,7 +227,7 @@
                   <h3 class="notify-title">알림통 수신 여부 설정</h3>
                   <ul class="notify-list">
                     <li class="notify-item">
-                      <div class="notify-item__label">통합 알림톡 수신여부</div>
+                      <div class="notify-item__label"><span></span>통합 알림톡 수신여부</div>
                       <div class="switch-box">
                         <input type="checkbox" id="switch1" class="chk-switch">
                         <label for="switch1">통합 알림톡 수신여부</label>
@@ -237,7 +237,7 @@
                     </li>
 
                     <li class="notify-item">
-                      <div class="notify-item__label">복대리 알림 수신여부</div>
+                      <div class="notify-item__label"><span></span>복대리 알림 수신여부</div>
                       <div class="switch-box">
                         <input type="checkbox" id="switch2" class="chk-switch">
                         <label for="switch2">복대리 알림 수신여부</label>
@@ -247,7 +247,7 @@
                     </li>
 
                     <li class="notify-item">
-                      <div class="notify-item__label">사건관리 알림 수신여부</div>
+                      <div class="notify-item__label"><span></span>사건관리 알림 수신여부</div>
                       <div class="switch-box">
                         <input type="checkbox" id="switch3" class="chk-switch">
                         <label for="switch3">사건관리 알림 수신여부</label>
@@ -260,16 +260,53 @@
 
 
                 <section class="user-setting">
-                  <h3 class="user-title">알림통 수신 여부 설정</h3>
-                  <div class="user-info">
-                    <div class="user-info__thum">
-                      <div class="user-img"></div>
-                      <div class="user-text"></div>
+                  <h3 class="user-title">법조인명부 정보 공개여부 설정</h3>
+                  <div class="user-infoSet">
+                    <div class="user-infoSet__thum">
+                      <div class="user-img">
+                        <img src="../resources/images/common/no-img-user.png" alt="유저 이미지">
+                      </div>
+                      <div class="user-text">
+                        <div class="user-type">검사</div>
+                        <div class="user-name">홍길동</div>
+                        <div class="user-birth">1984.02.23</div>
+                      </div>
+                      <div class="user-switch">
+                        <div class="switch-box">
+                          <input type="checkbox" id="switch4" class="chk-switch">
+                          <label for="switch4">썸네일 공개여부</label>
+                          <p class="chk_y" onclick="document.getElementById('switch4').click();">SHOW</p>
+                          <p class="chk_n" onclick="document.getElementById('switch4').click();">HIDE</p>
+                        </div>
+                      </div>
                     </div>
-                    <ul class="user-info__desc">
-                      <li></li>
-
-                    </ul>
+                    <div class="user-infoSet__desc">
+                      <ul class="user-infoSet__list">
+                        <li class="user-infoSet__item">
+                          <div class="ttl">자격정보 : </div>
+                          <div class="conf">사법시험 00기 / 연수원 00기</div>
+                        </li>
+                        <li class="user-infoSet__item">
+                          <div class="ttl">소속 : </div>
+                          <div class="conf">울산지방검찰청</div>
+                        </li>
+                        <li class="user-infoSet__item">
+                          <div class="ttl">자격정보 : </div>
+                          <div class="conf">서민다중피해범죄전담부(형사 제4부)</div>
+                        </li>
+                        <li class="user-infoSet__item">
+                          <div class="ttl">자격정보 : </div>
+                          <div class="conf"> 전라남도 장흥군 장흥읍 읍성로 121-1 상세주소전라남도 장흥군 장흥읍 읍성로 121-1 상세주소전라남도 장흥군 장흥읍 읍성로 121-1 상세주소</div>
+                        </li>
+  
+                      </ul>
+                      <div class="switch-box showBox">
+                        <input type="checkbox" id="switch5" class="chk-switch">
+                        <label for="switch5">자격 보임 여부</label>
+                        <p class="chk_y" onclick="document.getElementById('switch5').click();">SHOW</p>
+                        <p class="chk_n" onclick="document.getElementById('switch5').click();">HIDE</p>
+                      </div>
+                    </div>
                   </div>
                 </section>
 

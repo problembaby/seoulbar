@@ -409,7 +409,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   font-size: 12px;
 }
 
-.calTable__header {display: flex; justify-content: space-between; align-items: center;}
+.calTable__header {display: flex; justify-content: space-between; align-items: center; flex-direction: row;}
 .sec04-data {font-size: 16px; color: #fff; padding-right: 20px;}
 .mainTab{margin-bottom:10px}
 .mainTab .nav-link{width: 70px; height: 40px; padding:0 0px}
@@ -3075,7 +3075,7 @@ width: 100%;
   transform: translate(-50%, -50%);
   display: flex;
   color: #FF3636;
-  font-size: 14px;
+  font-size: 13px;
   width: 18px;
   height: 18px;
   background-color: #fff;
@@ -3083,6 +3083,9 @@ width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.calendar-container.main-cal-month .calendar-day > div .bok {
+  display: none;
 }
 
 
@@ -3097,6 +3100,11 @@ width: 100%;
 
 
 @media screen and (max-width: 576px) {
+  .calTable__header {
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
   .form-container{
     padding: 25px 15px;
   }

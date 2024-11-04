@@ -425,7 +425,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 380px;
+  max-width: 300px;
 }
 
 .sec02 .whiteTable, .calTable .whiteTable{max-height:330px; overflow: auto; height: 330px;
@@ -1734,7 +1734,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
   transform: translate(-50%, -50%);
   display: flex;
   color: #458FFF;
-  font-size: 14px;
+  font-size: 13px;
   width: 18px;
   height: 18px;
   background-color:  #fff;

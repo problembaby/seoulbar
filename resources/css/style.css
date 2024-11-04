@@ -397,7 +397,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 
 .sec-box{margin-bottom:36px; width: 100%;}
-.sec-box__title{font-size: 22px; color:#fff; margin-bottom: 16px;}
+.sec-box__title{font-size: 22px; color:#fff; margin-bottom: 20px;}
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: var(--bs-nav-pills-link-active-color);
@@ -409,6 +409,8 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   font-size: 12px;
 }
 
+.calTable__header {display: flex; justify-content: space-between; align-items: center;}
+.sec04-data {font-size: 16px; color: #fff; padding-right: 20px;}
 .mainTab{margin-bottom:10px}
 .mainTab .nav-link{width: 70px; height: 40px; padding:0 0px}
 
@@ -1710,11 +1712,28 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 
 .calendar-container.main-cal-month .calendar-day > div .ale {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 25%;
   transform: translate(-50%, -50%);
   display: flex;
   color: #FF3636;
+  font-size: 13px;
+  width: 18px;
+  height: 18px;
+  background-color:  #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.calendar-container.main-cal-month .calendar-day > div .bok {
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  color: #458FFF;
   font-size: 14px;
   width: 18px;
   height: 18px;
@@ -2229,7 +2248,7 @@ input[type="checkbox"]:checked + .check-icon::before {
 @media screen and (max-width: 1800px) {
 
 
-.view-result .list{display: grid; gap:20px}
+  .view-result .list{display: grid; gap:20px}
   .regist-box__btn button{width: 100px;}
 
 }

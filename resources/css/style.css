@@ -2245,6 +2245,47 @@ input[type="checkbox"]:checked + .check-icon::before {
   opacity: 0;
 }
 
+.main-notice-wrap .notice_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.main-notice-wrap .notice-text {
+  background-color: #D3DBF9;
+  padding: 15px;
+  border-radius: 5px;
+  height: 300px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 7px;  
+    height: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.4); /* 스크롤바 색상 */
+      border-radius: 10px; /* 스크롤바 둥근 테두리 */
+  }
+
+  &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);  /*스크롤바 뒷 배경 색상*/
+      
+  }
+}
+.main-notice-wrap .notice_title .board-top-cate {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 117px;
+  flex-shrink: 0;
+}
+.main-notice-wrap .notice_title .tit-text {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 @media screen and (max-width: 1800px) {
 
 
@@ -3212,6 +3253,11 @@ width: 100%;
   gap: 10px;
 }
 
+.main-notice-wrap .notice_title {
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
 }
 
 @media screen and (max-width: 320px) {

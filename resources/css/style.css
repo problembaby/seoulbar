@@ -2286,6 +2286,12 @@ input[type="checkbox"]:checked + .check-icon::before {
   font-size: 15px;
 }
 
+.main-pop__btnList{display: flex; gap:10px; justify-content: flex-end; align-items: center; margin-top: 20px;}
+.btn-colse-sm{width: 80px; height: 36px;}
+
+.cursor{cursor: pointer;}
+.titleNbtn{display: flex; align-items: center; gap:20px; flex-wrap: wrap;}
+
 @media screen and (max-width: 1800px) {
 
 

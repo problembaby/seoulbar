@@ -2527,8 +2527,8 @@ background-size: cover;
  flex-wrap: nowrap;
 }
 #gnb {
-  width: 0;
-}
+  width:0;
+} 
 .gnb-layout{
   background-color: var(--main2-color);
 }

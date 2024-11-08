@@ -55,6 +55,17 @@ body{background: #fff;}
 
 /*관리자 버전 페이징*/
 
+.page {
+  --page-el-width: 34px;
+  --page-el-height: 34px;
+  --paging-color: #1c4eba;
+  margin-top: 54px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+
 .admin-container .a-firstpage::after {
   display: inline-block;
   width: var(--page-el-width);
@@ -120,6 +131,8 @@ body{background: #fff;}
   color: #fff;
   border-radius: 4px;
 }
+
+
 
 
 @media screen and (max-width: 1024px){

@@ -747,7 +747,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 /* .sub-container .inner{min-height: 830px;} */
 
-.formStyle01{max-width:160px; width: 100%; font-size: 14px;}
+.formStyle01{width: 140px; font-size: 14px;}
 .formStyle02{width:82px; font-size: 14px; border-color: var(--gray-2); flex-shrink: inherit;}
 .formStyle03{width: 100%; font-size: 14px; border-color: var(--gray-2);}
 .formStyle240{width: 240px;; font-size: 14px;}
@@ -2477,6 +2477,7 @@ input[type="checkbox"]:checked + .check-icon::before {
 }
 
 @media screen and (max-width: 1024px) {
+  .formStyle01{width: 100%;}
 
   #contents{margin-left: 0;}
   /* 태블릿 해상도 */

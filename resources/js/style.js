@@ -54,17 +54,13 @@ $(document).ready(function () {
   // 모바일시 로드시 창 안나오는 문제 수정
   $(document).on('click', '.gnbMenuToggle', function () {
     $('#offcanvasRight').addClass('offcanvas'); // 너비와 상관없이 작동
-
-
     // 사파리 버그 때문에 추가
     if ($(window).width() <= 1024) {
-      console.log('동동동')
         $('#gnb').css('width', '230px');
     }
 });
 $(window).on('resize', function () {
     if ($(window).width() > 1024) {
-      console.log('동작');
         $('#gnb').css('width', ''); // 1024px 이상일 때는 기본 값으로 복원
     }
 });

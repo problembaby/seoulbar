@@ -2286,6 +2286,14 @@ input[type="checkbox"]:checked + .check-icon::before {
   font-size: 15px;
 }
 
+.titleNbtn{display: flex; gap:20px; align-items: center;}
+.main-pop__btnList{display: flex; justify-content: flex-end; align-items: center; gap:20px; margin-top:20px}
+.modal-title{
+  font-size: 22px;
+  font-weight: 700;
+  color: #1E356D;
+}
+
 @media screen and (max-width: 1800px) {
 
 

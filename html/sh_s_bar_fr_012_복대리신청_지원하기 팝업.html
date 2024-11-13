@@ -80,7 +80,7 @@
     </script>
   
     <!-- 소송복대리신청 상세 지원하기 Modal -->
-    <div class="modal fade modal-lg" id="sh_s_bar_fr_012" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
+    <div class="modal fade modal-xl" id="sh_s_bar_fr_012" tabindex="-1" aria-labelledby="sh_s_bar_fr_ModalLabel"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -168,6 +168,10 @@
               <div class="board-viewPage__con">
                 <div class="title">
                   *복대리 위임장 기재사항
+
+                  <!--2024.11.08 추가-->
+                  <button type="button" class="btn btn-write btn-primary ml10" data-bs-toggle="modal" data-bs-target="#bringing_in">기본정보
+                    복사</button>
                 </div>
                 <div class="view-list form-popup-list">
                   <div class="inline-row">
@@ -264,6 +268,79 @@
       input.value = formattedNumber;
     }
   </script>
+
+
+
+<!-- 2024.11.08 기본정보복사 모달 -->
+<div class="modal fade modal-lg" id="bringing_in" tabindex="-1" aria-labelledby="기본정보복사 팝업" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">기본정보복사</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <div class="table-board board-list">
+          <table>
+            <caption class="sr-only">기본정보 목록을 제공합니다.</caption>
+            <colgroup>
+              <col width="20%">
+              <col width="5%">
+              <col width="20%">
+              <col width="20%">
+              <col width="auto">
+            </colgroup>
+            <tbody>
+              <tr onclick="" class="cursor" data-bs-toggle="modal"
+              data-bs-target="#sh_s_bar_fr_012">
+                <td>****법무사</td>
+                <td class="cell-subject">홍길동</td>
+                <td>010-1111-2222</td>
+                <td>abcd@naver.com</td>
+                <td>11/13 11시 서울고등법원 복대리</td>
+              </tr>
+              <tr onclick="" class="cursor" data-bs-toggle="modal"
+              data-bs-target="#sh_s_bar_fr_012">
+                <td>****법무사</td>
+                <td class="cell-subject">홍길동</td>
+                <td>010-1111-2222</td>
+                <td>abcd@naver.com</td>
+                <td>11/13 11시 서울고등법원 복대리</td>
+              </tr>
+              <tr onclick="" class="cursor" data-bs-toggle="modal"
+              data-bs-target="#sh_s_bar_fr_012">
+                <td>****법무사</td>
+                <td class="cell-subject">홍길동</td>
+                <td>010-1111-2222</td>
+                <td>abcd@naver.com</td>
+                <td>11/13 11시 서울고등법원 복대리</td>
+              </tr>
+              <tr onclick="" class="cursor" data-bs-toggle="modal"
+              data-bs-target="#sh_s_bar_fr_012">
+                <td>****법무사</td>
+                <td class="cell-subject">홍길동</td>
+                <td>010-1111-2222</td>
+                <td>abcd@naver.com</td>
+                <td>11/13 11시 서울고등법원 복대리</td>
+              </tr>
+             
+
+
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 </body>
 
 

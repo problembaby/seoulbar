@@ -2171,6 +2171,10 @@ input[type="checkbox"]:checked + .check-icon::before {
   border: 1px solid #ddd;
   border-radius: 50%;
   background-color: #e9ecef;
+  overflow: hidden;
+}
+.profile-image img {
+  width: 100%;
 }
 
 .name {
@@ -2293,6 +2297,7 @@ input[type="checkbox"]:checked + .check-icon::before {
   font-weight: 700;
   color: #1E356D;
 }
+
 
 @media screen and (max-width: 1800px) {
 

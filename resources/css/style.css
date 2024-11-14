@@ -2298,6 +2298,10 @@ input[type="checkbox"]:checked + .check-icon::before {
   color: #1E356D;
 }
 
+.calendar-btn-list{display: flex; align-items: center; justify-content: flex-start; gap:10px; margin-top: 20px;}
+.btn-calendar{background-color: #00c37f; color:#fff;}
+.btn-latest{background-color: #AE9400; color:#fff;}
+
 
 @media screen and (max-width: 1800px) {
 

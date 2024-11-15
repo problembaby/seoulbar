@@ -2312,6 +2312,20 @@ input[type="checkbox"]:checked + .check-icon::before {
 .btn-calendar{background-color: #FF5545; color:#fff;}
 .btn-latest{background-color: #AE9400; color:#fff;}
 
+.calendar-datepipicker{
+  font-size: 30px!important;
+  font-weight: 700;
+  color: #fff;
+  background: transparent!important;
+  border: 0!important;
+  width: 220px;
+  padding:0px!important;
+  text-align: center;
+}
+.calupdInput{
+  width: 240px;
+}
+
 
 @media screen and (max-width: 1800px) {
 
@@ -3291,6 +3305,15 @@ width: 100%;
   font-size: 19px;
   font-weight: 700;
   color: #fff;
+}
+
+.calendar-datepipicker{
+  font-size: 19px!important;
+  width: 127px;
+  text-align: center;
+}
+.calupdInput{
+  width: 158px;
 }
 }
 

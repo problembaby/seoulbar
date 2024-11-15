@@ -235,8 +235,30 @@
             <div class="calendar-header">
               <div class="month">
                 <button id="prev-month" class="prev-month"></button>
-                <h3 id="month-year" class="month-year">2024년 9월</h3>
+                <!--2024.11.15일 datepicker 로 수정-->
+                <h3 id="month-year" class="month-year">
+                  <label for="cal-date" class="hidden">캘린더 날짜</label>
+                  <input type="text" id="cal-date" class="datepicker calendar-datepipicker" placeholder="날짜" value="">
+                </h3>
                 <button id="next-month" class="next-month"></button>
+
+                <script>
+                  function initializeDatepicker() {
+                    $(".datepicker").datepicker({
+                      dateFormat: 'yy년 mm월', // 데이터 형식
+                      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                      dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'],
+                      dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
+                      showMonthAfterYear: true,
+                    });
+                    $(".datepicker").datepicker('setDate', 'today');
+                  }
+          
+                  $(function () {
+                    initializeDatepicker();
+                  });
+                </script>
               </div>
               <div class="right">
                 <ul class="settings-list">

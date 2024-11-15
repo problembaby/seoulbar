@@ -730,7 +730,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .subBg-line{position: relative;}
 /* .subBg-line::before{height: 3px; width:80%; background-color: #83a4c7; content: ""; position: absolute; top: 50%; left: 250px; transform: translateY(-50%); z-index: -1;} */
 
-.sub-title .ico{background:url(../images/sub-titleBg.png); width: 42px; height: 43px; display: flex; align-items: center; justify-content: center; position: relative;}
+.sub-title .ico{background:url(../images/sub-titleBg.png); width: 42px; height: 43px; display: flex; align-items: center; justify-content: center; position: relative; flex: 0 0 42px}
 .sub-title .pos-ss::before{position: absolute; top:10px; left:13px}
 .sub-title .pos-at::before{position: absolute; top:8px;}
 
@@ -1371,7 +1371,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   gap:5px;
   padding:10px;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .data-item .list .list-item{
@@ -1467,7 +1467,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .popDetails  .list .list-item{padding: 3px 10px; height: auto;}
 
 .state-td-p{display: flex; gap:5px; align-items: center; justify-content: center;}
-.slink-padding{display: flex; margin-bottom: 10px; }
+.slink-padding{display: flex; margin-bottom: 10px; flex-wrap: wrap;}
 .slink-padding > a{width: 70px; flex: 0 0 70px; display: flex; align-items: center; justify-content: center; }
 
 .btn-excel{background-color:#38B000; color:#fff;}
@@ -3286,9 +3286,21 @@ width: 100%;
   gap: 5px;
   margin-bottom: 10px;
 }
+
+.calendar-header .month-year {
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
+}
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
+
+     /*페이징 사이즈 조절*/
+     .page {
+      --page-el-width: 30px;
+      --page-el-height: 30px;
+    }
 }
 
 

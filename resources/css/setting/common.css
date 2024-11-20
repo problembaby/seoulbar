@@ -169,6 +169,15 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background: linear-gradient(90deg, #0083BD 0%, #134B82 100%);
 }
+body.theme01{
+  background: linear-gradient(90deg, #0083BD 0%, #134B82 100%)!important;
+}
+body.theme02{
+  background: #4786A1!important;
+}
+body.theme03{
+  background: #3067A1!important;
+}
 
 /* 수평선 초기화 */
 hr {

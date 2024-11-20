@@ -137,6 +137,9 @@ body{background: #fff;}
 
 @media screen and (max-width: 1024px){
   .inline-form-group li .title{ flex:1 0 200px; }
+  #gnb.adminGnb {
+    background-color: transparent
+   }
 }
 
 @media screen and (max-width: 768px){

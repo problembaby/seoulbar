@@ -53,7 +53,7 @@
 .whiteList li{ background-color: #fff; overflow: hidden; display: flex; height: 50px; align-items: center;border-bottom: 1px dotted #002839; justify-content: space-between; padding:0 12px; gap:10px}
 .whiteList li:last-child{border-bottom: 0;}
 
-
+.notice-list{height: 250px; overflow-y: auto;}
 .notice-list .state{width:63px; height: 26px; display: flex; justify-content: center; align-items: center; background-color: gray; color:#fff; border-radius: 5px; font-size: 12px; gap:5px; flex:0 0 63px}
 
 .notice-list .state.state-notice{background-color: #455785;}
@@ -64,6 +64,7 @@
 
 .notice-list .state.state-deputy{background-color: #458FFF;}
 .notice-list .state.state-deputy::before{content:""; display: block; background: url(../images/ico/ico-state-deputy.svg);  width: 11px; height: 12px;}
+
 
 .whiteList li .subject { flex: 1 1 410px;   white-space: nowrap;
   overflow: hidden;
@@ -714,13 +715,13 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .search-area {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 20px;
   flex-wrap: wrap;
   gap: 12px;
 }
 .search-area .left{flex:0 40%}
-.search-area .right{ display: flex; justify-content: flex-end; align-items: center;}
+.search-area .right{ display: flex; /* justify-content: flex-end; */ align-items: center;}
 .search-area__inputList{display: flex; gap:10px}
 .date-input-wrap{display: flex; align-items: center; gap:10px}
 
@@ -1516,7 +1517,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .user-info__img img{width: 100%;}
 
 /* 회원 서식자료실 목록 */
-.sh_s_bar_fr_023 .search-area {justify-content: flex-end;}
+/* .sh_s_bar_fr_023 .search-area {justify-content: flex-end;} */
 
 .sh_s_bar_fr_023 .table-board .ico-area {
   display: flex;
@@ -2323,7 +2324,7 @@ input[type="checkbox"]:checked + .check-icon::before {
   text-align: center;
 }
 .calupdInput{
-  width: 240px;
+  width: 240px;d
 }
 
 
@@ -2332,7 +2333,7 @@ input[type="checkbox"]:checked + .check-icon::before {
 
 .cursor{cursor: pointer;}
 .titleNbtn{display: flex; align-items: center; gap:20px; flex-wrap: wrap;}
-
+.search-start{justify-content: flex-start;}
 @media screen and (max-width: 1800px) {
 
 
@@ -2577,6 +2578,12 @@ background-size: cover;
 #gnb {
   width:0;
 } 
+#gnb.smallMenu{
+  width:0;
+}
+#gnb.smallMenu ~ #contents {
+  margin-left: 0;
+}
 .gnb-layout{
   background-color: var(--main2-color);
 }
@@ -2845,6 +2852,9 @@ width: 100%;
   margin-top:0;
 }
 
+
+
+
 .notice-list .state {
   width: 63px;
   height: 26px;
@@ -2957,7 +2967,8 @@ width: 100%;
   .form-group .label__title.h-cont5 {
     height: 250px;
   }
-  .board-menuList .sub-link-list{gap:0; flex-wrap: nowrap;}
+  .board-menuList .sub-link-list{gap:5px; flex-wrap: wrap;}
+  .board-menuList .sub-link-list .subMenuLink {flex:1 0 30%}
   .board-menuList .sub-link-list.tab-dropdown{gap:0; flex-wrap: wrap;}
 
   .user-infoSet__thum, .user-infoSet__desc{flex-direction: column;}
@@ -2980,6 +2991,10 @@ width: 100%;
   .form-popup-list .inline-row-form__conf .radio-input-wrap {width: 100%;}
 
   .board-top-cate{width:100%}
+
+  .adminGnb .menuBtn span {
+    display: block;
+}
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */

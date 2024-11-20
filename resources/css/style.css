@@ -380,7 +380,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   height: 250px;
 }
 
-.sub-container{width: 100%; height: 100%;  /* min-height: calc(100vh - 40px); */}
+.sub-container{width: 100%; /* height: 100%; */  /* min-height: calc(100vh - 40px); */}
 
 .ai-search{border-radius: 16px; overflow: hidden; background-color: #fff;}
 .ai-search .form-control{  border:0; height: 60px;}
@@ -2789,7 +2789,8 @@ width: 100%;
     top:50px;
     display: flex;
     gap: 10px;
-    justify-content: center
+    justify-content: center;
+    display: none; /* 2024.11.20 모바일시 안보이게*/
 }
 
 
@@ -2798,7 +2799,8 @@ width: 100%;
 }
 
 .calendar-container.main-cal-month {
-  margin-top:80px
+ /*  margin-top:80px;  모바일시 히든되서 수정*/
+  margin-top:0;
 }
 
 .notice-list .state {

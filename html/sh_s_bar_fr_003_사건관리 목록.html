@@ -220,18 +220,45 @@
               <i class="ico ico-plus"></i>
               사건 등록
             </button>
-            <button type="button" class="btn btn-white btn-case red" data-bs-toggle="modal" data-bs-target="#sh_s_bar_fr_Modal3">
-              <i class="ico ico-danger"></i>
-              오류 신고
-            </button>
           </div>
+
+          <!--2024.11.15 목록탭 추가 [start]-->
+          <div class="board-menuList mb40 mt20">
+            <div class="sub-link-list left">
+              <a href="sh_s_bar_fr_003_사건관리 목록.html"  title="선택됨" class="subMenuLink on">캘린더</a>
+              <a href="sh_s_bar_fr_003_사건관리_업데이트목록.html" class="subMenuLink">업데이트</a>
+            </div>
+          </div>
+          <!--2024.11.15 목록탭 추가 [end]-->
 
           <div class="calendar-area">
             <div class="calendar-header">
               <div class="month">
                 <button id="prev-month" class="prev-month"></button>
-                <h3 id="month-year" class="month-year">2024년 9월</h3>
+                <!--2024.11.15일 datepicker 로 수정-->
+                <h3 id="month-year" class="month-year">
+                  <label for="cal-date" class="hidden">캘린더 날짜</label>
+                  <input type="text" id="cal-date" class="datepicker calendar-datepipicker" placeholder="날짜" value="">
+                </h3>
                 <button id="next-month" class="next-month"></button>
+
+                <script>
+                  function initializeDatepicker() {
+                    $(".datepicker").datepicker({
+                      dateFormat: 'yy년 mm월', // 데이터 형식
+                      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                      monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                      dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'],
+                      dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
+                      showMonthAfterYear: true,
+                    });
+                    $(".datepicker").datepicker('setDate', 'today');
+                  }
+          
+                  $(function () {
+                    initializeDatepicker();
+                  });
+                </script>
               </div>
               <div class="right">
                 <ul class="settings-list">

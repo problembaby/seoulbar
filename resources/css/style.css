@@ -730,7 +730,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .subBg-line{position: relative;}
 /* .subBg-line::before{height: 3px; width:80%; background-color: #83a4c7; content: ""; position: absolute; top: 50%; left: 250px; transform: translateY(-50%); z-index: -1;} */
 
-.sub-title .ico{background:url(../images/sub-titleBg.png); width: 42px; height: 43px; display: flex; align-items: center; justify-content: center; position: relative;}
+.sub-title .ico{background:url(../images/sub-titleBg.png); width: 42px; height: 43px; display: flex; align-items: center; justify-content: center; position: relative; flex: 0 0 42px}
 .sub-title .pos-ss::before{position: absolute; top:10px; left:13px}
 .sub-title .pos-at::before{position: absolute; top:8px;}
 
@@ -747,7 +747,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 /* .sub-container .inner{min-height: 830px;} */
 
-.formStyle01{max-width:160px; width: 100%; font-size: 14px;}
+.formStyle01{width: 140px; font-size: 14px;}
 .formStyle02{width:82px; font-size: 14px; border-color: var(--gray-2); flex-shrink: inherit;}
 .formStyle03{width: 100%; font-size: 14px; border-color: var(--gray-2);}
 .formStyle240{width: 240px;; font-size: 14px;}
@@ -1371,7 +1371,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   gap:5px;
   padding:10px;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .data-item .list .list-item{
@@ -1467,7 +1467,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .popDetails  .list .list-item{padding: 3px 10px; height: auto;}
 
 .state-td-p{display: flex; gap:5px; align-items: center; justify-content: center;}
-.slink-padding{display: flex; margin-bottom: 10px; }
+.slink-padding{display: flex; margin-bottom: 10px; flex-wrap: wrap;}
 .slink-padding > a{width: 70px; flex: 0 0 70px; display: flex; align-items: center; justify-content: center; }
 
 .btn-excel{background-color:#38B000; color:#fff;}
@@ -2171,6 +2171,10 @@ input[type="checkbox"]:checked + .check-icon::before {
   border: 1px solid #ddd;
   border-radius: 50%;
   background-color: #e9ecef;
+  overflow: hidden;
+}
+.profile-image img {
+  width: 100%;
 }
 
 .name {
@@ -2285,6 +2289,43 @@ input[type="checkbox"]:checked + .check-icon::before {
   font-weight: bold;
   font-size: 15px;
 }
+
+.titleNbtn{display: flex; gap:20px; align-items: center;}
+.main-pop__btnList{display: flex; justify-content: flex-end; align-items: center; gap:20px; margin-top:20px;}
+.modal-title{
+  font-size: 22px;
+  font-weight: 700;
+  color: #1E356D;
+}
+
+.calendar-btn-list{display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; gap:10px}
+.calendar-btn-list a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 140px;
+  height: 40px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.btn-calendar{background-color: #FF5545; color:#fff;}
+.btn-latest{background-color: #AE9400; color:#fff;}
+
+.calendar-datepipicker{
+  font-size: 30px!important;
+  font-weight: 700;
+  color: #fff;
+  background: transparent!important;
+  border: 0!important;
+  width: 220px;
+  padding:0px!important;
+  text-align: center;
+}
+.calupdInput{
+  width: 240px;
+}
+
 
 .main-pop__btnList{display: flex; gap:10px; justify-content: flex-end; align-items: center; margin-top: 20px;}
 .btn-colse-sm{width: 80px; height: 36px;}
@@ -2483,6 +2524,7 @@ input[type="checkbox"]:checked + .check-icon::before {
 }
 
 @media screen and (max-width: 1024px) {
+  .formStyle01{width: 100%;}
 
   #contents{margin-left: 0;}
   /* 태블릿 해상도 */
@@ -3266,9 +3308,30 @@ width: 100%;
   gap: 5px;
   margin-bottom: 10px;
 }
+
+.calendar-header .month-year {
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
 }
 
-@media screen and (max-width: 320px) {
+.calendar-datepipicker{
+  font-size: 19px!important;
+  width: 127px;
+  text-align: center;
+}
+.calupdInput{
+  width: 158px;
+}
+}
+
+@media screen and (max-width: 375px) {
+
+     /*페이징 사이즈 조절*/
+     .page {
+      --page-el-width: 30px;
+      --page-el-height: 30px;
+    }
 }
 
 

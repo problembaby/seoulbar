@@ -32,7 +32,7 @@ body{background: #fff;}
 .chatAdmin-wrap__setting{display: flex; flex-wrap:wrap; justify-content: space-between; align-items: flex-start; gap:50px}
 
 .chatAdmin-wrap__setting .left, .chatAdmin-wrap__setting .right{display: flex; flex-direction: column; flex:1 auto; }
-
+.adm-sec {margin-bottom: 20px;}
 .adm-secTitle{display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; font-size: 24px; font-weight: 700;}
 
 .inline-form-group{border-top:1px solid #0F3966 }
@@ -132,6 +132,7 @@ body{background: #fff;}
   border-radius: 4px;
 }
 
+.theme-input-area{display: flex; gap:5px 20px; flex-wrap: wrap;}
 
 
 
@@ -144,4 +145,10 @@ body{background: #fff;}
 
 @media screen and (max-width: 768px){
   .inline-form-group li .title{ flex:1 0 200px; }
+  select {
+    padding: 0 30px 0 10px;
+}
+}
+@media screen and (max-width: 426px){
+  .inline-form-group li .title{ flex:1 0 100px; padding: 5px; }
 }

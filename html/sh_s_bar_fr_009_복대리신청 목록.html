@@ -229,7 +229,15 @@
               </div>
             </div>
 
-            <div class="search-area">
+
+            <!--
+            2024.11.20
+            모바일시에만 검색폼 열기 버튼 추가
+            -->
+            <div class="only-mob sch-dropWrap">
+              <button class="btn btn-search-dropDown">검색 열기</button>
+            </div>
+            <div class="search-area search-dropDown">
               <div class="letf">
                 <div class="search-area__inputList">
                   <select class="form-select formStyle01" aria-label="지역선택">
@@ -271,12 +279,13 @@
 
               <div class="right">
                 <div class="search-area__inputList">
-                <select class="form-select formStyle01" aria-label="정렬순" id="selectTaxbilPblicteAt" name="selectTaxbilPblicteAt">
-                  <option value="">세금계산서 전체</option>
-                  <option value="Y">발행</option>
-                  <option value="N">미발행</option>
-                          </select>
-             
+                  <select class="form-select formStyle01" aria-label="정렬순" id="selectTaxbilPblicteAt"
+                    name="selectTaxbilPblicteAt">
+                    <option value="">세금계산서 전체</option>
+                    <option value="Y">발행</option>
+                    <option value="N">미발행</option>
+                  </select>
+
                   <select class="form-select formStyle01" aria-label="정렬순">
                     <option value="등록일순">등록일순</option>
                     <option value="기일임박">기일임박</option>
@@ -294,12 +303,36 @@
 
             </div>
 
+            <script>
+
+              //2024.11.20 검색열기 토글
+              $('.btn-search-dropDown').click(function () {
+                $(this).toggleClass('active');
+                $('.search-dropDown').slideToggle('fast');
+              });
+
+              // 브라우저 리사이즈 이벤트
+              $(window).resize(function () {
+                if ($(window).width() >= 1024) {
+                  $('.search-area.search-dropDown').css('display', 'flex');
+                } else {
+                  $('.search-area.search-dropDown').css('display', 'none');
+                }
+              });
+              if ($(window).width() >= 1024) {
+                $('.search-area.search-dropDown').css('display', 'flex');
+              } else {
+                $('.search-area.search-dropDown').css('display', 'none');
+              }
+            </script>
+
             <div class="border-contents">
               <div class="whiteTable">
 
                 <div class="table-board board-list">
                   <table>
-                    <caption class="sr-only">복대리 신청 게시물 목록입니다. 번호, 구분, 법원구분, 제목, 작성자, 금액, 재판일시, 진행상황 항목을 제공합니다.</caption>
+                    <caption class="sr-only">복대리 신청 게시물 목록입니다. 번호, 구분, 법원구분, 제목, 작성자, 금액, 재판일시, 진행상황 항목을 제공합니다.
+                    </caption>
                     <colgroup>
                       <col width="6%;">
                       <col width="6%;">
@@ -342,7 +375,7 @@
                         </td>
 
                       </tr>
- 
+
                       <tr>
                         <td class="num">1203</td>
                         <td class="mobNone">복대리</td>

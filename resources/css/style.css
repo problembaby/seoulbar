@@ -47,6 +47,7 @@
   align-items: center;
   color:#fff;
   margin-top: 30px;
+  margin-bottom:20px
 }
 
 .whiteList{border-radius: 16px; background-color: #fff; overflow: hidden;}
@@ -484,7 +485,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  color:#0F3966;
+  color:var(--main-color);
   font-size:26px
 }
 
@@ -503,7 +504,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   margin: 0 auto;
 }
 .form-area__inputList {
-  border-top: 2px solid #0F3966;
+  border-top: 2px solid var(--main-color);
 }
 .form-item {
   border-bottom: 1px solid #999;
@@ -788,7 +789,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   font-weight: 500;
 }
 .a-current-page {
-  background:#0F3966;
+  background:var(--main-color);
   color: #fff;
   border-radius: 4px;
 }
@@ -865,7 +866,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .board-viewPage__con .title{font-size: 22px; font-weight: 700; margin-bottom: 10px; display: flex; flex-wrap: wrap; gap:5px 20px}
 
-.view-list{border-top: 1px solid #999; border-top: 2px solid #0F3966; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.view-list{border-top: 1px solid #999; border-top: 2px solid var(--main-color); width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; }
 .view-list .inline-row{display: flex; width: 100%; border-bottom:1px solid #999999 }
 .inline-row-form{display: flex ; align-items: center; flex:1 40%; gap:20px}
 .inline-row-form__tit{flex:0 0 140px; color:#000; padding: 13px 10px; height: 100%; display: flex; align-items: center; background-color: #EEEEEE; font-weight: 700; justify-content: center; justify-content: center; text-align: center;}
@@ -919,7 +920,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 }
 
 .notification-list.sub li a {
-  width: 135x;
+  width: 135px;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -973,7 +974,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   background-size: cover;
 }
 
-.board-noticeView__con{border-top:2px solid #0F3966}
+.board-noticeView__con{border-top:2px solid var(--main-color)}
 .board-top-row{background: #E7ECFF; display: flex; justify-content: space-between;  padding:20px; border-bottom: 1px solid #999999;}
 .board-top-row .title{font-size: 22px; font-weight: 500;}
 .board-top-row .right{display: flex; flex-direction: row; gap:20px;}
@@ -1054,7 +1055,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
   width: 100%;
   height: 60px;
   border-radius: 16px;
-  background-color: #0F3966;
+  background-color: var(--main-color);
   color: #fff;
   font-size: 20px;
   font-weight: 500;
@@ -1077,7 +1078,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .btnList{display: flex; gap:10px}
 .btnList.right{justify-content: flex-end;}
-.btn-case{width: 160px; height: 48px; color:#0F3966;   border:none;
+.btn-case{width: 160px; height: 48px; color:var(--main-color);   border:none;
   box-shadow: 0 5px 0 #AAAAAA; font-size: 18px; gap: 10px;}
 .btn-case.red{color: #FF4F4F}
 
@@ -1126,7 +1127,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .sh_s_bar_fr_027 .left-contents .enter-letters-area .fromport {
   width: 40px;
   height: 40px;
-  background-color: #0F3966;
+  background-color: var(--main-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1173,7 +1174,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .sh_s_bar_fr_027 .right-contents {
   width: 100%;  
   max-width: 260px; 
-  background-color: #0F3966; 
+  background-color: var(--main-color); 
   border-radius: 8px; 
   padding: 20px; 
   color: #fff; 
@@ -1248,7 +1249,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 .absolute-side-bar {
   width: 100%;
   max-width: 260px;
-  background-color: #0F3966;
+  background-color: var(--main-color);
   border-radius: 8px;
   padding: 20px;
   right: 30px;
@@ -1377,7 +1378,7 @@ a.points, a.messages, a.errorReport{display: flex; align-items: center; font-wei
 
 .data-item .list .list-item{
   width: 100%;
-  height: 36px; display: flex; align-items: center; gap:10px; border-radius: 8px; padding: 0 10px; background-color: #0F3966; color:#000;
+  height: 36px; display: flex; align-items: center; gap:10px; border-radius: 8px; padding: 0 10px; background-color: var(--main-color); color:#000;
 }
 
 .case-state{width: 36px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 12px; font-weight: 500; color:#fff; background-color: #48526E; flex: 0 0 36px; }
@@ -1481,7 +1482,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 
 /* 법조인명부  */
 .legal-list .whiteTable{padding:20px}
-.legal-list__searchArea{border-top: 2px solid #0F3966;}
+.legal-list__searchArea{border-top: 2px solid var(--main-color);}
 .list-row { background: #E7ECFF; display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid #999999; width: 100%; gap:10px }
 .list-row .list-item { display: flex; align-items: center; flex:1 0 20%; gap:5px}
 .list-row .list-item .tit {white-space: nowrap; flex:0 0 120px; font-weight: 700; text-align: center;}
@@ -1572,7 +1573,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 .main-cal__tab{position: absolute; right:0; display: flex; gap:10px}
 .main-cal__tab .nav-item{ display: flex; align-items: center; justify-content: center;}
 .main-cal__tab .nav-item .nav-link{width: 74px; height: 30px; border-radius: 30px; border:1px solid #999999; background-color: transparent;}
-.main-cal__tab .nav-item .nav-link.active{border-color:#0F3966 ; background-color: #0F3966;}
+.main-cal__tab .nav-item .nav-link.active{border-color:var(--main-color) ; background-color: var(--main-color);}
 
 .main-cal__tab ul .nav-item:first-child::after{content:""; display: block; width: 1px; height: 10px; background-color:#D9D9D9; margin: 0 10px}
 
@@ -1622,7 +1623,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
   display: none;
   width: 50px;
   height:50px;
-  border: 4px solid #0F3966;
+  border: 4px solid var(--main-color);
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -1683,7 +1684,7 @@ display: none; top:5px ; left: 5px; cursor: auto;}
 }
 .weekSwiper .swiper-slide.current .week-item .week-number{
  font-size: 36px;
- color: #0F3966;
+ color: var(--main-color);
  font-weight: 500;
 }
 .weekSwiper .swiper-slide.current .week-item .week-day{
@@ -1947,7 +1948,7 @@ body.zoom-125 .notification-list.sub li a {
 }
 .point__area {
   width: 100%;
-  border-top: 2px solid #0F3966;
+  border-top: 2px solid var(--main-color);
   overflow-x: auto;
 }
 .point__area .point__item {
@@ -2334,6 +2335,52 @@ input[type="checkbox"]:checked + .check-icon::before {
 .cursor{cursor: pointer;}
 .titleNbtn{display: flex; align-items: center; gap:20px; flex-wrap: wrap;}
 .search-start{justify-content: flex-start;}
+
+/*테마기능추가*/
+body.theme02 {
+  --main-color : #1C4E62!important;
+}
+
+.alert-pop::before{
+content:"";
+background: url(../images/ico/exclamation-circle-fill.svg)no-repeat;
+background-size: cover;
+width: 15px;
+height: 15px;
+display: block;
+color: #fff;
+}
+
+.bok-tab{margin-top: 40px;}
+.sch-dropWrap{display: flex; justify-content: flex-end;}
+
+.btn-search-dropDown {
+  background: #fff!important;
+  margin-bottom: 10px;
+  color: #000!important;
+  gap: 5px;
+  position: relative; /* ::after 위치 지정에 필요 */
+  padding-right: 23px;
+}
+
+.btn-search-dropDown::after {
+  content: ""; /* 가상 요소 활성화 */
+  display: block;
+  position: absolute;
+  right: 10px; /* 아이콘 위치 (버튼의 오른쪽) */
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('../images/ico/chevron_down.svg') no-repeat;
+  width: 13px;
+  height: 8px;
+  background-size: cover;
+  transition: transform 0.3s ease; /* 애니메이션 효과 */
+}
+
+.btn-search-dropDown.active::after {
+  transform: translateY(-50%) rotate(180deg); /* 아이콘 회전 */
+}
+
 @media screen and (max-width: 1800px) {
 
 
@@ -2587,6 +2634,9 @@ background-size: cover;
 .gnb-layout{
   background-color: var(--main2-color);
 }
+body.theme02 .gnb-layout{
+  background-color: #4786A1;
+}
 .notification-list li a {
   width: 100%;
 }
@@ -2612,8 +2662,10 @@ background-size: cover;
   margin-top: 50px;
 }
 
-.search-area .letf{
+.search-area .left{
 width: 100%;
+margin-bottom:10px;
+
 }
 .search-area__inputList{flex-direction: column; width: 100%;}
 .search-area__inputList > *{/* flex:1 100%; */ max-width: 100%;}
@@ -2872,11 +2924,11 @@ width: 100%;
   display: flex;
   flex-direction: column;
 }
-.sec01-1 { order: 1; }
+.sec01-1 { display: none; }
 .sec01 { order: 3; }
 .sec02 { order: 4; }
-.sec03 { order: 2; }
-.sec04 { order: 5; }
+.sec03 { order: 2; display: none;}
+.sec04 { order: 1;  }
 .form-popup-list .inline-row-form__conf {
   width: 100%;
   flex-direction: column;
@@ -2995,6 +3047,10 @@ width: 100%;
   .adminGnb .menuBtn span {
     display: block;
 }
+.main-cal, .calTable{margin-top:20px}
+
+.search-dropDown{display: none;}
+
 }
 @media screen and (max-width: 882px) {
   /* 갤럭시 폴드 해상도 */

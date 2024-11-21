@@ -1195,7 +1195,7 @@ Box Sizing 정의 (Margin & Padding)
 
 .btn-primary {
   --btn-color: #fff;
-  --btn-bg: #0F3966;
+  --btn-bg: var(--main-color);
   --btn-border-color: none;
   --btn-hover-color: #fff;
   --btn-hover-bg: #0d3156;
@@ -1810,6 +1810,11 @@ Box Sizing 정의 (Margin & Padding)
   display: none;
 }
 
+
+/* popover */
+.popover-header{font-size: 14px;}
+.popover-body{font-size: 12px;}
+
 /**------------------------------------------
 통합검색 탭 01 미디어 쿼리
 --------------------------------------------*/
@@ -2277,8 +2282,8 @@ div.upload-btn_wrap button {/*버튼 div*/
 	height:36px;
 	font-weight:bold;
   border-radius: 6px;
-border: 1px solid #0F3966;
-background: #0F3966;
+border: 1px solid var(--main-color);
+background: var(--main-color);
 color:#fff;
 cursor:pointer;
 }

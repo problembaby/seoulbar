@@ -225,28 +225,34 @@
 
             <div class="search-area align-items-end">
               <div class="letf">
-                <ul class="notification-list sub">
+                <!-- 
+                내복대리 pc/모바일 이중화 작업  
+                * notification-list 에 only-pc-flex mb20 추가
+                * .only-mob 영역 추가
+                 -->
+                <!-- <ul class="notification-list sub"> -->
+                <ul class="notification-list sub only-pc-flex mb20">
                   <li>
                     <a href="#" title="페이지이동" class="notification-item on" title="선택됨">
-                      <div class="tit">의뢰한 복대리</div>
+                      <div class="tit">복대리 의뢰 건</div>
                       <div class="value">1건</div>
                     </a>
                   </li>
                   <li>
                     <a href="#" title="페이지이동" class="notification-item">
-                      <div class="tit">지원요청 복대리</div>
+                      <div class="tit">복대리 지원 건</div>
                       <div class="value">4건</div>
                     </a>
                   </li>
                   <li>
                     <a href="#" title="페이지이동" class="notification-item">
-                      <div class="tit">복대리 위임요청</div>
+                      <div class="tit">복대리 의뢰 신청 건</div>
                       <div class="value">16건</div>
                     </a>
                   </li>
                   <li>
                     <a href="#" title="페이지이동" class="notification-item">
-                      <div class="tit">복대리 수임요청</div>
+                      <div class="tit">복대리 지원 신청 건</div>
                       <div class="value">4건</div>
                     </a>
                   </li>
@@ -257,6 +263,16 @@
                     </a>
                   </li>
                 </ul>
+
+                <div class="board-menuList bok-tab only-mob">
+                  <div class="sub-link-list">
+                    <a href="#" title="선택됨" class="subMenuLink on">복대리 의뢰 건</a>
+                    <a href="#" class="subMenuLink">복대리 지원 건</a>
+                    <a href="#" class="subMenuLink">관심 복대리</a>
+                    <a href="#" class="subMenuLink">복대리 의뢰 신청 건</a>
+                    <a href="#" class="subMenuLink">복대리 지원 신청 건</a>
+                  </div>
+                </div>
 
 
               </div>

@@ -1,6 +1,13 @@
 $(document).ready(function () {
 
   
+  //팝오프 초기화
+  $('[data-bs-toggle="popover"]').popover({
+    container: 'body'
+  });
+
+
+  
     // 모바일시 탭 드롭다운
     $(document).on('click', '.tab-dropdown .subMenuLink', function (e) {
       e.preventDefault();
@@ -58,6 +65,16 @@ $(document).ready(function () {
     if ($(window).width() <= 1024) {
         $('#gnb').css('width', '230px');
     }
+});
+
+  // offcanvas-backdrop 클릭 시 동작
+  $(document).on('click', '.offcanvas-backdrop', function () {
+    $('#gnb').css('width', '0');
+});
+
+// btn-close 클릭 시 동작
+$(document).on('click', '.btn-close', function () {
+    $('#gnb').css('width', '0');
 });
 $(window).on('resize', function () {
     if ($(window).width() > 1024) {
@@ -179,5 +196,4 @@ $(window).on('resize', function () {
 
   // 각각의 기능 호출
   activateTabs();
-  setupTopDropSelect();
 });

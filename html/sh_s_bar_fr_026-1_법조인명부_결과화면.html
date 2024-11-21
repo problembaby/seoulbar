@@ -214,7 +214,14 @@
             <div class="board-contents legal-list">
               <div class="whiteTable">
                 <!--조회 영역 [start]-->
-                <div class="legal-list__searchArea">
+                <!--
+                2024.11.20 모바일시 검색 열기 기능추가
+                모바일시에 초기에 검색이 보이고 검색이후에 
+                -->
+                <div class="only-mob sch-dropWrap">
+                  <button class="btn btn-search-dropDown btn-blue">검색 열기</button>
+                </div>
+                <div class="legal-list__searchArea search-dropDown" style="display: block;">
                   <ul class="list-row">
                     <li class="list-item">
                       <label for="currentPosition" class="tit">현직</label>
@@ -270,6 +277,32 @@
                   </ul>
 
                 </div>
+
+                <script>
+
+                  //2024.11.20 검색열기 토글
+                    $('.btn-search-dropDown').click(function () {
+    // 버튼에 active 클래스 토글
+    $(this).toggleClass('active');
+    $('.search-dropDown').slideToggle('fast');
+  });
+
+    // 브라우저 리사이즈 이벤트
+    $(window).resize(function () {
+      if ($(window).width() >= 1024) {
+        $('.legal-list__searchArea.search-dropDown').css('display', 'block');
+      } else {
+        $('.legal-list__searchArea.search-dropDown').css('display', 'none');
+      }
+    });
+  
+    // 페이지 로드 시 초기 상태 설정
+    if ($(window).width() >= 1024) {
+      $('.legal-list__searchArea.search-dropDown').css('display', 'block');
+    } else {
+      $('.legal-list__searchArea.search-dropDown').css('display', 'none');
+    }
+                </script>
                 <!--조회 영역 [end]-->
 
                 <!--조회 결과 영역  [start]-->
